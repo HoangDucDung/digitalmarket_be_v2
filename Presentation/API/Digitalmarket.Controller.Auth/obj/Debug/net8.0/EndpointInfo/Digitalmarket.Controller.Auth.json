@@ -1,0 +1,14 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Auth Documentation",
+    "description": "Tài liệu tích hợp auth",
+    "contact": {
+      "name": "DigitalMarket",
+      "email": "digital_market@gmail.com"
+    },
+    "version": "v1"
+  },
+  "paths": { },
+  "components": { }
+}

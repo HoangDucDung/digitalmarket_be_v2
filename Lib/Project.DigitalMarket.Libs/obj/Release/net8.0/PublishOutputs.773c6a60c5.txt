@@ -1,0 +1,9 @@
+E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\hddung_as1\Project.DigitalMarket.Libs.dll
+E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\hddung_as1\Project.DigitalMarket.Libs.deps.json
+E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\hddung_as1\Project.DigitalMarket.Libs.pdb
+E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\hddung_as1\Microsoft.OpenApi.dll
+E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\hddung_as1\Swashbuckle.AspNetCore.Swagger.dll
+E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\hddung_as1\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\hddung_as1\Swashbuckle.AspNetCore.SwaggerUI.dll
+E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\hddung_as1\Project.DigitalMarket.Extension.dll
+E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\hddung_as1\Project.DigitalMarket.Extension.pdb

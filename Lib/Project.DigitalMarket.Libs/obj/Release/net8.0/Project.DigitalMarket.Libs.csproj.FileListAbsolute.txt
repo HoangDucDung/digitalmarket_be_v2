@@ -1,0 +1,15 @@
+E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Lib\Project.DigitalMarket.Libs\bin\Release\net8.0\Project.DigitalMarket.Libs.deps.json
+E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Lib\Project.DigitalMarket.Libs\bin\Release\net8.0\Project.DigitalMarket.Libs.dll
+E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Lib\Project.DigitalMarket.Libs\bin\Release\net8.0\Project.DigitalMarket.Libs.pdb
+E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Lib\Project.DigitalMarket.Libs\bin\Release\net8.0\Project.DigitalMarket.Extension.dll
+E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Lib\Project.DigitalMarket.Libs\bin\Release\net8.0\Project.DigitalMarket.Extension.pdb
+E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Lib\Project.DigitalMarket.Libs\obj\Release\net8.0\Project.DigitalMarket.Libs.csproj.AssemblyReference.cache
+E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Lib\Project.DigitalMarket.Libs\obj\Release\net8.0\Project.DigitalMarket.Libs.GeneratedMSBuildEditorConfig.editorconfig
+E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Lib\Project.DigitalMarket.Libs\obj\Release\net8.0\Project.DigitalMarket.Libs.AssemblyInfoInputs.cache
+E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Lib\Project.DigitalMarket.Libs\obj\Release\net8.0\Project.DigitalMarket.Libs.AssemblyInfo.cs
+E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Lib\Project.DigitalMarket.Libs\obj\Release\net8.0\Project.DigitalMarket.Libs.csproj.CoreCompileInputs.cache
+E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Lib\Project.DigitalMarket.Libs\obj\Release\net8.0\Project..F28213D1.Up2Date
+E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Lib\Project.DigitalMarket.Libs\obj\Release\net8.0\Project.DigitalMarket.Libs.dll
+E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Lib\Project.DigitalMarket.Libs\obj\Release\net8.0\refint\Project.DigitalMarket.Libs.dll
+E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Lib\Project.DigitalMarket.Libs\obj\Release\net8.0\Project.DigitalMarket.Libs.pdb
+E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Lib\Project.DigitalMarket.Libs\obj\Release\net8.0\ref\Project.DigitalMarket.Libs.dll

@@ -1,0 +1,5 @@
+{
+  "TestKafka": {
+    "WorkerCount": 3
+  }
+}

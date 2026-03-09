@@ -1,0 +1,307 @@
+# Phân tích Package Identity trong project DigitalMarket
+
+## 1. Tổng quan về Project
+
+Project `digitalmarket_be_v2` là một **ASP.NET Core 8 Web API** sử dụng kiến trúc **Clean Architecture** với 5 project C#:
+
+```mermaid
+graph TD
+    subgraph "Presentation Layer"
+        AUTH["Digitalmarket.Controller.Auth<br/>(Auth API Host)"]
+        BASE["Digitalmarket.Controller.Base<br/>(Shared Base)"]
+    end
+
+    subgraph "Lib Layer"
+        HOSTBASE["Project.DigitalMarket.Host.Base<br/>(Middleware, Configs, API Doc)"]
+        LIBS["Project.DigitalMarket.Libs<br/>(DI, Exceptions)"]
+    end
+
+    subgraph "Extension Layer"
+        EXT["Project.DigitalMarket.Extension<br/>(Utility Extensions)"]
+    end
+
+    subgraph "Config"
+        CFG["auth.json / connection.json<br/>kafka.json / consumerConfig.json"]
+    end
+
+    AUTH --> BASE
+    BASE --> HOSTBASE
+    HOSTBASE --> LIBS
+    LIBS --> EXT
+    AUTH -.->|đọc config| CFG
+```
+
+### Dependency chain (từ cao → thấp):
+| # | Project | Depends On |
+|---|---------|-----------|
+| 1 | `Digitalmarket.Controller.Auth` | `Digitalmarket.Controller.Base` |
+| 2 | `Digitalmarket.Controller.Base` | `Project.DigitalMarket.Host.Base` |
+| 3 | `Project.DigitalMarket.Host.Base` | `Project.DigitalMarket.Libs` |
+| 4 | `Project.DigitalMarket.Libs` | `Project.DigitalMarket.Extension` |
+| 5 | `Project.DigitalMarket.Extension` | *(không phụ thuộc gì)* |
+
+---
+
+## 2. Package Identity hiện tại trong project
+
+> [!IMPORTANT]
+> Project hiện tại **CHƯA sử dụng ASP.NET Core Identity** (không có `Microsoft.AspNetCore.Identity.EntityFrameworkCore`). Thay vào đó, project tự xây dựng hệ thống xác thực JWT bằng package `System.IdentityModel.Tokens.Jwt`.
+
+### NuGet Packages liên quan đến Identity đang dùng
+
+| Package | Version | Project | Mục đích |
+|---------|---------|---------|----------|
+| `System.IdentityModel.Tokens.Jwt` | 8.14.0 | `Host.Base` | Tạo & validate JWT token |
+| `Microsoft.IdentityModel.Tokens` | *(transitive)* | `Host.Base` | Cung cấp `TokenValidationParameters`, `SymmetricSecurityKey` |
+
+---
+
+## 3. Các thành phần Authentication hiện tại
+
+### 3.1. [AuthConfig](file:///e:/tap_hoa_so/digitalmarket_be_v2/digitalmarket_be_v2/Lib/Project.DigitalMarket.Host.Base/Configs/AuthConfig.cs#3-11) — Cấu hình JWT
+
+[AuthConfig.cs](file:///e:/tap_hoa_so/digitalmarket_be_v2/digitalmarket_be_v2/Lib/Project.DigitalMarket.Host.Base/Configs/AuthConfig.cs)
+
+```csharp
+public class AuthConfig
+{
+    public string SecretKey { get; set; }    // Key bí mật để ký JWT
+    public string Issuer { get; set; }       // Nhà phát hành token
+    public string Audience { get; set; }     // Đối tượng nhận token
+    public int ExpiresTime { get; set; }     // Thời gian hết hạn (phút)
+    public int RefreshTokenTime { get; set; } // Thời gian refresh token (phút)
+}
+```
+
+Giá trị được đọc từ [auth.json](file:///e:/tap_hoa_so/digitalmarket_be_v2/digitalmarket_be_v2/Config/auth.json):
+```json
+{
+  "AuthConfig": {
+    "SecretKey": "anhdungdepzaiquatroivodichtuyetdoioidoioi",
+    "Issuer": "dungdz",
+    "Audience": "dungdz",
+    "ExpiresTime": 6000,
+    "RefreshTokenTime": 60000
+  }
+}
+```
+
+---
+
+### 3.2. [AuthenMiddleware](file:///e:/tap_hoa_so/digitalmarket_be_v2/digitalmarket_be_v2/Lib/Project.DigitalMarket.Host.Base/Middleware/AuthenMiddleware.cs#16-20) — Middleware xác thực JWT
+
+[AuthenMiddleware.cs](file:///e:/tap_hoa_so/digitalmarket_be_v2/digitalmarket_be_v2/Lib/Project.DigitalMarket.Host.Base/Middleware/AuthenMiddleware.cs)
+
+**Chức năng:** Kiểm tra JWT token từ header `Authentication` cho mọi request.
+
+**Luồng xử lý:**
+
+```mermaid
+flowchart TD
+    A["Request đến"] --> B{"Endpoint tồn tại?"}
+    B -->|Không| C["Bỏ qua → next()"]
+    B -->|Có| D{"Có [AllowAnonymous]?"}
+    D -->|Có| C
+    D -->|Không| E["Đọc token từ header 'Authentication'"]
+    E --> F["Lấy AuthConfig (SecretKey)"]
+    F --> G["JwtSecurityTokenHandler.ValidateToken()"]
+    G -->|Hợp lệ| H["Tiếp tục pipeline → next()"]
+    G -->|Lỗi| I["Throw Exception<br/>(Expired/Invalid/Null)"]
+```
+
+**Lưu ý quan trọng:**
+- Header name là `Authentication` (không phải `Authorization` chuẩn)
+- `ValidateIssuer = false`, `ValidateAudience = false` — chỉ validate signing key
+- Chưa gắn `ClaimsPrincipal` vào `HttpContext.User` sau khi validate
+
+---
+
+### 3.3. [AuthException](file:///e:/tap_hoa_so/digitalmarket_be_v2/digitalmarket_be_v2/Lib/Project.DigitalMarket.Libs/Exceptions/AuthException.cs#5-13) — Exception cho lỗi xác thực
+
+[AuthException.cs](file:///e:/tap_hoa_so/digitalmarket_be_v2/digitalmarket_be_v2/Lib/Project.DigitalMarket.Libs/Exceptions/AuthException.cs)
+
+```csharp
+public class AuthException : BaseHttpStatusCodeException
+{
+    // Tự động trả HTTP 401 Unauthorized
+    public override HttpStatusCode StatusCode { get; set; } = HttpStatusCode.Unauthorized;
+}
+```
+
+Được xử lý bởi [ApplicationMiddleware.cs](file:///e:/tap_hoa_so/digitalmarket_be_v2/digitalmarket_be_v2/Lib/Project.DigitalMarket.Host.Base/Middleware/ApplicationMiddleware.cs) — catch [BaseHttpStatusCodeException](file:///e:/tap_hoa_so/digitalmarket_be_v2/digitalmarket_be_v2/Lib/Project.DigitalMarket.Libs/Exceptions/BaseHttpStatusCodeException.cs#5-13) và trả về status code.
+
+---
+
+### 3.4. [DigitalBaseController](file:///e:/tap_hoa_so/digitalmarket_be_v2/digitalmarket_be_v2/Presentation/API/Digitalmarket.Controller.Base/Controllers/DigitalBaseController.cs#7-18) — Base controller có [Authorize]
+
+[DigitalBaseController.cs](file:///e:/tap_hoa_so/digitalmarket_be_v2/digitalmarket_be_v2/Presentation/API/Digitalmarket.Controller.Base/Controllers/DigitalBaseController.cs)
+
+```csharp
+[ApiController]
+[Authorize]            // ← Yêu cầu xác thực mặc định
+[Route("api/[controller]")]
+public class DigitalBaseController : ControllerBase
+{
+    protected ILazyloadProvider _lazyloadProvider;
+}
+```
+
+Mọi controller kế thừa [DigitalBaseController](file:///e:/tap_hoa_so/digitalmarket_be_v2/digitalmarket_be_v2/Presentation/API/Digitalmarket.Controller.Base/Controllers/DigitalBaseController.cs#7-18) sẽ **mặc định yêu cầu xác thực**.
+
+---
+
+### 3.5. [AppCoreFactory](file:///e:/tap_hoa_so/digitalmarket_be_v2/digitalmarket_be_v2/Presentation/API/Digitalmarket.Controller.Base/AppCoreFactory/AppCoreFactory.cs#8-57) — DI Factory
+
+[AppCoreFactory.cs](file:///e:/tap_hoa_so/digitalmarket_be_v2/digitalmarket_be_v2/Presentation/API/Digitalmarket.Controller.Base/AppCoreFactory/AppCoreFactory.cs)
+
+```csharp
+// Hiện tại RỖNG — chưa đăng ký service nào cho auth
+public static IServiceCollection UseAppAuthenFactory(this IServiceCollection services)
+{
+    return services;  // ← Placeholder, chưa implement
+}
+```
+
+---
+
+### 3.6. [MiddlewareFactory](file:///e:/tap_hoa_so/digitalmarket_be_v2/digitalmarket_be_v2/Presentation/API/Digitalmarket.Controller.Base/AppCoreFactory/MiddlewareFactory.cs#5-15) — Đăng ký Middleware
+
+[MiddlewareFactory.cs](file:///e:/tap_hoa_so/digitalmarket_be_v2/digitalmarket_be_v2/Presentation/API/Digitalmarket.Controller.Base/AppCoreFactory/MiddlewareFactory.cs)
+
+```csharp
+public static IApplicationBuilder MiddlewareRegistration(this IApplicationBuilder builder)
+{
+    builder.UseMiddleware<AuthenMiddleware>();       // 1. Xác thực JWT
+    builder.UseMiddleware<ApplicationMiddleware>();  // 2. Xử lý exception
+    return builder;
+}
+```
+
+---
+
+### 3.7. Pipeline tổng thể trong Program.cs (Auth API)
+
+[Program.cs](file:///e:/tap_hoa_so/digitalmarket_be_v2/digitalmarket_be_v2/Presentation/API/Digitalmarket.Controller.Auth/Program.cs)
+
+```
+1. Đọc config: auth.json, connection.json
+2. Đăng ký Swagger + API Documentation
+3. Đăng ký LazyLoad DI (CachedServiceProvider, LazyloadProvider)
+4. Đăng ký Auth services (UseAppAuthenFactory — hiện rỗng)
+5. Bind config: AuthConfig, ConnectionString
+6. Middleware pipeline:
+   → AuthenMiddleware (JWT check)
+   → ApplicationMiddleware (error handling)
+   → UseHttpsRedirection
+   → UseAuthorization
+   → MapControllers
+```
+
+> [!WARNING]
+> Auth Controllers folder hiện tại **trống** — chưa có endpoint nào cho register/login/logout.
+
+---
+
+## 4. Những gì CÒN THIẾU (so với ASP.NET Core Identity đầy đủ)
+
+| Tính năng | Hiện tại | Cần bổ sung |
+|-----------|----------|-------------|
+| **User Management** | ❌ Chưa có | Tạo `ApplicationUser` model, CRUD user |
+| **Role Management** | ❌ Chưa có | Tạo roles (Admin, User, Manager...) |
+| **Database User Storage** | ❌ Chưa có | `IdentityDbContext` + EF Core migrations |
+| **Register API** | ❌ Chưa có | `POST /api/auth/register` |
+| **Login API** | ❌ Chưa có | `POST /api/auth/login` → trả JWT |
+| **Password Hashing** | ❌ Chưa có | PBKDF2 qua Identity |
+| **Refresh Token** | ⚠️ Config có nhưng chưa implement | Endpoint + logic |
+| **JWT Generation** | ❌ Chỉ có validate | Cần thêm tạo token |
+| **Claims/User Info** | ❌ Chưa gắn vào HttpContext | Set `HttpContext.User` |
+| **Email Confirmation** | ❌ | Optional |
+| **2FA** | ❌ | Optional |
+
+---
+
+## 5. Kế hoạch tích hợp ASP.NET Core Identity
+
+### Bước 1: Cài NuGet Packages
+
+| Package | Cài vào project |
+|---------|----------------|
+| `Microsoft.AspNetCore.Identity.EntityFrameworkCore` | `Host.Base` hoặc tạo project mới trong **Core/Infrastructure** |
+| `Microsoft.EntityFrameworkCore.SqlServer` | Project chứa DbContext |
+| `Microsoft.AspNetCore.Authentication.JwtBearer` | `Host.Base` hoặc `Controller.Auth` |
+
+### Bước 2: Tạo project Domain/Infrastructure (đang trống)
+
+Tạo 2 project mới theo Clean Architecture:
+
+```
+Core/
+└── Project.DigitalMarket.Domain/    ← [NEW] Entities, Interfaces
+    ├── Entities/
+    │   └── ApplicationUser.cs       ← Kế thừa IdentityUser
+    └── Interfaces/
+        └── IAuthService.cs
+
+Infrastructure/
+└── Project.DigitalMarket.Infrastructure/  ← [NEW] EF Core, Identity stores
+    ├── Data/
+    │   └── DigitalMarketDbContext.cs       ← Kế thừa IdentityDbContext<ApplicationUser>
+    └── Services/
+        └── AuthService.cs                 ← Implement login/register/token generation
+```
+
+### Bước 3: Tạo DbContext với Identity
+
+```csharp
+public class DigitalMarketDbContext : IdentityDbContext<ApplicationUser>
+{
+    // Tự động có bảng: AspNetUsers, AspNetRoles, AspNetUserRoles...
+}
+```
+
+### Bước 4: Cấu hình Identity Services
+
+Trong `AppCoreFactory.UseAppAuthenFactory()`:
+```csharp
+public static IServiceCollection UseAppAuthenFactory(this IServiceCollection services)
+{
+    services.AddIdentity<ApplicationUser, IdentityRole>(options => { ... })
+        .AddEntityFrameworkStores<DigitalMarketDbContext>()
+        .AddDefaultTokenProviders();
+    
+    services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+        .AddJwtBearer(options => { ... });
+    
+    return services;
+}
+```
+
+### Bước 5: Tạo Auth Controllers
+
+Trong `Digitalmarket.Controller.Auth/Controllers/`:
+- `AuthController.cs` — Login, Register, RefreshToken, Logout
+
+### Bước 6: Cập nhật AuthenMiddleware
+
+Chuyển từ custom middleware validate sang sử dụng `app.UseAuthentication()` built-in, hoặc giữ lại middleware và bổ sung gắn `ClaimsPrincipal` vào `HttpContext.User`.
+
+### Bước 7: Database Migration
+
+```bash
+dotnet ef migrations add AddIdentity -p Infrastructure -s Presentation/API/Digitalmarket.Controller.Auth
+dotnet ef database update
+```
+
+---
+
+## 6. Hai hướng tiếp cận
+
+| | Hướng 1: Dùng ASP.NET Core Identity đầy đủ | Hướng 2: Custom JWT (giữ nguyên kiến trúc hiện tại) |
+|---|---|---|
+| **Ưu điểm** | Có sẵn User/Role management, password hashing, 2FA, email confirm | Nhẹ, linh hoạt, không phụ thuộc EF Core |
+| **Nhược điểm** | Phụ thuộc EF Core + SQL Server, thêm 7 bảng DB | Phải tự implement mọi thứ (password hash, user CRUD, role) |
+| **Phù hợp khi** | Cần hệ thống auth đầy đủ, có frontend/admin panel | Microservice nhỏ, chỉ cần xác thực token |
+| **Thay đổi cần thiết** | Tạo 2 project mới (Domain + Infrastructure), sửa [AppCoreFactory](file:///e:/tap_hoa_so/digitalmarket_be_v2/digitalmarket_be_v2/Presentation/API/Digitalmarket.Controller.Base/AppCoreFactory/AppCoreFactory.cs#8-57) | Chỉ bổ sung Controllers + Token generation service |
+
+> [!NOTE]
+> Dựa trên kiến trúc Clean Architecture và việc project đã có sẵn config cho JWT (SecretKey, Issuer, Audience, ExpiresTime, RefreshTokenTime), **Hướng 1 (ASP.NET Core Identity)** được khuyến nghị vì phù hợp với quy mô project DigitalMarket.

@@ -1,0 +1,33 @@
+{
+  "ProducerCommon": {
+    "BootstrapServers": "localhost:9092",
+    "Topic": "demo",
+    "Partitions": 6,
+    // Số bản sao của topic lưu trữ offset để tăng độ bền dữ liệu (số replicate luôn bằng số lượng broker trong cluster để phát huy tối đa hiệu năng),
+    // nếu lớn hơn thì k có ý nghĩa vì bản chất là sao lưu để đảm bảo an toàn dữ liệu 1 broker chết thì sẽ còn 1 bản sao của partition ở 1 broker kahcs có thể tiếp tục làm nhiệm vụ
+    "ReplicationFactor": 3
+  },
+  //----------------------------------------
+  "TestNumberOneKafka": {
+    "Cunsumer": {
+      "AutoOffsetReset": "Earliest", // Từ đầu topic nếu chưa có offset nào được commit
+      "EnableAutoCommit": true, // Tắt tự động commit offset (kiểu nhận xử lý không cần quan tâm có xử lý logic thành công không, cứ đánh đã hoàn thành trước đã)
+      "BootstrapServers": "localhost:9092",
+      "GroupId": "my-consumer-group",
+      "Topic": "demo",
+      "SessionTimeoutMs": 20, // Ping tới Coordinator mỗi 20ms để bảo đảm consumer đang lắng nghe partition không bị coi là mất kết nối, nếu mất sẽ tự động phân bổ lại partition cho consumer khác trong cùng group
+      "HeartbeatIntervalMs": 30, //Ping coordinator
+      //"MaxPollIntervalMs": 50000, //Max time xử lý
+      "auto.create.topics.enable": true
+    }
+  }
+  //"TestNumberTwoKafka": { // sẽ là 1 option khác sử lý riêng cho các event kafka khác
+  //  "Cunsumer": {
+  //    "AutoOffsetReset": "Earliest",
+  //    "EnableAutoCommit": true,
+  //    "BootstrapServers": "localhost:9092",
+  //    "GroupId": "my-consumer-group",
+  //    "Topic": "demo"
+  //  }
+  //}
+}
