@@ -4,8 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using Project.DigitalMarket.Domain.Entities;
-using Project.DigitalMarket.Domain.Interfaces;
-using Project.DigitalMarket.Host.Base.Configs;
+using Project.DigitalMarket.Domain.Services;
 using Project.DigitalMarket.Infrastructure.Data;
 using Project.DigitalMarket.Infrastructure.Services;
 using Project.DigitalMarket.Libs.DependencyInjection;
@@ -39,7 +38,7 @@ namespace Digitalmarket.Controller.Base.AppCoreFactory
                 options.UseSqlServer(connectionString));
 
             // 2. Đăng ký Identity
-            services.AddIdentity<ApplicationUser, IdentityRole>(options =>
+            services.AddIdentity<UserEntity, IdentityRole<Guid>>(options =>
             {
                 options.Password.RequireDigit = true;
                 options.Password.RequiredLength = 6;
@@ -72,6 +71,20 @@ namespace Digitalmarket.Controller.Base.AppCoreFactory
                     ValidAudience = authConfig["Audience"],
                     ValidateLifetime = true,
                     ClockSkew = TimeSpan.Zero
+                };
+                options.Events = new JwtBearerEvents
+                {
+                    OnMessageReceived = context =>
+                    {
+                        var token = context.Request.Headers["Authorization"].FirstOrDefault()
+                                 ?? context.Request.Headers["Authentication"].FirstOrDefault();
+
+                        if (!string.IsNullOrEmpty(token) && token.StartsWith("Bearer ", StringComparison.OrdinalIgnoreCase))
+                        {
+                            context.Token = token.Substring("Bearer ".Length).Trim();
+                        }
+                        return Task.CompletedTask;
+                    }
                 };
             });
 

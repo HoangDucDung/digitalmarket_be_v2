@@ -1,0 +1,21 @@
+# Visual Studio .gitignore
+.vs/
+[Bb]in/
+[Oo]bj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+# Rider
+.idea/
+# General
+*.log
+*.swp
+*.bak
+# Local settings
+appsettings.Local.json
+# Build logs
+build.log
+build_log.txt
+errors.txt
+errors2.txt
