@@ -138,7 +138,6 @@ E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalma
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Auth\bin\Debug\net8.0\Project.DigitalMarket.Infrastructure.pdb
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Auth\bin\Debug\net8.0\Project.DigitalMarket.Domain.pdb
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Auth\obj\Debug\net8.0\Digitalmarket.Controller.Auth.sourcelink.json
-E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Auth\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Auth\bin\Debug\net8.0\Azure.Core.dll
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Auth\bin\Debug\net8.0\Azure.Identity.dll
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Auth\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
