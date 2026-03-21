@@ -73,6 +73,78 @@
         }
       }
     },
+    "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application\\Project.DigitalMarket.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application\\Project.DigitalMarket.Application.csproj",
+        "projectName": "Project.DigitalMarket.Application",
+        "projectPath": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application\\Project.DigitalMarket.Application.csproj",
+        "packagesPath": "C:\\Users\\FPTSHOP\\.nuget\\packages\\",
+        "outputPath": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\FPTSHOP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application.Contract\\Project.DigitalMarket.Application.Contract.csproj": {
+                "projectPath": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application.Contract\\Project.DigitalMarket.Application.Contract.csproj"
+              },
+              "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain\\Project.DigitalMarket.Domain.csproj": {
+                "projectPath": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain\\Project.DigitalMarket.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain.Share\\Project.DigitalMarket.Domain.Share.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -314,9 +386,6 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application.Contract\\Project.DigitalMarket.Application.Contract.csproj": {
-                "projectPath": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application.Contract\\Project.DigitalMarket.Application.Contract.csproj"
-              },
               "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain\\Project.DigitalMarket.Domain.csproj": {
                 "projectPath": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain\\Project.DigitalMarket.Domain.csproj"
               },
@@ -572,6 +641,9 @@
             "projectReferences": {
               "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application.Contract\\Project.DigitalMarket.Application.Contract.csproj": {
                 "projectPath": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application.Contract\\Project.DigitalMarket.Application.Contract.csproj"
+              },
+              "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application\\Project.DigitalMarket.Application.csproj": {
+                "projectPath": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application\\Project.DigitalMarket.Application.csproj"
               },
               "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure\\Project.DigitalMarket.Infrastructure.csproj": {
                 "projectPath": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure\\Project.DigitalMarket.Infrastructure.csproj"

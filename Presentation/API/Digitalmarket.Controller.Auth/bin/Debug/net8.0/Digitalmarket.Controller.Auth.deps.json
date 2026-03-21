@@ -963,6 +963,7 @@
       },
       "Digitalmarket.Controller.Base/1.0.0": {
         "dependencies": {
+          "Project.DigitalMarket.Application": "1.0.0",
           "Project.DigitalMarket.Application.Contract": "1.0.0",
           "Project.DigitalMarket.Host.Base": "1.0.0",
           "Project.DigitalMarket.Infrastructure": "1.0.0",
@@ -970,6 +971,18 @@
         },
         "runtime": {
           "Digitalmarket.Controller.Base.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Project.DigitalMarket.Application/1.0.0": {
+        "dependencies": {
+          "Project.DigitalMarket.Application.Contract": "1.0.0",
+          "Project.DigitalMarket.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Project.DigitalMarket.Application.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -1038,7 +1051,6 @@
         "dependencies": {
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.8",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.8",
-          "Project.DigitalMarket.Application.Contract": "1.0.0",
           "Project.DigitalMarket.Domain": "1.0.0",
           "Project.DigitalMarket.Host.Base": "1.0.0"
         },
@@ -1651,6 +1663,11 @@
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
     },
     "Digitalmarket.Controller.Base/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Project.DigitalMarket.Application/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

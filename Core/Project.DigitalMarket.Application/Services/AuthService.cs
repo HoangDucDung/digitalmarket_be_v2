@@ -1,32 +1,22 @@
 using Microsoft.AspNetCore.Identity;
-using Microsoft.Extensions.Options;
 using Project.DigitalMarket.Application.Contract.DTOs;
 using Project.DigitalMarket.Domain.Entities;
 using Project.DigitalMarket.Domain.Managers.Auths;
-using Project.DigitalMarket.Host.Base.Configs;
 using Project.DigitalMarket.Libs.Exceptions;
 using Project.DigitalMarket.Domain.Services;
+using Project.DigitalMarket.Libs.DependencyInjection;
 
-namespace Project.DigitalMarket.Infrastructure.Services
+namespace Project.DigitalMarket.Application.Services
 {
     /// <summary>
-    /// Service xử lý đăng ký, đăng nhập và tạo JWT token
+    /// Service xử lý đăng ký, đăng nhập và tạo JWT token.
+    /// Chuyển từ Infrastructure sang Application theo kiến trúc Clean Architecture.
     /// </summary>
-    public class AuthService : IAuthService
+    public class AuthService(ILazyloadProvider lazyloadProvider) : DigitalMarketServiceBase(lazyloadProvider), IAuthService
     {
-        private readonly UserManager<UserEntity> _userManager;
-        private readonly SignInManager<UserEntity> _signInManager;
-        private readonly IAuthManager _authManager;
-
-        public AuthService(
-            UserManager<UserEntity> userManager,
-            SignInManager<UserEntity> signInManager,
-            IAuthManager authManager)
-        {
-            _userManager = userManager;
-            _signInManager = signInManager;
-            _authManager = authManager;
-        }
+        private UserManager<UserEntity> _userManager => _lazyloadProvider.GetRequiredService<UserManager<UserEntity>>();
+        private SignInManager<UserEntity> _signInManager => _lazyloadProvider.GetRequiredService<SignInManager<UserEntity>>();
+        private IAuthManager _authManager => _lazyloadProvider.GetRequiredService<IAuthManager>();
 
         /// <summary>
         /// Đăng ký tài khoản mới

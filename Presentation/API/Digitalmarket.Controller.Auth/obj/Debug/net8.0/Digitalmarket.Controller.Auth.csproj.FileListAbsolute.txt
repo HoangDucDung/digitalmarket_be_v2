@@ -166,3 +166,6 @@ E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalma
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Auth\bin\Debug\net8.0\Project.DigitalMarket.Domain.Share.dll
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Auth\bin\Debug\net8.0\Project.DigitalMarket.Application.Contract.pdb
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Auth\bin\Debug\net8.0\Project.DigitalMarket.Domain.Share.pdb
+E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Auth\bin\Debug\net8.0\Project.DigitalMarket.Application.dll
+E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Auth\bin\Debug\net8.0\Project.DigitalMarket.Application.pdb
+E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Auth\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

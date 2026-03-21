@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Project.DigitalMarket.Libs")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+40348b529a3d08185a9e881e2fd57922be8ebe35")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+19e4fc4aa5f8c0e68cba49dc7f05f3a130dddf08")]
 [assembly: System.Reflection.AssemblyProductAttribute("Project.DigitalMarket.Libs")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Project.DigitalMarket.Libs")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
