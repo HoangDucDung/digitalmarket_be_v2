@@ -23,20 +23,21 @@ namespace Project.DigitalMarket.Domain.Managers.Auths
         {
             var user = await _authRepository.GetUserByEmailAsync(request.Email);
 
-            if(user == null) 
+            if (user == null)
                 throw new BusinessException("User not found");
 
-            var isPasswordValid = VerifyHashedPassword(request.Password, request.Password);
+            var isPasswordValid = VerifyHashedPassword(request.Password, user.PasswordHash);
 
-            if(!isPasswordValid) 
+            if (!isPasswordValid)
                 throw new BusinessException("Invalid password");
 
-            var token = GenerateToken(user);
+            var infoToken = GenerateJwtToken(user);
+            infoToken.RefreshToken = GenerateRefreshToken();
 
             // Lưu refresh token vào database hoặc cache nếu cần thiết
-            await _authRepository.SaveRefreshTokenAsync(user.Id, token.RefreshToken);
+            await _authRepository.SaveRefreshTokenAsync(user.Id, infoToken.RefreshToken);
 
-            return token;
+            return infoToken;
         }
 
         /// <summary>
@@ -53,30 +54,39 @@ namespace Project.DigitalMarket.Domain.Managers.Auths
         }
 
         /// <summary>
-        /// Tạo JWT token
+        /// Tạo JWT token từ thông tin user
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>
-        private InfoToken GenerateToken(UserEntity user)
+        public InfoToken GenerateJwtToken(UserEntity user)
         {
-            var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.UTF8.GetBytes(_authConfig.SecretKey);
-            var tokenDescriptor = new SecurityTokenDescriptor
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_authConfig.SecretKey));
+            var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+            var expiration = DateTime.UtcNow.AddMinutes(_authConfig.ExpiresTime);
+
+            var claims = new List<Claim>
             {
-                Subject = new ClaimsIdentity(
-                [
-                    new Claim(AppClaimTypes.UserId, user.Id.ToString()),
-                    new Claim(AppClaimTypes.Email, user.Email ?? string.Empty),
-                    new Claim(AppClaimTypes.Role, user.Role)
-                ]),
-                Expires = DateTime.UtcNow.AddHours(4),
-                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
+                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+                new Claim(ClaimTypes.Email, user.Email ?? string.Empty),
+                new Claim(ClaimTypes.Name, user.FullName),
+                new Claim(ClaimTypes.Role, user.Role),
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
             };
-            var token = tokenHandler.CreateToken(tokenDescriptor);
+
+            var token = new JwtSecurityToken(
+                issuer: _authConfig.Issuer,
+                audience: _authConfig.Audience,
+                claims: claims,
+                expires: expiration,
+                signingCredentials: credentials
+            );
+
             return new InfoToken
             {
-                AccessToken = tokenHandler.WriteToken(token),
-                RefreshToken = GenerateRefreshToken()
+                Token = new JwtSecurityTokenHandler().WriteToken(token),
+                Expiration = expiration,
+                FullName = user.FullName,
+                Email = user.Email ?? string.Empty
             };
         }
 

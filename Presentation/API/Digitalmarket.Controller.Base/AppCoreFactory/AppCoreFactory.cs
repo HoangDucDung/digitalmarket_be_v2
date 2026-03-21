@@ -1,13 +1,16 @@
-﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Project.DigitalMarket.Domain.Entities;
+using Project.DigitalMarket.Domain.Managers.Auths;
 using Project.DigitalMarket.Domain.Services;
 using Project.DigitalMarket.Infrastructure.Data;
 using Project.DigitalMarket.Infrastructure.Services;
 using Project.DigitalMarket.Libs.DependencyInjection;
+using System.Security.Claims;
 using System.Text;
 
 namespace Digitalmarket.Controller.Base.AppCoreFactory
@@ -115,14 +118,14 @@ namespace Digitalmarket.Controller.Base.AppCoreFactory
         }
 
         /// <summary>
-        /// DI cho domain logic
+        /// DI cho domain logic (Manager)
         /// </summary>
         /// <param name="services"></param>
         /// <returns></returns>
         public static IServiceCollection UseAppManagerFactory(this IServiceCollection services)
         {
+            services.AddScoped<IAuthManager, AuthManager>();
             return services;
         }
     }
 }
-

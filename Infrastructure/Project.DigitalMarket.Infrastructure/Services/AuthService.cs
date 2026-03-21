@@ -1,14 +1,10 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
-using Microsoft.IdentityModel.Tokens;
 using Project.DigitalMarket.Application.Contract.DTOs;
 using Project.DigitalMarket.Domain.Entities;
-using Project.DigitalMarket.Domain.Repositories.Auths;
+using Project.DigitalMarket.Domain.Managers.Auths;
 using Project.DigitalMarket.Host.Base.Configs;
 using Project.DigitalMarket.Libs.Exceptions;
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using System.Text;
 using Project.DigitalMarket.Domain.Services;
 
 namespace Project.DigitalMarket.Infrastructure.Services
@@ -20,16 +16,16 @@ namespace Project.DigitalMarket.Infrastructure.Services
     {
         private readonly UserManager<UserEntity> _userManager;
         private readonly SignInManager<UserEntity> _signInManager;
-        private readonly AuthConfig _authConfig;
+        private readonly IAuthManager _authManager;
 
         public AuthService(
             UserManager<UserEntity> userManager,
             SignInManager<UserEntity> signInManager,
-            IOptions<AuthConfig> authConfig)
+            IAuthManager authManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
-            _authConfig = authConfig.Value;
+            _authManager = authManager;
         }
 
         /// <summary>
@@ -86,37 +82,18 @@ namespace Project.DigitalMarket.Infrastructure.Services
         }
 
         /// <summary>
-        /// Tạo JWT token từ thông tin user
+        /// Tạo JWT token từ thông tin user thông qua Manager
         /// </summary>
         private AuthResponseDto GenerateJwtToken(UserEntity user)
         {
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_authConfig.SecretKey));
-            var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-            var expiration = DateTime.UtcNow.AddMinutes(_authConfig.ExpiresTime);
-
-            var claims = new List<Claim>
-            {
-                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                new Claim(ClaimTypes.Email, user.Email ?? string.Empty),
-                new Claim(ClaimTypes.Name, user.FullName),
-                new Claim(ClaimTypes.Role, user.Role),
-                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
-            };
-
-            var token = new JwtSecurityToken(
-                issuer: _authConfig.Issuer,
-                audience: _authConfig.Audience,
-                claims: claims,
-                expires: expiration,
-                signingCredentials: credentials
-            );
+            var infoToken = _authManager.GenerateJwtToken(user);
 
             return new AuthResponseDto
             {
-                Token = new JwtSecurityTokenHandler().WriteToken(token),
-                Expiration = expiration,
-                FullName = user.FullName,
-                Email = user.Email ?? string.Empty
+                Token = infoToken.Token,
+                Expiration = infoToken.Expiration,
+                FullName = infoToken.FullName,
+                Email = infoToken.Email
             };
         }
     }
