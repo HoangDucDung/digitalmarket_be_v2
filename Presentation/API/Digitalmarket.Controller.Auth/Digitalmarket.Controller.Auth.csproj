@@ -18,7 +18,6 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\Digitalmarket.Controller.Base\Digitalmarket.Controller.Base.csproj" />
-		<ProjectReference Include="..\..\..\Infrastructure\Project.DigitalMarket.Infrastructure\Project.DigitalMarket.Infrastructure.csproj" />
 	</ItemGroup>
 
 </Project>

@@ -4,5 +4,33 @@
         <name>Digitalmarket.Controller.Auth</name>
     </assembly>
     <members>
+        <member name="T:Digitalmarket.Controller.Auth.Controllers.AuthController">
+            <summary>
+            Controller xử lý xác thực: đăng ký và đăng nhập
+            </summary>
+        </member>
+        <member name="M:Digitalmarket.Controller.Auth.Controllers.AuthController.#ctor(Project.DigitalMarket.Libs.DependencyInjection.ILazyloadProvider)">
+            <summary>
+            Controller xử lý xác thực: đăng ký và đăng nhập
+            </summary>
+        </member>
+        <member name="M:Digitalmarket.Controller.Auth.Controllers.AuthController.Register(Project.DigitalMarket.Application.Contract.DTOs.RegisterDto)">
+            <summary>
+            Đăng ký tài khoản mới
+            </summary>
+            <param name="registerDto">Thông tin đăng ký (Email, Password, FullName)</param>
+            <returns>JWT token và thông tin user</returns>
+            <response code="200">Đăng ký thành công, trả về token</response>
+            <response code="422">Dữ liệu không hợp lệ hoặc email đã tồn tại</response>
+        </member>
+        <member name="M:Digitalmarket.Controller.Auth.Controllers.AuthController.Login(Project.DigitalMarket.Application.Contract.DTOs.LoginDto)">
+            <summary>
+            Đăng nhập
+            </summary>
+            <param name="loginDto">Thông tin đăng nhập (Email, Password)</param>
+            <returns>JWT token và thông tin user</returns>
+            <response code="200">Đăng nhập thành công, trả về token</response>
+            <response code="401">Email hoặc mật khẩu không đúng</response>
+        </member>
     </members>
 </doc>

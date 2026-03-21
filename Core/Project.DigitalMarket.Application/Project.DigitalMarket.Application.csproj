@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Project.DigitalMarket.Application.Contract\Project.DigitalMarket.Application.Contract.csproj" />
+    <ProjectReference Include="..\Project.DigitalMarket.Domain\Project.DigitalMarket.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

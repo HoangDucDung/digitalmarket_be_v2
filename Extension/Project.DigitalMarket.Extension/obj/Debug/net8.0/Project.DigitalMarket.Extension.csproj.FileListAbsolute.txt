@@ -9,3 +9,4 @@ E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Extension\Project.DigitalM
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Extension\Project.DigitalMarket.Extension\obj\Debug\net8.0\refint\Project.DigitalMarket.Extension.dll
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Extension\Project.DigitalMarket.Extension\obj\Debug\net8.0\Project.DigitalMarket.Extension.pdb
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Extension\Project.DigitalMarket.Extension\obj\Debug\net8.0\ref\Project.DigitalMarket.Extension.dll
+E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Extension\Project.DigitalMarket.Extension\obj\Debug\net8.0\Project.DigitalMarket.Extension.sourcelink.json

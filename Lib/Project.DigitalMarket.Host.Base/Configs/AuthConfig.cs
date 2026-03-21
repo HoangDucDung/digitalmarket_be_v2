@@ -1,6 +1,8 @@
-﻿namespace Project.DigitalMarket.Host.Base.Configs
+﻿using Project.DigitalMarket.Domain.Share.Config;
+
+namespace Project.DigitalMarket.Host.Base.Configs
 {
-    public class AuthConfig
+    public class AuthConfig : IAuthConfig
     {
         public string SecretKey { get; set; } = string.Empty;
         public string Issuer { get; set; } = string.Empty;

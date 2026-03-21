@@ -11,7 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\Project.DigitalMarket.Application.Contract\Project.DigitalMarket.Application.Contract.csproj" />
     <ProjectReference Include="..\..\..\Lib\Project.DigitalMarket.Host.Base\Project.DigitalMarket.Host.Base.csproj" />
+    <ProjectReference Include="..\..\..\Infrastructure\Project.DigitalMarket.Infrastructure\Project.DigitalMarket.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

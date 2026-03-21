@@ -30,7 +30,7 @@ namespace Digitalmarket.Controller.Auth
 
             // Đăng ký các dịch vụ tùy chỉnh
             builder.Services.AddLazyloadFactory();
-            builder.Services.UseAppAuthenFactory();
+            builder.Services.UseAppAuthenFactory(builder.Configuration);
 
             // Đăng ký các options
             builder.Services.GetAuthConfig(builder.Configuration);
@@ -47,6 +47,7 @@ namespace Digitalmarket.Controller.Auth
 
             app.UseHttpsRedirection();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapControllers();
@@ -55,3 +56,4 @@ namespace Digitalmarket.Controller.Auth
         }
     }
 }
+

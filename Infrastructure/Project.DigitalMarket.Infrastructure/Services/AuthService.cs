@@ -1,14 +1,15 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using Project.DigitalMarket.Domain.DTOs;
+using Project.DigitalMarket.Application.Contract.DTOs;
 using Project.DigitalMarket.Domain.Entities;
-using Project.DigitalMarket.Domain.Interfaces;
+using Project.DigitalMarket.Domain.Repositories.Auths;
 using Project.DigitalMarket.Host.Base.Configs;
 using Project.DigitalMarket.Libs.Exceptions;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using Project.DigitalMarket.Domain.Services;
 
 namespace Project.DigitalMarket.Infrastructure.Services
 {
@@ -17,13 +18,13 @@ namespace Project.DigitalMarket.Infrastructure.Services
     /// </summary>
     public class AuthService : IAuthService
     {
-        private readonly UserManager<ApplicationUser> _userManager;
-        private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly UserManager<UserEntity> _userManager;
+        private readonly SignInManager<UserEntity> _signInManager;
         private readonly AuthConfig _authConfig;
 
         public AuthService(
-            UserManager<ApplicationUser> userManager,
-            SignInManager<ApplicationUser> signInManager,
+            UserManager<UserEntity> userManager,
+            SignInManager<UserEntity> signInManager,
             IOptions<AuthConfig> authConfig)
         {
             _userManager = userManager;
@@ -43,7 +44,7 @@ namespace Project.DigitalMarket.Infrastructure.Services
                 throw new BusinessException("Email đã được sử dụng.");
             }
 
-            var user = new ApplicationUser
+            var user = new UserEntity
             {
                 UserName = registerDto.Email,
                 Email = registerDto.Email,
@@ -87,7 +88,7 @@ namespace Project.DigitalMarket.Infrastructure.Services
         /// <summary>
         /// Tạo JWT token từ thông tin user
         /// </summary>
-        private AuthResponseDto GenerateJwtToken(ApplicationUser user)
+        private AuthResponseDto GenerateJwtToken(UserEntity user)
         {
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_authConfig.SecretKey));
             var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
@@ -95,7 +96,6 @@ namespace Project.DigitalMarket.Infrastructure.Services
 
             var claims = new List<Claim>
             {
-                new Claim(ClaimTypes.NameIdentifier, user.Id),
                 new Claim(ClaimTypes.Email, user.Email ?? string.Empty),
                 new Claim(ClaimTypes.Name, user.FullName),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())

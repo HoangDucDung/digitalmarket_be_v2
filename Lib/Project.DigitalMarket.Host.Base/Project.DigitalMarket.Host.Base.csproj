@@ -14,8 +14,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <ProjectReference Include="..\..\Core\Project.DigitalMarket.Domain.Share\Project.DigitalMarket.Domain.Share.csproj" />
 	  <ProjectReference Include="..\Project.DigitalMarket.Libs\Project.DigitalMarket.Libs.csproj" />
-	  <ProjectReference Include="..\..\Core\Project.DigitalMarket.Domain\Project.DigitalMarket.Domain.csproj" />
 	</ItemGroup>
 
 </Project>

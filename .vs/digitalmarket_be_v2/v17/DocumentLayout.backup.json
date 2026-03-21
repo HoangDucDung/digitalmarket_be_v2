@@ -3,36 +3,120 @@
   "WorkspaceRootPath": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B1AD8D9D-46A6-4573-A700-9241A39854BD}|Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\lib\\project.digitalmarket.host.base\\bases\\apidocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B1AD8D9D-46A6-4573-A700-9241A39854BD}|Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj|solutionrelative:lib\\project.digitalmarket.host.base\\bases\\apidocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B1AD8D9D-46A6-4573-A700-9241A39854BD}|Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\lib\\project.digitalmarket.host.base\\middleware\\authenmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1AD8D9D-46A6-4573-A700-9241A39854BD}|Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj|solutionrelative:lib\\project.digitalmarket.host.base\\middleware\\authenmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{729EE164-7CFB-48A1-82E2-9F470404A2D3}|Presentation\\API\\Digitalmarket.Controller.Base\\Digitalmarket.Controller.Base.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\presentation\\api\\digitalmarket.controller.base\\appcorefactory\\appcorefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{729EE164-7CFB-48A1-82E2-9F470404A2D3}|Presentation\\API\\Digitalmarket.Controller.Base\\Digitalmarket.Controller.Base.csproj|solutionrelative:presentation\\api\\digitalmarket.controller.base\\appcorefactory\\appcorefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{66714ECB-B380-40BA-94DC-42DE183E8DD4}|Presentation\\API\\Digitalmarket.Controller.Auth\\Digitalmarket.Controller.Auth.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\presentation\\api\\digitalmarket.controller.auth\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{66714ECB-B380-40BA-94DC-42DE183E8DD4}|Presentation\\API\\Digitalmarket.Controller.Auth\\Digitalmarket.Controller.Auth.csproj|solutionrelative:presentation\\api\\digitalmarket.controller.auth\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{12FA3841-3D7C-47B3-8A2B-E5744D31572F}|Core\\Project.DigitalMarket.Domain\\Project.DigitalMarket.Domain.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\core\\project.digitalmarket.domain\\repositories\\base\\irepositorybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12FA3841-3D7C-47B3-8A2B-E5744D31572F}|Core\\Project.DigitalMarket.Domain\\Project.DigitalMarket.Domain.csproj|solutionrelative:core\\project.digitalmarket.domain\\repositories\\base\\irepositorybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{66714ECB-B380-40BA-94DC-42DE183E8DD4}|Presentation\\API\\Digitalmarket.Controller.Auth\\Digitalmarket.Controller.Auth.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\presentation\\api\\digitalmarket.controller.auth\\digitalmarket.controller.auth.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{66714ECB-B380-40BA-94DC-42DE183E8DD4}|Presentation\\API\\Digitalmarket.Controller.Auth\\Digitalmarket.Controller.Auth.csproj|solutionrelative:presentation\\api\\digitalmarket.controller.auth\\digitalmarket.controller.auth.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{66714ECB-B380-40BA-94DC-42DE183E8DD4}|Presentation\\API\\Digitalmarket.Controller.Auth\\Digitalmarket.Controller.Auth.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\presentation\\api\\digitalmarket.controller.auth\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66714ECB-B380-40BA-94DC-42DE183E8DD4}|Presentation\\API\\Digitalmarket.Controller.Auth\\Digitalmarket.Controller.Auth.csproj|solutionrelative:presentation\\api\\digitalmarket.controller.auth\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B1AD8D9D-46A6-4573-A700-9241A39854BD}|Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\lib\\project.digitalmarket.host.base\\bases\\configurationbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B1AD8D9D-46A6-4573-A700-9241A39854BD}|Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj|solutionrelative:lib\\project.digitalmarket.host.base\\bases\\configurationbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{24ECFF31-CDEA-4317-9119-6D34B3F585B5}|Infrastructure\\Project.DigitalMarket.Infrastructure\\Project.DigitalMarket.Infrastructure.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\infrastructure\\project.digitalmarket.infrastructure\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24ECFF31-CDEA-4317-9119-6D34B3F585B5}|Infrastructure\\Project.DigitalMarket.Infrastructure\\Project.DigitalMarket.Infrastructure.csproj|solutionrelative:infrastructure\\project.digitalmarket.infrastructure\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12FA3841-3D7C-47B3-8A2B-E5744D31572F}|Core\\Project.DigitalMarket.Domain\\Project.DigitalMarket.Domain.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\core\\project.digitalmarket.domain\\managers\\auths\\authmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12FA3841-3D7C-47B3-8A2B-E5744D31572F}|Core\\Project.DigitalMarket.Domain\\Project.DigitalMarket.Domain.csproj|solutionrelative:core\\project.digitalmarket.domain\\managers\\auths\\authmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2025ABF-D38A-4636-9EE2-410957A94873}|Core\\Project.DigitalMarket.Domain.Share\\Project.DigitalMarket.Domain.Share.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\core\\project.digitalmarket.domain.share\\constants\\auths\\appclaimtypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2025ABF-D38A-4636-9EE2-410957A94873}|Core\\Project.DigitalMarket.Domain.Share\\Project.DigitalMarket.Domain.Share.csproj|solutionrelative:core\\project.digitalmarket.domain.share\\constants\\auths\\appclaimtypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12FA3841-3D7C-47B3-8A2B-E5744D31572F}|Core\\Project.DigitalMarket.Domain\\Project.DigitalMarket.Domain.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\core\\project.digitalmarket.domain\\entities\\userentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12FA3841-3D7C-47B3-8A2B-E5744D31572F}|Core\\Project.DigitalMarket.Domain\\Project.DigitalMarket.Domain.csproj|solutionrelative:core\\project.digitalmarket.domain\\entities\\userentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12FA3841-3D7C-47B3-8A2B-E5744D31572F}|Core\\Project.DigitalMarket.Domain\\Project.DigitalMarket.Domain.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\core\\project.digitalmarket.domain\\repositories\\auths\\iauthrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12FA3841-3D7C-47B3-8A2B-E5744D31572F}|Core\\Project.DigitalMarket.Domain\\Project.DigitalMarket.Domain.csproj|solutionrelative:core\\project.digitalmarket.domain\\repositories\\auths\\iauthrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1AD8D9D-46A6-4573-A700-9241A39854BD}|Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\lib\\project.digitalmarket.host.base\\middleware\\applicationmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1AD8D9D-46A6-4573-A700-9241A39854BD}|Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj|solutionrelative:lib\\project.digitalmarket.host.base\\middleware\\applicationmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E73F3C6E-BB6C-4E29-BEB0-268AB51FB728}|Core\\Project.DigitalMarket.Application.Contract\\Project.DigitalMarket.Application.Contract.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\core\\project.digitalmarket.application.contract\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E73F3C6E-BB6C-4E29-BEB0-268AB51FB728}|Core\\Project.DigitalMarket.Application.Contract\\Project.DigitalMarket.Application.Contract.csproj|solutionrelative:core\\project.digitalmarket.application.contract\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12FA3841-3D7C-47B3-8A2B-E5744D31572F}|Core\\Project.DigitalMarket.Domain\\Project.DigitalMarket.Domain.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\core\\project.digitalmarket.domain\\managers\\managerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12FA3841-3D7C-47B3-8A2B-E5744D31572F}|Core\\Project.DigitalMarket.Domain\\Project.DigitalMarket.Domain.csproj|solutionrelative:core\\project.digitalmarket.domain\\managers\\managerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12FA3841-3D7C-47B3-8A2B-E5744D31572F}|Core\\Project.DigitalMarket.Domain\\Project.DigitalMarket.Domain.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\core\\project.digitalmarket.domain\\managers\\auths\\iauthmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12FA3841-3D7C-47B3-8A2B-E5744D31572F}|Core\\Project.DigitalMarket.Domain\\Project.DigitalMarket.Domain.csproj|solutionrelative:core\\project.digitalmarket.domain\\managers\\auths\\iauthmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12FA3841-3D7C-47B3-8A2B-E5744D31572F}|Core\\Project.DigitalMarket.Domain\\Project.DigitalMarket.Domain.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\core\\project.digitalmarket.domain\\models\\auths\\signinrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12FA3841-3D7C-47B3-8A2B-E5744D31572F}|Core\\Project.DigitalMarket.Domain\\Project.DigitalMarket.Domain.csproj|solutionrelative:core\\project.digitalmarket.domain\\models\\auths\\signinrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12FA3841-3D7C-47B3-8A2B-E5744D31572F}|Core\\Project.DigitalMarket.Domain\\Project.DigitalMarket.Domain.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\core\\project.digitalmarket.domain\\models\\auths\\infotoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12FA3841-3D7C-47B3-8A2B-E5744D31572F}|Core\\Project.DigitalMarket.Domain\\Project.DigitalMarket.Domain.csproj|solutionrelative:core\\project.digitalmarket.domain\\models\\auths\\infotoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E73F3C6E-BB6C-4E29-BEB0-268AB51FB728}|Core\\Project.DigitalMarket.Application.Contract\\Project.DigitalMarket.Application.Contract.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\core\\project.digitalmarket.application.contract\\services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E73F3C6E-BB6C-4E29-BEB0-268AB51FB728}|Core\\Project.DigitalMarket.Application.Contract\\Project.DigitalMarket.Application.Contract.csproj|solutionrelative:core\\project.digitalmarket.application.contract\\services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E73F3C6E-BB6C-4E29-BEB0-268AB51FB728}|Core\\Project.DigitalMarket.Application.Contract\\Project.DigitalMarket.Application.Contract.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\core\\project.digitalmarket.application.contract\\dtos\\authresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E73F3C6E-BB6C-4E29-BEB0-268AB51FB728}|Core\\Project.DigitalMarket.Application.Contract\\Project.DigitalMarket.Application.Contract.csproj|solutionrelative:core\\project.digitalmarket.application.contract\\dtos\\authresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E73F3C6E-BB6C-4E29-BEB0-268AB51FB728}|Core\\Project.DigitalMarket.Application.Contract\\Project.DigitalMarket.Application.Contract.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\core\\project.digitalmarket.application.contract\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E73F3C6E-BB6C-4E29-BEB0-268AB51FB728}|Core\\Project.DigitalMarket.Application.Contract\\Project.DigitalMarket.Application.Contract.csproj|solutionrelative:core\\project.digitalmarket.application.contract\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1AD8D9D-46A6-4573-A700-9241A39854BD}|Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\lib\\project.digitalmarket.host.base\\configs\\kafkaconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1AD8D9D-46A6-4573-A700-9241A39854BD}|Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj|solutionrelative:lib\\project.digitalmarket.host.base\\configs\\kafkaconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2025ABF-D38A-4636-9EE2-410957A94873}|Core\\Project.DigitalMarket.Domain.Share\\Project.DigitalMarket.Domain.Share.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\core\\project.digitalmarket.domain.share\\config\\ikafkaconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2025ABF-D38A-4636-9EE2-410957A94873}|Core\\Project.DigitalMarket.Domain.Share\\Project.DigitalMarket.Domain.Share.csproj|solutionrelative:core\\project.digitalmarket.domain.share\\config\\ikafkaconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1AD8D9D-46A6-4573-A700-9241A39854BD}|Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\lib\\project.digitalmarket.host.base\\configs\\authconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1AD8D9D-46A6-4573-A700-9241A39854BD}|Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj|solutionrelative:lib\\project.digitalmarket.host.base\\configs\\authconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2025ABF-D38A-4636-9EE2-410957A94873}|Core\\Project.DigitalMarket.Domain.Share\\Project.DigitalMarket.Domain.Share.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\core\\project.digitalmarket.domain.share\\config\\iauthconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2025ABF-D38A-4636-9EE2-410957A94873}|Core\\Project.DigitalMarket.Domain.Share\\Project.DigitalMarket.Domain.Share.csproj|solutionrelative:core\\project.digitalmarket.domain.share\\config\\iauthconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E94A6BFD-95A4-4816-9C4B-F26A523E6922}|Lib\\Project.DigitalMarket.Libs\\Project.DigitalMarket.Libs.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\lib\\project.digitalmarket.libs\\project.digitalmarket.libs.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{E94A6BFD-95A4-4816-9C4B-F26A523E6922}|Lib\\Project.DigitalMarket.Libs\\Project.DigitalMarket.Libs.csproj|solutionrelative:lib\\project.digitalmarket.libs\\project.digitalmarket.libs.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2D826C78-C635-49D5-BE1F-E29B625EB680}|Extension\\Project.DigitalMarket.Extension\\Project.DigitalMarket.Extension.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\extension\\project.digitalmarket.extension\\extensions\\validationextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D826C78-C635-49D5-BE1F-E29B625EB680}|Extension\\Project.DigitalMarket.Extension\\Project.DigitalMarket.Extension.csproj|solutionrelative:extension\\project.digitalmarket.extension\\extensions\\validationextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2D826C78-C635-49D5-BE1F-E29B625EB680}|Extension\\Project.DigitalMarket.Extension\\Project.DigitalMarket.Extension.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\extension\\project.digitalmarket.extension\\project.digitalmarket.extension.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{2D826C78-C635-49D5-BE1F-E29B625EB680}|Extension\\Project.DigitalMarket.Extension\\Project.DigitalMarket.Extension.csproj|solutionrelative:extension\\project.digitalmarket.extension\\project.digitalmarket.extension.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B1AD8D9D-46A6-4573-A700-9241A39854BD}|Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\lib\\project.digitalmarket.host.base\\configs\\appgetsectionconfigure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B1AD8D9D-46A6-4573-A700-9241A39854BD}|Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj|solutionrelative:lib\\project.digitalmarket.host.base\\configs\\appgetsectionconfigure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B1AD8D9D-46A6-4573-A700-9241A39854BD}|Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\lib\\project.digitalmarket.host.base\\project.digitalmarket.host.base.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{B1AD8D9D-46A6-4573-A700-9241A39854BD}|Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj|solutionrelative:lib\\project.digitalmarket.host.base\\project.digitalmarket.host.base.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729EE164-7CFB-48A1-82E2-9F470404A2D3}|Presentation\\API\\Digitalmarket.Controller.Base\\Digitalmarket.Controller.Base.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\presentation\\api\\digitalmarket.controller.base\\digitalmarket.controller.base.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{729EE164-7CFB-48A1-82E2-9F470404A2D3}|Presentation\\API\\Digitalmarket.Controller.Base\\Digitalmarket.Controller.Base.csproj|solutionrelative:presentation\\api\\digitalmarket.controller.base\\digitalmarket.controller.base.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66714ECB-B380-40BA-94DC-42DE183E8DD4}|Presentation\\API\\Digitalmarket.Controller.Auth\\Digitalmarket.Controller.Auth.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\presentation\\api\\digitalmarket.controller.auth\\digitalmarket.controller.auth.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{66714ECB-B380-40BA-94DC-42DE183E8DD4}|Presentation\\API\\Digitalmarket.Controller.Auth\\Digitalmarket.Controller.Auth.csproj|solutionrelative:presentation\\api\\digitalmarket.controller.auth\\digitalmarket.controller.auth.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24ECFF31-CDEA-4317-9119-6D34B3F585B5}|Infrastructure\\Project.DigitalMarket.Infrastructure\\Project.DigitalMarket.Infrastructure.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\infrastructure\\project.digitalmarket.infrastructure\\project.digitalmarket.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{24ECFF31-CDEA-4317-9119-6D34B3F585B5}|Infrastructure\\Project.DigitalMarket.Infrastructure\\Project.DigitalMarket.Infrastructure.csproj|solutionrelative:infrastructure\\project.digitalmarket.infrastructure\\project.digitalmarket.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12FA3841-3D7C-47B3-8A2B-E5744D31572F}|Core\\Project.DigitalMarket.Domain\\Project.DigitalMarket.Domain.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\core\\project.digitalmarket.domain\\project.digitalmarket.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{12FA3841-3D7C-47B3-8A2B-E5744D31572F}|Core\\Project.DigitalMarket.Domain\\Project.DigitalMarket.Domain.csproj|solutionrelative:core\\project.digitalmarket.domain\\project.digitalmarket.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{729EE164-7CFB-48A1-82E2-9F470404A2D3}|Presentation\\API\\Digitalmarket.Controller.Base\\Digitalmarket.Controller.Base.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\presentation\\api\\digitalmarket.controller.base\\controllers\\digitalbasecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -43,28 +127,28 @@
       "RelativeMoniker": "D:0:0:{66714ECB-B380-40BA-94DC-42DE183E8DD4}|Presentation\\API\\Digitalmarket.Controller.Auth\\Digitalmarket.Controller.Auth.csproj|solutionrelative:presentation\\api\\digitalmarket.controller.auth\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{B1AD8D9D-46A6-4573-A700-9241A39854BD}|Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\lib\\project.digitalmarket.host.base\\bases\\apidocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1AD8D9D-46A6-4573-A700-9241A39854BD}|Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj|solutionrelative:lib\\project.digitalmarket.host.base\\bases\\apidocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66714ECB-B380-40BA-94DC-42DE183E8DD4}|Presentation\\API\\Digitalmarket.Controller.Auth\\Digitalmarket.Controller.Auth.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\presentation\\api\\digitalmarket.controller.auth\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{66714ECB-B380-40BA-94DC-42DE183E8DD4}|Presentation\\API\\Digitalmarket.Controller.Auth\\Digitalmarket.Controller.Auth.csproj|solutionrelative:presentation\\api\\digitalmarket.controller.auth\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1AD8D9D-46A6-4573-A700-9241A39854BD}|Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\lib\\project.digitalmarket.host.base\\bases\\configurationbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1AD8D9D-46A6-4573-A700-9241A39854BD}|Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj|solutionrelative:lib\\project.digitalmarket.host.base\\bases\\configurationbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D826C78-C635-49D5-BE1F-E29B625EB680}|Extension\\Project.DigitalMarket.Extension\\Project.DigitalMarket.Extension.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\extension\\project.digitalmarket.extension\\extensions\\validationextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D826C78-C635-49D5-BE1F-E29B625EB680}|Extension\\Project.DigitalMarket.Extension\\Project.DigitalMarket.Extension.csproj|solutionrelative:extension\\project.digitalmarket.extension\\extensions\\validationextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1AD8D9D-46A6-4573-A700-9241A39854BD}|Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\lib\\project.digitalmarket.host.base\\configs\\appgetsectionconfigure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1AD8D9D-46A6-4573-A700-9241A39854BD}|Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj|solutionrelative:lib\\project.digitalmarket.host.base\\configs\\appgetsectionconfigure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{729EE164-7CFB-48A1-82E2-9F470404A2D3}|Presentation\\API\\Digitalmarket.Controller.Base\\Digitalmarket.Controller.Base.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\presentation\\api\\digitalmarket.controller.base\\appcorefactory\\middlewarefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{729EE164-7CFB-48A1-82E2-9F470404A2D3}|Presentation\\API\\Digitalmarket.Controller.Base\\Digitalmarket.Controller.Base.csproj|solutionrelative:presentation\\api\\digitalmarket.controller.base\\appcorefactory\\middlewarefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B1AD8D9D-46A6-4573-A700-9241A39854BD}|Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\lib\\project.digitalmarket.host.base\\middleware\\authenmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B1AD8D9D-46A6-4573-A700-9241A39854BD}|Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj|solutionrelative:lib\\project.digitalmarket.host.base\\middleware\\authenmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B1AD8D9D-46A6-4573-A700-9241A39854BD}|Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\lib\\project.digitalmarket.host.base\\configs\\authconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B1AD8D9D-46A6-4573-A700-9241A39854BD}|Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj|solutionrelative:lib\\project.digitalmarket.host.base\\configs\\authconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B1AD8D9D-46A6-4573-A700-9241A39854BD}|Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\lib\\project.digitalmarket.host.base\\middleware\\applicationmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B1AD8D9D-46A6-4573-A700-9241A39854BD}|Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj|solutionrelative:lib\\project.digitalmarket.host.base\\middleware\\applicationmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B1AD8D9D-46A6-4573-A700-9241A39854BD}|Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\lib\\project.digitalmarket.host.base\\project.digitalmarket.host.base.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{B1AD8D9D-46A6-4573-A700-9241A39854BD}|Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj|solutionrelative:lib\\project.digitalmarket.host.base\\project.digitalmarket.host.base.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B1AD8D9D-46A6-4573-A700-9241A39854BD}|Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\lib\\project.digitalmarket.host.base\\configs\\kafkaconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B1AD8D9D-46A6-4573-A700-9241A39854BD}|Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj|solutionrelative:lib\\project.digitalmarket.host.base\\configs\\kafkaconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B1AD8D9D-46A6-4573-A700-9241A39854BD}|Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\lib\\project.digitalmarket.host.base\\configs\\consumerconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -105,6 +189,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{E94A6BFD-95A4-4816-9C4B-F26A523E6922}|Lib\\Project.DigitalMarket.Libs\\Project.DigitalMarket.Libs.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\lib\\project.digitalmarket.libs\\dependencyinjection\\lazyloadprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E94A6BFD-95A4-4816-9C4B-F26A523E6922}|Lib\\Project.DigitalMarket.Libs\\Project.DigitalMarket.Libs.csproj|solutionrelative:lib\\project.digitalmarket.libs\\dependencyinjection\\lazyloadprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24ECFF31-CDEA-4317-9119-6D34B3F585B5}|Infrastructure\\Project.DigitalMarket.Infrastructure\\Project.DigitalMarket.Infrastructure.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\infrastructure\\project.digitalmarket.infrastructure\\data\\digitalmarketdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24ECFF31-CDEA-4317-9119-6D34B3F585B5}|Infrastructure\\Project.DigitalMarket.Infrastructure\\Project.DigitalMarket.Infrastructure.csproj|solutionrelative:infrastructure\\project.digitalmarket.infrastructure\\data\\digitalmarketdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -114,7 +202,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 14,
+          "SelectedChildIndex": 16,
           "Children": [
             {
               "$type": "Bookmark",
@@ -151,66 +239,89 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Presentation\\API\\Digitalmarket.Controller.Auth\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "Presentation\\API\\Digitalmarket.Controller.Auth\\Properties\\launchSettings.json",
-              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Presentation\\API\\Digitalmarket.Controller.Auth\\Properties\\launchSettings.json",
-              "RelativeToolTip": "Presentation\\API\\Digitalmarket.Controller.Auth\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-02T16:13:57.947Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Digitalmarket.Controller.Auth",
-              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Presentation\\API\\Digitalmarket.Controller.Auth\\Digitalmarket.Controller.Auth.csproj",
-              "RelativeDocumentMoniker": "Presentation\\API\\Digitalmarket.Controller.Auth\\Digitalmarket.Controller.Auth.csproj",
-              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Presentation\\API\\Digitalmarket.Controller.Auth\\Digitalmarket.Controller.Auth.csproj",
-              "RelativeToolTip": "Presentation\\API\\Digitalmarket.Controller.Auth\\Digitalmarket.Controller.Auth.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-03-02T16:13:32.412Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Presentation\\API\\Digitalmarket.Controller.Auth\\Program.cs",
-              "RelativeDocumentMoniker": "Presentation\\API\\Digitalmarket.Controller.Auth\\Program.cs",
-              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Presentation\\API\\Digitalmarket.Controller.Auth\\Program.cs",
-              "RelativeToolTip": "Presentation\\API\\Digitalmarket.Controller.Auth\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAAAAAAAAAAAAA==",
+              "Title": "IRepositoryBase.cs",
+              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain\\Repositories\\Base\\IRepositoryBase.cs",
+              "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Domain\\Repositories\\Base\\IRepositoryBase.cs",
+              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain\\Repositories\\Base\\IRepositoryBase.cs",
+              "RelativeToolTip": "Core\\Project.DigitalMarket.Domain\\Repositories\\Base\\IRepositoryBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T15:38:00.554Z",
+              "WhenOpened": "2026-03-21T09:01:04.606Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "DigitalBaseController.cs",
-              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Presentation\\API\\Digitalmarket.Controller.Base\\Controllers\\DigitalBaseController.cs",
-              "RelativeDocumentMoniker": "Presentation\\API\\Digitalmarket.Controller.Base\\Controllers\\DigitalBaseController.cs",
-              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Presentation\\API\\Digitalmarket.Controller.Base\\Controllers\\DigitalBaseController.cs",
-              "RelativeToolTip": "Presentation\\API\\Digitalmarket.Controller.Base\\Controllers\\DigitalBaseController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "AuthManager.cs",
+              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain\\Managers\\Auths\\AuthManager.cs",
+              "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Domain\\Managers\\Auths\\AuthManager.cs",
+              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain\\Managers\\Auths\\AuthManager.cs",
+              "RelativeToolTip": "Core\\Project.DigitalMarket.Domain\\Managers\\Auths\\AuthManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T15:26:12.853Z",
+              "WhenOpened": "2026-03-09T17:01:11.464Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "AppGetSectionConfigure.cs",
-              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Configs\\AppGetSectionConfigure.cs",
-              "RelativeDocumentMoniker": "Lib\\Project.DigitalMarket.Host.Base\\Configs\\AppGetSectionConfigure.cs",
-              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Configs\\AppGetSectionConfigure.cs",
-              "RelativeToolTip": "Lib\\Project.DigitalMarket.Host.Base\\Configs\\AppGetSectionConfigure.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABoAAAAAAAAAA==",
+              "Title": "UserEntity.cs",
+              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain\\Entities\\UserEntity.cs",
+              "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Domain\\Entities\\UserEntity.cs",
+              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain\\Entities\\UserEntity.cs",
+              "RelativeToolTip": "Core\\Project.DigitalMarket.Domain\\Entities\\UserEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T15:34:07.679Z",
+              "WhenOpened": "2026-03-09T15:15:36.074Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application.Contract\\Services\\IAuthService.cs",
+              "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Application.Contract\\Services\\IAuthService.cs",
+              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application.Contract\\Services\\IAuthService.cs",
+              "RelativeToolTip": "Core\\Project.DigitalMarket.Application.Contract\\Services\\IAuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T15:12:13.605Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "RegisterDto.cs",
+              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application.Contract\\DTOs\\RegisterDto.cs",
+              "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Application.Contract\\DTOs\\RegisterDto.cs",
+              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application.Contract\\DTOs\\RegisterDto.cs",
+              "RelativeToolTip": "Core\\Project.DigitalMarket.Application.Contract\\DTOs\\RegisterDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T15:11:38.97Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Project.DigitalMarket.Infrastructure\\Services\\AuthService.cs",
+              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure\\Services\\AuthService.cs",
+              "RelativeToolTip": "Infrastructure\\Project.DigitalMarket.Infrastructure\\Services\\AuthService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAwBkAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T14:44:12.451Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Presentation\\API\\Digitalmarket.Controller.Auth\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Presentation\\API\\Digitalmarket.Controller.Auth\\Controllers\\AuthController.cs",
+              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Presentation\\API\\Digitalmarket.Controller.Auth\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Presentation\\API\\Digitalmarket.Controller.Auth\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T14:36:10.443Z",
               "EditorCaption": ""
             },
             {
@@ -221,7 +332,7 @@
               "RelativeDocumentMoniker": "Presentation\\API\\Digitalmarket.Controller.Base\\AppCoreFactory\\AppCoreFactory.cs",
               "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Presentation\\API\\Digitalmarket.Controller.Base\\AppCoreFactory\\AppCoreFactory.cs",
               "RelativeToolTip": "Presentation\\API\\Digitalmarket.Controller.Base\\AppCoreFactory\\AppCoreFactory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAqwEIAAABkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-02T15:50:22.935Z",
               "EditorCaption": ""
@@ -229,19 +340,331 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "APIDocument.cs",
-              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Bases\\APIDocument.cs",
-              "RelativeDocumentMoniker": "Lib\\Project.DigitalMarket.Host.Base\\Bases\\APIDocument.cs",
-              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Bases\\APIDocument.cs*",
-              "RelativeToolTip": "Lib\\Project.DigitalMarket.Host.Base\\Bases\\APIDocument.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAtAAAAAAAAAA==",
+              "Title": "AuthenMiddleware.cs",
+              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Middleware\\AuthenMiddleware.cs",
+              "RelativeDocumentMoniker": "Lib\\Project.DigitalMarket.Host.Base\\Middleware\\AuthenMiddleware.cs",
+              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Middleware\\AuthenMiddleware.cs",
+              "RelativeToolTip": "Lib\\Project.DigitalMarket.Host.Base\\Middleware\\AuthenMiddleware.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T15:32:41.186Z",
+              "WhenOpened": "2026-03-02T15:55:37.552Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 47,
+              "Title": "DigitalMarketDbContext.cs",
+              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure\\Data\\DigitalMarketDbContext.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Project.DigitalMarket.Infrastructure\\Data\\DigitalMarketDbContext.cs",
+              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure\\Data\\DigitalMarketDbContext.cs",
+              "RelativeToolTip": "Infrastructure\\Project.DigitalMarket.Infrastructure\\Data\\DigitalMarketDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T15:19:20.859Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IAuthManager.cs",
+              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain\\Managers\\Auths\\IAuthManager.cs",
+              "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Domain\\Managers\\Auths\\IAuthManager.cs",
+              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain\\Managers\\Auths\\IAuthManager.cs",
+              "RelativeToolTip": "Core\\Project.DigitalMarket.Domain\\Managers\\Auths\\IAuthManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T15:19:54.236Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "InfoToken.cs",
+              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain\\Models\\Auths\\InfoToken.cs",
+              "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Domain\\Models\\Auths\\InfoToken.cs",
+              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain\\Models\\Auths\\InfoToken.cs",
+              "RelativeToolTip": "Core\\Project.DigitalMarket.Domain\\Models\\Auths\\InfoToken.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T16:13:40.807Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IAuthRepository.cs",
+              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain\\Repositories\\Auths\\IAuthRepository.cs",
+              "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Domain\\Repositories\\Auths\\IAuthRepository.cs",
+              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain\\Repositories\\Auths\\IAuthRepository.cs",
+              "RelativeToolTip": "Core\\Project.DigitalMarket.Domain\\Repositories\\Auths\\IAuthRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwCEAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T16:38:52.319Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AppClaimTypes.cs",
+              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain.Share\\Constants\\Auths\\AppClaimTypes.cs",
+              "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Domain.Share\\Constants\\Auths\\AppClaimTypes.cs",
+              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain.Share\\Constants\\Auths\\AppClaimTypes.cs",
+              "RelativeToolTip": "Core\\Project.DigitalMarket.Domain.Share\\Constants\\Auths\\AppClaimTypes.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T17:27:51.353Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ApplicationMiddleware.cs",
+              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Middleware\\ApplicationMiddleware.cs",
+              "RelativeDocumentMoniker": "Lib\\Project.DigitalMarket.Host.Base\\Middleware\\ApplicationMiddleware.cs",
+              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Middleware\\ApplicationMiddleware.cs",
+              "RelativeToolTip": "Lib\\Project.DigitalMarket.Host.Base\\Middleware\\ApplicationMiddleware.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T15:55:44.921Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "SignInRequest.cs",
+              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain\\Models\\Auths\\SignInRequest.cs",
+              "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Domain\\Models\\Auths\\SignInRequest.cs",
+              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain\\Models\\Auths\\SignInRequest.cs",
+              "RelativeToolTip": "Core\\Project.DigitalMarket.Domain\\Models\\Auths\\SignInRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T16:17:23.736Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ManagerBase.cs",
+              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain\\Managers\\ManagerBase.cs",
+              "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Domain\\Managers\\ManagerBase.cs",
+              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain\\Managers\\ManagerBase.cs",
+              "RelativeToolTip": "Core\\Project.DigitalMarket.Domain\\Managers\\ManagerBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T16:24:29.257Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "LoginDto.cs",
+              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application.Contract\\DTOs\\LoginDto.cs",
+              "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Application.Contract\\DTOs\\LoginDto.cs",
+              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application.Contract\\DTOs\\LoginDto.cs",
+              "RelativeToolTip": "Core\\Project.DigitalMarket.Application.Contract\\DTOs\\LoginDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T15:11:32.638Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "AuthResponseDto.cs",
+              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application.Contract\\DTOs\\AuthResponseDto.cs",
+              "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Application.Contract\\DTOs\\AuthResponseDto.cs",
+              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application.Contract\\DTOs\\AuthResponseDto.cs",
+              "RelativeToolTip": "Core\\Project.DigitalMarket.Application.Contract\\DTOs\\AuthResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T15:11:25.146Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "IKafkaConfig.cs",
+              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain.Share\\Config\\IKafkaConfig.cs",
+              "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Domain.Share\\Config\\IKafkaConfig.cs",
+              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain.Share\\Config\\IKafkaConfig.cs",
+              "RelativeToolTip": "Core\\Project.DigitalMarket.Domain.Share\\Config\\IKafkaConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T15:03:02.821Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "AuthConfig.cs",
+              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Configs\\AuthConfig.cs",
+              "RelativeDocumentMoniker": "Lib\\Project.DigitalMarket.Host.Base\\Configs\\AuthConfig.cs",
+              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Configs\\AuthConfig.cs",
+              "RelativeToolTip": "Lib\\Project.DigitalMarket.Host.Base\\Configs\\AuthConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T15:37:26.726Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "IAuthConfig.cs",
+              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain.Share\\Config\\IAuthConfig.cs",
+              "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Domain.Share\\Config\\IAuthConfig.cs",
+              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain.Share\\Config\\IAuthConfig.cs",
+              "RelativeToolTip": "Core\\Project.DigitalMarket.Domain.Share\\Config\\IAuthConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T15:00:15.241Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Project.DigitalMarket.Libs.csproj",
+              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\Project.DigitalMarket.Libs.csproj",
+              "RelativeDocumentMoniker": "Lib\\Project.DigitalMarket.Libs\\Project.DigitalMarket.Libs.csproj",
+              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\Project.DigitalMarket.Libs.csproj",
+              "RelativeToolTip": "Lib\\Project.DigitalMarket.Libs\\Project.DigitalMarket.Libs.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-02T15:30:29.55Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Project.DigitalMarket.Extension.csproj",
+              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Extension\\Project.DigitalMarket.Extension\\Project.DigitalMarket.Extension.csproj",
+              "RelativeDocumentMoniker": "Extension\\Project.DigitalMarket.Extension\\Project.DigitalMarket.Extension.csproj",
+              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Extension\\Project.DigitalMarket.Extension\\Project.DigitalMarket.Extension.csproj",
+              "RelativeToolTip": "Extension\\Project.DigitalMarket.Extension\\Project.DigitalMarket.Extension.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-09T14:52:43.564Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "KafkaConfig.cs",
+              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Configs\\KafkaConfig.cs",
+              "RelativeDocumentMoniker": "Lib\\Project.DigitalMarket.Host.Base\\Configs\\KafkaConfig.cs",
+              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Configs\\KafkaConfig.cs",
+              "RelativeToolTip": "Lib\\Project.DigitalMarket.Host.Base\\Configs\\KafkaConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T15:37:40.754Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Project.DigitalMarket.Host.Base.csproj",
+              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj",
+              "RelativeDocumentMoniker": "Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj",
+              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj",
+              "RelativeToolTip": "Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-02T15:32:54.972Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Digitalmarket.Controller.Base.csproj",
+              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Presentation\\API\\Digitalmarket.Controller.Base\\Digitalmarket.Controller.Base.csproj",
+              "RelativeDocumentMoniker": "Presentation\\API\\Digitalmarket.Controller.Base\\Digitalmarket.Controller.Base.csproj",
+              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Presentation\\API\\Digitalmarket.Controller.Base\\Digitalmarket.Controller.Base.csproj",
+              "RelativeToolTip": "Presentation\\API\\Digitalmarket.Controller.Base\\Digitalmarket.Controller.Base.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-09T14:38:26.777Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Digitalmarket.Controller.Auth.csproj",
+              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Presentation\\API\\Digitalmarket.Controller.Auth\\Digitalmarket.Controller.Auth.csproj",
+              "RelativeDocumentMoniker": "Presentation\\API\\Digitalmarket.Controller.Auth\\Digitalmarket.Controller.Auth.csproj",
+              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Presentation\\API\\Digitalmarket.Controller.Auth\\Digitalmarket.Controller.Auth.csproj",
+              "RelativeToolTip": "Presentation\\API\\Digitalmarket.Controller.Auth\\Digitalmarket.Controller.Auth.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-02T16:13:32.412Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Project.DigitalMarket.Infrastructure.csproj",
+              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure\\Project.DigitalMarket.Infrastructure.csproj",
+              "RelativeDocumentMoniker": "Infrastructure\\Project.DigitalMarket.Infrastructure\\Project.DigitalMarket.Infrastructure.csproj",
+              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure\\Project.DigitalMarket.Infrastructure.csproj",
+              "RelativeToolTip": "Infrastructure\\Project.DigitalMarket.Infrastructure\\Project.DigitalMarket.Infrastructure.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-09T14:40:43.804Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Project.DigitalMarket.Domain.csproj",
+              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain\\Project.DigitalMarket.Domain.csproj",
+              "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Domain\\Project.DigitalMarket.Domain.csproj",
+              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain\\Project.DigitalMarket.Domain.csproj",
+              "RelativeToolTip": "Core\\Project.DigitalMarket.Domain\\Project.DigitalMarket.Domain.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-09T14:42:36.302Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Presentation\\API\\Digitalmarket.Controller.Auth\\Program.cs",
+              "RelativeDocumentMoniker": "Presentation\\API\\Digitalmarket.Controller.Auth\\Program.cs",
+              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Presentation\\API\\Digitalmarket.Controller.Auth\\Program.cs",
+              "RelativeToolTip": "Presentation\\API\\Digitalmarket.Controller.Auth\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T15:38:00.554Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "DigitalBaseController.cs",
+              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Presentation\\API\\Digitalmarket.Controller.Base\\Controllers\\DigitalBaseController.cs",
+              "RelativeDocumentMoniker": "Presentation\\API\\Digitalmarket.Controller.Base\\Controllers\\DigitalBaseController.cs",
+              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Presentation\\API\\Digitalmarket.Controller.Base\\Controllers\\DigitalBaseController.cs",
+              "RelativeToolTip": "Presentation\\API\\Digitalmarket.Controller.Base\\Controllers\\DigitalBaseController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T15:26:12.853Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "AppGetSectionConfigure.cs",
+              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Configs\\AppGetSectionConfigure.cs",
+              "RelativeDocumentMoniker": "Lib\\Project.DigitalMarket.Host.Base\\Configs\\AppGetSectionConfigure.cs",
+              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Configs\\AppGetSectionConfigure.cs",
+              "RelativeToolTip": "Lib\\Project.DigitalMarket.Host.Base\\Configs\\AppGetSectionConfigure.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T15:34:07.679Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Presentation\\API\\Digitalmarket.Controller.Auth\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Presentation\\API\\Digitalmarket.Controller.Auth\\Properties\\launchSettings.json",
+              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Presentation\\API\\Digitalmarket.Controller.Auth\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Presentation\\API\\Digitalmarket.Controller.Auth\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-02T16:13:57.947Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "APIDocument.cs",
+              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Bases\\APIDocument.cs",
+              "RelativeDocumentMoniker": "Lib\\Project.DigitalMarket.Host.Base\\Bases\\APIDocument.cs",
+              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Bases\\APIDocument.cs",
+              "RelativeToolTip": "Lib\\Project.DigitalMarket.Host.Base\\Bases\\APIDocument.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T15:32:41.186Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
               "Title": "MiddlewareFactory.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Presentation\\API\\Digitalmarket.Controller.Base\\AppCoreFactory\\MiddlewareFactory.cs",
               "RelativeDocumentMoniker": "Presentation\\API\\Digitalmarket.Controller.Base\\AppCoreFactory\\MiddlewareFactory.cs",
@@ -249,12 +672,11 @@
               "RelativeToolTip": "Presentation\\API\\Digitalmarket.Controller.Base\\AppCoreFactory\\MiddlewareFactory.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAYAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T15:53:51.446Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-02T15:53:51.446Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 34,
               "Title": "ValidationExtensions.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Extension\\Project.DigitalMarket.Extension\\Extensions\\ValidationExtensions.cs",
               "RelativeDocumentMoniker": "Extension\\Project.DigitalMarket.Extension\\Extensions\\ValidationExtensions.cs",
@@ -262,12 +684,11 @@
               "RelativeToolTip": "Extension\\Project.DigitalMarket.Extension\\Extensions\\ValidationExtensions.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T16:07:00.731Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-02T16:07:00.731Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 33,
               "Title": "ConfigurationBase.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Bases\\ConfigurationBase.cs",
               "RelativeDocumentMoniker": "Lib\\Project.DigitalMarket.Host.Base\\Bases\\ConfigurationBase.cs",
@@ -275,90 +696,11 @@
               "RelativeToolTip": "Lib\\Project.DigitalMarket.Host.Base\\Bases\\ConfigurationBase.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwBkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T15:33:27.662Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-02T15:33:27.662Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Project.DigitalMarket.Libs",
-              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\Project.DigitalMarket.Libs.csproj",
-              "RelativeDocumentMoniker": "Lib\\Project.DigitalMarket.Libs\\Project.DigitalMarket.Libs.csproj",
-              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\Project.DigitalMarket.Libs.csproj",
-              "RelativeToolTip": "Lib\\Project.DigitalMarket.Libs\\Project.DigitalMarket.Libs.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-03-02T15:30:29.55Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AuthenMiddleware.cs",
-              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Middleware\\AuthenMiddleware.cs",
-              "RelativeDocumentMoniker": "Lib\\Project.DigitalMarket.Host.Base\\Middleware\\AuthenMiddleware.cs",
-              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Middleware\\AuthenMiddleware.cs",
-              "RelativeToolTip": "Lib\\Project.DigitalMarket.Host.Base\\Middleware\\AuthenMiddleware.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T15:55:37.552Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "AuthConfig.cs",
-              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Configs\\AuthConfig.cs",
-              "RelativeDocumentMoniker": "Lib\\Project.DigitalMarket.Host.Base\\Configs\\AuthConfig.cs",
-              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Configs\\AuthConfig.cs",
-              "RelativeToolTip": "Lib\\Project.DigitalMarket.Host.Base\\Configs\\AuthConfig.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T15:37:26.726Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ApplicationMiddleware.cs",
-              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Middleware\\ApplicationMiddleware.cs",
-              "RelativeDocumentMoniker": "Lib\\Project.DigitalMarket.Host.Base\\Middleware\\ApplicationMiddleware.cs",
-              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Middleware\\ApplicationMiddleware.cs",
-              "RelativeToolTip": "Lib\\Project.DigitalMarket.Host.Base\\Middleware\\ApplicationMiddleware.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T15:55:44.921Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Project.DigitalMarket.Host.Base",
-              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj",
-              "RelativeDocumentMoniker": "Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj",
-              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj",
-              "RelativeToolTip": "Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABRAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-03-02T15:32:54.972Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "KafkaConfig.cs",
-              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Configs\\KafkaConfig.cs",
-              "RelativeDocumentMoniker": "Lib\\Project.DigitalMarket.Host.Base\\Configs\\KafkaConfig.cs",
-              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Configs\\KafkaConfig.cs",
-              "RelativeToolTip": "Lib\\Project.DigitalMarket.Host.Base\\Configs\\KafkaConfig.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T15:37:40.754Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 37,
               "Title": "ConsumerConfig.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Configs\\ConsumerConfig.cs",
               "RelativeDocumentMoniker": "Lib\\Project.DigitalMarket.Host.Base\\Configs\\ConsumerConfig.cs",
@@ -366,12 +708,11 @@
               "RelativeToolTip": "Lib\\Project.DigitalMarket.Host.Base\\Configs\\ConsumerConfig.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T15:37:34.573Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-02T15:37:34.573Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 38,
               "Title": "ConnectionString.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Configs\\ConnectionString.cs",
               "RelativeDocumentMoniker": "Lib\\Project.DigitalMarket.Host.Base\\Configs\\ConnectionString.cs",
@@ -379,12 +720,11 @@
               "RelativeToolTip": "Lib\\Project.DigitalMarket.Host.Base\\Configs\\ConnectionString.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T15:37:30.939Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-02T15:37:30.939Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 40,
               "Title": "BusinessException.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\Exceptions\\BusinessException.cs",
               "RelativeDocumentMoniker": "Lib\\Project.DigitalMarket.Libs\\Exceptions\\BusinessException.cs",
@@ -392,12 +732,11 @@
               "RelativeToolTip": "Lib\\Project.DigitalMarket.Libs\\Exceptions\\BusinessException.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAB8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T15:34:43.159Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-02T15:34:43.159Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 41,
               "Title": "BaseHttpStatusCodeException.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\Exceptions\\BaseHttpStatusCodeException.cs",
               "RelativeDocumentMoniker": "Lib\\Project.DigitalMarket.Libs\\Exceptions\\BaseHttpStatusCodeException.cs",
@@ -405,12 +744,11 @@
               "RelativeToolTip": "Lib\\Project.DigitalMarket.Libs\\Exceptions\\BaseHttpStatusCodeException.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T15:34:39.64Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-02T15:34:39.64Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 42,
               "Title": "AuthException.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\Exceptions\\AuthException.cs",
               "RelativeDocumentMoniker": "Lib\\Project.DigitalMarket.Libs\\Exceptions\\AuthException.cs",
@@ -418,12 +756,11 @@
               "RelativeToolTip": "Lib\\Project.DigitalMarket.Libs\\Exceptions\\AuthException.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T15:34:35.297Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-02T15:34:35.297Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 39,
               "Title": "CachedServiceProviderBase.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\DependencyInjection\\CachedServiceProviderBase.cs",
               "RelativeDocumentMoniker": "Lib\\Project.DigitalMarket.Libs\\DependencyInjection\\CachedServiceProviderBase.cs",
@@ -431,12 +768,11 @@
               "RelativeToolTip": "Lib\\Project.DigitalMarket.Libs\\DependencyInjection\\CachedServiceProviderBase.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T15:29:08.42Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-02T15:29:08.42Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 43,
               "Title": "ServiceIdentifier.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\DependencyInjection\\ServiceIdentifier.cs",
               "RelativeDocumentMoniker": "Lib\\Project.DigitalMarket.Libs\\DependencyInjection\\ServiceIdentifier.cs",
@@ -444,12 +780,11 @@
               "RelativeToolTip": "Lib\\Project.DigitalMarket.Libs\\DependencyInjection\\ServiceIdentifier.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T15:29:39.225Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-02T15:29:39.225Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 46,
               "Title": "LazyloadProvider.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\DependencyInjection\\LazyloadProvider.cs",
               "RelativeDocumentMoniker": "Lib\\Project.DigitalMarket.Libs\\DependencyInjection\\LazyloadProvider.cs",
@@ -457,12 +792,11 @@
               "RelativeToolTip": "Lib\\Project.DigitalMarket.Libs\\DependencyInjection\\LazyloadProvider.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T15:29:34.275Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-02T15:29:34.275Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 45,
               "Title": "ILazyloadProvider.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\DependencyInjection\\ILazyloadProvider.cs",
               "RelativeDocumentMoniker": "Lib\\Project.DigitalMarket.Libs\\DependencyInjection\\ILazyloadProvider.cs",
@@ -470,12 +804,11 @@
               "RelativeToolTip": "Lib\\Project.DigitalMarket.Libs\\DependencyInjection\\ILazyloadProvider.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T15:29:30.488Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-02T15:29:30.488Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 44,
               "Title": "ICachedServiceProviderBase.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\DependencyInjection\\ICachedServiceProviderBase.cs",
               "RelativeDocumentMoniker": "Lib\\Project.DigitalMarket.Libs\\DependencyInjection\\ICachedServiceProviderBase.cs",
@@ -483,8 +816,7 @@
               "RelativeToolTip": "Lib\\Project.DigitalMarket.Libs\\DependencyInjection\\ICachedServiceProviderBase.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T15:29:26.381Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-02T15:29:26.381Z"
             }
           ]
         }

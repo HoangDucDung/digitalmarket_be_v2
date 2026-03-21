@@ -15,3 +15,6 @@ E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Lib\Project.DigitalMarket.
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Lib\Project.DigitalMarket.Host.Base\obj\Debug\net8.0\refint\Project.DigitalMarket.Host.Base.dll
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Lib\Project.DigitalMarket.Host.Base\obj\Debug\net8.0\Project.DigitalMarket.Host.Base.pdb
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Lib\Project.DigitalMarket.Host.Base\obj\Debug\net8.0\ref\Project.DigitalMarket.Host.Base.dll
+E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Lib\Project.DigitalMarket.Host.Base\obj\Debug\net8.0\Project.DigitalMarket.Host.Base.sourcelink.json
+E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Lib\Project.DigitalMarket.Host.Base\bin\Debug\net8.0\Project.DigitalMarket.Domain.Share.dll
+E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Lib\Project.DigitalMarket.Host.Base\bin\Debug\net8.0\Project.DigitalMarket.Domain.Share.pdb

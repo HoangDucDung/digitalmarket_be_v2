@@ -13,3 +13,4 @@ E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Lib\Project.DigitalMarket.
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Lib\Project.DigitalMarket.Libs\obj\Debug\net8.0\refint\Project.DigitalMarket.Libs.dll
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Lib\Project.DigitalMarket.Libs\obj\Debug\net8.0\Project.DigitalMarket.Libs.pdb
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Lib\Project.DigitalMarket.Libs\obj\Debug\net8.0\ref\Project.DigitalMarket.Libs.dll
+E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Lib\Project.DigitalMarket.Libs\obj\Debug\net8.0\Project.DigitalMarket.Libs.sourcelink.json

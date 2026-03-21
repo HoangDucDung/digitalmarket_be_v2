@@ -1,7 +1,9 @@
+using Digitalmarket.Controller.Base.Controllers;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Project.DigitalMarket.Domain.DTOs;
-using Project.DigitalMarket.Domain.Interfaces;
+using Project.DigitalMarket.Application.Contract.DTOs;
+using Project.DigitalMarket.Domain.Services;
+using Project.DigitalMarket.Libs.DependencyInjection;
 
 namespace Digitalmarket.Controller.Auth.Controllers
 {
@@ -10,14 +12,9 @@ namespace Digitalmarket.Controller.Auth.Controllers
     /// </summary>
     [ApiController]
     [Route("api/[controller]")]
-    public class AuthController : ControllerBase
+    public class AuthController(ILazyloadProvider lazyloadProvider) : DigitalBaseController(lazyloadProvider)
     {
-        private readonly IAuthService _authService;
-
-        public AuthController(IAuthService authService)
-        {
-            _authService = authService;
-        }
+        private IAuthService _authService => _lazyloadProvider.LazyGetRequiredService<IAuthService>();
 
         /// <summary>
         /// Đăng ký tài khoản mới
