@@ -13,13 +13,38 @@ namespace Project.DigitalMarket.Domain.Entities
         public string FullName { get; set; } = string.Empty;
 
         /// <summary>
+        /// Đường dẫn ảnh đại diện
+        /// </summary>
+        public string? AvatarUrl { get; set; }
+
+        /// <summary>
+        /// Giới thiệu bản thân (Dành cho Seller profile)
+        /// </summary>
+        public string? Bio { get; set; }
+
+        /// <summary>
         /// Ngày tạo tài khoản
         /// </summary>
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
         /// <summary>
-        /// Thông tin vai trò của người dùng (ví dụ: "Admin", "User", ...)
+        /// Ngày cập nhật thông tin gần nhất
         /// </summary>
-        public string Role { get; set; } = "User";
+        public DateTime? UpdatedAt { get; set; }
+        
+        /// <summary>
+        /// Thông tin KYC/Pháp lý (1-1)
+        /// </summary>
+        public virtual UserKycProfileEntity? KycProfile { get; set; }
+
+        /// <summary>
+        /// Danh sách tài khoản thanh toán/rút tiền (1-N)
+        /// </summary>
+        public virtual ICollection<UserFinancialTieEntity> FinancialTies { get; set; } = new List<UserFinancialTieEntity>();
+
+        /// <summary>
+        /// Danh sách nhật ký hoạt động quan trọng (1-N)
+        /// </summary>
+        public virtual ICollection<UserAuditLogEntity> AuditLogs { get; set; } = new List<UserAuditLogEntity>();
     }
 }
