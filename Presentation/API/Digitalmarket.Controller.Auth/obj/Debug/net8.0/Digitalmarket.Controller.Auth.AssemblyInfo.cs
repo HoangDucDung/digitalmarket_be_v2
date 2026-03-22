@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Digitalmarket.Controller.Auth")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+19e4fc4aa5f8c0e68cba49dc7f05f3a130dddf08")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6dab36a1136abf25ee18ff519cd473dc522d4480")]
 [assembly: System.Reflection.AssemblyProductAttribute("Digitalmarket.Controller.Auth")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Digitalmarket.Controller.Auth")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

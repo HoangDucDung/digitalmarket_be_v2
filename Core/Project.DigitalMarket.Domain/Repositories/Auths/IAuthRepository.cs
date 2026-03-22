@@ -16,14 +16,14 @@ namespace Project.DigitalMarket.Domain.Repositories.Auths
         /// </summary>
         /// <param name="userId">Id của user</param>
         /// <returns>Thông tin user</returns>
-        Task<UserEntity> GetUserByUserIdAsync(Guid userId);
+        Task<UserEntity?> GetUserByUserIdAsync(Guid userId);
 
         /// <summary>
         /// Lấy thông tin user theo email
         /// </summary>
         /// <param name="email">Email</param>
         /// <returns>Thông tin user</returns>
-        Task<UserEntity> GetUserByEmailAsync(string email);
+        Task<UserEntity?> GetUserByEmailAsync(string email);
 
         /// <summary>
         /// Lưu refresh token cho user

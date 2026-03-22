@@ -1,16 +1,16 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Project.DigitalMarket.Domain.Entities;
 using Project.DigitalMarket.Domain.Managers.Auths;
-using Project.DigitalMarket.Domain.Services;
-using Project.DigitalMarket.Application.Services;
-using Project.DigitalMarket.Infrastructure.Data;
+using Project.DigitalMarket.Application.Contract.Services.Auths;
+using Project.DigitalMarket.Application.Contract.Services.Mails;
+using Project.DigitalMarket.Application.Services.Auths;
+using Project.DigitalMarket.Domain.ExternalServices.Mails;
+using Project.DigitalMarket.Infrastructure.Mail.Services;
+using Project.DigitalMarket.Infrastructure.MsSql.Data;
 using Project.DigitalMarket.Libs.DependencyInjection;
-using System.Security.Claims;
 using System.Text;
 
 namespace Digitalmarket.Controller.Base.AppCoreFactory
@@ -91,8 +91,12 @@ namespace Digitalmarket.Controller.Base.AppCoreFactory
                 };
             });
 
-            // 4. Đăng ký AuthService
+            // 4. Đăng ký Services (Application Layer)
             services.AddScoped<IAuthService, AuthService>();
+            services.AddScoped<IEmailService, Project.DigitalMarket.Application.Services.Mails.EmailService>();
+
+            // 5. Đăng ký External Services (Domain Contract <-> Infras Implementation)
+            services.AddScoped<IEmailManager, EmailService>();
 
             return services;
         }
@@ -125,6 +129,7 @@ namespace Digitalmarket.Controller.Base.AppCoreFactory
         public static IServiceCollection UseAppManagerFactory(this IServiceCollection services)
         {
             services.AddScoped<IAuthManager, AuthManager>();
+            services.AddScoped<Project.DigitalMarket.Domain.Repositories.Auths.IAuthRepository, Project.DigitalMarket.Infrastructure.MsSql.Repositories.Auths.AuthRepository>();
             return services;
         }
     }

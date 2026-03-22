@@ -1,5 +1,7 @@
-﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
+using Project.DigitalMarket.Domain.Share.Config;
 using Project.DigitalMarket.Libs.Exceptions;
 
 namespace Project.DigitalMarket.Host.Base.Configs
@@ -19,6 +21,13 @@ namespace Project.DigitalMarket.Host.Base.Configs
         public static void GetAuthConfig(this IServiceCollection services, IConfiguration configuration)
         {
             GetSectionConfigure<AuthConfig>(services, configuration, "AuthConfig");
+            services.AddSingleton<IAuthConfig>(sp => sp.GetRequiredService<IOptions<AuthConfig>>().Value);
+        }
+
+        public static void GetEmailConfig(this IServiceCollection services, IConfiguration configuration)
+        {
+            GetSectionConfigure<EmailConfig>(services, configuration, "EmailConfig");
+            services.AddSingleton<IEmailConfig>(sp => sp.GetRequiredService<IOptions<EmailConfig>>().Value);
         }
 
         public static void GetConnectionConfig(this IServiceCollection services, IConfiguration configuration)

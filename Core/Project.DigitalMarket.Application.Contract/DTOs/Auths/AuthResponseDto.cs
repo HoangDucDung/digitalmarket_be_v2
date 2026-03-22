@@ -1,4 +1,4 @@
-namespace Project.DigitalMarket.Application.Contract.DTOs
+namespace Project.DigitalMarket.Application.Contract.DTOs.Auths
 {
     /// <summary>
     /// DTO cho response trả về sau khi đăng nhập thành công
@@ -24,5 +24,6 @@ namespace Project.DigitalMarket.Application.Contract.DTOs
         /// Email người dùng
         /// </summary>
         public string Email { get; set; } = string.Empty;
+        public bool RequiresTwoFactor { get; set; }
     }
 }

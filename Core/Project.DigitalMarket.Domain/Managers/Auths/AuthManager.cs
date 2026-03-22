@@ -7,6 +7,7 @@ using Project.DigitalMarket.Domain.Share.Config;
 using Project.DigitalMarket.Domain.Share.Constants.Auths;
 using Project.DigitalMarket.Libs.DependencyInjection;
 using Project.DigitalMarket.Libs.Exceptions;
+using Project.Extensions.Extensions;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
@@ -16,8 +17,8 @@ namespace Project.DigitalMarket.Domain.Managers.Auths
 {
     public class AuthManager(ILazyloadProvider lazyloadProvider) : ManagerBase(lazyloadProvider), IAuthManager
     {
-        private IAuthRepository _authRepository => _lazyloadProvider.GetRequiredService<IAuthRepository>();
-        private IAuthConfig _authConfig => _lazyloadProvider.GetRequiredService<IAuthConfig>();
+        private IAuthRepository _authRepository => _lazyloadProvider.LazyGetRequiredService<IAuthRepository>();
+        private IAuthConfig _authConfig => _lazyloadProvider.LazyGetRequiredService<IAuthConfig>();
 
         public async Task<InfoToken> SignInAsync(SignInRequest request)
         {
@@ -62,7 +63,7 @@ namespace Project.DigitalMarket.Domain.Managers.Auths
         {
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_authConfig.SecretKey));
             var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-            var expiration = DateTime.UtcNow.AddMinutes(_authConfig.ExpiresTime);
+            var expiration = GenerateExtentions.Now.AddMinutes(_authConfig.ExpiresTime);
 
             var claims = new List<Claim>
             {

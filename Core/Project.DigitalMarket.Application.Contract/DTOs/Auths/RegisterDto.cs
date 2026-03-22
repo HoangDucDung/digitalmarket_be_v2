@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Project.DigitalMarket.Application.Contract.DTOs
+namespace Project.DigitalMarket.Application.Contract.DTOs.Auths
 {
     /// <summary>
     /// DTO cho request đăng ký tài khoản

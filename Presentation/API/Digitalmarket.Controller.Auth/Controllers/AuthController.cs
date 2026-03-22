@@ -1,8 +1,8 @@
 using Digitalmarket.Controller.Base.Controllers;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Project.DigitalMarket.Application.Contract.DTOs;
-using Project.DigitalMarket.Domain.Services;
+using Project.DigitalMarket.Application.Contract.DTOs.Auths;
+using Project.DigitalMarket.Application.Contract.Services.Auths;
 using Project.DigitalMarket.Libs.DependencyInjection;
 
 namespace Digitalmarket.Controller.Auth.Controllers
@@ -46,6 +46,53 @@ namespace Digitalmarket.Controller.Auth.Controllers
         {
             var result = await _authService.LoginAsync(loginDto);
             return Ok(result);
+        }
+        /// <summary>
+        /// Xác thực email sau khi đăng ký
+        /// </summary>
+        [HttpPost("verify-email")]
+        [AllowAnonymous]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public async Task<IActionResult> VerifyEmail([FromBody] VerifyEmailDto dto)
+        {
+            await _authService.VerifyEmailAsync(dto);
+            return Ok(new { Message = "Xác thực email thành công." });
+        }
+
+        /// <summary>
+        /// Xác thực đăng nhập 2FA
+        /// </summary>
+        [HttpPost("verify-2fa-login")]
+        [AllowAnonymous]
+        [ProducesResponseType(typeof(AuthResponseDto), StatusCodes.Status200OK)]
+        public async Task<IActionResult> Verify2FALogin([FromBody] Verify2FALoginDto dto)
+        {
+            var result = await _authService.Verify2FALoginAsync(dto);
+            return Ok(result);
+        }
+
+        /// <summary>
+        /// Gửi mã kích hoạt 2FA (yêu cầu đăng nhập)
+        /// </summary>
+        [HttpPost("enable-2fa")]
+        [Authorize]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public async Task<IActionResult> Enable2FA()
+        {
+            await _authService.Enable2FAAsync(UserContext.UserId);
+            return Ok(new { Message = "Mã xác nhận đã được gửi đến email của bạn." });
+        }
+
+        /// <summary>
+        /// Xác nhận mã và bật 2FA (yêu cầu đăng nhập)
+        /// </summary>
+        [HttpPost("confirm-enable-2fa")]
+        [Authorize]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public async Task<IActionResult> ConfirmEnable2FA([FromBody] ConfirmEnable2FADto dto)
+        {
+            await _authService.ConfirmEnable2FAAsync(UserContext.UserId, dto);
+            return Ok(new { Message = "Xác thực 2 bước đã được bật thành công." });
         }
     }
 }

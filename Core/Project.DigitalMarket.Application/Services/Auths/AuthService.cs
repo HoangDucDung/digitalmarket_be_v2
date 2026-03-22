@@ -1,0 +1,150 @@
+using Microsoft.AspNetCore.Identity;
+using Project.DigitalMarket.Application.Contract.DTOs.Auths;
+using Project.DigitalMarket.Application.Contract.Services.Auths;
+using Project.DigitalMarket.Application.Contract.Services.Mails;
+using Project.DigitalMarket.Domain.Entities;
+using Project.DigitalMarket.Domain.Managers.Auths;
+using Project.DigitalMarket.Libs.DependencyInjection;
+using Project.DigitalMarket.Libs.Exceptions;
+using Project.Extensions.Extensions;
+
+namespace Project.DigitalMarket.Application.Services.Auths
+{
+    /// <summary>
+    /// Service xử lý đăng ký, đăng nhập và tạo JWT token.
+    /// Chuyển lại Application theo yêu cầu (Business Logic layer).
+    /// </summary>
+    public class AuthService(ILazyloadProvider lazyloadProvider) : DigitalMarketServiceBase(lazyloadProvider), IAuthService
+    {
+        private UserManager<UserEntity> _userManager => _lazyloadProvider.LazyGetRequiredService<UserManager<UserEntity>>();
+        private SignInManager<UserEntity> _signInManager => _lazyloadProvider.LazyGetRequiredService<SignInManager<UserEntity>>();
+        private IAuthManager _authManager => _lazyloadProvider.LazyGetRequiredService<IAuthManager>();
+        private IEmailService _emailService => _lazyloadProvider.LazyGetRequiredService<IEmailService>();
+
+        /// <summary>
+        /// Đăng ký tài khoản mới
+        /// </summary>
+        public async Task<AuthResponseDto> RegisterAsync(RegisterDto registerDto)
+        {
+            // Kiểm tra email đã tồn tại chưa
+            var existingUser = await _userManager.FindByEmailAsync(registerDto.Email);
+            if (existingUser != null)
+            {
+                throw new BusinessException("Email đã được sử dụng.");
+            }
+
+            var user = new UserEntity
+            {
+                UserName = registerDto.Email,
+                Email = registerDto.Email,
+                FullName = registerDto.FullName,
+                CreatedAt = GenerateExtentions.Now
+            };
+
+            var result = await _userManager.CreateAsync(user, registerDto.Password);
+
+            if (!result.Succeeded)
+            {
+                var errors = string.Join(", ", result.Errors.Select(e => e.Description));
+                throw new BusinessException($"Đăng ký thất bại: {errors}");
+            }
+
+            // Gửi email xác thực
+            var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+            await _emailService.SendEmailAsync(user.Email!, "Xác thực email", $"Mã xác thực của bạn là: {token}");
+
+            // Trả về response trống vì yêu cầu xác thực email trước khi đăng nhập
+            return new AuthResponseDto { Email = user.Email! };
+        }
+
+        /// <summary>
+        /// Đăng nhập
+        /// </summary>
+        public async Task<AuthResponseDto> LoginAsync(LoginDto loginDto)
+        {
+            var user = await _userManager.FindByEmailAsync(loginDto.Email);
+            if (user == null)
+            {
+                throw new AuthException("Email hoặc mật khẩu không đúng.");
+            }
+
+            if (!user.EmailConfirmed)
+            {
+                throw new AuthException("Vui lòng xác thực email trước khi đăng nhập.");
+            }
+
+            var result = await _signInManager.CheckPasswordSignInAsync(user, loginDto.Password, lockoutOnFailure: false);
+
+            if (result.RequiresTwoFactor)
+            {
+                var token = await _userManager.GenerateTwoFactorTokenAsync(user, "Email");
+                await _emailService.SendEmailAsync(user.Email!, "Mã xác thực 2FA", $"Mã 2FA của bạn là: {token}");
+                return new AuthResponseDto { RequiresTwoFactor = true, Email = user.Email! };
+            }
+
+            if (!result.Succeeded)
+            {
+                throw new AuthException("Email hoặc mật khẩu không đúng.");
+            }
+
+            return GenerateJwtToken(user);
+        }
+
+        /// <summary>
+        /// Tạo JWT token từ thông tin user thông qua Manager
+        /// </summary>
+        private AuthResponseDto GenerateJwtToken(UserEntity user)
+        {
+            var infoToken = _authManager.GenerateJwtToken(user);
+
+            return new AuthResponseDto
+            {
+                Token = infoToken.Token,
+                Expiration = infoToken.Expiration,
+                FullName = infoToken.FullName,
+                Email = infoToken.Email
+            };
+        }
+
+        public async Task VerifyEmailAsync(VerifyEmailDto dto)
+        {
+            var user = await _userManager.FindByEmailAsync(dto.Email);
+            if (user == null) throw new AuthException("Tài khoản không tồn tại.");
+
+            var result = await _userManager.ConfirmEmailAsync(user, dto.Token);
+            if (!result.Succeeded) throw new AuthException("Mã xác thực không hợp lệ or đã hết hạn.");
+        }
+
+        public async Task Enable2FAAsync(Guid userId)
+        {
+            var user = await _userManager.FindByIdAsync(userId.ToString());
+            if (user == null) throw new AuthException("Tài khoản không tồn tại.");
+
+            var token = await _userManager.GenerateTwoFactorTokenAsync(user, "Email");
+            await _emailService.SendEmailAsync(user.Email!, "Kích hoạt 2FA", $"Mã kích hoạt 2FA của bạn là: {token}");
+        }
+
+        public async Task ConfirmEnable2FAAsync(Guid userId, ConfirmEnable2FADto dto)
+        {
+            var user = await _userManager.FindByIdAsync(userId.ToString());
+            if (user == null) throw new AuthException("Tài khoản không tồn tại.");
+
+            var isValid = await _userManager.VerifyTwoFactorTokenAsync(user, "Email", dto.Code);
+            if (!isValid) throw new AuthException("Mã kích hoạt không hợp lệ.");
+
+            await _userManager.SetTwoFactorEnabledAsync(user, true);
+        }
+
+        public async Task<AuthResponseDto> Verify2FALoginAsync(Verify2FALoginDto dto)
+        {
+            var user = await _userManager.FindByEmailAsync(dto.Email);
+            if (user == null) throw new AuthException("Tài khoản không tồn tại.");
+
+            var isValid = await _userManager.VerifyTwoFactorTokenAsync(user, "Email", dto.Code);
+            if (!isValid) throw new AuthException("Mã 2FA không hợp lệ.");
+
+            // Trực tiếp sinh JWT nếu mã 2FA đúng (vì bước trước đó đã verify Password thành công)
+            return GenerateJwtToken(user);
+        }
+    }
+}

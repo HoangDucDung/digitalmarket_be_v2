@@ -1,6 +1,44 @@
 [
   {
     "ContainingType": "Digitalmarket.Controller.Auth.Controllers.AuthController",
+    "Method": "ConfirmEnable2FA",
+    "RelativePath": "api/Auth/confirm-enable-2fa",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Project.DigitalMarket.Application.Contract.DTOs.Auths.ConfirmEnable2FADto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Digitalmarket.Controller.Auth.Controllers.AuthController",
+    "Method": "Enable2FA",
+    "RelativePath": "api/Auth/enable-2fa",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Digitalmarket.Controller.Auth.Controllers.AuthController",
     "Method": "Login",
     "RelativePath": "api/Auth/login",
     "HttpMethod": "POST",
@@ -9,13 +47,13 @@
     "Parameters": [
       {
         "Name": "loginDto",
-        "Type": "Project.DigitalMarket.Application.Contract.DTOs.LoginDto",
+        "Type": "Project.DigitalMarket.Application.Contract.DTOs.Auths.LoginDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Project.DigitalMarket.Application.Contract.DTOs.AuthResponseDto",
+        "Type": "Project.DigitalMarket.Application.Contract.DTOs.Auths.AuthResponseDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -35,18 +73,66 @@
     "Parameters": [
       {
         "Name": "registerDto",
-        "Type": "Project.DigitalMarket.Application.Contract.DTOs.RegisterDto",
+        "Type": "Project.DigitalMarket.Application.Contract.DTOs.Auths.RegisterDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Project.DigitalMarket.Application.Contract.DTOs.AuthResponseDto",
+        "Type": "Project.DigitalMarket.Application.Contract.DTOs.Auths.AuthResponseDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
           "text/json"
         ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Digitalmarket.Controller.Auth.Controllers.AuthController",
+    "Method": "Verify2FALogin",
+    "RelativePath": "api/Auth/verify-2fa-login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Project.DigitalMarket.Application.Contract.DTOs.Auths.Verify2FALoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Project.DigitalMarket.Application.Contract.DTOs.Auths.AuthResponseDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Digitalmarket.Controller.Auth.Controllers.AuthController",
+    "Method": "VerifyEmail",
+    "RelativePath": "api/Auth/verify-email",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Project.DigitalMarket.Application.Contract.DTOs.Auths.VerifyEmailDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
         "StatusCode": 200
       }
     ]

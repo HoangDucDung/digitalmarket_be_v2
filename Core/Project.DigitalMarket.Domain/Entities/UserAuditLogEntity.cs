@@ -1,3 +1,5 @@
+using Project.Extensions.Extensions;
+
 namespace Project.DigitalMarket.Domain.Entities
 {
     /// <summary>
@@ -33,7 +35,7 @@ namespace Project.DigitalMarket.Domain.Entities
         /// <summary>
         /// Thời gian xảy ra hành động
         /// </summary>
-        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public DateTime CreatedAt { get; set; } = GenerateExtentions.Now;
 
         /// <summary>
         /// Dữ liệu bổ sung dạng JSON nếu cần lưu thêm thông tin chi tiết

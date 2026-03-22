@@ -1,3 +1,5 @@
+using Project.Extensions.Extensions;
+
 namespace Project.DigitalMarket.Domain.Entities.Base
 {
     public abstract class BaseEntity
@@ -10,7 +12,7 @@ namespace Project.DigitalMarket.Domain.Entities.Base
         /// <summary>
         /// Ngày tạo bản ghi
         /// </summary>
-        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public DateTime CreatedAt { get; set; } = GenerateExtentions.Now;
 
         /// <summary>
         /// Người tạo (Id hoặc Tên)

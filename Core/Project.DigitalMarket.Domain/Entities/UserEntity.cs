@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Identity;
+using Project.Extensions.Extensions;
 
 namespace Project.DigitalMarket.Domain.Entities
 {
@@ -25,7 +26,7 @@ namespace Project.DigitalMarket.Domain.Entities
         /// <summary>
         /// Ngày tạo tài khoản
         /// </summary>
-        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public DateTime CreatedAt { get; set; } = GenerateExtentions.Now;
 
         /// <summary>
         /// Ngày cập nhật thông tin gần nhất

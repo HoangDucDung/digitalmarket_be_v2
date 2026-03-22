@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Project.DigitalMarket.Domain.Entities;
 
-namespace Project.DigitalMarket.Infrastructure.Data
+namespace Project.DigitalMarket.Infrastructure.MsSql.Data
 {
     /// <summary>
     /// DbContext tích hợp Identity, kế thừa IdentityDbContext để tự động quản lý bảng User, Role, Claims...

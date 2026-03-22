@@ -117,17 +117,3 @@ public class ProductManager
     }
 }
 ```
-
-Note: Entity
-
-Sử dụng .AsNoTracking(): Giải thích vì sao việc tắt bộ theo dõi thay đổi (Change Tracker) giúp giảm mức chiếm dụng RAM và CPU khi thực hiện các tác vụ chỉ đọc dữ liệu (Read-only).
-Sử dụng IQueryable<T>: Giải thích về cơ chế trì hoãn thực thi (Deferred Execution). Thay vì lấy toàn bộ dữ liệu về RAM, EF Core sẽ dịch câu lệnh sang SQL và chỉ gửi những gì thực sự cần thiết xuống database.
-Chiến lược
-
-SaveChangesAsync()
-: Giải thích về gom nhóm các câu lệnh INSERT/UPDATE thành một khối (Batching), giúp giảm thiểu số lượng kết nối mạng giữa ứng dụng và SQL Server.
-Tận dụng Generic Type Constraints: Cách sử dụng where TEntity : class để giúp code của bạn an toàn hơn, tránh các lỗi kiểu dữ liệu ngay từ lúc biên dịch (Compile-time).
-Soft Delete (Xóa mềm): Giải thích sự kết hợp giữa BaseEntity.IsDeleted và các hàm lọc dữ liệu (
-
-GetByCondition
-) để bảo vệ dữ liệu khỏi việc bị xóa vĩnh viễn trong database.

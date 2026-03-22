@@ -1,4 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection;
 using System.Collections.Concurrent;
 
 namespace Project.DigitalMarket.Libs.DependencyInjection
@@ -40,7 +40,7 @@ namespace Project.DigitalMarket.Libs.DependencyInjection
 
         public T GetRequiredService<T>()
         {
-            return (T)GetRequiredService(typeof(T));
+            return (T)GetRequiredService(typeof(T))!;
         }
 
         public object GetRequiredService(Type serviceType, object defaultValue)

@@ -1,3 +1,5 @@
+using Project.Extensions.Extensions;
+
 namespace Project.DigitalMarket.Domain.Entities
 {
     /// <summary>
@@ -48,7 +50,7 @@ namespace Project.DigitalMarket.Domain.Entities
         /// <summary>
         /// Ngày tạo hồ sơ KYC
         /// </summary>
-        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public DateTime CreatedAt { get; set; } = GenerateExtentions.Now;
 
         /// <summary>
         /// Ngày duyệt hồ sơ

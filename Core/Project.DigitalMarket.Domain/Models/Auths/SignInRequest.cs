@@ -1,4 +1,4 @@
-﻿namespace Project.DigitalMarket.Domain.Models.Auths
+namespace Project.DigitalMarket.Domain.Models.Auths
 {
     public class SignInRequest
     {

@@ -1,9 +1,10 @@
 using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
 using Project.DigitalMarket.Domain.Repositories.Base;
-using Project.DigitalMarket.Infrastructure.Data;
+using Project.DigitalMarket.Infrastructure.MsSql.Data;
+using Project.DigitalMarket.Libs.DependencyInjection;
 
-namespace Project.DigitalMarket.Infrastructure.Repositories.Base
+namespace Project.DigitalMarket.Infrastructure.MsSql.Repositories.Base
 {
     /// <summary>
     /// Lớp triển khai các hàm CRUD cơ bản bằng Entity Framework Core
@@ -11,13 +12,13 @@ namespace Project.DigitalMarket.Infrastructure.Repositories.Base
     /// <typeparam name="TEntity">Thực thể Database (Entity)</typeparam>
     public abstract class RepositoryBase<TEntity> : IRepositoryBase<TEntity> where TEntity : class
     {
-        protected readonly DigitalMarketDbContext _context;
-        protected readonly DbSet<TEntity> _dbSet;
+        protected readonly ILazyloadProvider _lazyloadProvider;
+        protected DigitalMarketDbContext _context => _lazyloadProvider.LazyGetRequiredService<DigitalMarketDbContext>();
+        protected DbSet<TEntity> _dbSet => _context.Set<TEntity>();
 
-        protected RepositoryBase(DigitalMarketDbContext context)
+        protected RepositoryBase(ILazyloadProvider lazyloadProvider)
         {
-            _context = context;
-            _dbSet = _context.Set<TEntity>();
+            _lazyloadProvider = lazyloadProvider;
         }
 
         /// <summary>

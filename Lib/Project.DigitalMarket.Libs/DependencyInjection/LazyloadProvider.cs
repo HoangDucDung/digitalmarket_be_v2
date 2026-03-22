@@ -1,4 +1,4 @@
-﻿using System.Collections.Concurrent;
+using System.Collections.Concurrent;
 
 namespace Project.DigitalMarket.Libs.DependencyInjection
 {
@@ -8,7 +8,7 @@ namespace Project.DigitalMarket.Libs.DependencyInjection
 
         public virtual T LazyGetRequiredService<T>()
         {
-            return (T)LazyGetRequiredService(typeof(T));
+            return (T)LazyGetRequiredService(typeof(T))!;
         }
 
         public virtual object LazyGetRequiredService(Type serviceType)

@@ -1,10 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
-using Project.DigitalMarket.Infrastructure.Data;
-using System.IO;
 
-namespace Project.DigitalMarket.Infrastructure.Data
+namespace Project.DigitalMarket.Infrastructure.MsSql.Data
 {
     public class DigitalMarketDbContextFactory : IDesignTimeDbContextFactory<DigitalMarketDbContext>
     {

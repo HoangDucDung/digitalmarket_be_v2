@@ -1,3 +1,5 @@
+using Project.Extensions.Extensions;
+
 namespace Project.DigitalMarket.Domain.Entities
 {
     /// <summary>
@@ -43,7 +45,7 @@ namespace Project.DigitalMarket.Domain.Entities
         /// <summary>
         /// Ngày thêm thông tin
         /// </summary>
-        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public DateTime CreatedAt { get; set; } = GenerateExtentions.Now;
 
         /// <summary>
         /// Navigation property tới UserEntity

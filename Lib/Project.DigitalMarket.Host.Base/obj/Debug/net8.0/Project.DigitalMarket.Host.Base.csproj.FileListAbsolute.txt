@@ -1,8 +1,10 @@
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Lib\Project.DigitalMarket.Host.Base\bin\Debug\net8.0\Project.DigitalMarket.Host.Base.deps.json
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Lib\Project.DigitalMarket.Host.Base\bin\Debug\net8.0\Project.DigitalMarket.Host.Base.dll
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Lib\Project.DigitalMarket.Host.Base\bin\Debug\net8.0\Project.DigitalMarket.Host.Base.pdb
+E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Lib\Project.DigitalMarket.Host.Base\bin\Debug\net8.0\Project.DigitalMarket.Domain.Share.dll
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Lib\Project.DigitalMarket.Host.Base\bin\Debug\net8.0\Project.DigitalMarket.Extension.dll
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Lib\Project.DigitalMarket.Host.Base\bin\Debug\net8.0\Project.DigitalMarket.Libs.dll
+E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Lib\Project.DigitalMarket.Host.Base\bin\Debug\net8.0\Project.DigitalMarket.Domain.Share.pdb
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Lib\Project.DigitalMarket.Host.Base\bin\Debug\net8.0\Project.DigitalMarket.Libs.pdb
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Lib\Project.DigitalMarket.Host.Base\bin\Debug\net8.0\Project.DigitalMarket.Extension.pdb
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Lib\Project.DigitalMarket.Host.Base\obj\Debug\net8.0\Project.DigitalMarket.Host.Base.csproj.AssemblyReference.cache
@@ -10,11 +12,9 @@ E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Lib\Project.DigitalMarket.
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Lib\Project.DigitalMarket.Host.Base\obj\Debug\net8.0\Project.DigitalMarket.Host.Base.AssemblyInfoInputs.cache
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Lib\Project.DigitalMarket.Host.Base\obj\Debug\net8.0\Project.DigitalMarket.Host.Base.AssemblyInfo.cs
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Lib\Project.DigitalMarket.Host.Base\obj\Debug\net8.0\Project.DigitalMarket.Host.Base.csproj.CoreCompileInputs.cache
+E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Lib\Project.DigitalMarket.Host.Base\obj\Debug\net8.0\Project.DigitalMarket.Host.Base.sourcelink.json
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Lib\Project.DigitalMarket.Host.Base\obj\Debug\net8.0\Project..663F34B2.Up2Date
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Lib\Project.DigitalMarket.Host.Base\obj\Debug\net8.0\Project.DigitalMarket.Host.Base.dll
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Lib\Project.DigitalMarket.Host.Base\obj\Debug\net8.0\refint\Project.DigitalMarket.Host.Base.dll
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Lib\Project.DigitalMarket.Host.Base\obj\Debug\net8.0\Project.DigitalMarket.Host.Base.pdb
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Lib\Project.DigitalMarket.Host.Base\obj\Debug\net8.0\ref\Project.DigitalMarket.Host.Base.dll
-E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Lib\Project.DigitalMarket.Host.Base\obj\Debug\net8.0\Project.DigitalMarket.Host.Base.sourcelink.json
-E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Lib\Project.DigitalMarket.Host.Base\bin\Debug\net8.0\Project.DigitalMarket.Domain.Share.dll
-E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Lib\Project.DigitalMarket.Host.Base\bin\Debug\net8.0\Project.DigitalMarket.Domain.Share.pdb

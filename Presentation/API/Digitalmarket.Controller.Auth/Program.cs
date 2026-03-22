@@ -1,4 +1,4 @@
-﻿
+
 using Digitalmarket.Controller.Base.AppCoreFactory;
 using Project.DigitalMarket.Host.Base.Bases;
 using Project.DigitalMarket.Host.Base.Configs;
@@ -15,6 +15,7 @@ namespace Digitalmarket.Controller.Auth
             builder.Configuration.AddBaseConfiguration(
             [
                 "auth.json",
+                "Email.json",
                 "connection.json"
             ]);
 
@@ -31,9 +32,11 @@ namespace Digitalmarket.Controller.Auth
             // Đăng ký các dịch vụ tùy chỉnh
             builder.Services.AddLazyloadFactory();
             builder.Services.UseAppAuthenFactory(builder.Configuration);
+            builder.Services.UseAppManagerFactory();
 
             // Đăng ký các options
             builder.Services.GetAuthConfig(builder.Configuration);
+            builder.Services.GetEmailConfig(builder.Configuration);
             builder.Services.GetConnectionConfig(builder.Configuration);
 
             var app = builder.Build();
