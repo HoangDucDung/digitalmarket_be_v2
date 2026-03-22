@@ -1,6 +1,6 @@
 {
   "ConnectionString": {
-    "SqlServer": "Server=HDDUNG\\MSSQLSERVER02;Database=BaseCleanArchitechture;Trusted_Connection=True;",
+    "SqlServer": "Server=HDDUNG\\MSSQLSERVER02;Database=DigitalMarket;Trusted_Connection=True;",
     "MongoDB": "mongodb://localhost:27017"
   }
 }
