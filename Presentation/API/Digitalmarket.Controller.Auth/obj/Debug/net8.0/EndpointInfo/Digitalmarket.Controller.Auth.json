@@ -21,17 +21,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RegisterDto"
+                "$ref": "#/components/schemas/Project.DigitalMarket.Application.Contract.DTOs.Auths.RegisterDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/RegisterDto"
+                "$ref": "#/components/schemas/Project.DigitalMarket.Application.Contract.DTOs.Auths.RegisterDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/RegisterDto"
+                "$ref": "#/components/schemas/Project.DigitalMarket.Application.Contract.DTOs.Auths.RegisterDto"
               }
             }
           }
@@ -42,17 +42,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/AuthResponseDto"
+                  "$ref": "#/components/schemas/Project.DigitalMarket.Application.Contract.DTOs.Auths.AuthResponseDto"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AuthResponseDto"
+                  "$ref": "#/components/schemas/Project.DigitalMarket.Application.Contract.DTOs.Auths.AuthResponseDto"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AuthResponseDto"
+                  "$ref": "#/components/schemas/Project.DigitalMarket.Application.Contract.DTOs.Auths.AuthResponseDto"
                 }
               }
             }
@@ -74,17 +74,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/LoginDto"
+                "$ref": "#/components/schemas/Project.DigitalMarket.Application.Contract.DTOs.Auths.LoginDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/LoginDto"
+                "$ref": "#/components/schemas/Project.DigitalMarket.Application.Contract.DTOs.Auths.LoginDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/LoginDto"
+                "$ref": "#/components/schemas/Project.DigitalMarket.Application.Contract.DTOs.Auths.LoginDto"
               }
             }
           }
@@ -95,17 +95,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/AuthResponseDto"
+                  "$ref": "#/components/schemas/Project.DigitalMarket.Application.Contract.DTOs.Auths.AuthResponseDto"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AuthResponseDto"
+                  "$ref": "#/components/schemas/Project.DigitalMarket.Application.Contract.DTOs.Auths.AuthResponseDto"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AuthResponseDto"
+                  "$ref": "#/components/schemas/Project.DigitalMarket.Application.Contract.DTOs.Auths.AuthResponseDto"
                 }
               }
             }
@@ -126,17 +126,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/VerifyEmailDto"
+                "$ref": "#/components/schemas/Project.DigitalMarket.Application.Contract.DTOs.Auths.VerifyEmailDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/VerifyEmailDto"
+                "$ref": "#/components/schemas/Project.DigitalMarket.Application.Contract.DTOs.Auths.VerifyEmailDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/VerifyEmailDto"
+                "$ref": "#/components/schemas/Project.DigitalMarket.Application.Contract.DTOs.Auths.VerifyEmailDto"
               }
             }
           }
@@ -158,17 +158,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Verify2FALoginDto"
+                "$ref": "#/components/schemas/Project.DigitalMarket.Application.Contract.DTOs.Auths.Verify2FALoginDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Verify2FALoginDto"
+                "$ref": "#/components/schemas/Project.DigitalMarket.Application.Contract.DTOs.Auths.Verify2FALoginDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Verify2FALoginDto"
+                "$ref": "#/components/schemas/Project.DigitalMarket.Application.Contract.DTOs.Auths.Verify2FALoginDto"
               }
             }
           }
@@ -179,17 +179,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/AuthResponseDto"
+                  "$ref": "#/components/schemas/Project.DigitalMarket.Application.Contract.DTOs.Auths.AuthResponseDto"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AuthResponseDto"
+                  "$ref": "#/components/schemas/Project.DigitalMarket.Application.Contract.DTOs.Auths.AuthResponseDto"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AuthResponseDto"
+                  "$ref": "#/components/schemas/Project.DigitalMarket.Application.Contract.DTOs.Auths.AuthResponseDto"
                 }
               }
             }
@@ -220,17 +220,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ConfirmEnable2FADto"
+                "$ref": "#/components/schemas/Project.DigitalMarket.Application.Contract.DTOs.Auths.ConfirmEnable2FADto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/ConfirmEnable2FADto"
+                "$ref": "#/components/schemas/Project.DigitalMarket.Application.Contract.DTOs.Auths.ConfirmEnable2FADto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/ConfirmEnable2FADto"
+                "$ref": "#/components/schemas/Project.DigitalMarket.Application.Contract.DTOs.Auths.ConfirmEnable2FADto"
               }
             }
           }
@@ -245,7 +245,7 @@
   },
   "components": {
     "schemas": {
-      "AuthResponseDto": {
+      "Project.DigitalMarket.Application.Contract.DTOs.Auths.AuthResponseDto": {
         "type": "object",
         "properties": {
           "token": {
@@ -270,7 +270,7 @@
         },
         "additionalProperties": false
       },
-      "ConfirmEnable2FADto": {
+      "Project.DigitalMarket.Application.Contract.DTOs.Auths.ConfirmEnable2FADto": {
         "type": "object",
         "properties": {
           "code": {
@@ -280,7 +280,7 @@
         },
         "additionalProperties": false
       },
-      "LoginDto": {
+      "Project.DigitalMarket.Application.Contract.DTOs.Auths.LoginDto": {
         "required": [
           "email",
           "password"
@@ -299,7 +299,7 @@
         },
         "additionalProperties": false
       },
-      "RegisterDto": {
+      "Project.DigitalMarket.Application.Contract.DTOs.Auths.RegisterDto": {
         "required": [
           "email",
           "fullName",
@@ -323,7 +323,7 @@
         },
         "additionalProperties": false
       },
-      "Verify2FALoginDto": {
+      "Project.DigitalMarket.Application.Contract.DTOs.Auths.Verify2FALoginDto": {
         "type": "object",
         "properties": {
           "email": {
@@ -337,7 +337,7 @@
         },
         "additionalProperties": false
       },
-      "VerifyEmailDto": {
+      "Project.DigitalMarket.Application.Contract.DTOs.Auths.VerifyEmailDto": {
         "type": "object",
         "properties": {
           "email": {

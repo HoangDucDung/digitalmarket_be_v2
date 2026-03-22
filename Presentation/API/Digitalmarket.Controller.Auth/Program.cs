@@ -23,6 +23,16 @@ namespace Digitalmarket.Controller.Auth
             var docName = "Auth";
 
             // Add services to the container.
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll", policy =>
+                {
+                    policy.AllowAnyOrigin()
+                          .AllowAnyMethod()
+                          .AllowAnyHeader();
+                });
+            });
+
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
@@ -40,6 +50,8 @@ namespace Digitalmarket.Controller.Auth
             builder.Services.GetConnectionConfig(builder.Configuration);
 
             var app = builder.Build();
+
+            app.UseCors("AllowAll");
 
             // Configure the HTTP request pipeline.
             //if (app.Environment.IsDevelopment())

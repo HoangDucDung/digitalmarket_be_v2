@@ -1,4 +1,4 @@
-﻿
+
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
@@ -26,7 +26,13 @@ namespace Project.DigitalMarket.Host.Base.Bases
                         },
                     });
 
-                options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFilename);
+                if (File.Exists(xmlPath))
+                {
+                    options.IncludeXmlComments(xmlPath);
+                }
+
+                options.CustomSchemaIds(type => type.FullName);
 
             });
             return services;

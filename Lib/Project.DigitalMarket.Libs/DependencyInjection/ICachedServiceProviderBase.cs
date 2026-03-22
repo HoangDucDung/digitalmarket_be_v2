@@ -1,4 +1,4 @@
-﻿namespace Project.DigitalMarket.Libs.DependencyInjection
+namespace Project.DigitalMarket.Libs.DependencyInjection
 {
     public interface ICachedServiceProviderBase
     {
