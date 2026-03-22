@@ -16,7 +16,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Core\Project.DigitalMarket.Domain\Project.DigitalMarket.Domain.csproj" />
-    <ProjectReference Include="..\..\Lib\Project.DigitalMarket.Host.Base\Project.DigitalMarket.Host.Base.csproj" />
     <ProjectReference Include="..\..\Lib\Project.DigitalMarket.Libs\Project.DigitalMarket.Libs.csproj" />
   </ItemGroup>
 

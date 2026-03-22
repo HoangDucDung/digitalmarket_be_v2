@@ -389,9 +389,6 @@
               "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain\\Project.DigitalMarket.Domain.csproj": {
                 "projectPath": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain\\Project.DigitalMarket.Domain.csproj"
               },
-              "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj": {
-                "projectPath": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj"
-              },
               "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\Project.DigitalMarket.Libs.csproj": {
                 "projectPath": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\Project.DigitalMarket.Libs.csproj"
               }
@@ -469,9 +466,6 @@
             "projectReferences": {
               "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain\\Project.DigitalMarket.Domain.csproj": {
                 "projectPath": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain\\Project.DigitalMarket.Domain.csproj"
-              },
-              "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj": {
-                "projectPath": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj"
               },
               "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\Project.DigitalMarket.Libs.csproj": {
                 "projectPath": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\Project.DigitalMarket.Libs.csproj"

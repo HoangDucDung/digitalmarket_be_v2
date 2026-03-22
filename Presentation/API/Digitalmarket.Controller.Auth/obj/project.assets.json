@@ -1821,7 +1821,6 @@
         "dependencies": {
           "MailKit": "4.15.1",
           "Project.DigitalMarket.Domain": "1.0.0",
-          "Project.DigitalMarket.Host.Base": "1.0.0",
           "Project.DigitalMarket.Libs": "1.0.0"
         },
         "compile": {
@@ -1837,7 +1836,6 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.8",
           "Project.DigitalMarket.Domain": "1.0.0",
-          "Project.DigitalMarket.Host.Base": "1.0.0",
           "Project.DigitalMarket.Libs": "1.0.0"
         },
         "compile": {
