@@ -6,6 +6,7 @@ using Project.DigitalMarket.Domain.Entities;
 using Project.DigitalMarket.Domain.Managers.Auths;
 using Project.DigitalMarket.Libs.DependencyInjection;
 using Project.DigitalMarket.Libs.Exceptions;
+using Project.DigitalMarket.Libs.Constants.ErrorCode;
 using Project.Extensions.Extensions;
 
 namespace Project.DigitalMarket.Application.Services.Auths
@@ -30,7 +31,7 @@ namespace Project.DigitalMarket.Application.Services.Auths
             var existingUser = await _userManager.FindByEmailAsync(registerDto.Email);
             if (existingUser != null)
             {
-                throw new BusinessException("Email đã được sử dụng.");
+                throw new BusinessException(ErrorCode.AccountAlreadyExists, "Email đã được sử dụng.");
             }
 
             var user = new UserEntity
@@ -46,7 +47,7 @@ namespace Project.DigitalMarket.Application.Services.Auths
             if (!result.Succeeded)
             {
                 var errors = string.Join(", ", result.Errors.Select(e => e.Description));
-                throw new BusinessException($"Đăng ký thất bại: {errors}");
+                throw new BusinessException(ErrorCode.RegistrationFailed, $"Đăng ký thất bại: {errors}");
             }
 
             // Gửi email xác thực
@@ -65,12 +66,12 @@ namespace Project.DigitalMarket.Application.Services.Auths
             var user = await _userManager.FindByEmailAsync(loginDto.Email);
             if (user == null)
             {
-                throw new AuthException("Email hoặc mật khẩu không đúng.");
+                throw new AuthException(ErrorCode.InvalidCredentials, "Email hoặc mật khẩu không đúng.");
             }
 
             if (!user.EmailConfirmed)
             {
-                throw new AuthException("Vui lòng xác thực email trước khi đăng nhập.");
+                throw new AuthException(ErrorCode.EmailNotConfirmed, "Vui lòng xác thực email trước khi đăng nhập.");
             }
 
             var result = await _signInManager.CheckPasswordSignInAsync(user, loginDto.Password, lockoutOnFailure: false);
@@ -84,7 +85,7 @@ namespace Project.DigitalMarket.Application.Services.Auths
 
             if (!result.Succeeded)
             {
-                throw new AuthException("Email hoặc mật khẩu không đúng.");
+                throw new AuthException(ErrorCode.InvalidCredentials, "Email hoặc mật khẩu không đúng.");
             }
 
             return GenerateJwtToken(user);
@@ -109,16 +110,16 @@ namespace Project.DigitalMarket.Application.Services.Auths
         public async Task VerifyEmailAsync(VerifyEmailDto dto)
         {
             var user = await _userManager.FindByEmailAsync(dto.Email);
-            if (user == null) throw new AuthException("Tài khoản không tồn tại.");
+            if (user == null) throw new AuthException(ErrorCode.AccountNotFound, "Tài khoản không tồn tại.");
 
             var result = await _userManager.ConfirmEmailAsync(user, dto.Token);
-            if (!result.Succeeded) throw new AuthException("Mã xác thực không hợp lệ or đã hết hạn.");
+            if (!result.Succeeded) throw new AuthException(ErrorCode.InvalidToken, "Mã xác thực không hợp lệ or đã hết hạn.");
         }
 
         public async Task Enable2FAAsync(Guid userId)
         {
             var user = await _userManager.FindByIdAsync(userId.ToString());
-            if (user == null) throw new AuthException("Tài khoản không tồn tại.");
+            if (user == null) throw new AuthException(ErrorCode.AccountNotFound, "Tài khoản không tồn tại.");
 
             var token = await _userManager.GenerateTwoFactorTokenAsync(user, "Email");
             await _emailService.SendEmailAsync(user.Email!, "Kích hoạt 2FA", $"Mã kích hoạt 2FA của bạn là: {token}");
@@ -127,7 +128,7 @@ namespace Project.DigitalMarket.Application.Services.Auths
         public async Task ConfirmEnable2FAAsync(Guid userId, ConfirmEnable2FADto dto)
         {
             var user = await _userManager.FindByIdAsync(userId.ToString());
-            if (user == null) throw new AuthException("Tài khoản không tồn tại.");
+            if (user == null) throw new AuthException(ErrorCode.AccountNotFound, "Tài khoản không tồn tại.");
 
             var isValid = await _userManager.VerifyTwoFactorTokenAsync(user, "Email", dto.Code);
             if (!isValid) throw new AuthException("Mã kích hoạt không hợp lệ.");
@@ -138,7 +139,7 @@ namespace Project.DigitalMarket.Application.Services.Auths
         public async Task<AuthResponseDto> Verify2FALoginAsync(Verify2FALoginDto dto)
         {
             var user = await _userManager.FindByEmailAsync(dto.Email);
-            if (user == null) throw new AuthException("Tài khoản không tồn tại.");
+            if (user == null) throw new AuthException(ErrorCode.AccountNotFound, "Tài khoản không tồn tại.");
 
             var isValid = await _userManager.VerifyTwoFactorTokenAsync(user, "Email", dto.Code);
             if (!isValid) throw new AuthException("Mã 2FA không hợp lệ.");

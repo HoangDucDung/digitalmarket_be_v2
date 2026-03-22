@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http;
 using Project.DigitalMarket.Libs.Exceptions;
 
 namespace Project.DigitalMarket.Host.Base.Middleware
@@ -20,7 +20,11 @@ namespace Project.DigitalMarket.Host.Base.Middleware
             catch (BaseHttpStatusCodeException ex)
             {
                 context.Response.StatusCode = (int)ex.StatusCode;
-                await context.Response.WriteAsync(ex.Message);
+                await context.Response.WriteAsJsonAsync(new
+                {
+                    errorcode = ex.ErrorCode,
+                    message = ex.Message
+                });
             }
             catch (Exception)
             {
