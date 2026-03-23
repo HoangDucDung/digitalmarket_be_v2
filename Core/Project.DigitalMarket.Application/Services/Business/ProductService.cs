@@ -12,7 +12,7 @@ namespace Project.DigitalMarket.Application.Services.Business
     /// </summary>
     public class ProductService(ILazyloadProvider lazyloadProvider) : DigitalMarketServiceBase(lazyloadProvider), IProductService
     {
-        public Task<DiscoveryResponseDto> GetDailyDiscoverAsync(DailyDiscoverRequest filter)
+        public Task<DiscoveryResponseDto> GetDailyDiscoverAsync(DiscoveryRequestDto discoveryRequestDto)
         {
             throw new NotImplementedException();
         }

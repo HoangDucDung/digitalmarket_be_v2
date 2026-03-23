@@ -10,7 +10,7 @@ namespace Project.DigitalMarket.Application.Contract.Services.Business
 {
     public interface IProductService
     {
-        Task<DiscoveryResponseDto> GetDailyDiscoverAsync(DailyDiscoverRequest filter);
+        Task<DiscoveryResponseDto> GetDailyDiscoverAsync(DiscoveryRequestDto discoveryRequestDto);
     }
 
 }

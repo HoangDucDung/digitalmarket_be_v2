@@ -9,9 +9,6 @@ namespace Project.DigitalMarket.Application.Contract.Services.Business
 {
     public interface IOrderService
     {
-        Task<OrderResponseDto> CreateOrderAsync(Guid userId, CreateOrderDto dto);
-        Task<OrderResponseDto> GetOrderByIdAsync(Guid orderId, Guid userId);
-        Task<IEnumerable<OrderResponseDto>> GetMyOrdersAsync(Guid userId);
-        Task CancelOrderAsync(Guid orderId, Guid userId);
+      
     }
 }
