@@ -4,6 +4,7 @@ using MimeKit;
 using Project.DigitalMarket.Domain.ExternalServices.Mails;
 using Project.DigitalMarket.Domain.Share.Config;
 using Project.DigitalMarket.Libs.DependencyInjection;
+using Project.Extensions.Extensions;
 
 namespace Project.DigitalMarket.Infrastructure.Mail.Services
 {
@@ -24,7 +25,7 @@ namespace Project.DigitalMarket.Infrastructure.Mail.Services
         public async Task SendEmailAsync(string[] toEmails, string subject, string body)
         {
             var email = new MimeMessage();
-            if (!string.IsNullOrEmpty(_emailConfig.FromName))
+            if (_emailConfig.FromName.HasValue())
             {
                 email.Sender = new MailboxAddress(_emailConfig.FromName, _emailConfig.FromEmail);
             }

@@ -12,6 +12,15 @@ using Project.DigitalMarket.Infrastructure.Mail.Services;
 using Project.DigitalMarket.Infrastructure.MsSql.Data;
 using Project.DigitalMarket.Libs.DependencyInjection;
 using System.Text;
+using Project.DigitalMarket.Application;
+using Project.DigitalMarket.Application.Contract.Services.Business;
+using Project.DigitalMarket.Application.Services.Business;
+using Project.DigitalMarket.Domain.Repositories.Auths;
+using Project.DigitalMarket.Infrastructure.MsSql.Repositories.Auths;
+using Project.DigitalMarket.Domain.Managers.Business;
+using Project.DigitalMarket.Infrastructure.MsSql.Repositories.Business;
+using Project.DigitalMarket.Domain.Repositories.Business;
+using Project.Extensions.Extensions;
 
 namespace Digitalmarket.Controller.Base.AppCoreFactory
 {
@@ -28,7 +37,7 @@ namespace Digitalmarket.Controller.Base.AppCoreFactory
         }
 
         /// <summary>
-        /// DI cho auth: Đăng ký Identity, JWT Authentication, DbContext, AuthService
+        /// DI cho auth: Đăng ký Identity, JWT Authentication, DbContext, AuthService, AutoMapper
         /// </summary>
         /// <param name="services"></param>
         /// <param name="configuration">Configuration để đọc AuthConfig và ConnectionString</param>
@@ -82,7 +91,7 @@ namespace Digitalmarket.Controller.Base.AppCoreFactory
                         var token = context.Request.Headers["Authorization"].FirstOrDefault()
                                  ?? context.Request.Headers["Authentication"].FirstOrDefault();
 
-                        if (!string.IsNullOrEmpty(token) && token.StartsWith("Bearer ", StringComparison.OrdinalIgnoreCase))
+                        if (token.HasValue() && token.StartsWith("Bearer ", StringComparison.OrdinalIgnoreCase))
                         {
                             context.Token = token.Substring("Bearer ".Length).Trim();
                         }
@@ -91,23 +100,22 @@ namespace Digitalmarket.Controller.Base.AppCoreFactory
                 };
             });
 
-            // 4. Đăng ký Services (Application Layer)
+            // 4. Đăng ký AutoMapper
+            services.AddAutoMapper(typeof(DigitalMarketAutoMapper));
+
+            // 5. Đăng ký Services (Application Layer)
             services.AddScoped<IAuthService, AuthService>();
             services.AddScoped<IEmailService, Project.DigitalMarket.Application.Services.Mails.EmailService>();
 
-            // 5. Đăng ký External Services (Domain Contract <-> Infras Implementation)
+            // 6. Đăng ký External Services (Domain Contract <-> Infras Implementation)
             services.AddScoped<IEmailManager, EmailService>();
 
             return services;
         }
 
-        /// <summary>
-        /// DI cho bussiness logic
-        /// </summary>
-        /// <param name="services"></param>
-        /// <returns></returns>
         public static IServiceCollection UseAppBussinessFactory(this IServiceCollection services)
         {
+            services.AddScoped<ISellerService, SellerService>();
             return services;
         }
 
@@ -129,7 +137,13 @@ namespace Digitalmarket.Controller.Base.AppCoreFactory
         public static IServiceCollection UseAppManagerFactory(this IServiceCollection services)
         {
             services.AddScoped<IAuthManager, AuthManager>();
-            services.AddScoped<Project.DigitalMarket.Domain.Repositories.Auths.IAuthRepository, Project.DigitalMarket.Infrastructure.MsSql.Repositories.Auths.AuthRepository>();
+            services.AddScoped<IAuthRepository, AuthRepository>();
+
+            // Business Managers & Repositories
+            services.AddScoped<ISellerManager, SellerManager>();
+            services.AddScoped<IKycRepository, KycRepository>();
+            services.AddScoped<IFinancialRepository, FinancialRepository>();
+
             return services;
         }
     }

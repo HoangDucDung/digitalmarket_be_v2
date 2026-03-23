@@ -7,6 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="16.1.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Project.DigitalMarket.Application.Contract\Project.DigitalMarket.Application.Contract.csproj" />
     <ProjectReference Include="..\Project.DigitalMarket.Domain\Project.DigitalMarket.Domain.csproj" />
   </ItemGroup>

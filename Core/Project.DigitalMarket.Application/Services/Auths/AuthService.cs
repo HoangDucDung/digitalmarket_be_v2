@@ -1,12 +1,12 @@
 using Microsoft.AspNetCore.Identity;
 using Project.DigitalMarket.Application.Contract.DTOs.Auths;
 using Project.DigitalMarket.Application.Contract.Services.Auths;
-using Project.DigitalMarket.Application.Contract.Services.Mails;
 using Project.DigitalMarket.Domain.Entities;
 using Project.DigitalMarket.Domain.Managers.Auths;
 using Project.DigitalMarket.Libs.DependencyInjection;
 using Project.DigitalMarket.Libs.Exceptions;
 using Project.DigitalMarket.Libs.Constants.ErrorCode;
+using Project.DigitalMarket.Domain.Share.Constants.Auths;
 using Project.Extensions.Extensions;
 
 namespace Project.DigitalMarket.Application.Services.Auths
@@ -20,7 +20,7 @@ namespace Project.DigitalMarket.Application.Services.Auths
         private UserManager<UserEntity> _userManager => _lazyloadProvider.LazyGetRequiredService<UserManager<UserEntity>>();
         private SignInManager<UserEntity> _signInManager => _lazyloadProvider.LazyGetRequiredService<SignInManager<UserEntity>>();
         private IAuthManager _authManager => _lazyloadProvider.LazyGetRequiredService<IAuthManager>();
-        private IEmailService _emailService => _lazyloadProvider.LazyGetRequiredService<IEmailService>();
+        //private IEmailService _emailService => _lazyloadProvider.LazyGetRequiredService<IEmailService>();
 
         /// <summary>
         /// Đăng ký tài khoản mới
@@ -39,6 +39,7 @@ namespace Project.DigitalMarket.Application.Services.Auths
                 UserName = registerDto.Email,
                 Email = registerDto.Email,
                 FullName = registerDto.FullName,
+                UserRoles = $"[\"{RoleConstants.Customer}\"]",
                 CreatedAt = GenerateExtentions.Now
             };
 
@@ -50,9 +51,10 @@ namespace Project.DigitalMarket.Application.Services.Auths
                 throw new BusinessException(ErrorCode.RegistrationFailed, $"Đăng ký thất bại: {errors}");
             }
 
-            // Gửi email xác thực
+            // Gửi email xác thực (Tạm thời ẩn và ghi log console)
             var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-            await _emailService.SendEmailAsync(user.Email!, "Xác thực email", $"Mã xác thực của bạn là: {token}");
+            // await _emailService.SendEmailAsync(user.Email!, "Xác thực email", $"Mã xác thực của bạn là: {token}");
+            Console.WriteLine($"\n[TEST LOG] Email: {user.Email} | Type: Xác thực email | Token: {token}\n");
 
             // Trả về response trống vì yêu cầu xác thực email trước khi đăng nhập
             return new AuthResponseDto { Email = user.Email! };
@@ -79,7 +81,8 @@ namespace Project.DigitalMarket.Application.Services.Auths
             if (result.RequiresTwoFactor)
             {
                 var token = await _userManager.GenerateTwoFactorTokenAsync(user, "Email");
-                await _emailService.SendEmailAsync(user.Email!, "Mã xác thực 2FA", $"Mã 2FA của bạn là: {token}");
+                // await _emailService.SendEmailAsync(user.Email!, "Mã xác thực 2FA", $"Mã 2FA của bạn là: {token}");
+                Console.WriteLine($"\n[TEST LOG] Email: {user.Email} | Type: 2FA Login | Code: {token}\n");
                 return new AuthResponseDto { RequiresTwoFactor = true, Email = user.Email! };
             }
 
@@ -97,14 +100,7 @@ namespace Project.DigitalMarket.Application.Services.Auths
         private AuthResponseDto GenerateJwtToken(UserEntity user)
         {
             var infoToken = _authManager.GenerateJwtToken(user);
-
-            return new AuthResponseDto
-            {
-                Token = infoToken.Token,
-                Expiration = infoToken.Expiration,
-                FullName = infoToken.FullName,
-                Email = infoToken.Email
-            };
+            return _mapper.Map<AuthResponseDto>(infoToken);
         }
 
         public async Task VerifyEmailAsync(VerifyEmailDto dto)
@@ -122,7 +118,8 @@ namespace Project.DigitalMarket.Application.Services.Auths
             if (user == null) throw new AuthException(ErrorCode.AccountNotFound, "Tài khoản không tồn tại.");
 
             var token = await _userManager.GenerateTwoFactorTokenAsync(user, "Email");
-            await _emailService.SendEmailAsync(user.Email!, "Kích hoạt 2FA", $"Mã kích hoạt 2FA của bạn là: {token}");
+            // await _emailService.SendEmailAsync(user.Email!, "Kích hoạt 2FA", $"Mã kích hoạt 2FA của bạn là: {token}");
+            Console.WriteLine($"\n[TEST LOG] Email: {user.Email} | Type: Enable 2FA | Code: {token}\n");
         }
 
         public async Task ConfirmEnable2FAAsync(Guid userId, ConfirmEnable2FADto dto)

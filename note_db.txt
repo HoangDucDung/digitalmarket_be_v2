@@ -1,0 +1,35 @@
+### HƯỚNG DẪN TẠO VÀ CẬP NHẬT DATABASE (EF CORE MIGRATIONS) ###
+
+Dưới đây là các câu lệnh để quản lý Database thông qua Entity Framework Core. 
+Bạn nên chạy các câu lệnh này tại thư mục gốc của dự án (nơi chứa file .sln).
+
+---
+
+1. CÂU LỆNH TẠO MIGRATION MỚI (Khi bạn thay đổi Model/Entity):
+------------------------------------------------------------
+dotnet ef migrations add [Tên_Migration] --project Infrastructure\Project.DigitalMarket.Infrastructure.MsSql --startup-project Presentation\API\Digitalmarket.Controller.Auth
+
+Ví dụ:
+dotnet ef migrations add UpdateDatabase_V1 --project Infrastructure\Project.DigitalMarket.Infrastructure.MsSql --startup-project Presentation\API\Digitalmarket.Controller.Auth
+
+
+2. CÂU LỆNH CẬP NHẬT DATABASE (Áp dụng các Migration vào DB):
+------------------------------------------------------------
+dotnet ef database update --project Infrastructure\Project.DigitalMarket.Infrastructure.MsSql --startup-project Presentation\API\Digitalmarket.Controller.Auth
+
+
+3. TRƯỜNG HỢP MUỐN XÓA MIGRATION CUỐI CÙNG (Chưa update vào DB):
+------------------------------------------------------------
+dotnet ef migrations remove --project Infrastructure\Project.DigitalMarket.Infrastructure.MsSql --startup-project Presentation\API\Digitalmarket.Controller.Auth
+
+
+4. TRƯỜNG HỢP MUỐN XUẤT THÀNH FILE SQL SCRIPT:
+------------------------------------------------------------
+dotnet ef migrations script --project Infrastructure\Project.DigitalMarket.Infrastructure.MsSql --startup-project Presentation\API\Digitalmarket.Controller.Auth
+
+
+---
+LƯU Ý:
+- Đảm bảo bạn đã cài đặt dotnet-ef tool: "dotnet tool install --global dotnet-ef"
+- Kiểm tra chuỗi kết nối (Connection String) trong file: Config\connection.json
+- [Tên_Migration] không được trùng với các migration đã có trong thư mục Infrastructure\Project.DigitalMarket.Infrastructure.MsSql\Migrations

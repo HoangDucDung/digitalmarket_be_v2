@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Identity;
+using Project.DigitalMarket.Domain.Share.Constants.Auths;
 using Project.Extensions.Extensions;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Project.DigitalMarket.Domain.Entities
 {
@@ -8,6 +10,23 @@ namespace Project.DigitalMarket.Domain.Entities
     /// </summary>
     public class UserEntity : IdentityUser<Guid>
     {
+        /// <summary>
+        /// Danh sách Role dưới dạng JSON (vd: ["Customer", "Seller"])
+        /// </summary>
+        public string UserRoles { get; set; } = $"[\"{RoleConstants.Customer}\"]";
+
+        /// <summary>
+        /// Kiểm tra xem User có phải là Người dùng (Customer) không
+        /// </summary>
+        [NotMapped]
+        public bool IsCustomer => UserRoles != null && UserRoles.Contains(RoleConstants.Customer);
+
+        /// <summary>
+        /// Kiểm tra xem User có phải là Người bán (Seller) không
+        /// </summary>
+        [NotMapped]
+        public bool IsSeller => UserRoles != null && UserRoles.Contains(RoleConstants.Seller);
+
         /// <summary>
         /// Họ và tên đầy đủ
         /// </summary>

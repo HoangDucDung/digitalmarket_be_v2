@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Digitalmarket.Controller.Business</name>
+    </assembly>
+    <members>
+        <member name="T:Digitalmarket.Controller.Business.Controllers.SellerController">
+            <summary>
+            Controller xử lý các nghiệp vụ liên quan đến Seller
+            </summary>
+        </member>
+        <member name="M:Digitalmarket.Controller.Business.Controllers.SellerController.RegisterAsSeller(Project.DigitalMarket.Application.Contract.DTOs.Business.SellerRegisterDto)">
+            <summary>
+            Đăng ký trở thành người bán (Seller)
+            </summary>
+            <param name="sellerDto">Thông tin KYC và tài chính</param>
+            <returns>Trạng thái đăng ký</returns>
+            <response code="200">Đăng ký thành công, hồ sơ đang chờ duyệt</response>
+            <response code="401">Chưa đăng nhập</response>
+        </member>
+    </members>
+</doc>

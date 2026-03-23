@@ -6,6 +6,8 @@ E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalma
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Base\bin\Debug\net8.0\Digitalmarket.Controller.Base.runtimeconfig.json
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Base\bin\Debug\net8.0\Digitalmarket.Controller.Base.dll
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Base\bin\Debug\net8.0\Digitalmarket.Controller.Base.pdb
+E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Base\bin\Debug\net8.0\AutoMapper.dll
+E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Base\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Base\bin\Debug\net8.0\Azure.Core.dll
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Base\bin\Debug\net8.0\Azure.Identity.dll
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Base\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
@@ -20,9 +22,12 @@ E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalma
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Base\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Base\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Base\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Base\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Base\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Base\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
+E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Base\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Base\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Base\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Base\bin\Debug\net8.0\Microsoft.Identity.Client.dll
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Base\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Base\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
@@ -40,6 +45,7 @@ E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalma
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Base\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Base\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Base\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Base\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Base\bin\Debug\net8.0\System.Drawing.Common.dll
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Base\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Base\bin\Debug\net8.0\System.Memory.Data.dll

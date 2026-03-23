@@ -14,6 +14,10 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Data
         {
         }
 
+        public DbSet<UserKycProfileEntity> UserKycProfiles { get; set; }
+        public DbSet<UserFinancialTieEntity> UserFinancialTies { get; set; }
+        public DbSet<UserAuditLogEntity> UserAuditLogs { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
