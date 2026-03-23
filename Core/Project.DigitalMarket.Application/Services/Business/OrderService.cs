@@ -1,4 +1,4 @@
-﻿using Project.DigitalMarket.Application.Contract.DTOs.Orders;
+﻿using Project.DigitalMarket.Application.Contract.DTOs.Business.Orders;
 using Project.DigitalMarket.Application.Contract.Services.Business;
 using Project.DigitalMarket.Libs.DependencyInjection;
 using System;

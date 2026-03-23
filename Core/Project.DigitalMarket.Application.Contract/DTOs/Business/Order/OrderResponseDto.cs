@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Project.DigitalMarket.Application.Contract.DTOs.Orders
+namespace Project.DigitalMarket.Application.Contract.DTOs.Business
 {
     public class OrderResponseDto
     {

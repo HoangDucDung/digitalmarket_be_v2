@@ -1,4 +1,4 @@
-﻿using Project.DigitalMarket.Application.Contract.DTOs.Orders;
+﻿using Project.DigitalMarket.Application.Contract.DTOs.Business;
 using System;
 using System.Collections.Generic;
 using System.Linq;
