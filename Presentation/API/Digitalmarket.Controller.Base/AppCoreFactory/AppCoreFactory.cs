@@ -116,6 +116,7 @@ namespace Digitalmarket.Controller.Base.AppCoreFactory
         public static IServiceCollection UseAppBussinessFactory(this IServiceCollection services)
         {
             services.AddScoped<ISellerService, SellerService>();
+            services.AddScoped<IProductService, ProductService>();
             return services;
         }
 
@@ -141,8 +142,10 @@ namespace Digitalmarket.Controller.Base.AppCoreFactory
 
             // Business Managers & Repositories
             services.AddScoped<ISellerManager, SellerManager>();
+            services.AddScoped<IProductManager, ProductManager>();
             services.AddScoped<IKycRepository, KycRepository>();
             services.AddScoped<IFinancialRepository, FinancialRepository>();
+            services.AddScoped<IProductRepository, ProductRepository>();
 
             return services;
         }

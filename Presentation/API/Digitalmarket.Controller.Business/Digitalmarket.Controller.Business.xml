@@ -4,6 +4,16 @@
         <name>Digitalmarket.Controller.Business</name>
     </assembly>
     <members>
+        <member name="M:Digitalmarket.Controller.Product.Controllers.ProductController.GetDailyDiscover(Project.DigitalMarket.Application.Contract.DTOs.Business.Product.DiscoveryRequestDto)">
+            <summary>
+            Lấy danh sách sản phẩm (có filter + phân trang)
+            </summary>
+        </member>
+        <member name="M:Digitalmarket.Controller.Product.Controllers.ProductController.GetProductDetail(Project.DigitalMarket.Application.Contract.DTOs.Business.Product.ProductDetailRequestDto)">
+            <summary>
+            Lấy chi tiết sản phẩm
+            </summary>
+        </member>
         <member name="T:Digitalmarket.Controller.Business.Controllers.SellerController">
             <summary>
             Controller xử lý các nghiệp vụ liên quan đến Seller

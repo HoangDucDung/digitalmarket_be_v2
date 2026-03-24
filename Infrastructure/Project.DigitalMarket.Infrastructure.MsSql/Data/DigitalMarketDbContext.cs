@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Project.DigitalMarket.Domain.Entities;
+using Project.DigitalMarket.Domain.Entities.Business;
 
 namespace Project.DigitalMarket.Infrastructure.MsSql.Data
 {
@@ -17,6 +18,7 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Data
         public DbSet<UserKycProfileEntity> UserKycProfiles { get; set; }
         public DbSet<UserFinancialTieEntity> UserFinancialTies { get; set; }
         public DbSet<UserAuditLogEntity> UserAuditLogs { get; set; }
+        public DbSet<ProductEntity> Products { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -84,6 +86,29 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Data
                 entity.Property(a => a.UserAgent).HasMaxLength(500);
                 
                 entity.HasIndex(a => new { a.UserId, a.CreatedAt });
+            });
+
+            // Cấu hình Product cho feed khám phá
+            builder.Entity<ProductEntity>(entity =>
+            {
+                entity.ToTable("Products");
+                entity.HasKey(p => p.Id);
+
+                entity.Property(p => p.Name).HasMaxLength(512).IsRequired();
+                entity.Property(p => p.Slug).HasMaxLength(512).IsRequired();
+                entity.Property(p => p.ImageUrl).HasMaxLength(1000).IsRequired();
+                entity.Property(p => p.ShopName).HasMaxLength(256).IsRequired();
+                entity.Property(p => p.ShopLocation).HasMaxLength(256).IsRequired();
+                entity.Property(p => p.Currency).HasMaxLength(10).IsRequired();
+                entity.Property(p => p.CategoryBundle).HasMaxLength(100).IsRequired();
+                entity.Property(p => p.Status).HasMaxLength(20).IsRequired();
+                entity.Property(p => p.OriginalPrice).HasPrecision(18, 2);
+                entity.Property(p => p.SalePrice).HasPrecision(18, 2);
+                entity.Property(p => p.RatingAverage).HasPrecision(3, 2);
+
+                entity.HasIndex(p => p.Slug).IsUnique();
+                entity.HasIndex(p => new { p.SellerId, p.Status, p.IsDeleted });
+                entity.HasIndex(p => new { p.IsDeleted, p.IsActive, p.Status, p.CategoryBundle });
             });
         }
     }

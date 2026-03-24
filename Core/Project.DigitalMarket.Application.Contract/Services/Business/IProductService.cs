@@ -1,4 +1,4 @@
-﻿using Project.DigitalMarket.Application.Contract.DTOs.Business;
+using Project.DigitalMarket.Application.Contract.DTOs.Business;
 using Project.DigitalMarket.Application.Contract.DTOs.Business.Product;
 using System;
 using System.Collections.Generic;
@@ -11,6 +11,7 @@ namespace Project.DigitalMarket.Application.Contract.Services.Business
     public interface IProductService
     {
         Task<DiscoveryResponseDto> GetDailyDiscoverAsync(DiscoveryRequestDto discoveryRequestDto);
+        Task<ProductDetailResponseDto?> GetProductDetailAsync(ProductDetailRequestDto requestDto);
     }
 
 }
