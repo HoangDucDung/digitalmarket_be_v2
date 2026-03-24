@@ -45,6 +45,12 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Data
                 entity.HasMany(u => u.AuditLogs)
                       .WithOne(a => a.User)
                       .HasForeignKey(a => a.UserId);
+
+                // Cấu hình navigation property cho Roles (IdentityUserRole)
+                entity.HasMany(u => u.UserRoles)
+                      .WithOne()
+                      .HasForeignKey(ur => ur.UserId)
+                      .IsRequired();
             });
 
             // Cấu hình KYC Profile

@@ -10,6 +10,6 @@ namespace Project.DigitalMarket.Domain.Managers.Auths
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>
-        InfoToken GenerateJwtToken(UserEntity user);
+        Task<InfoToken> GenerateJwtToken(UserEntity user);
     }
 }

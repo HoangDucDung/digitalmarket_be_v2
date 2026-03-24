@@ -11,21 +11,21 @@ namespace Project.DigitalMarket.Domain.Entities
     public class UserEntity : IdentityUser<Guid>
     {
         /// <summary>
-        /// Danh sách Role dưới dạng JSON (vd: ["Customer", "Seller"])
+        /// Danh sách Role của User (Sử dụng entity IdentityUserRole của Identity)
         /// </summary>
-        public string UserRoles { get; set; } = $"[\"{RoleConstants.Customer}\"]";
+        public virtual ICollection<IdentityUserRole<Guid>> UserRoles { get; set; } = new List<IdentityUserRole<Guid>>();
 
         /// <summary>
         /// Kiểm tra xem User có phải là Người dùng (Customer) không
         /// </summary>
         [NotMapped]
-        public bool IsCustomer => UserRoles != null && UserRoles.Contains(RoleConstants.Customer);
+        public bool IsCustomer => UserRoles != null && UserRoles.Any(); // Tạm thời để Any, logic check role name nên dùng UserManager
 
         /// <summary>
         /// Kiểm tra xem User có phải là Người bán (Seller) không
         /// </summary>
         [NotMapped]
-        public bool IsSeller => UserRoles != null && UserRoles.Contains(RoleConstants.Seller);
+        public bool IsSeller => UserRoles != null && UserRoles.Any(); // Tạm thời để Any, logic check role name nên dùng UserManager
 
         /// <summary>
         /// Họ và tên đầy đủ

@@ -43,16 +43,6 @@ namespace Project.DigitalMarket.Domain.Managers.Business
                 await _userManager.AddToRoleAsync(user, sellerRole);
             }
 
-            // Cập nhật JSON Roles
-            if (user.UserRoles.IsNullOrEmpty() || user.UserRoles == "[]")
-            {
-                user.UserRoles = $"[\"{RoleConstants.Seller}\"]";
-            }
-            else if (!user.UserRoles.Contains(RoleConstants.Seller))
-            {
-                user.UserRoles = user.UserRoles.Replace("]", $", \"{RoleConstants.Seller}\"]");
-            }
-            
             await _userManager.UpdateAsync(user);
 
             // 2. Tạo hoặc cập nhật hồ sơ KYC qua Repository

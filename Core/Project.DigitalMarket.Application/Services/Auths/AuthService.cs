@@ -39,7 +39,6 @@ namespace Project.DigitalMarket.Application.Services.Auths
                 UserName = registerDto.Email,
                 Email = registerDto.Email,
                 FullName = registerDto.FullName,
-                UserRoles = $"[\"{RoleConstants.Customer}\"]",
                 CreatedAt = GenerateExtentions.Now
             };
 
@@ -50,6 +49,9 @@ namespace Project.DigitalMarket.Application.Services.Auths
                 var errors = string.Join(", ", result.Errors.Select(e => e.Description));
                 throw new BusinessException(ErrorCode.RegistrationFailed, $"Đăng ký thất bại: {errors}");
             }
+
+            // Gán role mặc định là Customer
+            await _userManager.AddToRoleAsync(user, RoleConstants.Customer);
 
             // Gửi email xác thực (Tạm thời ẩn và ghi log console)
             var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
@@ -91,15 +93,15 @@ namespace Project.DigitalMarket.Application.Services.Auths
                 throw new AuthException(ErrorCode.InvalidCredentials, "Email hoặc mật khẩu không đúng.");
             }
 
-            return GenerateJwtToken(user);
+            return await GenerateJwtTokenAsync(user);
         }
 
         /// <summary>
         /// Tạo JWT token từ thông tin user thông qua Manager
         /// </summary>
-        private AuthResponseDto GenerateJwtToken(UserEntity user)
+        private async Task<AuthResponseDto> GenerateJwtTokenAsync(UserEntity user)
         {
-            var infoToken = _authManager.GenerateJwtToken(user);
+            var infoToken = await _authManager.GenerateJwtToken(user);
             return _mapper.Map<AuthResponseDto>(infoToken);
         }
 
@@ -142,7 +144,7 @@ namespace Project.DigitalMarket.Application.Services.Auths
             if (!isValid) throw new AuthException("Mã 2FA không hợp lệ.");
 
             // Trực tiếp sinh JWT nếu mã 2FA đúng (vì bước trước đó đã verify Password thành công)
-            return GenerateJwtToken(user);
+            return await GenerateJwtTokenAsync(user);
         }
     }
 }

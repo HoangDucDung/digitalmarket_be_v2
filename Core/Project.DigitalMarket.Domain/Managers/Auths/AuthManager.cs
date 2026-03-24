@@ -1,7 +1,9 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
 using Project.DigitalMarket.Domain.Entities;
 using Project.DigitalMarket.Domain.Models.Auths;
 using Project.DigitalMarket.Domain.Share.Config;
+using Project.DigitalMarket.Domain.Share.Constants.Auths;
 using Project.DigitalMarket.Libs.DependencyInjection;
 using Project.Extensions.Extensions;
 using System.IdentityModel.Tokens.Jwt;
@@ -14,13 +16,15 @@ namespace Project.DigitalMarket.Domain.Managers.Auths
     {
         private IAuthConfig _authConfig => _lazyloadProvider.LazyGetRequiredService<IAuthConfig>();
 
+        private UserManager<UserEntity> userManager => _lazyloadProvider.LazyGetRequiredService<UserManager<UserEntity>>();
+
         /// <summary>
         /// Tạo JWT token từ thông tin user
         /// </summary>
-        /// <param name="user"></param>
-        /// <returns></returns>
-        public InfoToken GenerateJwtToken(UserEntity user)
+        public async Task<InfoToken> GenerateJwtToken(UserEntity user)
         {
+            var roles = await userManager.GetRolesAsync(user);
+
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_authConfig.SecretKey));
             var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
             var expiration = GenerateExtentions.Now.AddMinutes(_authConfig.ExpiresTime);
@@ -30,9 +34,9 @@ namespace Project.DigitalMarket.Domain.Managers.Auths
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
                 new Claim(ClaimTypes.Email, user.Email ?? string.Empty),
                 new Claim(ClaimTypes.Name, user.FullName),
-                new Claim("IsCustomer", user.IsCustomer.ToString().ToLower()),
-                new Claim("IsSeller", user.IsSeller.ToString().ToLower()),
-                new Claim("UserRoles", user.UserRoles),
+                new Claim("IsCustomer", roles.Contains(RoleConstants.Customer).ToString().ToLower()),
+                new Claim("IsSeller", roles.Contains(RoleConstants.Seller).ToString().ToLower()),
+                new Claim("UserRoles", string.Join(",", roles)),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
             };
 
