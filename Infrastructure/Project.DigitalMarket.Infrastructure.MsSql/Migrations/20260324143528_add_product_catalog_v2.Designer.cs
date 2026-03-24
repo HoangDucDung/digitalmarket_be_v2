@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Project.DigitalMarket.Infrastructure.MsSql.Data;
 
@@ -11,9 +12,11 @@ using Project.DigitalMarket.Infrastructure.MsSql.Data;
 namespace Project.DigitalMarket.Infrastructure.MsSql.Migrations
 {
     [DbContext(typeof(DigitalMarketDbContext))]
-    partial class DigitalMarketDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260324143528_add_product_catalog_v2")]
+    partial class add_product_catalog_v2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -372,6 +375,10 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Migrations
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
 
+                    b.Property<string>("UserRoles")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.HasIndex("NormalizedEmail")
@@ -511,7 +518,7 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Migrations
                         .IsRequired();
 
                     b.HasOne("Project.DigitalMarket.Domain.Entities.UserEntity", null)
-                        .WithMany("UserRoles")
+                        .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -566,8 +573,6 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Migrations
                     b.Navigation("FinancialTies");
 
                     b.Navigation("KycProfile");
-
-                    b.Navigation("UserRoles");
                 });
 #pragma warning restore 612, 618
         }
