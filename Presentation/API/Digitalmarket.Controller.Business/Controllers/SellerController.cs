@@ -4,6 +4,8 @@ using Project.DigitalMarket.Application.Contract.DTOs.Business;
 using Project.DigitalMarket.Application.Contract.Services.Business;
 using Project.DigitalMarket.Libs.DependencyInjection;
 using Digitalmarket.Controller.Base.Controllers;
+using Project.DigitalMarket.Application.Contract.Services.Business.Seller;
+using Project.DigitalMarket.Application.Contract.DTOs.Business.Seller;
 
 namespace Digitalmarket.Controller.Business.Controllers
 {
@@ -12,12 +14,8 @@ namespace Digitalmarket.Controller.Business.Controllers
     /// </summary>
     [ApiController]
     [Route("api/[controller]")]
-    public class SellerController : DigitalBaseController
+    public class SellerController(ILazyloadProvider lazyloadProvider) : DigitalBaseController(lazyloadProvider)
     {
-        public SellerController(ILazyloadProvider lazyloadProvider) : base(lazyloadProvider)
-        {
-        }
-
         private ISellerService _sellerService => _lazyloadProvider.LazyGetRequiredService<ISellerService>();
 
         /// <summary>

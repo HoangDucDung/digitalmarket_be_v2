@@ -130,7 +130,7 @@ namespace Project.DigitalMarket.Application.Services.Auths
             if (user == null) throw new AuthException(ErrorCode.AccountNotFound, "Tài khoản không tồn tại.");
 
             var isValid = await _userManager.VerifyTwoFactorTokenAsync(user, "Email", dto.Code);
-            if (!isValid) throw new AuthException("Mã kích hoạt không hợp lệ.");
+            if (!isValid) throw new AuthException(ErrorCode.InvalidToken, "Mã kích hoạt không hợp lệ.");
 
             await _userManager.SetTwoFactorEnabledAsync(user, true);
         }
@@ -141,7 +141,7 @@ namespace Project.DigitalMarket.Application.Services.Auths
             if (user == null) throw new AuthException(ErrorCode.AccountNotFound, "Tài khoản không tồn tại.");
 
             var isValid = await _userManager.VerifyTwoFactorTokenAsync(user, "Email", dto.Code);
-            if (!isValid) throw new AuthException("Mã 2FA không hợp lệ.");
+            if (!isValid) throw new AuthException(ErrorCode.InvalidToken, "Mã 2FA không hợp lệ.");
 
             // Trực tiếp sinh JWT nếu mã 2FA đúng (vì bước trước đó đã verify Password thành công)
             return await GenerateJwtTokenAsync(user);

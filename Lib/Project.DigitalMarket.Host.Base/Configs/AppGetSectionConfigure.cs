@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Project.DigitalMarket.Domain.Share.Config;
 using Project.DigitalMarket.Libs.Exceptions;
+using Project.DigitalMarket.Libs.Constants.ErrorCode;
 
 namespace Project.DigitalMarket.Host.Base.Configs
 {
@@ -13,7 +14,7 @@ namespace Project.DigitalMarket.Host.Base.Configs
             var section = configuration.GetSection(sectionName);
 
             if (!section.Exists())
-                throw new BusinessException($"Section {sectionName} không tồn tại trong cấu hình.");
+                throw new BusinessException(ErrorCode.ConfigSectionNotFound, $"Section {sectionName} không tồn tại trong cấu hình.");
 
             services.Configure<TOptions>(section);
         }

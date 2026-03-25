@@ -13,13 +13,28 @@ using Project.DigitalMarket.Infrastructure.MsSql.Data;
 using Project.DigitalMarket.Libs.DependencyInjection;
 using System.Text;
 using Project.DigitalMarket.Application;
-using Project.DigitalMarket.Application.Contract.Services.Business;
-using Project.DigitalMarket.Application.Services.Business;
+using Project.DigitalMarket.Application.Contract.Services.Business.Cart;
+using Project.DigitalMarket.Application.Contract.Services.Business.Order;
+using Project.DigitalMarket.Application.Contract.Services.Business.Product;
+using Project.DigitalMarket.Application.Contract.Services.Business.Seller;
+using Project.DigitalMarket.Application.Services.Business.Cart;
+using Project.DigitalMarket.Application.Services.Business.Order;
+using Project.DigitalMarket.Application.Services.Business.Product;
+using Project.DigitalMarket.Application.Services.Business.Seller;
+using Project.DigitalMarket.Domain.Managers.Business.Cart;
+using Project.DigitalMarket.Domain.Managers.Business.Order;
+using Project.DigitalMarket.Domain.Managers.Business.Product;
+using Project.DigitalMarket.Domain.Managers.Business.Seller;
 using Project.DigitalMarket.Domain.Repositories.Auths;
 using Project.DigitalMarket.Infrastructure.MsSql.Repositories.Auths;
-using Project.DigitalMarket.Domain.Managers.Business;
-using Project.DigitalMarket.Infrastructure.MsSql.Repositories.Business;
-using Project.DigitalMarket.Domain.Repositories.Business;
+using Project.DigitalMarket.Domain.Repositories.Business.Cart;
+using Project.DigitalMarket.Domain.Repositories.Business.Order;
+using Project.DigitalMarket.Domain.Repositories.Business.Product;
+using Project.DigitalMarket.Domain.Repositories.Business.Seller;
+using Project.DigitalMarket.Infrastructure.MsSql.Repositories.Business.Cart;
+using Project.DigitalMarket.Infrastructure.MsSql.Repositories.Business.Order;
+using Project.DigitalMarket.Infrastructure.MsSql.Repositories.Business.Product;
+using Project.DigitalMarket.Infrastructure.MsSql.Repositories.Business.Seller;
 using Project.Extensions.Extensions;
 
 namespace Digitalmarket.Controller.Base.AppCoreFactory
@@ -31,6 +46,7 @@ namespace Digitalmarket.Controller.Base.AppCoreFactory
     {
         public static IServiceCollection AddLazyloadFactory(this IServiceCollection service)
         {
+            service.AddHttpContextAccessor();
             service.AddScoped<ICachedServiceProviderBase, CachedServiceProviderBase>();
             service.AddScoped<ILazyloadProvider, LazyloadProvider>();
             return service;
@@ -117,6 +133,8 @@ namespace Digitalmarket.Controller.Base.AppCoreFactory
         {
             services.AddScoped<ISellerService, SellerService>();
             services.AddScoped<IProductService, ProductService>();
+            services.AddScoped<ICartService, CartService>();
+            services.AddScoped<IOrderService, OrderService>();
             return services;
         }
 
@@ -143,9 +161,14 @@ namespace Digitalmarket.Controller.Base.AppCoreFactory
             // Business Managers & Repositories
             services.AddScoped<ISellerManager, SellerManager>();
             services.AddScoped<IProductManager, ProductManager>();
+            services.AddScoped<ICartManager, CartManager>();
+            services.AddScoped<IOrderManager, OrderManager>();
+            
             services.AddScoped<IKycRepository, KycRepository>();
             services.AddScoped<IFinancialRepository, FinancialRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<ICartRepository, CartRepository>();
+            services.AddScoped<IOrderRepository, OrderRepository>();
 
             return services;
         }

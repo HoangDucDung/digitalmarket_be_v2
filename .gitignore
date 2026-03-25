@@ -6,16 +6,43 @@
 *.suo
 *.userosscache
 *.sln.docstates
+*.user.user
+*.suo.user
+*.user.*
+*.vspscc
+*.vssscc
+_ReSharper*/
+
 # Rider
 .idea/
+
 # General
 *.log
 *.swp
 *.bak
+*.tmp
+*.temp
+
 # Local settings
 appsettings.Local.json
+appsettings.development.json
+appsettings.Development.json
+
 # Build logs
 build.log
 build_log.txt
 errors.txt
 errors2.txt
+
+# Node.js (if any)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Publish output
+/publish/
+/bin/Release/
+/obj/Release/
+/bin/Debug/
+/obj/Debug/
+

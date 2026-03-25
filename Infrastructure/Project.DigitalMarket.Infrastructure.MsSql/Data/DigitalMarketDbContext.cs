@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Project.DigitalMarket.Domain.Entities;
 using Project.DigitalMarket.Domain.Entities.Business;
+using Project.DigitalMarket.Domain.Share.Constants.Business;
 
 namespace Project.DigitalMarket.Infrastructure.MsSql.Data
 {
@@ -19,10 +20,63 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Data
         public DbSet<UserFinancialTieEntity> UserFinancialTies { get; set; }
         public DbSet<UserAuditLogEntity> UserAuditLogs { get; set; }
         public DbSet<ProductEntity> Products { get; set; }
+        public DbSet<CartItemEntity> CartItems { get; set; }
+        public DbSet<OrderEntity> Orders { get; set; }
+        public DbSet<OrderItemEntity> OrderItems { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
+
+            // Cấu hình CartItem
+            builder.Entity<CartItemEntity>(entity =>
+            {
+                entity.ToTable("CartItems");
+                entity.HasKey(c => c.Id);
+                entity.Property(c => c.ReferencePrice).HasPrecision(18, 2);
+
+                entity.HasOne(c => c.Product)
+                    .WithMany()
+                    .HasForeignKey(c => c.ProductId);
+
+                entity.HasIndex(c => c.UserId);
+            });
+
+            // Cấu hình Order
+            builder.Entity<OrderEntity>(entity =>
+            {
+                entity.ToTable("Orders");
+                entity.HasKey(o => o.Id);
+                entity.Property(o => o.OrderCode).HasMaxLength(50).IsRequired();
+                entity.Property(o => o.Status).HasMaxLength(20).IsRequired();
+                entity.Property(o => o.PaymentMethod).HasMaxLength(50).IsRequired();
+                entity.Property(o => o.Subtotal).HasPrecision(18, 2);
+                entity.Property(o => o.DiscountTotal).HasPrecision(18, 2);
+                entity.Property(o => o.TotalAmount).HasPrecision(18, 2);
+                entity.Property(o => o.ProcessingFee).HasPrecision(18, 2);
+
+                entity.HasIndex(o => o.OrderCode).IsUnique();
+                entity.HasIndex(o => o.BuyerId);
+            });
+
+            // Cấu hình OrderItem
+            builder.Entity<OrderItemEntity>(entity =>
+            {
+                entity.ToTable("OrderItems");
+                entity.HasKey(oi => oi.Id);
+                entity.Property(oi => oi.ProductName).HasMaxLength(512).IsRequired();
+                entity.Property(oi => oi.UnitPrice).HasPrecision(18, 2);
+                entity.Property(oi => oi.OriginalPrice).HasPrecision(18, 2);
+                entity.Property(oi => oi.Subtotal).HasPrecision(18, 2);
+
+                entity.HasOne(oi => oi.Order)
+                    .WithMany(o => o.Items)
+                    .HasForeignKey(oi => oi.OrderId);
+
+                entity.HasOne(oi => oi.Product)
+                    .WithMany()
+                    .HasForeignKey(oi => oi.ProductId);
+            });
 
             // Cấu hình ApplicationUser
             builder.Entity<UserEntity>(entity =>

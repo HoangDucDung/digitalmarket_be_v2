@@ -4,12 +4,62 @@
         <name>Digitalmarket.Controller.Business</name>
     </assembly>
     <members>
-        <member name="M:Digitalmarket.Controller.Product.Controllers.ProductController.GetDailyDiscover(Project.DigitalMarket.Application.Contract.DTOs.Business.Product.DiscoveryRequestDto)">
+        <member name="M:Digitalmarket.Controller.Cart.Controllers.CartController.AddToCart(Project.DigitalMarket.Application.Contract.DTOs.Business.Cart.AddToCartReqDto)">
+            <summary>
+            Thêm sản phẩm vào giỏ hàng
+            </summary>
+        </member>
+        <member name="M:Digitalmarket.Controller.Cart.Controllers.CartController.UpdateQuantity(Project.DigitalMarket.Application.Contract.DTOs.Business.Cart.UpdateQuantityReqDto)">
+            <summary>
+            Cập nhật số lượng sản phẩm trong giỏ hàng
+            </summary>
+        </member>
+        <member name="M:Digitalmarket.Controller.Cart.Controllers.CartController.RemoveFromCart(System.Guid)">
+            <summary>
+            Xóa sản phẩm khỏi giỏ hàng
+            </summary>
+        </member>
+        <member name="M:Digitalmarket.Controller.Cart.Controllers.CartController.GetMyCart">
+            <summary>
+            Lấy giỏ hàng của tôi
+            </summary>
+        </member>
+        <member name="M:Digitalmarket.Controller.Cart.Controllers.CartController.ClearCart">
+            <summary>
+            Xóa sạch giỏ hàng
+            </summary>
+        </member>
+        <member name="M:Digitalmarket.Controller.Order.Controllers.OrderController.Checkout(Project.DigitalMarket.Application.Contract.DTOs.Business.Order.CheckoutCartReqDto)">
+            <summary>
+            Thanh toán giỏ hàng
+            </summary>
+        </member>
+        <member name="M:Digitalmarket.Controller.Order.Controllers.OrderController.DirectPurchase(Project.DigitalMarket.Application.Contract.DTOs.Business.Order.DirectPurchaseReqDto)">
+            <summary>
+            Mua ngay
+            </summary>
+        </member>
+        <member name="M:Digitalmarket.Controller.Order.Controllers.OrderController.GetMyOrders">
+            <summary>
+            Lấy danh sách đơn hàng của tôi
+            </summary>
+        </member>
+        <member name="M:Digitalmarket.Controller.Order.Controllers.OrderController.GetOrderDetail(System.Guid)">
+            <summary>
+            Lấy chi tiết đơn hàng
+            </summary>
+        </member>
+        <member name="M:Digitalmarket.Controller.Order.Controllers.OrderController.CancelOrder(System.Guid)">
+            <summary>
+            Hủy đơn hàng
+            </summary>
+        </member>
+        <member name="M:Digitalmarket.Controller.Product.Controllers.ProductController.GetDailyDiscover(System.String,System.Int32,System.Int32,System.Int32,System.Boolean,System.String)">
             <summary>
             Lấy danh sách sản phẩm (có filter + phân trang)
             </summary>
         </member>
-        <member name="M:Digitalmarket.Controller.Product.Controllers.ProductController.GetProductDetail(Project.DigitalMarket.Application.Contract.DTOs.Business.Product.ProductDetailRequestDto)">
+        <member name="M:Digitalmarket.Controller.Product.Controllers.ProductController.GetProductDetail(Project.DigitalMarket.Application.Contract.DTOs.Business.Product.ProductDetailReqDto)">
             <summary>
             Lấy chi tiết sản phẩm
             </summary>
@@ -19,7 +69,12 @@
             Controller xử lý các nghiệp vụ liên quan đến Seller
             </summary>
         </member>
-        <member name="M:Digitalmarket.Controller.Business.Controllers.SellerController.RegisterAsSeller(Project.DigitalMarket.Application.Contract.DTOs.Business.SellerRegisterDto)">
+        <member name="M:Digitalmarket.Controller.Business.Controllers.SellerController.#ctor(Project.DigitalMarket.Libs.DependencyInjection.ILazyloadProvider)">
+            <summary>
+            Controller xử lý các nghiệp vụ liên quan đến Seller
+            </summary>
+        </member>
+        <member name="M:Digitalmarket.Controller.Business.Controllers.SellerController.RegisterAsSeller(Project.DigitalMarket.Application.Contract.DTOs.Business.Seller.SellerRegisterDto)">
             <summary>
             Đăng ký trở thành người bán (Seller)
             </summary>
