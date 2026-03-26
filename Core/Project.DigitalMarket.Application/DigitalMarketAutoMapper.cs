@@ -9,6 +9,8 @@ using Project.DigitalMarket.Domain.Entities.Business;
 using Project.DigitalMarket.Domain.Models.Auths;
 using Project.DigitalMarket.Domain.Models.Business.Product;
 using Project.DigitalMarket.Domain.Models.Business.Seller;
+using Project.DigitalMarket.Domain.Entities;
+using Project.DigitalMarket.Application.Contract.DTOs.Business.Wallet;
 
 namespace Project.DigitalMarket.Application
 {
@@ -34,6 +36,9 @@ namespace Project.DigitalMarket.Application
             // Order & Item mapping: Entity (Domain) -> Result (Contract)
             CreateMap<OrderEntity, OrderResultDto>();
             CreateMap<OrderItemEntity, OrderItemResultDto>();
+
+            // Wallet mapping
+            CreateMap<WalletTransactionEntity, WalletTransactionDTO>();
 
             // Nếu cần phản hồi ngược: Domain (Req) -> Contract (DTO)
             CreateMap<SellerRegisterReq, SellerRegisterDto>();

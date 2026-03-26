@@ -8,6 +8,8 @@ using Project.DigitalMarket.Application.Contract.Services.Auths;
 using Project.DigitalMarket.Application.Contract.Services.Mails;
 using Project.DigitalMarket.Application.Services.Auths;
 using Project.DigitalMarket.Domain.ExternalServices.Mails;
+using Project.DigitalMarket.Application.Contract.Services.Business.Seller;
+using Project.DigitalMarket.Application.Contract.Services.Business.Wallet;
 using Project.DigitalMarket.Infrastructure.Mail.Services;
 using Project.DigitalMarket.Infrastructure.MsSql.Data;
 using Project.DigitalMarket.Libs.DependencyInjection;
@@ -16,11 +18,11 @@ using Project.DigitalMarket.Application;
 using Project.DigitalMarket.Application.Contract.Services.Business.Cart;
 using Project.DigitalMarket.Application.Contract.Services.Business.Order;
 using Project.DigitalMarket.Application.Contract.Services.Business.Product;
-using Project.DigitalMarket.Application.Contract.Services.Business.Seller;
 using Project.DigitalMarket.Application.Services.Business.Cart;
 using Project.DigitalMarket.Application.Services.Business.Order;
 using Project.DigitalMarket.Application.Services.Business.Product;
 using Project.DigitalMarket.Application.Services.Business.Seller;
+using Project.DigitalMarket.Application.Services.Business.Wallet;
 using Project.DigitalMarket.Domain.Managers.Business.Cart;
 using Project.DigitalMarket.Domain.Managers.Business.Order;
 using Project.DigitalMarket.Domain.Managers.Business.Product;
@@ -35,6 +37,9 @@ using Project.DigitalMarket.Infrastructure.MsSql.Repositories.Business.Cart;
 using Project.DigitalMarket.Infrastructure.MsSql.Repositories.Business.Order;
 using Project.DigitalMarket.Infrastructure.MsSql.Repositories.Business.Product;
 using Project.DigitalMarket.Infrastructure.MsSql.Repositories.Business.Seller;
+using Project.DigitalMarket.Domain.Managers.Auths.Wallet;
+using Project.DigitalMarket.Domain.Repositories.Auths.Wallet;
+using Project.DigitalMarket.Infrastructure.MsSql.Repositories.Auths.Wallet;
 using Project.Extensions.Extensions;
 
 namespace Digitalmarket.Controller.Base.AppCoreFactory
@@ -135,6 +140,7 @@ namespace Digitalmarket.Controller.Base.AppCoreFactory
             services.AddScoped<IProductService, ProductService>();
             services.AddScoped<ICartService, CartService>();
             services.AddScoped<IOrderService, OrderService>();
+            services.AddScoped<IWalletService, WalletService>();
             return services;
         }
 
@@ -169,6 +175,11 @@ namespace Digitalmarket.Controller.Base.AppCoreFactory
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<ICartRepository, CartRepository>();
             services.AddScoped<IOrderRepository, OrderRepository>();
+
+            // Wallet
+            services.AddScoped<IWalletManager, WalletManager>();
+            services.AddScoped<IWalletRepository, WalletRepository>();
+            services.AddScoped<IWalletTransactionRepository, WalletTransactionRepository>();
 
             return services;
         }

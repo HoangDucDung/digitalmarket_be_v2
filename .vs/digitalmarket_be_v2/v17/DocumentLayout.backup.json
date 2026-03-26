@@ -3,6 +3,26 @@
   "WorkspaceRootPath": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{04779790-2A2B-4618-AF0C-CB68EC887358}|Infrastructure\\Project.DigitalMarket.Infrastructure.MsSql\\Project.DigitalMarket.Infrastructure.MsSql.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\infrastructure\\project.digitalmarket.infrastructure.mssql\\data\\digitalmarketdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04779790-2A2B-4618-AF0C-CB68EC887358}|Infrastructure\\Project.DigitalMarket.Infrastructure.MsSql\\Project.DigitalMarket.Infrastructure.MsSql.csproj|solutionrelative:infrastructure\\project.digitalmarket.infrastructure.mssql\\data\\digitalmarketdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729EE164-7CFB-48A1-82E2-9F470404A2D3}|Presentation\\API\\Digitalmarket.Controller.Base\\Digitalmarket.Controller.Base.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\presentation\\api\\digitalmarket.controller.base\\appcorefactory\\appcorefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{729EE164-7CFB-48A1-82E2-9F470404A2D3}|Presentation\\API\\Digitalmarket.Controller.Base\\Digitalmarket.Controller.Base.csproj|solutionrelative:presentation\\api\\digitalmarket.controller.base\\appcorefactory\\appcorefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91BB9F49-5202-4094-BC3F-6B72B730FEA2}|Core\\Project.DigitalMarket.Application\\Project.DigitalMarket.Application.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\core\\project.digitalmarket.application\\services\\business\\product\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91BB9F49-5202-4094-BC3F-6B72B730FEA2}|Core\\Project.DigitalMarket.Application\\Project.DigitalMarket.Application.csproj|solutionrelative:core\\project.digitalmarket.application\\services\\business\\product\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91BB9F49-5202-4094-BC3F-6B72B730FEA2}|Core\\Project.DigitalMarket.Application\\Project.DigitalMarket.Application.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\core\\project.digitalmarket.application\\services\\business\\order\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91BB9F49-5202-4094-BC3F-6B72B730FEA2}|Core\\Project.DigitalMarket.Application\\Project.DigitalMarket.Application.csproj|solutionrelative:core\\project.digitalmarket.application\\services\\business\\order\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91BB9F49-5202-4094-BC3F-6B72B730FEA2}|Core\\Project.DigitalMarket.Application\\Project.DigitalMarket.Application.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\core\\project.digitalmarket.application\\services\\business\\cart\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91BB9F49-5202-4094-BC3F-6B72B730FEA2}|Core\\Project.DigitalMarket.Application\\Project.DigitalMarket.Application.csproj|solutionrelative:core\\project.digitalmarket.application\\services\\business\\cart\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{12FA3841-3D7C-47B3-8A2B-E5744D31572F}|Core\\Project.DigitalMarket.Domain\\Project.DigitalMarket.Domain.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\core\\project.digitalmarket.domain\\managers\\business\\product\\iproductmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{12FA3841-3D7C-47B3-8A2B-E5744D31572F}|Core\\Project.DigitalMarket.Domain\\Project.DigitalMarket.Domain.csproj|solutionrelative:core\\project.digitalmarket.domain\\managers\\business\\product\\iproductmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -111,10 +131,6 @@
       "RelativeMoniker": "D:0:0:{66714ECB-B380-40BA-94DC-42DE183E8DD4}|Presentation\\API\\Digitalmarket.Controller.Auth\\Digitalmarket.Controller.Auth.csproj|solutionrelative:presentation\\api\\digitalmarket.controller.auth\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{729EE164-7CFB-48A1-82E2-9F470404A2D3}|Presentation\\API\\Digitalmarket.Controller.Base\\Digitalmarket.Controller.Base.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\presentation\\api\\digitalmarket.controller.base\\appcorefactory\\appcorefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{729EE164-7CFB-48A1-82E2-9F470404A2D3}|Presentation\\API\\Digitalmarket.Controller.Base\\Digitalmarket.Controller.Base.csproj|solutionrelative:presentation\\api\\digitalmarket.controller.base\\appcorefactory\\appcorefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{12FA3841-3D7C-47B3-8A2B-E5744D31572F}|Core\\Project.DigitalMarket.Domain\\Project.DigitalMarket.Domain.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\core\\project.digitalmarket.domain\\managers\\managerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{12FA3841-3D7C-47B3-8A2B-E5744D31572F}|Core\\Project.DigitalMarket.Domain\\Project.DigitalMarket.Domain.csproj|solutionrelative:core\\project.digitalmarket.domain\\managers\\managerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -141,10 +157,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{12FA3841-3D7C-47B3-8A2B-E5744D31572F}|Core\\Project.DigitalMarket.Domain\\Project.DigitalMarket.Domain.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\core\\project.digitalmarket.domain\\entities\\base\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{12FA3841-3D7C-47B3-8A2B-E5744D31572F}|Core\\Project.DigitalMarket.Domain\\Project.DigitalMarket.Domain.csproj|solutionrelative:core\\project.digitalmarket.domain\\entities\\base\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04779790-2A2B-4618-AF0C-CB68EC887358}|Infrastructure\\Project.DigitalMarket.Infrastructure.MsSql\\Project.DigitalMarket.Infrastructure.MsSql.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\infrastructure\\project.digitalmarket.infrastructure.mssql\\data\\digitalmarketdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{04779790-2A2B-4618-AF0C-CB68EC887358}|Infrastructure\\Project.DigitalMarket.Infrastructure.MsSql\\Project.DigitalMarket.Infrastructure.MsSql.csproj|solutionrelative:infrastructure\\project.digitalmarket.infrastructure.mssql\\data\\digitalmarketdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{04779790-2A2B-4618-AF0C-CB68EC887358}|Infrastructure\\Project.DigitalMarket.Infrastructure.MsSql\\Project.DigitalMarket.Infrastructure.MsSql.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\infrastructure\\project.digitalmarket.infrastructure.mssql\\data\\digitalmarketdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -390,7 +402,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 16,
           "Children": [
             {
               "$type": "Bookmark",
@@ -426,20 +438,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "IProductManager.cs",
-              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain\\Managers\\Business\\Product\\IProductManager.cs",
-              "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Domain\\Managers\\Business\\Product\\IProductManager.cs",
-              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain\\Managers\\Business\\Product\\IProductManager.cs",
-              "RelativeToolTip": "Core\\Project.DigitalMarket.Domain\\Managers\\Business\\Product\\IProductManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application\\Services\\Business\\Product\\ProductService.cs",
+              "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Application\\Services\\Business\\Product\\ProductService.cs",
+              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application\\Services\\Business\\Product\\ProductService.cs",
+              "RelativeToolTip": "Core\\Project.DigitalMarket.Application\\Services\\Business\\Product\\ProductService.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAYwHAAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-24T16:30:19.734Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T09:54:09.016Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "IOrderManager.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain\\Managers\\Business\\Order\\IOrderManager.cs",
               "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Domain\\Managers\\Business\\Order\\IOrderManager.cs",
@@ -451,7 +462,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "ICartManager.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain\\Managers\\Business\\Cart\\ICartManager.cs",
               "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Domain\\Managers\\Business\\Cart\\ICartManager.cs",
@@ -463,7 +474,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "IProductService.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application.Contract\\Services\\Business\\Product\\IProductService.cs",
               "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Application.Contract\\Services\\Business\\Product\\IProductService.cs",
@@ -475,7 +486,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "IOrderService.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application.Contract\\Services\\Business\\Order\\IOrderService.cs",
               "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Application.Contract\\Services\\Business\\Order\\IOrderService.cs",
@@ -487,7 +498,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
               "Title": "ProductDetailResDto.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application.Contract\\DTOs\\Business\\Product\\ProductDetailResDto.cs",
               "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Application.Contract\\DTOs\\Business\\Product\\ProductDetailResDto.cs",
@@ -499,7 +510,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 14,
               "Title": "DiscoveryReqDto.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application.Contract\\DTOs\\Business\\Product\\DiscoveryReqDto.cs",
               "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Application.Contract\\DTOs\\Business\\Product\\DiscoveryReqDto.cs",
@@ -511,7 +522,68 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AppCoreFactory.cs",
+              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Presentation\\API\\Digitalmarket.Controller.Base\\AppCoreFactory\\AppCoreFactory.cs",
+              "RelativeDocumentMoniker": "Presentation\\API\\Digitalmarket.Controller.Base\\AppCoreFactory\\AppCoreFactory.cs",
+              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Presentation\\API\\Digitalmarket.Controller.Base\\AppCoreFactory\\AppCoreFactory.cs",
+              "RelativeToolTip": "Presentation\\API\\Digitalmarket.Controller.Base\\AppCoreFactory\\AppCoreFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T15:50:22.935Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DigitalMarketDbContext.cs",
+              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure.MsSql\\Data\\DigitalMarketDbContext.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Project.DigitalMarket.Infrastructure.MsSql\\Data\\DigitalMarketDbContext.cs",
+              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure.MsSql\\Data\\DigitalMarketDbContext.cs",
+              "RelativeToolTip": "Infrastructure\\Project.DigitalMarket.Infrastructure.MsSql\\Data\\DigitalMarketDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T05:47:31.152Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IProductManager.cs",
+              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain\\Managers\\Business\\Product\\IProductManager.cs",
+              "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Domain\\Managers\\Business\\Product\\IProductManager.cs",
+              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain\\Managers\\Business\\Product\\IProductManager.cs",
+              "RelativeToolTip": "Core\\Project.DigitalMarket.Domain\\Managers\\Business\\Product\\IProductManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-24T16:30:19.734Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "CartService.cs",
+              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application\\Services\\Business\\Cart\\CartService.cs",
+              "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Application\\Services\\Business\\Cart\\CartService.cs",
+              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application\\Services\\Business\\Cart\\CartService.cs",
+              "RelativeToolTip": "Core\\Project.DigitalMarket.Application\\Services\\Business\\Cart\\CartService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T09:54:00.649Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "OrderService.cs",
+              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application\\Services\\Business\\Order\\OrderService.cs",
+              "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Application\\Services\\Business\\Order\\OrderService.cs",
+              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application\\Services\\Business\\Order\\OrderService.cs",
+              "RelativeToolTip": "Core\\Project.DigitalMarket.Application\\Services\\Business\\Order\\OrderService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T09:54:05.403Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "ISellerService.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application.Contract\\Services\\Business\\Seller\\ISellerService.cs",
               "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Application.Contract\\Services\\Business\\Seller\\ISellerService.cs",
@@ -523,7 +595,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 15,
               "Title": "DiscoveryResDto.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application.Contract\\DTOs\\Business\\Product\\DiscoveryResDto.cs",
               "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Application.Contract\\DTOs\\Business\\Product\\DiscoveryResDto.cs",
@@ -535,7 +607,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 19,
               "Title": "OrderController.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Presentation\\API\\Digitalmarket.Controller.Business\\Controllers\\OrderController.cs",
               "RelativeDocumentMoniker": "Presentation\\API\\Digitalmarket.Controller.Business\\Controllers\\OrderController.cs",
@@ -547,7 +619,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "ICartService.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application.Contract\\Services\\Business\\Cart\\ICartService.cs",
               "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Application.Contract\\Services\\Business\\Cart\\ICartService.cs",
@@ -559,7 +631,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 20,
               "Title": "AuthRepository.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure.MsSql\\Repositories\\Auths\\AuthRepository.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Project.DigitalMarket.Infrastructure.MsSql\\Repositories\\Auths\\AuthRepository.cs",
@@ -571,7 +643,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 13,
               "Title": "ProductDetailReqDto.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application.Contract\\DTOs\\Business\\Product\\ProductDetailReqDto.cs",
               "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Application.Contract\\DTOs\\Business\\Product\\ProductDetailReqDto.cs",
@@ -583,7 +655,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 21,
               "Title": "ProductManager.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain\\Managers\\Business\\Product\\ProductManager.cs",
               "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Domain\\Managers\\Business\\Product\\ProductManager.cs",
@@ -595,7 +667,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 18,
               "Title": "ProductController.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Presentation\\API\\Digitalmarket.Controller.Business\\Controllers\\ProductController.cs",
               "RelativeDocumentMoniker": "Presentation\\API\\Digitalmarket.Controller.Business\\Controllers\\ProductController.cs",
@@ -607,7 +679,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 17,
               "Title": "SellerController.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Presentation\\API\\Digitalmarket.Controller.Business\\Controllers\\SellerController.cs",
               "RelativeDocumentMoniker": "Presentation\\API\\Digitalmarket.Controller.Business\\Controllers\\SellerController.cs",
@@ -619,7 +691,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "AuthController.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Presentation\\API\\Digitalmarket.Controller.Auth\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Presentation\\API\\Digitalmarket.Controller.Auth\\Controllers\\AuthController.cs",
@@ -631,7 +703,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 22,
               "Title": "CartRepository.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure.MsSql\\Repositories\\Business\\Cart\\CartRepository.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Project.DigitalMarket.Infrastructure.MsSql\\Repositories\\Business\\Cart\\CartRepository.cs",
@@ -643,7 +715,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 23,
               "Title": "OrderRepository.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure.MsSql\\Repositories\\Business\\Order\\OrderRepository.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Project.DigitalMarket.Infrastructure.MsSql\\Repositories\\Business\\Order\\OrderRepository.cs",
@@ -655,7 +727,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 24,
               "Title": "KycRepository.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure.MsSql\\Repositories\\Business\\Seller\\KycRepository.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Project.DigitalMarket.Infrastructure.MsSql\\Repositories\\Business\\Seller\\KycRepository.cs",
@@ -667,7 +739,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 25,
               "Title": "FinancialRepository.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure.MsSql\\Repositories\\Business\\Seller\\FinancialRepository.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Project.DigitalMarket.Infrastructure.MsSql\\Repositories\\Business\\Seller\\FinancialRepository.cs",
@@ -679,7 +751,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 26,
               "Title": "ProductRepository.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure.MsSql\\Repositories\\Business\\Product\\ProductRepository.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Project.DigitalMarket.Infrastructure.MsSql\\Repositories\\Business\\Product\\ProductRepository.cs",
@@ -691,7 +763,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 27,
               "Title": "CreateOrderDto.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application.Contract\\DTOs\\Business\\Order\\CreateOrderDto.cs",
               "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Application.Contract\\DTOs\\Business\\Order\\CreateOrderDto.cs",
@@ -703,7 +775,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 29,
               "Title": "DailyDiscoverReqDto.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application.Contract\\DTOs\\Business\\Product\\DailyDiscoverReqDto.cs",
               "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Application.Contract\\DTOs\\Business\\Product\\DailyDiscoverReqDto.cs",
@@ -715,7 +787,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 30,
               "Title": "DirectPurchaseReqDto.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application.Contract\\DTOs\\Business\\Order\\DirectPurchaseReqDto.cs",
               "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Application.Contract\\DTOs\\Business\\Order\\DirectPurchaseReqDto.cs",
@@ -727,7 +799,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 28,
               "Title": "CheckoutCartReqDto.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application.Contract\\DTOs\\Business\\Order\\CheckoutCartReqDto.cs",
               "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Application.Contract\\DTOs\\Business\\Order\\CheckoutCartReqDto.cs",
@@ -739,7 +811,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 31,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Presentation\\API\\Digitalmarket.Controller.Auth\\Program.cs",
               "RelativeDocumentMoniker": "Presentation\\API\\Digitalmarket.Controller.Auth\\Program.cs",
@@ -751,19 +823,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "AppCoreFactory.cs",
-              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Presentation\\API\\Digitalmarket.Controller.Base\\AppCoreFactory\\AppCoreFactory.cs",
-              "RelativeDocumentMoniker": "Presentation\\API\\Digitalmarket.Controller.Base\\AppCoreFactory\\AppCoreFactory.cs",
-              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Presentation\\API\\Digitalmarket.Controller.Base\\AppCoreFactory\\AppCoreFactory.cs",
-              "RelativeToolTip": "Presentation\\API\\Digitalmarket.Controller.Base\\AppCoreFactory\\AppCoreFactory.cs",
-              "ViewState": "AgIAAHAAAAAAAAAAAAAiwIYAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T15:50:22.935Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 33,
               "Title": "OrderItemEntity.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain\\Entities\\Business\\OrderItemEntity.cs",
               "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Domain\\Entities\\Business\\OrderItemEntity.cs",
@@ -775,7 +835,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 34,
               "Title": "OrderEntity.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain\\Entities\\Business\\OrderEntity.cs",
               "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Domain\\Entities\\Business\\OrderEntity.cs",
@@ -787,7 +847,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 35,
               "Title": "CartItemEntity.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain\\Entities\\Business\\CartItemEntity.cs",
               "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Domain\\Entities\\Business\\CartItemEntity.cs",
@@ -799,7 +859,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 37,
               "Title": "ProductEntity.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain\\Entities\\Business\\ProductEntity.cs",
               "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Domain\\Entities\\Business\\ProductEntity.cs",
@@ -811,7 +871,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 32,
               "Title": "ManagerBase.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain\\Managers\\ManagerBase.cs",
               "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Domain\\Managers\\ManagerBase.cs",
@@ -823,7 +883,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 36,
               "Title": "UserEntity.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain\\Entities\\Auths\\UserEntity.cs",
               "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Domain\\Entities\\Auths\\UserEntity.cs",
@@ -835,7 +895,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 43,
               "Title": "ConfigurationBase.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Bases\\ConfigurationBase.cs",
               "RelativeDocumentMoniker": "Lib\\Project.DigitalMarket.Host.Base\\Bases\\ConfigurationBase.cs",
@@ -847,7 +907,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 38,
               "Title": "BaseEntity.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain\\Entities\\Base\\BaseEntity.cs",
               "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Domain\\Entities\\Base\\BaseEntity.cs",
@@ -859,7 +919,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 40,
               "Title": "AuthService.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application\\Services\\Auths\\AuthService.cs",
               "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Application\\Services\\Auths\\AuthService.cs",
@@ -871,7 +931,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 41,
               "Title": "AuthManager.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain\\Managers\\Auths\\AuthManager.cs",
               "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Domain\\Managers\\Auths\\AuthManager.cs",
@@ -883,7 +943,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 39,
               "Title": "DigitalMarketDbContextFactory.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure.MsSql\\Data\\DigitalMarketDbContextFactory.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Project.DigitalMarket.Infrastructure.MsSql\\Data\\DigitalMarketDbContextFactory.cs",
@@ -895,19 +955,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "DigitalMarketDbContext.cs",
-              "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure.MsSql\\Data\\DigitalMarketDbContext.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Project.DigitalMarket.Infrastructure.MsSql\\Data\\DigitalMarketDbContext.cs",
-              "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure.MsSql\\Data\\DigitalMarketDbContext.cs",
-              "RelativeToolTip": "Infrastructure\\Project.DigitalMarket.Infrastructure.MsSql\\Data\\DigitalMarketDbContext.cs",
-              "ViewState": "AgIAAJYAAAAAAAAAAAAowK0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-22T05:47:31.152Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 48,
               "Title": "launchSettings.json",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Presentation\\API\\Digitalmarket.Controller.Auth\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Presentation\\API\\Digitalmarket.Controller.Auth\\Properties\\launchSettings.json",
@@ -919,7 +967,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 49,
               "Title": "Digitalmarket.Controller.Business.csproj",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Presentation\\API\\Digitalmarket.Controller.Business\\Digitalmarket.Controller.Business.csproj",
               "RelativeDocumentMoniker": "Presentation\\API\\Digitalmarket.Controller.Business\\Digitalmarket.Controller.Business.csproj",
@@ -931,7 +979,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 42,
               "Title": "CachedServiceProviderBase.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\DependencyInjection\\CachedServiceProviderBase.cs",
               "RelativeDocumentMoniker": "Lib\\Project.DigitalMarket.Libs\\DependencyInjection\\CachedServiceProviderBase.cs",
@@ -943,7 +991,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 47,
               "Title": "launchSettings.json",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Presentation\\API\\Digitalmarket.Controller.Business\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Presentation\\API\\Digitalmarket.Controller.Business\\Properties\\launchSettings.json",
@@ -955,7 +1003,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 45,
               "Title": "ConfirmEnable2FADto.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application.Contract\\DTOs\\Auths\\ConfirmEnable2FADto.cs",
               "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Application.Contract\\DTOs\\Auths\\ConfirmEnable2FADto.cs",
@@ -967,7 +1015,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 44,
               "Title": "RegisterDto.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application.Contract\\DTOs\\Auths\\RegisterDto.cs",
               "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Application.Contract\\DTOs\\Auths\\RegisterDto.cs",
@@ -979,7 +1027,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 46,
               "Title": "AuthResponseDto.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application.Contract\\DTOs\\Auths\\AuthResponseDto.cs",
               "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Application.Contract\\DTOs\\Auths\\AuthResponseDto.cs",
@@ -991,7 +1039,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 51,
               "Title": "EmailService.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure.Mail\\Services\\EmailService.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Project.DigitalMarket.Infrastructure.Mail\\Services\\EmailService.cs",
@@ -1003,7 +1051,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 52,
               "Title": "GenerateExtentions.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Extension\\Project.DigitalMarket.Extension\\Extensions\\GenerateExtentions.cs",
               "RelativeDocumentMoniker": "Extension\\Project.DigitalMarket.Extension\\Extensions\\GenerateExtentions.cs",
@@ -1015,7 +1063,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 50,
               "Title": "Digitalmarket.Controller.Auth.csproj",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Presentation\\API\\Digitalmarket.Controller.Auth\\Digitalmarket.Controller.Auth.csproj",
               "RelativeDocumentMoniker": "Presentation\\API\\Digitalmarket.Controller.Auth\\Digitalmarket.Controller.Auth.csproj",
@@ -1027,7 +1075,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 53,
               "Title": "ValidationExtensions.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Extension\\Project.DigitalMarket.Extension\\Extensions\\ValidationExtensions.cs",
               "RelativeDocumentMoniker": "Extension\\Project.DigitalMarket.Extension\\Extensions\\ValidationExtensions.cs",
@@ -1039,7 +1087,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 54,
               "Title": "UserKycProfileEntity.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain\\Entities\\Auths\\UserKycProfileEntity.cs",
               "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Domain\\Entities\\Auths\\UserKycProfileEntity.cs",
@@ -1051,7 +1099,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 55,
               "Title": "UserFinancialTieEntity.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain\\Entities\\Auths\\UserFinancialTieEntity.cs",
               "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Domain\\Entities\\Auths\\UserFinancialTieEntity.cs",
@@ -1063,7 +1111,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 56,
               "Title": "UserAuditLogEntity.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain\\Entities\\Auths\\UserAuditLogEntity.cs",
               "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Domain\\Entities\\Auths\\UserAuditLogEntity.cs",
@@ -1075,7 +1123,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 57,
               "Title": "DigitalMarketServiceBase.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application\\DigitalMarketServiceBase.cs",
               "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Application\\DigitalMarketServiceBase.cs",
@@ -1087,7 +1135,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 58,
               "Title": "DigitalMarketAutoMapper.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application\\DigitalMarketAutoMapper.cs",
               "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Application\\DigitalMarketAutoMapper.cs",
@@ -1099,7 +1147,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 59,
               "Title": "IAuthManager.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain\\Managers\\Auths\\IAuthManager.cs",
               "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Domain\\Managers\\Auths\\IAuthManager.cs",
@@ -1111,7 +1159,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 60,
               "Title": "InfoToken.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain\\Models\\Auths\\InfoToken.cs",
               "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Domain\\Models\\Auths\\InfoToken.cs",
@@ -1123,7 +1171,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 61,
               "Title": "SignInRequest.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain\\Models\\Auths\\SignInRequest.cs",
               "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Domain\\Models\\Auths\\SignInRequest.cs",
@@ -1135,7 +1183,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 64,
               "Title": "Project.DigitalMarket.Application.Contract.csproj",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application.Contract\\Project.DigitalMarket.Application.Contract.csproj",
               "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Application.Contract\\Project.DigitalMarket.Application.Contract.csproj",
@@ -1147,7 +1195,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 62,
               "Title": "Project.DigitalMarket.Domain.Share.csproj",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain.Share\\Project.DigitalMarket.Domain.Share.csproj",
               "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Domain.Share\\Project.DigitalMarket.Domain.Share.csproj",
@@ -1159,7 +1207,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 63,
               "Title": "Project.DigitalMarket.Domain.csproj",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain\\Project.DigitalMarket.Domain.csproj",
               "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Domain\\Project.DigitalMarket.Domain.csproj",
@@ -1171,7 +1219,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 65,
               "Title": "IRepositoryBase.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain\\Repositories\\Base\\IRepositoryBase.cs",
               "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Domain\\Repositories\\Base\\IRepositoryBase.cs",
@@ -1183,7 +1231,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 66,
               "Title": "connection.json",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Config\\connection.json",
               "RelativeDocumentMoniker": "Config\\connection.json",
@@ -1195,7 +1243,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 68,
               "Title": "ErrorCodeBusiness.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\Constants\\ErrorCode\\ErrorCodeBusiness.cs",
               "RelativeDocumentMoniker": "Lib\\Project.DigitalMarket.Libs\\Constants\\ErrorCode\\ErrorCodeBusiness.cs",
@@ -1207,7 +1255,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 69,
               "Title": "ErrorCodeAuth.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\Constants\\ErrorCode\\ErrorCodeAuth.cs",
               "RelativeDocumentMoniker": "Lib\\Project.DigitalMarket.Libs\\Constants\\ErrorCode\\ErrorCodeAuth.cs",
@@ -1219,7 +1267,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 70,
               "Title": "ApplicationMiddleware.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Middleware\\ApplicationMiddleware.cs",
               "RelativeDocumentMoniker": "Lib\\Project.DigitalMarket.Host.Base\\Middleware\\ApplicationMiddleware.cs",
@@ -1231,7 +1279,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 71,
               "Title": "BusinessException.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\Exceptions\\BusinessException.cs",
               "RelativeDocumentMoniker": "Lib\\Project.DigitalMarket.Libs\\Exceptions\\BusinessException.cs",
@@ -1243,7 +1291,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 72,
               "Title": "AuthException.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\Exceptions\\AuthException.cs",
               "RelativeDocumentMoniker": "Lib\\Project.DigitalMarket.Libs\\Exceptions\\AuthException.cs",
@@ -1255,7 +1303,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 67,
               "Title": "RepositoryBase.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure.MsSql\\Repositories\\Base\\RepositoryBase.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Project.DigitalMarket.Infrastructure.MsSql\\Repositories\\Base\\RepositoryBase.cs",
@@ -1267,7 +1315,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 73,
               "Title": "EmailService.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application\\Services\\Mails\\EmailService.cs",
               "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Application\\Services\\Mails\\EmailService.cs",
@@ -1279,7 +1327,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 74,
               "Title": "BaseHttpStatusCodeException.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\Exceptions\\BaseHttpStatusCodeException.cs",
               "RelativeDocumentMoniker": "Lib\\Project.DigitalMarket.Libs\\Exceptions\\BaseHttpStatusCodeException.cs",
@@ -1291,7 +1339,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 75,
               "Title": "Project.DigitalMarket.Infrastructure.Mail.csproj",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure.Mail\\Project.DigitalMarket.Infrastructure.Mail.csproj",
               "RelativeDocumentMoniker": "Infrastructure\\Project.DigitalMarket.Infrastructure.Mail\\Project.DigitalMarket.Infrastructure.Mail.csproj",
@@ -1303,7 +1351,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 76,
               "Title": "Project.DigitalMarket.Infrastructure.MsSql.csproj",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure.MsSql\\Project.DigitalMarket.Infrastructure.MsSql.csproj",
               "RelativeDocumentMoniker": "Infrastructure\\Project.DigitalMarket.Infrastructure.MsSql\\Project.DigitalMarket.Infrastructure.MsSql.csproj",
@@ -1315,7 +1363,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 78,
               "Title": "LazyloadProvider.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\DependencyInjection\\LazyloadProvider.cs",
               "RelativeDocumentMoniker": "Lib\\Project.DigitalMarket.Libs\\DependencyInjection\\LazyloadProvider.cs",
@@ -1327,7 +1375,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 79,
               "Title": "IEmailManager.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain\\ExternalServices\\Mails\\IEmailManager.cs",
               "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Domain\\ExternalServices\\Mails\\IEmailManager.cs",
@@ -1339,7 +1387,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 80,
               "Title": "IEmailConfig.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain.Share\\Config\\IEmailConfig.cs",
               "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Domain.Share\\Config\\IEmailConfig.cs",
@@ -1351,7 +1399,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 78,
+              "DocumentIndex": 81,
               "Title": "Project.DigitalMarket.Libs.csproj",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\Project.DigitalMarket.Libs.csproj",
               "RelativeDocumentMoniker": "Lib\\Project.DigitalMarket.Libs\\Project.DigitalMarket.Libs.csproj",
@@ -1363,7 +1411,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 77,
               "Title": "IAuthRepository.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain\\Repositories\\Auths\\IAuthRepository.cs",
               "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Domain\\Repositories\\Auths\\IAuthRepository.cs",
@@ -1375,7 +1423,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 80,
+              "DocumentIndex": 83,
               "Title": "APIDocument.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Bases\\APIDocument.cs",
               "RelativeDocumentMoniker": "Lib\\Project.DigitalMarket.Host.Base\\Bases\\APIDocument.cs",
@@ -1387,7 +1435,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 79,
+              "DocumentIndex": 82,
               "Title": "DigitalBaseController.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Presentation\\API\\Digitalmarket.Controller.Base\\Controllers\\DigitalBaseController.cs",
               "RelativeDocumentMoniker": "Presentation\\API\\Digitalmarket.Controller.Base\\Controllers\\DigitalBaseController.cs",
@@ -1399,7 +1447,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 81,
+              "DocumentIndex": 84,
               "Title": "AppClaimTypes.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain.Share\\Constants\\Auths\\AppClaimTypes.cs",
               "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Domain.Share\\Constants\\Auths\\AppClaimTypes.cs",
@@ -1411,7 +1459,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 83,
+              "DocumentIndex": 86,
               "Title": "IKafkaConfig.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain.Share\\Config\\IKafkaConfig.cs",
               "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Domain.Share\\Config\\IKafkaConfig.cs",
@@ -1423,7 +1471,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 84,
+              "DocumentIndex": 87,
               "Title": "AuthConfig.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Configs\\AuthConfig.cs",
               "RelativeDocumentMoniker": "Lib\\Project.DigitalMarket.Host.Base\\Configs\\AuthConfig.cs",
@@ -1435,7 +1483,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 85,
+              "DocumentIndex": 88,
               "Title": "IAuthConfig.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain.Share\\Config\\IAuthConfig.cs",
               "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Domain.Share\\Config\\IAuthConfig.cs",
@@ -1447,7 +1495,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 86,
+              "DocumentIndex": 89,
               "Title": "Project.DigitalMarket.Extension.csproj",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Extension\\Project.DigitalMarket.Extension\\Project.DigitalMarket.Extension.csproj",
               "RelativeDocumentMoniker": "Extension\\Project.DigitalMarket.Extension\\Project.DigitalMarket.Extension.csproj",
@@ -1459,7 +1507,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 82,
+              "DocumentIndex": 85,
               "Title": "KafkaConfig.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Configs\\KafkaConfig.cs",
               "RelativeDocumentMoniker": "Lib\\Project.DigitalMarket.Host.Base\\Configs\\KafkaConfig.cs",
@@ -1471,7 +1519,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 87,
+              "DocumentIndex": 90,
               "Title": "Project.DigitalMarket.Host.Base.csproj",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj",
               "RelativeDocumentMoniker": "Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj",
@@ -1483,7 +1531,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 88,
+              "DocumentIndex": 91,
               "Title": "Digitalmarket.Controller.Base.csproj",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Presentation\\API\\Digitalmarket.Controller.Base\\Digitalmarket.Controller.Base.csproj",
               "RelativeDocumentMoniker": "Presentation\\API\\Digitalmarket.Controller.Base\\Digitalmarket.Controller.Base.csproj",
@@ -1495,7 +1543,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 89,
+              "DocumentIndex": 92,
               "Title": "AppGetSectionConfigure.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Configs\\AppGetSectionConfigure.cs",
               "RelativeDocumentMoniker": "Lib\\Project.DigitalMarket.Host.Base\\Configs\\AppGetSectionConfigure.cs",
@@ -1507,7 +1555,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 90,
+              "DocumentIndex": 93,
               "Title": "MiddlewareFactory.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Presentation\\API\\Digitalmarket.Controller.Base\\AppCoreFactory\\MiddlewareFactory.cs",
               "RelativeDocumentMoniker": "Presentation\\API\\Digitalmarket.Controller.Base\\AppCoreFactory\\MiddlewareFactory.cs",
@@ -1519,7 +1567,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 91,
+              "DocumentIndex": 94,
               "Title": "ConsumerConfig.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Configs\\ConsumerConfig.cs",
               "RelativeDocumentMoniker": "Lib\\Project.DigitalMarket.Host.Base\\Configs\\ConsumerConfig.cs",
@@ -1531,7 +1579,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 92,
+              "DocumentIndex": 95,
               "Title": "ConnectionString.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Configs\\ConnectionString.cs",
               "RelativeDocumentMoniker": "Lib\\Project.DigitalMarket.Host.Base\\Configs\\ConnectionString.cs",
@@ -1543,7 +1591,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 93,
+              "DocumentIndex": 96,
               "Title": "ServiceIdentifier.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\DependencyInjection\\ServiceIdentifier.cs",
               "RelativeDocumentMoniker": "Lib\\Project.DigitalMarket.Libs\\DependencyInjection\\ServiceIdentifier.cs",
@@ -1555,7 +1603,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 94,
+              "DocumentIndex": 97,
               "Title": "ICachedServiceProviderBase.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\DependencyInjection\\ICachedServiceProviderBase.cs",
               "RelativeDocumentMoniker": "Lib\\Project.DigitalMarket.Libs\\DependencyInjection\\ICachedServiceProviderBase.cs",

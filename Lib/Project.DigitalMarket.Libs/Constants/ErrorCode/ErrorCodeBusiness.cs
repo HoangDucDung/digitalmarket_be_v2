@@ -49,5 +49,20 @@ namespace Project.DigitalMarket.Libs.Constants.ErrorCode
         /// Không được phép mua sản phẩm của chính mình
         /// </summary>
         public const int CannotBuyOwnProduct = 3009;
+
+        /// <summary>
+        /// Số dư không đủ
+        /// </summary>
+        public const int InsufficientBalance = 3010;
+
+        /// <summary>
+        /// Ví đang bị khóa
+        /// </summary>
+        public const int WalletLocked = 3011;
+
+        /// <summary>
+        /// Số tiền không hợp lệ
+        /// </summary>
+        public const int InvalidAmount = 3012;
     }
 }

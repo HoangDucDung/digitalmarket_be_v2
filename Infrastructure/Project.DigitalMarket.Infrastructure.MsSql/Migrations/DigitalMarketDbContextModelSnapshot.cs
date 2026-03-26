@@ -48,6 +48,29 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("b74ddd14-6340-4840-95c2-db12554843e5"),
+                            ConcurrencyStamp = "e10a6f9b-7d9a-4f1a-b1c8-5a2c3d4e5f6a",
+                            Name = "Customer",
+                            NormalizedName = "CUSTOMER"
+                        },
+                        new
+                        {
+                            Id = new Guid("69bd714f-9576-45ba-b5b7-f00649be00de"),
+                            ConcurrencyStamp = "d20b7f0c-8e0b-5a2b-c2d9-6b3d4e5f6a7b",
+                            Name = "Seller",
+                            NormalizedName = "SELLER"
+                        },
+                        new
+                        {
+                            Id = new Guid("8d04dce2-969a-435d-bba4-072895a5531b"),
+                            ConcurrencyStamp = "c30c8f1d-9f1c-6b3c-d3e0-7c4d5e6f7a8b",
+                            Name = "Admin",
+                            NormalizedName = "ADMIN"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>
@@ -651,6 +674,72 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Migrations
                     b.ToTable("UserKycProfiles", (string)null);
                 });
 
+            modelBuilder.Entity("Project.DigitalMarket.Domain.Entities.WalletEntity", b =>
+                {
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<decimal>("Balance")
+                        .HasPrecision(18, 2)
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("UserId");
+
+                    b.ToTable("Wallets", (string)null);
+                });
+
+            modelBuilder.Entity("Project.DigitalMarket.Domain.Entities.WalletTransactionEntity", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<decimal>("Amount")
+                        .HasPrecision(18, 2)
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("ReferenceId")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<string>("Type")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<Guid>("WalletId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("WalletId");
+
+                    b.ToTable("WalletTransactions", (string)null);
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole<System.Guid>", null)
@@ -765,6 +854,28 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("Project.DigitalMarket.Domain.Entities.WalletEntity", b =>
+                {
+                    b.HasOne("Project.DigitalMarket.Domain.Entities.UserEntity", "User")
+                        .WithOne("Wallet")
+                        .HasForeignKey("Project.DigitalMarket.Domain.Entities.WalletEntity", "UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Project.DigitalMarket.Domain.Entities.WalletTransactionEntity", b =>
+                {
+                    b.HasOne("Project.DigitalMarket.Domain.Entities.WalletEntity", "Wallet")
+                        .WithMany("Transactions")
+                        .HasForeignKey("WalletId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Wallet");
+                });
+
             modelBuilder.Entity("Project.DigitalMarket.Domain.Entities.Business.OrderEntity", b =>
                 {
                     b.Navigation("Items");
@@ -779,6 +890,14 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Migrations
                     b.Navigation("KycProfile");
 
                     b.Navigation("UserRoles");
+
+                    b.Navigation("Wallet")
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Project.DigitalMarket.Domain.Entities.WalletEntity", b =>
+                {
+                    b.Navigation("Transactions");
                 });
 #pragma warning restore 612, 618
         }

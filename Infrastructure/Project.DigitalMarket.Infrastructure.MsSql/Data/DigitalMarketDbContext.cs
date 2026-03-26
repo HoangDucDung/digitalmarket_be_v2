@@ -25,6 +25,8 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Data
         public DbSet<CartItemEntity> CartItems { get; set; }
         public DbSet<OrderEntity> Orders { get; set; }
         public DbSet<OrderItemEntity> OrderItems { get; set; }
+        public DbSet<WalletEntity> Wallets { get; set; }
+        public DbSet<WalletTransactionEntity> WalletTransactions { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -173,30 +175,63 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Data
                 entity.HasIndex(p => new { p.IsDeleted, p.IsActive, p.Status, p.CategoryBundle });
             });
 
-            // Seeding Roles
-            builder.Entity<IdentityRole<Guid>>().HasData(
-                new IdentityRole<Guid>
-                {
-                    Id = Guid.Parse("B74DDD14-6340-4840-95C2-DB12554843E5"),
-                    Name = RoleConstants.Customer,
-                    NormalizedName = RoleConstants.Customer.ToUpper(),
-                    ConcurrencyStamp = "e10a6f9b-7d9a-4f1a-b1c8-5a2c3d4e5f6a"
-                },
-                new IdentityRole<Guid>
-                {
-                    Id = Guid.Parse("69BD714F-9576-45BA-B5B7-F00649BE00DE"),
-                    Name = RoleConstants.Seller,
-                    NormalizedName = RoleConstants.Seller.ToUpper(),
-                    ConcurrencyStamp = "d20b7f0c-8e0b-5a2b-c2d9-6b3d4e5f6a7b"
-                },
-                new IdentityRole<Guid>
-                {
-                    Id = Guid.Parse("8D04DCE2-969A-435D-BBA4-072895A5531B"),
-                    Name = RoleConstants.Admin,
-                    NormalizedName = RoleConstants.Admin.ToUpper(),
-                    ConcurrencyStamp = "c30c8f1d-9f1c-6b3c-d3e0-7c4d5e6f7a8b"
-                }
-            );
+            // Cấu hình Wallet
+            builder.Entity<WalletEntity>(entity =>
+            {
+                entity.ToTable("Wallets");
+                entity.HasKey(w => w.UserId);
+                entity.Property(w => w.Balance).HasPrecision(18, 2);
+                entity.Property(w => w.Status).HasMaxLength(20).IsRequired();
+
+                entity.HasOne(w => w.User)
+                    .WithOne(u => u.Wallet)
+                    .HasForeignKey<WalletEntity>(w => w.UserId)
+                    .OnDelete(DeleteBehavior.Cascade);
+            });
+
+            // Cấu hình WalletTransaction
+            builder.Entity<WalletTransactionEntity>(entity =>
+            {
+                entity.ToTable("WalletTransactions");
+                entity.HasKey(t => t.Id);
+                entity.Property(t => t.Amount).HasPrecision(18, 2);
+                entity.Property(t => t.Type).HasMaxLength(50).IsRequired();
+                entity.Property(t => t.Status).HasMaxLength(20).IsRequired();
+                entity.Property(t => t.Description).HasMaxLength(500);
+                entity.Property(t => t.ReferenceId).HasMaxLength(100);
+
+                entity.HasOne(t => t.Wallet)
+                    .WithMany(w => w.Transactions)
+                    .HasForeignKey(t => t.WalletId)
+                    .OnDelete(DeleteBehavior.Cascade);
+
+                entity.HasIndex(t => t.WalletId);
+            });
+
+            //Seeding Roles
+             builder.Entity<IdentityRole<Guid>>().HasData(
+                 new IdentityRole<Guid>
+                 {
+                     Id = Guid.Parse("B74DDD14-6340-4840-95C2-DB12554843E5"),
+                     Name = RoleConstants.Customer,
+                     NormalizedName = RoleConstants.Customer.ToUpper(),
+                     ConcurrencyStamp = "e10a6f9b-7d9a-4f1a-b1c8-5a2c3d4e5f6a"
+                 },
+                 new IdentityRole<Guid>
+                 {
+                     Id = Guid.Parse("69BD714F-9576-45BA-B5B7-F00649BE00DE"),
+                     Name = RoleConstants.Seller,
+                     NormalizedName = RoleConstants.Seller.ToUpper(),
+                     ConcurrencyStamp = "d20b7f0c-8e0b-5a2b-c2d9-6b3d4e5f6a7b"
+                 },
+                 new IdentityRole<Guid>
+                 {
+                     Id = Guid.Parse("8D04DCE2-969A-435D-BBA4-072895A5531B"),
+                     Name = RoleConstants.Admin,
+                     NormalizedName = RoleConstants.Admin.ToUpper(),
+                     ConcurrencyStamp = "c30c8f1d-9f1c-6b3c-d3e0-7c4d5e6f7a8b"
+                 }
+             );
         }
     }
 }
