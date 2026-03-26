@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{91BB9F49-5202-4094-BC3F-6B72B730FEA2}|Core\\Project.DigitalMarket.Application\\Project.DigitalMarket.Application.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\core\\project.digitalmarket.application\\services\\business\\product\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91BB9F49-5202-4094-BC3F-6B72B730FEA2}|Core\\Project.DigitalMarket.Application\\Project.DigitalMarket.Application.csproj|solutionrelative:core\\project.digitalmarket.application\\services\\business\\product\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{04779790-2A2B-4618-AF0C-CB68EC887358}|Infrastructure\\Project.DigitalMarket.Infrastructure.MsSql\\Project.DigitalMarket.Infrastructure.MsSql.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\infrastructure\\project.digitalmarket.infrastructure.mssql\\data\\digitalmarketdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{04779790-2A2B-4618-AF0C-CB68EC887358}|Infrastructure\\Project.DigitalMarket.Infrastructure.MsSql\\Project.DigitalMarket.Infrastructure.MsSql.csproj|solutionrelative:infrastructure\\project.digitalmarket.infrastructure.mssql\\data\\digitalmarketdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{729EE164-7CFB-48A1-82E2-9F470404A2D3}|Presentation\\API\\Digitalmarket.Controller.Base\\Digitalmarket.Controller.Base.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\presentation\\api\\digitalmarket.controller.base\\appcorefactory\\appcorefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{729EE164-7CFB-48A1-82E2-9F470404A2D3}|Presentation\\API\\Digitalmarket.Controller.Base\\Digitalmarket.Controller.Base.csproj|solutionrelative:presentation\\api\\digitalmarket.controller.base\\appcorefactory\\appcorefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{91BB9F49-5202-4094-BC3F-6B72B730FEA2}|Core\\Project.DigitalMarket.Application\\Project.DigitalMarket.Application.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\core\\project.digitalmarket.application\\services\\business\\product\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91BB9F49-5202-4094-BC3F-6B72B730FEA2}|Core\\Project.DigitalMarket.Application\\Project.DigitalMarket.Application.csproj|solutionrelative:core\\project.digitalmarket.application\\services\\business\\product\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{91BB9F49-5202-4094-BC3F-6B72B730FEA2}|Core\\Project.DigitalMarket.Application\\Project.DigitalMarket.Application.csproj|e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\core\\project.digitalmarket.application\\services\\business\\order\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -402,7 +402,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 16,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -438,15 +438,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "ProductService.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application\\Services\\Business\\Product\\ProductService.cs",
               "RelativeDocumentMoniker": "Core\\Project.DigitalMarket.Application\\Services\\Business\\Product\\ProductService.cs",
               "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application\\Services\\Business\\Product\\ProductService.cs",
               "RelativeToolTip": "Core\\Project.DigitalMarket.Application\\Services\\Business\\Product\\ProductService.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAYwHAAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T09:54:09.016Z"
+              "WhenOpened": "2026-03-25T09:54:09.016Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -522,7 +523,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "AppCoreFactory.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Presentation\\API\\Digitalmarket.Controller.Base\\AppCoreFactory\\AppCoreFactory.cs",
               "RelativeDocumentMoniker": "Presentation\\API\\Digitalmarket.Controller.Base\\AppCoreFactory\\AppCoreFactory.cs",
@@ -534,13 +535,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "DigitalMarketDbContext.cs",
               "DocumentMoniker": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure.MsSql\\Data\\DigitalMarketDbContext.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Project.DigitalMarket.Infrastructure.MsSql\\Data\\DigitalMarketDbContext.cs",
               "ToolTip": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure.MsSql\\Data\\DigitalMarketDbContext.cs",
               "RelativeToolTip": "Infrastructure\\Project.DigitalMarket.Infrastructure.MsSql\\Data\\DigitalMarketDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAswEkAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-22T05:47:31.152Z",
               "EditorCaption": ""

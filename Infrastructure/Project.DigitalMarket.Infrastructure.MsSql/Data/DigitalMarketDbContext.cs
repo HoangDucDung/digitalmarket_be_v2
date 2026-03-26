@@ -27,6 +27,7 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Data
         public DbSet<OrderItemEntity> OrderItems { get; set; }
         public DbSet<WalletEntity> Wallets { get; set; }
         public DbSet<WalletTransactionEntity> WalletTransactions { get; set; }
+        public DbSet<CommentEntity> Comments { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -206,6 +207,28 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Data
                     .OnDelete(DeleteBehavior.Cascade);
 
                 entity.HasIndex(t => t.WalletId);
+            });
+
+            // Cấu hình Comment
+            builder.Entity<CommentEntity>(entity =>
+            {
+                entity.ToTable("Comments");
+                entity.HasKey(c => c.Id);
+                entity.Property(c => c.Content).HasMaxLength(2000).IsRequired();
+                entity.Property(c => c.ImageUrls).HasMaxLength(2000);
+
+                entity.HasOne(c => c.Product)
+                    .WithMany()
+                    .HasForeignKey(c => c.ProductId)
+                    .OnDelete(DeleteBehavior.Cascade);
+
+                entity.HasOne(c => c.User)
+                    .WithMany()
+                    .HasForeignKey(c => c.UserId)
+                    .OnDelete(DeleteBehavior.NoAction);
+
+                entity.HasIndex(c => c.ProductId);
+                entity.HasIndex(c => c.UserId);
             });
 
             //Seeding Roles

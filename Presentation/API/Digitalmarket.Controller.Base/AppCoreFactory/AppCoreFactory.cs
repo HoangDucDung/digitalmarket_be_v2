@@ -140,6 +140,7 @@ namespace Digitalmarket.Controller.Base.AppCoreFactory
             services.AddScoped<IProductService, ProductService>();
             services.AddScoped<ICartService, CartService>();
             services.AddScoped<IOrderService, OrderService>();
+            services.AddScoped<ICommentService, CommentService>();
             services.AddScoped<IWalletService, WalletService>();
             return services;
         }
@@ -167,12 +168,14 @@ namespace Digitalmarket.Controller.Base.AppCoreFactory
             // Business Managers & Repositories
             services.AddScoped<ISellerManager, SellerManager>();
             services.AddScoped<IProductManager, ProductManager>();
+            services.AddScoped<ICommentManager, CommentManager>();
             services.AddScoped<ICartManager, CartManager>();
             services.AddScoped<IOrderManager, OrderManager>();
             
             services.AddScoped<IKycRepository, KycRepository>();
             services.AddScoped<IFinancialRepository, FinancialRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<ICommentRepository, CommentRepository>();
             services.AddScoped<ICartRepository, CartRepository>();
             services.AddScoped<IOrderRepository, OrderRepository>();
 

@@ -29,39 +29,14 @@
             Xóa sạch giỏ hàng
             </summary>
         </member>
-        <member name="M:Digitalmarket.Controller.Order.Controllers.OrderController.Checkout(Project.DigitalMarket.Application.Contract.DTOs.Business.Order.CheckoutCartReqDto)">
+        <member name="M:Digitalmarket.Controller.Business.Controllers.CommentController.CreateComment(Project.DigitalMarket.Application.Contract.DTOs.Business.Product.CreateCommentReqDto)">
             <summary>
-            Thanh toán giỏ hàng
+            Tạo mới bình luận cho sản phẩm.
             </summary>
         </member>
-        <member name="M:Digitalmarket.Controller.Order.Controllers.OrderController.DirectPurchase(Project.DigitalMarket.Application.Contract.DTOs.Business.Order.DirectPurchaseReqDto)">
+        <member name="M:Digitalmarket.Controller.Business.Controllers.CommentController.GetProductComments(System.Guid)">
             <summary>
-            Mua ngay
-            </summary>
-        </member>
-        <member name="M:Digitalmarket.Controller.Order.Controllers.OrderController.GetMyOrders">
-            <summary>
-            Lấy danh sách đơn hàng của tôi
-            </summary>
-        </member>
-        <member name="M:Digitalmarket.Controller.Order.Controllers.OrderController.GetOrderDetail(System.Guid)">
-            <summary>
-            Lấy chi tiết đơn hàng
-            </summary>
-        </member>
-        <member name="M:Digitalmarket.Controller.Order.Controllers.OrderController.CancelOrder(System.Guid)">
-            <summary>
-            Hủy đơn hàng
-            </summary>
-        </member>
-        <member name="M:Digitalmarket.Controller.Product.Controllers.ProductController.GetDailyDiscover(System.String,System.Int32,System.Int32,System.Int32,System.Boolean,System.String)">
-            <summary>
-            Lấy danh sách sản phẩm (có filter + phân trang)
-            </summary>
-        </member>
-        <member name="M:Digitalmarket.Controller.Product.Controllers.ProductController.GetProductDetail(Project.DigitalMarket.Application.Contract.DTOs.Business.Product.ProductDetailReqDto)">
-            <summary>
-            Lấy chi tiết sản phẩm
+            Lấy danh sách bình luận của sản phẩm.
             </summary>
         </member>
         <member name="T:Digitalmarket.Controller.Business.Controllers.SellerController">
@@ -124,6 +99,41 @@
         <member name="P:Digitalmarket.Controller.Business.Controllers.WalletTopUpRequest.Description">
             <summary>
             Nội dung/Ghi chú nạp tiền
+            </summary>
+        </member>
+        <member name="M:Digitalmarket.Controller.Order.Controllers.OrderController.Checkout(Project.DigitalMarket.Application.Contract.DTOs.Business.Order.CheckoutCartReqDto)">
+            <summary>
+            Thanh toán giỏ hàng
+            </summary>
+        </member>
+        <member name="M:Digitalmarket.Controller.Order.Controllers.OrderController.DirectPurchase(Project.DigitalMarket.Application.Contract.DTOs.Business.Order.DirectPurchaseReqDto)">
+            <summary>
+            Mua ngay
+            </summary>
+        </member>
+        <member name="M:Digitalmarket.Controller.Order.Controllers.OrderController.GetMyOrders">
+            <summary>
+            Lấy danh sách đơn hàng của tôi
+            </summary>
+        </member>
+        <member name="M:Digitalmarket.Controller.Order.Controllers.OrderController.GetOrderDetail(System.Guid)">
+            <summary>
+            Lấy chi tiết đơn hàng
+            </summary>
+        </member>
+        <member name="M:Digitalmarket.Controller.Order.Controllers.OrderController.CancelOrder(System.Guid)">
+            <summary>
+            Hủy đơn hàng
+            </summary>
+        </member>
+        <member name="M:Digitalmarket.Controller.Product.Controllers.ProductController.GetDailyDiscover(System.String,System.Int32,System.Int32,System.Int32,System.Boolean,System.String)">
+            <summary>
+            Lấy danh sách sản phẩm (có filter + phân trang)
+            </summary>
+        </member>
+        <member name="M:Digitalmarket.Controller.Product.Controllers.ProductController.GetProductDetail(Project.DigitalMarket.Application.Contract.DTOs.Business.Product.ProductDetailReqDto)">
+            <summary>
+            Lấy chi tiết sản phẩm
             </summary>
         </member>
     </members>

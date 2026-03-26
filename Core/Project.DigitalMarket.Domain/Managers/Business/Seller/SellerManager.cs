@@ -69,22 +69,35 @@ namespace Project.DigitalMarket.Domain.Managers.Business.Seller
             else
                 _kycRepository.Update(kycProfile);
 
-            // 3. Tạo thông tin tài chính (Payout) qua Repository
-            var financialTie = new UserFinancialTieEntity
-            {
-                UserId = userId,
-                Type = registerDto.PayoutType,
-                Provider = registerDto.PayoutProvider,
-                AccountName = registerDto.PayoutAccountName,
-                AccountNumber = registerDto.PayoutAccountNumber,
-                IsDefault = true,
-                CreatedAt = GenerateExtentions.Now
-            };
-            await _financialRepository.AddAsync(financialTie);
+            // 3. Tạo hoặc cập nhật thông tin tài chính (Payout) qua Repository
+            var financialTie = await _financialRepository.GetByCondition(x => x.UserId == userId && x.IsDefault).FirstOrDefaultAsync();
 
-            // 4. Lưu tất cả thay đổi qua Repository
+            if (financialTie == null)
+            {
+                financialTie = new UserFinancialTieEntity
+                {
+                    UserId = userId,
+                    IsDefault = true,
+                    CreatedAt = GenerateExtentions.Now
+                };
+                financialTie.Type = registerDto.PayoutType;
+                financialTie.Provider = registerDto.PayoutProvider;
+                financialTie.AccountName = registerDto.PayoutAccountName;
+                financialTie.AccountNumber = registerDto.PayoutAccountNumber;
+                await _financialRepository.AddAsync(financialTie);
+            }
+            else
+            {
+                financialTie.Type = registerDto.PayoutType;
+                financialTie.Provider = registerDto.PayoutProvider;
+                financialTie.AccountName = registerDto.PayoutAccountName;
+                financialTie.AccountNumber = registerDto.PayoutAccountNumber;
+                financialTie.UpdatedAt = GenerateExtentions.Now;
+                _financialRepository.Update(financialTie);
+            }
+
+            // 4. Lưu tất cả thay đổi qua Repository (Cả 2 repo dùng chung 1 DbContext)
             await _kycRepository.SaveChangesAsync();
-            await _financialRepository.SaveChangesAsync();
         }
     }
 }
