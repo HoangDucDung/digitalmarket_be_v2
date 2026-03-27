@@ -29,7 +29,8 @@ namespace Project.DigitalMarket.Application
             // Cart mapping
             CreateMap<CartItemEntity, CartItemResultDto>()
                 .ForMember(d => d.ProductName, o => o.MapFrom(s => s.Product.Name))
-                .ForMember(d => d.ImageUrl, o => o.MapFrom(s => s.Product.ImageUrl));
+                .ForMember(d => d.ThumbnailFileId, o => o.MapFrom(s =>
+                    s.Product.Images.OrderByDescending(i => i.IsPrimary).ThenBy(i => i.SortOrder).Select(i => i.FileId).FirstOrDefault()));
 
             // Order & Item mapping: Entity (Domain) -> Result (Contract)
             CreateMap<OrderEntity, OrderResultDto>();

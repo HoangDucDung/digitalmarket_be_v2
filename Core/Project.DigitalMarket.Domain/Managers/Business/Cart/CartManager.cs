@@ -15,7 +15,9 @@ namespace Project.DigitalMarket.Domain.Managers.Business.Cart
 
         public async Task AddToCartAsync(Guid userId, Guid productId, int quantity)
         {
-            var product = await _productRepository.GetByCondition(x => x.Id == productId && x.IsActive && !x.IsDeleted).FirstOrDefaultAsync();
+            var product = await _productRepository.GetByCondition(x => x.Id == productId && x.IsActive && !x.IsDeleted)
+                .Include(x => x.Variants)
+                .FirstOrDefaultAsync();
             if (product == null)
                 throw new BusinessException(ErrorCode.ProductNotAvailable, "Sản phẩm không khả dụng.");
 
@@ -30,7 +32,7 @@ namespace Project.DigitalMarket.Domain.Managers.Business.Cart
                     UserId = userId,
                     ProductId = productId,
                     Quantity = quantity,
-                    ReferencePrice = product.SalePrice ?? product.OriginalPrice
+                    ReferencePrice = product.Variants.Where(v => v.IsActive).OrderBy(v => v.Price).Select(v => v.Price).FirstOrDefault()
                 };
                 await _cartRepository.AddAsync(cartItem);
             }
@@ -66,6 +68,7 @@ namespace Project.DigitalMarket.Domain.Managers.Business.Cart
         {
             return await _cartRepository.GetByCondition(x => x.UserId == userId)
                 .Include(x => x.Product)
+                .ThenInclude(p => p.Images)
                 .OrderByDescending(x => x.CreatedAt)
                 .ToListAsync();
         }

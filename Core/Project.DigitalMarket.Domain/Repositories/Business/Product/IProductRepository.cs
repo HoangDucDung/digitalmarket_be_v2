@@ -6,5 +6,7 @@ namespace Project.DigitalMarket.Domain.Repositories.Business.Product
     public interface IProductRepository : IRepositoryBase<ProductEntity>
     {
         IQueryable<ProductEntity> GetDiscoverQuery();
+        Task<CategoryEntity?> ResolveCategoryAsync(string categoryNameOrSlug);
+        Task<BrandEntity?> ResolveBrandAsync(string? brandNameOrSlug);
     }
 }

@@ -22,9 +22,17 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Data
         public DbSet<UserFinancialTieEntity> UserFinancialTies { get; set; }
         public DbSet<UserAuditLogEntity> UserAuditLogs { get; set; }
         public DbSet<ProductEntity> Products { get; set; }
+        public DbSet<ProductImageEntity> ProductImages { get; set; }
+        public DbSet<ProductVariantEntity> ProductVariants { get; set; }
+        public DbSet<ProductVariantAttributeEntity> ProductVariantAttributes { get; set; }
+        public DbSet<ProductInventoryMovementEntity> ProductInventoryMovements { get; set; }
+        public DbSet<ProductRatingEntity> ProductRatings { get; set; }
+        public DbSet<CategoryEntity> Categories { get; set; }
+        public DbSet<BrandEntity> Brands { get; set; }
         public DbSet<CartItemEntity> CartItems { get; set; }
         public DbSet<OrderEntity> Orders { get; set; }
         public DbSet<OrderItemEntity> OrderItems { get; set; }
+        public DbSet<FileEntity> Files { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -78,6 +86,19 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Data
                 entity.HasOne(oi => oi.Product)
                     .WithMany()
                     .HasForeignKey(oi => oi.ProductId);
+            });
+
+            builder.Entity<FileEntity>(entity =>
+            {
+                entity.ToTable("Files");
+                entity.HasKey(f => f.Id);
+                entity.Property(f => f.FileName).HasMaxLength(512).IsRequired();
+                entity.Property(f => f.ContentType).HasMaxLength(256).IsRequired();
+                entity.Property(f => f.Base64Data).IsRequired();
+                entity.Property(f => f.FileSize).IsRequired();
+                entity.Property(f => f.UploadedAt).IsRequired();
+
+                entity.HasIndex(f => f.UploadedAt);
             });
 
             // Cấu hình ApplicationUser
@@ -155,23 +176,146 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Data
             {
                 entity.ToTable("Products");
                 entity.HasKey(p => p.Id);
-
                 entity.Property(p => p.Name).HasMaxLength(512).IsRequired();
                 entity.Property(p => p.Slug).HasMaxLength(512).IsRequired();
-                entity.Property(p => p.ImageUrl).HasMaxLength(1000).IsRequired();
-                entity.Property(p => p.ShopName).HasMaxLength(256).IsRequired();
-                entity.Property(p => p.ShopLocation).HasMaxLength(256).IsRequired();
-                entity.Property(p => p.Currency).HasMaxLength(10).IsRequired();
-                entity.Property(p => p.CategoryBundle).HasMaxLength(100).IsRequired();
-                entity.Property(p => p.Status).HasMaxLength(20).IsRequired();
-                entity.Property(p => p.OriginalPrice).HasPrecision(18, 2);
-                entity.Property(p => p.SalePrice).HasPrecision(18, 2);
-                entity.Property(p => p.RatingAverage).HasPrecision(3, 2);
+                entity.Property(p => p.Material).HasMaxLength(256);
+                entity.Property(p => p.Currency).HasMaxLength(10).IsRequired().HasDefaultValue("VND");
+                entity.Property(p => p.Status).HasMaxLength(20).IsRequired().HasDefaultValue(ProductConstants.Status.Draft);
+                entity.Property(p => p.IsActive).HasDefaultValue(true);
+                entity.Property(p => p.RowVersion).IsRowVersion();
 
                 entity.HasIndex(p => p.Slug).IsUnique();
-                entity.HasIndex(p => new { p.SellerId, p.Status, p.IsDeleted });
-                entity.HasIndex(p => new { p.IsDeleted, p.IsActive, p.Status, p.CategoryBundle });
+                entity.HasIndex(p => new { p.SellerId, p.Status, p.PublishedAt });
+                entity.HasIndex(p => new { p.CategoryId, p.IsActive });
+                entity.HasCheckConstraint("CK_Products_Status", "[Status] IN ('Draft','Published','Archived')");
+
+                entity.HasOne(p => p.Seller).WithMany().HasForeignKey(p => p.SellerId).OnDelete(DeleteBehavior.Restrict);
+                entity.HasOne(p => p.Category).WithMany().HasForeignKey(p => p.CategoryId).OnDelete(DeleteBehavior.Restrict);
+                entity.HasOne(p => p.Brand).WithMany().HasForeignKey(p => p.BrandId).OnDelete(DeleteBehavior.Restrict);
+                entity.HasMany(p => p.Images).WithOne(i => i.Product).HasForeignKey(i => i.ProductId).OnDelete(DeleteBehavior.Cascade);
+                entity.HasMany(p => p.Variants).WithOne(v => v.Product).HasForeignKey(v => v.ProductId).OnDelete(DeleteBehavior.Cascade);
+                entity.HasOne(p => p.Rating).WithOne(r => r.Product).HasForeignKey<ProductRatingEntity>(r => r.ProductId).OnDelete(DeleteBehavior.Cascade);
             });
+
+            builder.Entity<ProductImageEntity>(entity =>
+            {
+                entity.ToTable("ProductImages");
+                entity.HasKey(x => x.Id);
+                entity.Property(x => x.FileId).IsRequired();
+                entity.Property(x => x.SortOrder).HasDefaultValue(0);
+                entity.Property(x => x.IsPrimary).HasDefaultValue(false);
+                entity.HasIndex(x => x.ProductId);
+                entity.HasIndex(x => new { x.ProductId, x.IsPrimary }).IsUnique().HasFilter("[IsPrimary] = 1");
+
+                entity.HasOne(x => x.File)
+                    .WithMany()
+                    .HasForeignKey(x => x.FileId)
+                    .OnDelete(DeleteBehavior.Restrict);
+            });
+
+            builder.Entity<ProductVariantEntity>(entity =>
+            {
+                entity.ToTable("ProductVariants");
+                entity.HasKey(x => x.Id);
+                entity.Property(x => x.Sku).HasMaxLength(100);
+                entity.Property(x => x.VariantName).HasMaxLength(256).IsRequired();
+                entity.Property(x => x.Price).HasPrecision(18, 2);
+                entity.Property(x => x.OriginalPrice).HasPrecision(18, 2);
+                entity.Property(x => x.StockQuantity).HasDefaultValue(0);
+                entity.Property(x => x.IsActive).HasDefaultValue(true);
+                entity.HasIndex(x => x.ProductId);
+                entity.HasIndex(x => x.Sku).IsUnique().HasFilter("[Sku] IS NOT NULL");
+                entity.HasIndex(x => new { x.ProductId, x.VariantName }).IsUnique();
+                entity.HasCheckConstraint("CK_ProductVariants_Price", "[Price] >= 0");
+                entity.HasCheckConstraint("CK_ProductVariants_Stock", "[StockQuantity] >= 0");
+            });
+
+            builder.Entity<ProductVariantAttributeEntity>(entity =>
+            {
+                entity.ToTable("ProductVariantAttributes");
+                entity.HasKey(x => x.Id);
+                entity.Property(x => x.AttributeName).HasMaxLength(100).IsRequired();
+                entity.Property(x => x.AttributeValue).HasMaxLength(100).IsRequired();
+                entity.HasIndex(x => new { x.VariantId, x.AttributeOrder }).IsUnique();
+                entity.HasIndex(x => new { x.AttributeName, x.AttributeValue });
+                entity.HasCheckConstraint("CK_ProductVariantAttributes_Order", "[AttributeOrder] IN (1,2)");
+                entity.HasOne(x => x.Variant).WithMany(v => v.Attributes).HasForeignKey(x => x.VariantId).OnDelete(DeleteBehavior.Cascade);
+            });
+
+            builder.Entity<ProductInventoryMovementEntity>(entity =>
+            {
+                entity.ToTable("ProductInventoryMovements");
+                entity.HasKey(x => x.Id);
+                entity.Property(x => x.ChangeType).HasMaxLength(30).IsRequired();
+                entity.Property(x => x.Note).HasMaxLength(500);
+                entity.HasIndex(x => new { x.VariantId, x.CreatedAt });
+                entity.HasOne(x => x.Variant).WithMany(v => v.InventoryMovements).HasForeignKey(x => x.VariantId).OnDelete(DeleteBehavior.Cascade);
+            });
+
+            builder.Entity<ProductRatingEntity>(entity =>
+            {
+                entity.ToTable("ProductRatings");
+                entity.HasKey(x => x.ProductId);
+                entity.Property(x => x.AvgRating).HasPrecision(3, 2);
+                entity.HasCheckConstraint("CK_ProductRatings_Avg", "[AvgRating] >= 0 AND [AvgRating] <= 5");
+                entity.HasCheckConstraint("CK_ProductRatings_Count", "[RatingCount] >= 0");
+            });
+
+            builder.Entity<CategoryEntity>(entity =>
+            {
+                entity.ToTable("Categories");
+                entity.HasKey(x => x.Id);
+                entity.Property(x => x.Name).HasMaxLength(256).IsRequired();
+                entity.Property(x => x.Slug).HasMaxLength(256).IsRequired();
+                entity.Property(x => x.IsActive).HasDefaultValue(true);
+                entity.HasIndex(x => x.Slug).IsUnique();
+                entity.HasOne(x => x.Parent).WithMany(x => x.Children).HasForeignKey(x => x.ParentId).OnDelete(DeleteBehavior.Restrict);
+            });
+
+            builder.Entity<BrandEntity>(entity =>
+            {
+                entity.ToTable("Brands");
+                entity.HasKey(x => x.Id);
+                entity.Property(x => x.Name).HasMaxLength(256).IsRequired();
+                entity.Property(x => x.Slug).HasMaxLength(256).IsRequired();
+                entity.Property(x => x.IsActive).HasDefaultValue(true);
+                entity.HasIndex(x => x.Slug).IsUnique();
+            });
+
+            builder.Entity<CategoryEntity>().HasData(
+                new CategoryEntity
+                {
+                    Id = Guid.Parse("11111111-1111-1111-1111-111111111111"),
+                    Name = "Thoi trang nam",
+                    Slug = "thoi-trang-nam",
+                    IsActive = true
+                },
+                new CategoryEntity
+                {
+                    Id = Guid.Parse("22222222-2222-2222-2222-222222222222"),
+                    Name = "Ao thun",
+                    Slug = "ao-thun",
+                    ParentId = Guid.Parse("11111111-1111-1111-1111-111111111111"),
+                    IsActive = true
+                }
+            );
+
+            builder.Entity<BrandEntity>().HasData(
+                new BrandEntity
+                {
+                    Id = Guid.Parse("33333333-3333-3333-3333-333333333333"),
+                    Name = "No Brand",
+                    Slug = "no-brand",
+                    IsActive = true
+                },
+                new BrandEntity
+                {
+                    Id = Guid.Parse("44444444-4444-4444-4444-444444444444"),
+                    Name = "Nike",
+                    Slug = "nike",
+                    IsActive = true
+                }
+            );
 
             // Seeding Roles
             builder.Entity<IdentityRole<Guid>>().HasData(

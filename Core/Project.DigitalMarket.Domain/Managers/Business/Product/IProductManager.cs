@@ -1,3 +1,4 @@
+using System;
 using Project.DigitalMarket.Domain.Models.Business.Product;
 
 namespace Project.DigitalMarket.Domain.Managers.Business.Product
@@ -16,5 +17,20 @@ namespace Project.DigitalMarket.Domain.Managers.Business.Product
         /// Lấy thông tin chi tiết của một sản phẩm bất kỳ
         /// </summary>
         Task<ProductDetailResult?> GetProductDetailAsync(ProductDetailReq request);
+
+        /// <summary>
+        /// Thêm sản phẩm mới
+        /// </summary>
+        Task<Guid> AddProductAsync(ProductCreateReq request);
+
+        /// <summary>
+        /// Cập nhật sản phẩm (patch) của seller
+        /// </summary>
+        Task<bool> UpdateProductAsync(ProductUpdateReq request);
+
+        /// <summary>
+        /// Xóa (soft-delete) sản phẩm của seller
+        /// </summary>
+        Task<bool> DeleteProductAsync(Guid sellerId, Guid productId);
     }
 }

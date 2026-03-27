@@ -21,6 +21,7 @@ namespace Project.DigitalMarket.Domain.Managers.Business.Order
         {
             var cartItems = await _cartRepository.GetByCondition(x => x.UserId == userId && x.IsSelected)
                 .Include(x => x.Product)
+                .ThenInclude(p => p.Variants)
                 .ToListAsync();
 
             if (!cartItems.Any()) throw new BusinessException(ErrorCode.EmptyCart, "Giỏ hàng của bạn đang trống.");
@@ -29,7 +30,7 @@ namespace Project.DigitalMarket.Domain.Managers.Business.Order
                 throw new BusinessException(ErrorCode.CannotBuyOwnProduct, "Giỏ hàng của bạn chứa sản phẩm do chính bạn đăng bán.");
 
             // Tính toán giá trị
-            decimal subtotal = cartItems.Sum(x => (x.Product.SalePrice ?? x.Product.OriginalPrice) * x.Quantity);
+            decimal subtotal = cartItems.Sum(x => GetUnitPrice(x.Product) * x.Quantity);
             decimal discount = 0; // Tạm thời
             decimal total = subtotal - discount;
 
@@ -52,14 +53,10 @@ namespace Project.DigitalMarket.Domain.Managers.Business.Order
                     ProductId = item.ProductId,
                     ProductName = item.Product.Name,
                     Quantity = item.Quantity,
-                    OriginalPrice = item.Product.OriginalPrice,
-                    UnitPrice = item.Product.SalePrice ?? item.Product.OriginalPrice,
-                    Subtotal = (item.Product.SalePrice ?? item.Product.OriginalPrice) * item.Quantity
+                    OriginalPrice = GetOriginalPrice(item.Product),
+                    UnitPrice = GetUnitPrice(item.Product),
+                    Subtotal = GetUnitPrice(item.Product) * item.Quantity
                 });
-                
-                // Cập nhật SoldCount cho sản phẩm
-                item.Product.SoldCount += item.Quantity;
-                _productRepository.Update(item.Product);
 
                 // Xóa khỏi giỏ hàng
                 _cartRepository.Delete(item);
@@ -73,13 +70,15 @@ namespace Project.DigitalMarket.Domain.Managers.Business.Order
 
         public async Task<OrderEntity> DirectPurchaseAsync(Guid userId, Guid productId, int quantity, string paymentMethod, string? note)
         {
-            var product = await _productRepository.GetByCondition(x => x.Id == productId && x.IsActive && !x.IsDeleted).FirstOrDefaultAsync();
+            var product = await _productRepository.GetByCondition(x => x.Id == productId && x.IsActive && !x.IsDeleted)
+                .Include(x => x.Variants)
+                .FirstOrDefaultAsync();
             if (product == null) throw new BusinessException(ErrorCode.ProductNotAvailable, "Sản phẩm không khả dụng.");
 
             if (product.SellerId == userId)
                 throw new BusinessException(ErrorCode.CannotBuyOwnProduct, "Bạn không thể mua sản phẩm do chính mình đăng bán.");
 
-            decimal unitPrice = product.SalePrice ?? product.OriginalPrice;
+            decimal unitPrice = GetUnitPrice(product);
             decimal subtotal = unitPrice * quantity;
 
             var order = new OrderEntity
@@ -98,20 +97,27 @@ namespace Project.DigitalMarket.Domain.Managers.Business.Order
                         ProductId = productId,
                         ProductName = product.Name,
                         Quantity = quantity,
-                        OriginalPrice = product.OriginalPrice,
+                        OriginalPrice = GetOriginalPrice(product),
                         UnitPrice = unitPrice,
                         Subtotal = subtotal
                     }
                 }
             };
 
-            product.SoldCount += quantity;
-            _productRepository.Update(product);
-
             await _orderRepository.AddAsync(order);
             await _orderRepository.SaveChangesAsync();
 
             return order;
+        }
+
+        private static decimal GetUnitPrice(ProductEntity product)
+        {
+            return product.Variants.Where(v => v.IsActive).OrderBy(v => v.Price).Select(v => v.Price).FirstOrDefault();
+        }
+
+        private static decimal GetOriginalPrice(ProductEntity product)
+        {
+            return product.Variants.Where(v => v.IsActive).OrderBy(v => v.Price).Select(v => v.OriginalPrice ?? v.Price).FirstOrDefault();
         }
 
         public async Task<List<OrderEntity>> GetUserOrdersAsync(Guid userId)

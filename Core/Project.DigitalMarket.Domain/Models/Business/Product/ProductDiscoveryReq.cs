@@ -4,7 +4,6 @@ namespace Project.DigitalMarket.Domain.Models.Business.Product
     {
         public int Limit { get; set; } = 40;
         public int Offset { get; set; } = 0;
-        public string? Bundle { get; set; } = "daily_discover_main";
     }
 
     public class ProductDiscoveryResult
@@ -15,17 +14,17 @@ namespace Project.DigitalMarket.Domain.Models.Business.Product
 
     public class ProductDiscoveryItem
     {
-        public Guid ItemId { get; set; }
-        public Guid ShopId { get; set; }
+        public Guid ProductId { get; set; }
+        public Guid SellerId { get; set; }
         public string Name { get; set; } = string.Empty;
-        public string ImageUrl { get; set; } = string.Empty;
+        public string Slug { get; set; } = string.Empty;
+        public Guid ThumbnailFileId { get; set; }
         public string ShopName { get; set; } = string.Empty;
-        public string ShopLocation { get; set; } = string.Empty;
-        public decimal OriginalPrice { get; set; }
-        public decimal FinalPrice { get; set; }
-        public int DiscountPercent { get; set; }
+        public decimal Price { get; set; }
+        public decimal? OriginalPrice { get; set; }
+        public decimal DiscountPercent { get; set; }
         public int SoldCount { get; set; }
-        public decimal RatingAverage { get; set; }
-        public bool IsFeatured { get; set; }
+        public decimal AvgRating { get; set; }
+        public int RatingCount { get; set; }
     }
 }

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Project.DigitalMarket.Infrastructure.MsSql.Data;
 
@@ -11,9 +12,11 @@ using Project.DigitalMarket.Infrastructure.MsSql.Data;
 namespace Project.DigitalMarket.Infrastructure.MsSql.Migrations
 {
     [DbContext(typeof(DigitalMarketDbContext))]
-    partial class DigitalMarketDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260327163643_normalize_product_schema_v2")]
+    partial class normalize_product_schema_v2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -223,7 +226,7 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Migrations
                         new
                         {
                             Id = new Guid("33333333-3333-3333-3333-333333333333"),
-                            CreatedAt = new DateTime(2026, 3, 28, 1, 22, 1, 442, DateTimeKind.Local).AddTicks(8735),
+                            CreatedAt = new DateTime(2026, 3, 27, 23, 36, 41, 20, DateTimeKind.Local).AddTicks(5601),
                             IsActive = true,
                             IsDeleted = false,
                             Name = "No Brand",
@@ -232,7 +235,7 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Migrations
                         new
                         {
                             Id = new Guid("44444444-4444-4444-4444-444444444444"),
-                            CreatedAt = new DateTime(2026, 3, 28, 1, 22, 1, 442, DateTimeKind.Local).AddTicks(8738),
+                            CreatedAt = new DateTime(2026, 3, 27, 23, 36, 41, 20, DateTimeKind.Local).AddTicks(5604),
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Nike",
@@ -338,7 +341,7 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Migrations
                         new
                         {
                             Id = new Guid("11111111-1111-1111-1111-111111111111"),
-                            CreatedAt = new DateTime(2026, 3, 28, 1, 22, 1, 442, DateTimeKind.Local).AddTicks(8532),
+                            CreatedAt = new DateTime(2026, 3, 27, 23, 36, 41, 20, DateTimeKind.Local).AddTicks(5328),
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Thoi trang nam",
@@ -347,61 +350,13 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Migrations
                         new
                         {
                             Id = new Guid("22222222-2222-2222-2222-222222222222"),
-                            CreatedAt = new DateTime(2026, 3, 28, 1, 22, 1, 442, DateTimeKind.Local).AddTicks(8567),
+                            CreatedAt = new DateTime(2026, 3, 27, 23, 36, 41, 20, DateTimeKind.Local).AddTicks(5366),
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Ao thun",
                             ParentId = new Guid("11111111-1111-1111-1111-111111111111"),
                             Slug = "ao-thun"
                         });
-                });
-
-            modelBuilder.Entity("Project.DigitalMarket.Domain.Entities.Business.FileEntity", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Base64Data")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ContentType")
-                        .IsRequired()
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("CreatedBy")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("FileName")
-                        .IsRequired()
-                        .HasMaxLength(512)
-                        .HasColumnType("nvarchar(512)");
-
-                    b.Property<long>("FileSize")
-                        .HasColumnType("bigint");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTime?>("UpdatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("UpdatedBy")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("UploadedAt")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("UploadedAt");
-
-                    b.ToTable("Files", (string)null);
                 });
 
             modelBuilder.Entity("Project.DigitalMarket.Domain.Entities.Business.OrderEntity", b =>
@@ -638,8 +593,10 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Migrations
                     b.Property<string>("CreatedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid>("FileId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
@@ -664,8 +621,6 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("FileId");
 
                     b.HasIndex("ProductId");
 
@@ -1192,19 +1147,11 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Migrations
 
             modelBuilder.Entity("Project.DigitalMarket.Domain.Entities.Business.ProductImageEntity", b =>
                 {
-                    b.HasOne("Project.DigitalMarket.Domain.Entities.Business.FileEntity", "File")
-                        .WithMany()
-                        .HasForeignKey("FileId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
                     b.HasOne("Project.DigitalMarket.Domain.Entities.Business.ProductEntity", "Product")
                         .WithMany("Images")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("File");
 
                     b.Navigation("Product");
                 });

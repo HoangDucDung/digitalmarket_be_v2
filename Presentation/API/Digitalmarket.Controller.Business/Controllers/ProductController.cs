@@ -6,7 +6,7 @@ using Project.DigitalMarket.Application.Contract.DTOs.Business.Product;
 using Project.DigitalMarket.Application.Contract.Services.Business.Product;
 using Project.DigitalMarket.Libs.DependencyInjection;
 
-namespace Digitalmarket.Controller.Product.Controllers
+namespace Digitalmarket.Controller.Business.Controllers
 {
     [ApiController]
     [Route("api/[controller]s")]
@@ -21,21 +21,13 @@ namespace Digitalmarket.Controller.Product.Controllers
         [AllowAnonymous]
         [ProducesResponseType(typeof(ApiResponse<DiscoveryResDto>), StatusCodes.Status200OK)]
         public async Task<IActionResult> GetDailyDiscover(
-            [FromQuery] string bundle = "daily_discover_main",
-            [FromQuery] int itemCard = 2,
             [FromQuery] int limit = 60,
-            [FromQuery] int offset = 0,
-            [FromQuery] bool needTab = false,
-            [FromQuery] string viewSessionId = "")
+            [FromQuery] int offset = 0)
         {
             var discoveryRequestDto = new DiscoveryReqDto
             {
-                Bundle = bundle,
-                ItemCard = itemCard,
                 Limit = limit,
-                Offset = offset,
-                NeedTab = needTab,
-                ViewSessionId = viewSessionId
+                Offset = offset
             };
 
             var response = new ApiResponse<DiscoveryResDto>();
@@ -65,6 +57,42 @@ namespace Digitalmarket.Controller.Product.Controllers
             };
 
             return Ok(response);
+        }
+
+        /// <summary>
+        /// Thêm sản phẩm (tạo mới) - seller hiện tại
+        /// </summary>
+        [HttpPost("create")]
+        [AllowAnonymous]
+        [ProducesResponseType(typeof(ApiResponse<ProductCreateResDto>), StatusCodes.Status200OK)]
+        public async Task<IActionResult> CreateProduct([FromBody] ProductCreateReqDto req)
+        {
+            var result = await _productService.AddProductAsync(req);
+            return Ok(new ApiResponse<ProductCreateResDto> { Data = result });
+        }
+
+        /// <summary>
+        /// Sửa sản phẩm (patch) - seller hiện tại
+        /// </summary>
+        [HttpPut("update")]
+        [AllowAnonymous]
+        [ProducesResponseType(typeof(ApiResponse<bool>), StatusCodes.Status200OK)]
+        public async Task<IActionResult> UpdateProduct([FromBody] ProductUpdateReqDto req)
+        {
+            var updated = await _productService.UpdateProductAsync(req);
+            return Ok(new ApiResponse<bool> { Data = updated });
+        }
+
+        /// <summary>
+        /// Xóa (soft-delete) sản phẩm - seller hiện tại
+        /// </summary>
+        [HttpDelete("remove/{productId}")]
+        [AllowAnonymous]
+        [ProducesResponseType(typeof(ApiResponse<bool>), StatusCodes.Status200OK)]
+        public async Task<IActionResult> DeleteProduct(Guid productId)
+        {
+            var deleted = await _productService.DeleteProductAsync(productId);
+            return Ok(new ApiResponse<bool> { Data = deleted });
         }
     }
 }

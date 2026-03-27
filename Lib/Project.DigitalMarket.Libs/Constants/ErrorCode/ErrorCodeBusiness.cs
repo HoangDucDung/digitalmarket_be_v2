@@ -49,5 +49,10 @@ namespace Project.DigitalMarket.Libs.Constants.ErrorCode
         /// Không được phép mua sản phẩm của chính mình
         /// </summary>
         public const int CannotBuyOwnProduct = 3009;
+
+
+        public const int InvalidProductData = 3010;
+        public const int SlugAlreadyExists = 3011;
+        public const int ProductNotFound = 3012;
     }
 }
