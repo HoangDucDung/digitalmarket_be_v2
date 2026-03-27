@@ -57,8 +57,8 @@ namespace Project.DigitalMarket.Domain.Managers.Business.Product
                         .ThenBy(i => i.SortOrder)
                         .Select(i => i.FileId)
                         .FirstOrDefault(),
-                    Price = x.Variants.Where(v => v.IsActive).Select(v => v.Price).DefaultIfEmpty(0).Min(),
-                    OriginalPrice = x.Variants.Where(v => v.IsActive).Select(v => v.OriginalPrice).FirstOrDefault(),
+                    //Price = x.Variants.Where(v => v.IsActive).Select(v => v.Price).DefaultIfEmpty(0).Min(),
+                    //OriginalPrice = x.Variants.Where(v => v.IsActive).Select(v => v.OriginalPrice).FirstOrDefault(),
                     DiscountPercent = 0,
                     SoldCount = 0,
                     AvgRating = x.Rating != null ? x.Rating.AvgRating : 0,
@@ -73,7 +73,7 @@ namespace Project.DigitalMarket.Domain.Managers.Business.Product
         public async Task<ProductDetailResult?> GetProductDetailAsync(ProductDetailReq request)
         {
             return await _productRepository.GetDiscoverQuery()
-                .Where(x => x.Id == request.ProductId)
+                .Where(x => x.Id == request.ItemId)
                 .Select(x => new ProductDetailResult
                 {
                     ProductId = x.Id,
@@ -93,23 +93,23 @@ namespace Project.DigitalMarket.Domain.Managers.Business.Product
                         SortOrder = i.SortOrder,
                         IsPrimary = i.IsPrimary
                     }).ToList(),
-                    Variants = x.Variants.Where(v => v.IsActive).Select(v => new ProductDetailVariantResult
-                    {
-                        VariantId = v.Id,
-                        VariantName = v.VariantName,
-                        Sku = v.Sku,
-                        Price = v.Price,
-                        OriginalPrice = v.OriginalPrice,
-                        StockQuantity = v.StockQuantity,
-                        Attributes = v.Attributes.OrderBy(a => a.AttributeOrder).Select(a => new ProductDetailVariantAttributeResult
-                        {
-                            AttributeName = a.AttributeName,
-                            AttributeValue = a.AttributeValue,
-                            AttributeOrder = a.AttributeOrder
-                        }).ToList()
-                    }).ToList(),
-                    MinPrice = x.Variants.Where(v => v.IsActive).Select(v => v.Price).DefaultIfEmpty(0).Min(),
-                    MaxPrice = x.Variants.Where(v => v.IsActive).Select(v => v.Price).DefaultIfEmpty(0).Max(),
+                    //Variants = x.Variants.Where(v => v.IsActive).Select(v => new ProductDetailVariantResult
+                    //{
+                    //    VariantId = v.Id,
+                    //    VariantName = v.VariantName,
+                    //    Sku = v.Sku,
+                    //    Price = v.Price,
+                    //    OriginalPrice = v.OriginalPrice,
+                    //    StockQuantity = v.StockQuantity,
+                    //    Attributes = v.Attributes.OrderBy(a => a.AttributeOrder).Select(a => new ProductDetailVariantAttributeResult
+                    //    {
+                    //        AttributeName = a.AttributeName,
+                    //        AttributeValue = a.AttributeValue,
+                    //        AttributeOrder = a.AttributeOrder
+                    //    }).ToList()
+                    //}).ToList(),
+                    //MinPrice = x.Variants.Where(v => v.IsActive).Select(v => v.Price).DefaultIfEmpty(0).Min(),
+                    //MaxPrice = x.Variants.Where(v => v.IsActive).Select(v => v.Price).DefaultIfEmpty(0).Max(),
                     SoldCount = 0,
                     ShopName = x.Seller.FullName ?? string.Empty,
                     AvgRating = x.Rating != null ? x.Rating.AvgRating : 0,
@@ -272,6 +272,59 @@ namespace Project.DigitalMarket.Domain.Managers.Business.Product
             _productRepository.Update(product);
             await _productRepository.SaveChangesAsync();
             return true;
+        }
+
+        public async Task<List<CategoryNodeResult>> GetCategoryTreeAsync(CategoryTreeReq request)
+        {
+            var categories = await _productRepository.GetCategoryTreeQuery(request.IncludeDisabled)
+                .OrderBy(x => x.Level)
+                .ThenBy(x => x.SortOrder ?? int.MaxValue)
+                .ThenBy(x => x.Name)
+                .ToListAsync();
+
+            var nodes = categories.ToDictionary(
+                x => x.Id,
+                x => new CategoryNodeResult
+                {
+                    Id = x.Id,
+                    Name = x.Name,
+                    Slug = x.Slug,
+                    Level = x.Level,
+                    ParentId = x.ParentId,
+                    SortOrder = x.SortOrder,
+                    Children = new List<CategoryNodeResult>()
+                });
+
+            foreach (var node in nodes.Values)
+            {
+                if (node.ParentId.HasValue && nodes.TryGetValue(node.ParentId.Value, out var parent))
+                {
+                    parent.Children!.Add(node);
+                }
+            }
+
+            foreach (var node in nodes.Values)
+            {
+                if (node.Children is { Count: > 0 })
+                {
+                    node.Children = node.Children
+                        .OrderBy(x => x.SortOrder ?? int.MaxValue)
+                        .ThenBy(x => x.Name)
+                        .ToList();
+                }
+
+                node.IsLeaf = node.Children is null || node.Children.Count == 0;
+                if (node.Children is { Count: 0 })
+                {
+                    node.Children = null;
+                }
+            }
+
+            return nodes.Values
+                .Where(x => !x.ParentId.HasValue || !nodes.ContainsKey(x.ParentId.Value))
+                .OrderBy(x => x.SortOrder ?? int.MaxValue)
+                .ThenBy(x => x.Name)
+                .ToList();
         }
     }
 }

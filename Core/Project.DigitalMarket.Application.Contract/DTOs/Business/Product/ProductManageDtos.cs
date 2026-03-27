@@ -8,7 +8,7 @@ namespace Project.DigitalMarket.Application.Contract.DTOs.Business.Product
         [Required]
         public string Name { get; set; } = string.Empty;
         [Required]
-        public string Category { get; set; } = string.Empty;
+        public string CategoryId { get; set; } = string.Empty;
         public string? Brand { get; set; }
         public string? Description { get; set; }
         [MinLength(1)]

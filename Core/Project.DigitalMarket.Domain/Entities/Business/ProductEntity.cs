@@ -72,7 +72,9 @@ namespace Project.DigitalMarket.Domain.Entities.Business
     {
         public string Name { get; set; } = string.Empty;
         public string Slug { get; set; } = string.Empty;
+        public int Level { get; set; } = 1;
         public Guid? ParentId { get; set; }
+        public int? SortOrder { get; set; }
         public bool IsActive { get; set; } = true;
         public virtual CategoryEntity? Parent { get; set; }
         public virtual ICollection<CategoryEntity> Children { get; set; } = new List<CategoryEntity>();

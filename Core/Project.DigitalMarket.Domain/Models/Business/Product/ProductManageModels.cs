@@ -37,4 +37,21 @@ namespace Project.DigitalMarket.Domain.Models.Business.Product
         public string? Name { get; set; }
         public string? Status { get; set; }
     }
+
+    public class CategoryTreeReq
+    {
+        public bool IncludeDisabled { get; set; }
+    }
+
+    public class CategoryNodeResult
+    {
+        public Guid Id { get; set; }
+        public string Name { get; set; } = string.Empty;
+        public string? Slug { get; set; }
+        public int Level { get; set; }
+        public Guid? ParentId { get; set; }
+        public bool IsLeaf { get; set; }
+        public int? SortOrder { get; set; }
+        public List<CategoryNodeResult>? Children { get; set; }
+    }
 }

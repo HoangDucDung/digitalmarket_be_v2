@@ -27,6 +27,17 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Repositories.Business.Produ
                 .Include(x => x.Seller);
         }
 
+        public IQueryable<CategoryEntity> GetCategoryTreeQuery(bool includeDisabled)
+        {
+            var query = _context.Set<CategoryEntity>().Where(x => !x.IsDeleted);
+            if (!includeDisabled)
+            {
+                query = query.Where(x => x.IsActive);
+            }
+
+            return query;
+        }
+
         public Task<CategoryEntity?> ResolveCategoryAsync(string categoryNameOrSlug)
         {
             var key = categoryNameOrSlug.Trim().ToLower();

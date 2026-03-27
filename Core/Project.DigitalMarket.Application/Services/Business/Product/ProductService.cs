@@ -1,8 +1,10 @@
+using Project.DigitalMarket.Application.Contract.DTOs.Business;
 using Project.DigitalMarket.Application.Contract.DTOs.Business.Product;
 using Project.DigitalMarket.Application.Contract.Services.Business.Product;
 using Project.DigitalMarket.Domain.Managers.Business.Product;
 using Project.DigitalMarket.Domain.Models.Business.Product;
 using Project.DigitalMarket.Libs.DependencyInjection;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Project.DigitalMarket.Application.Services.Business.Product
 {
@@ -14,46 +16,37 @@ namespace Project.DigitalMarket.Application.Services.Business.Product
         {
             var result = await _productManager.GetDailyDiscoverAsync(new ProductDiscoveryReq
             {
+                Limit = discoveryRequestDto.Limit.Value,
+                Offset = discoveryRequestDto.Offset.Value
+            });
+
+            var feeds = result.Items.Select(p => new FeedItemDto
+            {
                 CentralisedItemCard = new CentralisedItemCardDto
                 {
                     ItemData = new
                     {
-                        Itemid = p.ItemId,
-                        Shopid = p.ShopId,
-                        Price = p.FinalPrice,
-                        p.OriginalPrice,
+                        Itemid = p.ProductId,
+                        Shopid = p.SellerId,
+                        Price = p.Price,
+                        OriginalPrice = p.OriginalPrice,
                         Discount = p.DiscountPercent
                     },
                     ItemCardDisplayedAsset = new
                     {
-                        p.Name,
-                        Image = p.ImageUrl,
-                        p.ShopName,
-                        p.ShopLocation,
-                        SoldCountText = FormatSoldCount(p.SoldCount),
-                        Rating = p.RatingAverage
+                        Name = p.Name,
+                        ShopName = p.ShopName,
+                        SoldCountText = p.SoldCount,
+                        Rating = p.RatingCount,
+                        Image = $"https://localhost:7097/api/files/{p.ThumbnailFileId}"
                     }
                 }
             }).ToList();
 
             return new DiscoveryResDto
             {
-                Items = result.Items.Select(x => new DailyDiscoverItemDto
-                {
-                    ProductId = x.ProductId,
-                    Name = x.Name,
-                    Slug = x.Slug,
-                    ThumbnailFileId = x.ThumbnailFileId,
-                    Price = x.Price,
-                    OriginalPrice = x.OriginalPrice,
-                    DiscountPercent = x.DiscountPercent,
-                    SoldCount = x.SoldCount,
-                    AvgRating = x.AvgRating,
-                    RatingCount = x.RatingCount,
-                    SellerId = x.SellerId,
-                    ShopName = x.ShopName
-                }).ToList(),
-                Total = result.Total,
+                Feeds = feeds,
+                FeedTotal = result.Total,
                 ReqId = Guid.NewGuid().ToString("N")
             };
         }
@@ -62,50 +55,95 @@ namespace Project.DigitalMarket.Application.Services.Business.Product
         {
             var result = await _productManager.GetProductDetailAsync(new ProductDetailReq
             {
-                ProductId = requestDto.ProductId
+                ItemId = requestDto.ItemId,
+                ShopId = requestDto.SellerId
             });
             if (result is null) return null;
 
+            //return new ProductDetailResDto
+            //{
+            //    ProductId = result.ProductId,
+            //    Name = result.Name,
+            //    Slug = result.Slug,
+            //    Description = result.Description,
+            //    Material = result.Material,
+            //    Currency = result.Currency,
+            //    Status = result.Status,
+            //    CategoryName = result.CategoryName,
+            //    BrandName = result.BrandName,
+            //    EnableVariation = result.EnableVariation,
+            //    MinPrice = result.MinPrice,
+            //    MaxPrice = result.MaxPrice,
+            //    SoldCount = result.SoldCount,
+            //    AvgRating = result.AvgRating,
+            //    RatingCount = result.RatingCount,
+            //    SellerId = result.SellerId,
+            //    ShopName = result.ShopName,
+            //    Images = result.Images.Select(i => new ProductDetailImageDto
+            //    {
+            //        FileId = i.FileId,
+            //        SortOrder = i.SortOrder,
+            //        IsPrimary = i.IsPrimary
+            //    }).ToList(),
+            //    Variants = result.Variants.Select(v => new ProductDetailVariantDto
+            //    {
+            //        VariantId = v.VariantId,
+            //        VariantName = v.VariantName,
+            //        Sku = v.Sku,
+            //        Price = v.Price,
+            //        OriginalPrice = v.OriginalPrice,
+            //        StockQuantity = v.StockQuantity,
+            //        Attributes = v.Attributes.Select(a => new ProductDetailVariantAttributeDto
+            //        {
+            //            AttributeName = a.AttributeName,
+            //            AttributeValue = a.AttributeValue,
+            //            AttributeOrder = a.AttributeOrder
+            //        }).ToList()
+            //    }).ToList(),
+            //    ReqId = Guid.NewGuid().ToString("N")
+            //};
+
             return new ProductDetailResDto
             {
-                ProductId = result.ProductId,
-                Name = result.Name,
-                Slug = result.Slug,
-                Description = result.Description,
-                Material = result.Material,
-                Currency = result.Currency,
-                Status = result.Status,
-                CategoryName = result.CategoryName,
-                BrandName = result.BrandName,
-                EnableVariation = result.EnableVariation,
-                MinPrice = result.MinPrice,
-                MaxPrice = result.MaxPrice,
-                SoldCount = result.SoldCount,
-                AvgRating = result.AvgRating,
-                RatingCount = result.RatingCount,
-                SellerId = result.SellerId,
-                ShopName = result.ShopName,
-                Images = result.Images.Select(i => new ProductDetailImageDto
+                Item = new ProductItemDetailDto
                 {
-                    FileId = i.FileId,
-                    SortOrder = i.SortOrder,
-                    IsPrimary = i.IsPrimary
-                }).ToList(),
-                Variants = result.Variants.Select(v => new ProductDetailVariantDto
+                    ItemId = result.ProductId,
+                    ShopId = result.SellerId,
+                    Title = result.Name,
+                    Image = $"https://localhost:7097/api/files/{result.Images[0].FileId}",
+                    Currency = result.Currency,
+                    //ShowDiscount = result.DiscountPercent,
+                    //Price = result.Price,
+                    //PriceBeforeDiscount = result.PriceBeforeDiscount,
+                    RatingStar = result.RatingCount,
+                    //ShopLocation = result.ShopLocation,
+                    HistoricalSold = result.SoldCount,
+                    //CTime = result.CreatedAt,
+                    IsFreeShipping = true
+                },
+                ProductPrice = new ProductPriceDetailDto
+
                 {
-                    VariantId = v.VariantId,
-                    VariantName = v.VariantName,
-                    Sku = v.Sku,
-                    Price = v.Price,
-                    OriginalPrice = v.OriginalPrice,
-                    StockQuantity = v.StockQuantity,
-                    Attributes = v.Attributes.Select(a => new ProductDetailVariantAttributeDto
-                    {
-                        AttributeName = a.AttributeName,
-                        AttributeValue = a.AttributeValue,
-                        AttributeOrder = a.AttributeOrder
-                    }).ToList()
-                }).ToList(),
+                    //Discount = result.DiscountPercent,
+                    //Price = result.Price,
+                    //PriceBeforeDiscount = result.PriceBeforeDiscount,
+                    HidePrice = false
+                },
+                ProductReview = new ProductReviewDetailDto
+                {
+                    RatingStar = result.RatingCount,
+                    TotalRatingCount = 0,
+                    CmtCount = 0,
+                    HistoricalSold = result.SoldCount
+                },
+                ShopDetailed = new ProductShopDetailDto
+
+                {
+                    ShopId = result.ProductId,
+                    Name = result.ShopName,
+                    //ShopLocation = result.ShopLocation,
+                    //RatingStar = result.RatingStar
+                },
                 ReqId = Guid.NewGuid().ToString("N")
             };
         }
@@ -116,7 +154,7 @@ namespace Project.DigitalMarket.Application.Services.Business.Product
             {
                 SellerId = UserId,
                 Name = requestDto.Name,
-                Category = requestDto.Category,
+                Category = requestDto.CategoryId,
                 Brand = requestDto.Brand,
                 Description = requestDto.Description,
                 Images = requestDto.Images,
@@ -137,12 +175,12 @@ namespace Project.DigitalMarket.Application.Services.Business.Product
                 IsActive = true
             });
 
-            var detail = await _productManager.GetProductDetailAsync(new ProductDetailReq { ProductId = productId });
+            //var detail = await _productManager.GetProductDetailAsync(new ProductDetailReq { ProductId = productId });
             return new ProductCreateResDto
             {
                 ProductId = productId,
-                Slug = detail?.Slug ?? string.Empty,
-                Status = detail?.Status ?? string.Empty,
+                //Slug = detail?.Slug ?? string.Empty,
+                //Status = detail?.Status ?? string.Empty,
                 ReqId = Guid.NewGuid().ToString("N")
             };
         }
@@ -161,6 +199,34 @@ namespace Project.DigitalMarket.Application.Services.Business.Product
         public Task<bool> DeleteProductAsync(Guid productId)
         {
             return _productManager.DeleteProductAsync(UserId, productId);
+        }
+
+        public async Task<CategoryTreeResDto> GetCategoryTreeAsync(CategoryTreeReqDto requestDto)
+        {
+            var categories = await _productManager.GetCategoryTreeAsync(new CategoryTreeReq
+            {
+                IncludeDisabled = requestDto.IncludeDisabled ?? false
+            });
+
+            return new CategoryTreeResDto
+            {
+                Categories = categories.Select(MapCategoryNode).ToList()
+            };
+        }
+
+        private static CategoryNodeDto MapCategoryNode(CategoryNodeResult node)
+        {
+            return new CategoryNodeDto
+            {
+                Id = node.Id.ToString(),
+                Name = node.Name,
+                Slug = node.Slug,
+                Level = node.Level,
+                ParentId = node.ParentId?.ToString(),
+                IsLeaf = node.IsLeaf,
+                SortOrder = node.SortOrder,
+                Children = node.Children?.Select(MapCategoryNode).ToList()
+            };
         }
     }
 }
