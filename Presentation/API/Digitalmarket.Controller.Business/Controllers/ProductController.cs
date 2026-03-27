@@ -22,12 +22,18 @@ namespace Digitalmarket.Controller.Business.Controllers
         [ProducesResponseType(typeof(ApiResponse<DiscoveryResDto>), StatusCodes.Status200OK)]
         public async Task<IActionResult> GetDailyDiscover(
             [FromQuery] int limit = 60,
-            [FromQuery] int offset = 0)
+            [FromQuery] int offset = 0,
+            [FromQuery] bool needTab = false,
+            [FromQuery] string viewSessionId = "",
+            [FromQuery] string keyword = "")
         {
             var discoveryRequestDto = new DiscoveryReqDto
             {
                 Limit = limit,
-                Offset = offset
+                Offset = offset,
+                NeedTab = needTab,
+                ViewSessionId = viewSessionId,
+                Keyword = keyword
             };
 
             var response = new ApiResponse<DiscoveryResDto>();

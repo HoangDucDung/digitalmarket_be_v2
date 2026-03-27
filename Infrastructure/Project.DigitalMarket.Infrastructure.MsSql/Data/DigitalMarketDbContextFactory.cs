@@ -10,22 +10,24 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Data
     {
         public DigitalMarketDbContext CreateDbContext(string[] args)
         {
-            var rootDir = Directory.GetCurrentDirectory();
+            var currentDir = Directory.GetCurrentDirectory();
+            var rootDir = currentDir;
             
-            // Nếu đang đứng ở thư mục con, trỏ lên thư mục gốc
-            if (rootDir.Contains("Infrastructure") || rootDir.Contains("Project.DigitalMarket.Infrastructure.MsSql"))
+            // Tìm thư mục gốc chứa thư mục Config
+            while (!Directory.Exists(Path.Combine(rootDir, "Config")) && Path.GetDirectoryName(rootDir) != null)
             {
-               rootDir = Path.GetFullPath(Path.Combine(rootDir, "..", ".."));
+                rootDir = Path.GetDirectoryName(rootDir)!;
             }
 
             IConfigurationRoot configuration = new ConfigurationBuilder()
                 .SetBasePath(rootDir)
-                .AddJsonFile("Config/connection.json", optional: true)
+                .AddJsonFile("Config/connection.json", optional: false) // Bỏ optional để báo lỗi nếu không tìm thấy
                 .Build();
 
             var builder = new DbContextOptionsBuilder<DigitalMarketDbContext>();
             
-            var connectionString = configuration.GetSection("ConnectionString:SqlServer").Value;
+            var connectionStrings = configuration.GetSection("ConnectionString");
+            var connectionString = connectionStrings["SqlServer"];
 
             if (connectionString.IsNullOrEmpty())
             {

@@ -50,6 +50,21 @@ namespace Project.DigitalMarket.Libs.Constants.ErrorCode
         /// </summary>
         public const int CannotBuyOwnProduct = 3009;
 
+        /// <summary>
+        /// Số dư không đủ
+        /// </summary>
+        public const int InsufficientBalance = 3010;
+
+        /// <summary>
+        /// Ví đang bị khóa
+        /// </summary>
+        public const int WalletLocked = 3011;
+
+        /// <summary>
+        /// Số tiền không hợp lệ
+        /// </summary>
+        public const int InvalidAmount = 3012;
+
 
         public const int InvalidProductData = 3010;
         public const int SlugAlreadyExists = 3011;

@@ -1,3 +1,4 @@
+using Project.DigitalMarket.Domain.Entities.Base;
 using Project.Extensions.Extensions;
 
 namespace Project.DigitalMarket.Domain.Entities
@@ -5,7 +6,7 @@ namespace Project.DigitalMarket.Domain.Entities
     /// <summary>
     /// Thông tin pháp lý/KYC cho người bán (Seller)
     /// </summary>
-    public class UserKycProfileEntity
+    public class UserKycProfileEntity : BaseEntity
     {
         /// <summary>
         /// Khóa ngoại tham chiếu Users.Id
@@ -46,16 +47,6 @@ namespace Project.DigitalMarket.Domain.Entities
         /// Ghi chú từ người duyệt (Nếu bị từ chối)
         /// </summary>
         public string? Note { get; set; }
-
-        /// <summary>
-        /// Ngày tạo hồ sơ KYC
-        /// </summary>
-        public DateTime CreatedAt { get; set; } = GenerateExtentions.Now;
-
-        /// <summary>
-        /// Ngày duyệt hồ sơ
-        /// </summary>
-        public DateTime? VerifiedAt { get; set; }
 
         /// <summary>
         /// Navigation property tới UserEntity

@@ -8,6 +8,7 @@ using Project.DigitalMarket.Libs.DependencyInjection;
 using Project.DigitalMarket.Libs.Exceptions;
 using Project.DigitalMarket.Libs.Constants.ErrorCode;
 using Project.Extensions.Extensions;
+using aut_wall = Project.DigitalMarket.Domain.Managers.Auths.Wallet;
 
 namespace Project.DigitalMarket.Domain.Managers.Business.Order
 {
@@ -16,6 +17,7 @@ namespace Project.DigitalMarket.Domain.Managers.Business.Order
         private IOrderRepository _orderRepository => _lazyloadProvider.LazyGetRequiredService<IOrderRepository>();
         private ICartRepository _cartRepository => _lazyloadProvider.LazyGetRequiredService<ICartRepository>();
         private IProductRepository _productRepository => _lazyloadProvider.LazyGetRequiredService<IProductRepository>();
+        private aut_wall.IWalletManager _walletManager => _lazyloadProvider.LazyGetRequiredService<aut_wall.IWalletManager>();
 
         public async Task<OrderEntity> CheckoutCartAsync(Guid userId, string paymentMethod, string? note)
         {
@@ -63,6 +65,17 @@ namespace Project.DigitalMarket.Domain.Managers.Business.Order
             }
 
             await _orderRepository.AddAsync(order);
+
+            // Xử lý thanh toán nếu dùng ví
+            if (paymentMethod == OrderConstants.PaymentMethod.InternalBalance)
+            {
+                await _walletManager.ProcessTransactionAsync(userId, -total, 
+                    WalletConstants.TransactionType.Payment, 
+                    $"Thanh toán đơn hàng {order.OrderCode}", 
+                    order.OrderCode);
+                order.Status = OrderConstants.Status.Processing;
+            }
+
             await _orderRepository.SaveChangesAsync();
 
             return order;
@@ -105,6 +118,17 @@ namespace Project.DigitalMarket.Domain.Managers.Business.Order
             };
 
             await _orderRepository.AddAsync(order);
+
+            // Xử lý thanh toán nếu dùng ví
+            if (paymentMethod == OrderConstants.PaymentMethod.InternalBalance)
+            {
+                await _walletManager.ProcessTransactionAsync(userId, -subtotal, 
+                    WalletConstants.TransactionType.Payment, 
+                    $"Thanh toán đơn hàng {order.OrderCode}", 
+                    order.OrderCode);
+                order.Status = OrderConstants.Status.Processing;
+            }
+
             await _orderRepository.SaveChangesAsync();
 
             return order;

@@ -34,6 +34,12 @@ namespace Project.DigitalMarket.Domain.Managers.Business.Product
             var offset = Math.Max(0, request.Offset);
             var query = _productRepository.GetDiscoverQuery();
 
+            if (!string.IsNullOrWhiteSpace(request.Keyword))
+            {
+                var keyword = request.Keyword.Trim();
+                query = query.Where(x => EF.Functions.Like(x.Name, $"%{keyword}%"));
+            }
+
             var total = await query.CountAsync();
             var items = await query
                 .OrderByDescending(x => x.PublishedAt)

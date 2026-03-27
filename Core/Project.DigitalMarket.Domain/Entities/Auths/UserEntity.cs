@@ -66,5 +66,10 @@ namespace Project.DigitalMarket.Domain.Entities
         /// Danh sách nhật ký hoạt động quan trọng (1-N)
         /// </summary>
         public virtual ICollection<UserAuditLogEntity> AuditLogs { get; set; } = new List<UserAuditLogEntity>();
+
+        /// <summary>
+        /// Ví tiền của người dùng (1-1)
+        /// </summary>
+        public virtual WalletEntity Wallet { get; set; }
     }
 }

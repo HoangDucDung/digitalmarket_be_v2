@@ -14,9 +14,27 @@ namespace Project.DigitalMarket.Application.Services.Business.Product
         {
             var result = await _productManager.GetDailyDiscoverAsync(new ProductDiscoveryReq
             {
-                Limit = discoveryRequestDto.Limit,
-                Offset = discoveryRequestDto.Offset
-            });
+                CentralisedItemCard = new CentralisedItemCardDto
+                {
+                    ItemData = new
+                    {
+                        Itemid = p.ItemId,
+                        Shopid = p.ShopId,
+                        Price = p.FinalPrice,
+                        p.OriginalPrice,
+                        Discount = p.DiscountPercent
+                    },
+                    ItemCardDisplayedAsset = new
+                    {
+                        p.Name,
+                        Image = p.ImageUrl,
+                        p.ShopName,
+                        p.ShopLocation,
+                        SoldCountText = FormatSoldCount(p.SoldCount),
+                        Rating = p.RatingAverage
+                    }
+                }
+            }).ToList();
 
             return new DiscoveryResDto
             {
