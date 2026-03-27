@@ -8,6 +8,7 @@ namespace Project.DigitalMarket.Application.Contract.DTOs.Business.Product
         public ProductShopDetailDto ShopDetailed { get; set; } = new();
 
         public string ReqId { get; set; } = string.Empty;
+        public List<ProductDetailVariantDto> ItemVariants { get; set; }
     }
 
     public class ProductItemDetailDto
@@ -16,15 +17,6 @@ namespace Project.DigitalMarket.Application.Contract.DTOs.Business.Product
         public Guid ShopId { get; set; }
         public string Title { get; set; } = string.Empty;
         public string Image { get; set; } = string.Empty;
-        public string Currency { get; set; } = "VND";
-        public int ShowDiscount { get; set; }
-        public decimal Price { get; set; }
-        public decimal PriceBeforeDiscount { get; set; }
-        public decimal RatingStar { get; set; }
-        public string ShopLocation { get; set; } = string.Empty;
-        public int HistoricalSold { get; set; }
-        public DateTime CTime { get; set; }
-        public bool IsFreeShipping { get; set; } = true;
     }
 
     public class ProductPriceDetailDto

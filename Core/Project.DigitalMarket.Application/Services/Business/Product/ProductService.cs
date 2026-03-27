@@ -111,24 +111,22 @@ namespace Project.DigitalMarket.Application.Services.Business.Product
                     ShopId = result.SellerId,
                     Title = result.Name,
                     Image = $"https://localhost:7097/api/files/{result.Images[0].FileId}",
-                    Currency = result.Currency,
-                    //ShowDiscount = result.DiscountPercent,
-                    //Price = result.Price,
-                    //PriceBeforeDiscount = result.PriceBeforeDiscount,
-                    RatingStar = result.RatingCount,
-                    //ShopLocation = result.ShopLocation,
-                    HistoricalSold = result.SoldCount,
-                    //CTime = result.CreatedAt,
-                    IsFreeShipping = true
                 },
-                ProductPrice = new ProductPriceDetailDto
-
+                ItemVariants = result.Variants.Select(v => new ProductDetailVariantDto
                 {
-                    //Discount = result.DiscountPercent,
-                    //Price = result.Price,
-                    //PriceBeforeDiscount = result.PriceBeforeDiscount,
-                    HidePrice = false
-                },
+                    VariantId = v.VariantId,
+                    VariantName = v.VariantName,
+                    Sku = v.Sku,
+                    Price = v.Price,
+                    OriginalPrice = v.OriginalPrice,
+                    StockQuantity = v.StockQuantity,
+                    Attributes = v.Attributes.Select(a => new ProductDetailVariantAttributeDto
+                    {
+                        AttributeName = a.AttributeName,
+                        AttributeValue = a.AttributeValue,
+                        AttributeOrder = a.AttributeOrder
+                    }).ToList()
+                }).ToList(),
                 ProductReview = new ProductReviewDetailDto
                 {
                     RatingStar = result.RatingCount,
@@ -137,7 +135,6 @@ namespace Project.DigitalMarket.Application.Services.Business.Product
                     HistoricalSold = result.SoldCount
                 },
                 ShopDetailed = new ProductShopDetailDto
-
                 {
                     ShopId = result.ProductId,
                     Name = result.ShopName,

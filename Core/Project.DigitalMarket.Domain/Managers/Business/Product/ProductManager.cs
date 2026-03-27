@@ -93,21 +93,21 @@ namespace Project.DigitalMarket.Domain.Managers.Business.Product
                         SortOrder = i.SortOrder,
                         IsPrimary = i.IsPrimary
                     }).ToList(),
-                    //Variants = x.Variants.Where(v => v.IsActive).Select(v => new ProductDetailVariantResult
-                    //{
-                    //    VariantId = v.Id,
-                    //    VariantName = v.VariantName,
-                    //    Sku = v.Sku,
-                    //    Price = v.Price,
-                    //    OriginalPrice = v.OriginalPrice,
-                    //    StockQuantity = v.StockQuantity,
-                    //    Attributes = v.Attributes.OrderBy(a => a.AttributeOrder).Select(a => new ProductDetailVariantAttributeResult
-                    //    {
-                    //        AttributeName = a.AttributeName,
-                    //        AttributeValue = a.AttributeValue,
-                    //        AttributeOrder = a.AttributeOrder
-                    //    }).ToList()
-                    //}).ToList(),
+                    Variants = x.Variants.Where(v => v.IsActive).Select(v => new ProductDetailVariantResult
+                    {
+                        VariantId = v.Id,
+                        VariantName = v.VariantName,
+                        Sku = v.Sku,
+                        Price = v.Price,
+                        OriginalPrice = v.OriginalPrice,
+                        StockQuantity = v.StockQuantity,
+                        Attributes = v.Attributes.OrderBy(a => a.AttributeOrder).Select(a => new ProductDetailVariantAttributeResult
+                        {
+                            AttributeName = a.AttributeName,
+                            AttributeValue = a.AttributeValue,
+                            AttributeOrder = a.AttributeOrder
+                        }).ToList()
+                    }).ToList(),
                     //MinPrice = x.Variants.Where(v => v.IsActive).Select(v => v.Price).DefaultIfEmpty(0).Min(),
                     //MaxPrice = x.Variants.Where(v => v.IsActive).Select(v => v.Price).DefaultIfEmpty(0).Max(),
                     SoldCount = 0,
