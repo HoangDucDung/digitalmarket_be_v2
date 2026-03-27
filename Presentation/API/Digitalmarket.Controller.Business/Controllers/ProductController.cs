@@ -26,7 +26,8 @@ namespace Digitalmarket.Controller.Product.Controllers
             [FromQuery] int limit = 60,
             [FromQuery] int offset = 0,
             [FromQuery] bool needTab = false,
-            [FromQuery] string viewSessionId = "")
+            [FromQuery] string viewSessionId = "",
+            [FromQuery] string keyword = "")
         {
             var discoveryRequestDto = new DiscoveryReqDto
             {
@@ -35,7 +36,8 @@ namespace Digitalmarket.Controller.Product.Controllers
                 Limit = limit,
                 Offset = offset,
                 NeedTab = needTab,
-                ViewSessionId = viewSessionId
+                ViewSessionId = viewSessionId,
+                Keyword = keyword
             };
 
             var response = new ApiResponse<DiscoveryResDto>();

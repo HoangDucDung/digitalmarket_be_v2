@@ -28,15 +28,15 @@ namespace Project.DigitalMarket.Application.Services.Business.Product
                         Itemid = p.ItemId,
                         Shopid = p.ShopId,
                         Price = p.FinalPrice,
-                        OriginalPrice = p.OriginalPrice,
+                        p.OriginalPrice,
                         Discount = p.DiscountPercent
                     },
                     ItemCardDisplayedAsset = new
                     {
-                        Name = p.Name,
+                        p.Name,
                         Image = p.ImageUrl,
-                        ShopName = p.ShopName,
-                        ShopLocation = p.ShopLocation,
+                        p.ShopName,
+                        p.ShopLocation,
                         SoldCountText = FormatSoldCount(p.SoldCount),
                         Rating = p.RatingAverage
                     }

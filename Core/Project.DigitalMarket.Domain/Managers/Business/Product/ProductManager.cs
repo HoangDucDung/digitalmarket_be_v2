@@ -21,6 +21,12 @@ namespace Project.DigitalMarket.Domain.Managers.Business.Product
                 query = query.Where(x => x.CategoryBundle == bundle);
             }
 
+            if (!string.IsNullOrWhiteSpace(request.Keyword))
+            {
+                var keyword = request.Keyword.Trim();
+                query = query.Where(x => EF.Functions.Like(x.Name, $"%{keyword}%"));
+            }
+
             var total = await query.CountAsync();
             var items = await query
                 .OrderByDescending(x => x.IsFeatured)

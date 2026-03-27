@@ -5,6 +5,7 @@ namespace Project.DigitalMarket.Domain.Models.Business.Product
         public int Limit { get; set; } = 40;
         public int Offset { get; set; } = 0;
         public string? Bundle { get; set; } = "daily_discover_main";
+        public string? Keyword { get; set; }
     }
 
     public class ProductDiscoveryResult

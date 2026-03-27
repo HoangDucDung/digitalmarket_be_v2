@@ -1,3 +1,4 @@
+using Project.DigitalMarket.Domain.Entities.Base;
 using Project.Extensions.Extensions;
 
 namespace Project.DigitalMarket.Domain.Entities
@@ -5,13 +6,8 @@ namespace Project.DigitalMarket.Domain.Entities
     /// <summary>
     /// Thông tin thanh toán (Billing) hoặc nhận tiền (Payout)
     /// </summary>
-    public class UserFinancialTieEntity
+    public class UserFinancialTieEntity : BaseEntity
     {
-        /// <summary>
-        /// Khóa chính
-        /// </summary>
-        public long Id { get; set; }
-
         /// <summary>
         /// Khóa ngoại tham chiếu Users.Id
         /// </summary>
@@ -41,11 +37,6 @@ namespace Project.DigitalMarket.Domain.Entities
         /// Đánh dấu là phương thức mặc định
         /// </summary>
         public bool IsDefault { get; set; }
-
-        /// <summary>
-        /// Ngày thêm thông tin
-        /// </summary>
-        public DateTime CreatedAt { get; set; } = GenerateExtentions.Now;
 
         /// <summary>
         /// Navigation property tới UserEntity

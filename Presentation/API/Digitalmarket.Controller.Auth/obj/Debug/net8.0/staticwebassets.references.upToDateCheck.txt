@@ -78,3 +78,4 @@ E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalma
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Base\obj\Debug\net8.0\staticwebassets.build.json
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Base\obj\Debug\net8.0\staticwebassets.build.json
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Base\obj\Debug\net8.0\staticwebassets.build.json
+E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Base\obj\Debug\net8.0\staticwebassets.build.json

@@ -62,12 +62,14 @@ namespace Project.DigitalMarket.Domain.Managers.Business.Seller
             kycProfile.BackImageUrl = registerDto.BackImageUrl;
             kycProfile.TaxId = registerDto.TaxId;
             kycProfile.VerificationStatus = KycConstants.Pending;
-            kycProfile.CreatedAt = GenerateExtentions.Now;
 
             if (isNewKyc)
                 await _kycRepository.AddAsync(kycProfile);
             else
+            {
+                kycProfile.UpdatedAt = GenerateExtentions.Now;
                 _kycRepository.Update(kycProfile);
+            }
 
             // 3. Tạo hoặc cập nhật thông tin tài chính (Payout) qua Repository
             var financialTie = await _financialRepository.GetByCondition(x => x.UserId == userId && x.IsDefault).FirstOrDefaultAsync();
@@ -77,8 +79,7 @@ namespace Project.DigitalMarket.Domain.Managers.Business.Seller
                 financialTie = new UserFinancialTieEntity
                 {
                     UserId = userId,
-                    IsDefault = true,
-                    CreatedAt = GenerateExtentions.Now
+                    IsDefault = true
                 };
                 financialTie.Type = registerDto.PayoutType;
                 financialTie.Provider = registerDto.PayoutProvider;

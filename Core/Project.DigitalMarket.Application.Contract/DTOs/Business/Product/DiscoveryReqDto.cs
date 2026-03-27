@@ -25,5 +25,8 @@ namespace Project.DigitalMarket.Application.Contract.DTOs.Business.Product
 
         // ID phiên làm việc để thuật toán gợi ý không bị lặp lại sản phẩm cũ
         public string? ViewSessionId { get; set; } = string.Empty;
+
+        // Từ khóa tìm kiếm
+        public string? Keyword { get; set; } = string.Empty;
     }
 }

@@ -126,7 +126,7 @@
             Hủy đơn hàng
             </summary>
         </member>
-        <member name="M:Digitalmarket.Controller.Product.Controllers.ProductController.GetDailyDiscover(System.String,System.Int32,System.Int32,System.Int32,System.Boolean,System.String)">
+        <member name="M:Digitalmarket.Controller.Product.Controllers.ProductController.GetDailyDiscover(System.String,System.Int32,System.Int32,System.Int32,System.Boolean,System.String,System.String)">
             <summary>
             Lấy danh sách sản phẩm (có filter + phân trang)
             </summary>
