@@ -57,8 +57,10 @@ namespace Project.DigitalMarket.Domain.Managers.Business.Product
                         .ThenBy(i => i.SortOrder)
                         .Select(i => i.FileId)
                         .FirstOrDefault(),
-                    //Price = x.Variants.Where(v => v.IsActive).Select(v => v.Price).DefaultIfEmpty(0).Min(),
-                    //OriginalPrice = x.Variants.Where(v => v.IsActive).Select(v => v.OriginalPrice).FirstOrDefault(),
+                    Price = x.Variants
+                        .Where(v => v.IsActive)
+                        .Min(v => (decimal?)v.Price) ?? 0,
+                    OriginalPrice = x.Variants.Where(v => v.IsActive).Select(v => v.OriginalPrice).FirstOrDefault(),
                     DiscountPercent = 0,
                     SoldCount = 0,
                     AvgRating = x.Rating != null ? x.Rating.AvgRating : 0,
