@@ -198,6 +198,11 @@ namespace Project.DigitalMarket.Application.Services.Business.Product
             return _productManager.DeleteProductAsync(UserId, productId);
         }
 
+        public Task<bool> DeleteProductByItemIdAsync(Guid itemId)
+        {
+            return _productManager.DeleteProductByItemIdAsync(UserId, itemId);
+        }
+
         public async Task<CategoryTreeResDto> GetCategoryTreeAsync(CategoryTreeReqDto requestDto)
         {
             var categories = await _productManager.GetCategoryTreeAsync(new CategoryTreeReq

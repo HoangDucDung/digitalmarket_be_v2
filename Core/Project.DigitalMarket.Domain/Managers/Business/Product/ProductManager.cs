@@ -274,6 +274,11 @@ namespace Project.DigitalMarket.Domain.Managers.Business.Product
             return true;
         }
 
+        public Task<bool> DeleteProductByItemIdAsync(Guid sellerId, Guid itemId)
+        {
+            return DeleteProductAsync(sellerId, itemId);
+        }
+
         public async Task<List<CategoryNodeResult>> GetCategoryTreeAsync(CategoryTreeReq request)
         {
             var categories = await _productRepository.GetCategoryTreeQuery(request.IncludeDisabled)

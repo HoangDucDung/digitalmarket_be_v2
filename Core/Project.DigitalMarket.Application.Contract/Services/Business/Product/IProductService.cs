@@ -23,6 +23,11 @@ namespace Project.DigitalMarket.Application.Contract.Services.Business.Product
         /// </summary>
         Task<bool> DeleteProductAsync(Guid productId);
 
+        /// <summary>
+        /// Xóa (soft-delete) sản phẩm theo ItemId (cùng khóa với ProductId) — seller hiện tại.
+        /// </summary>
+        Task<bool> DeleteProductByItemIdAsync(Guid itemId);
+
         Task<CategoryTreeResDto> GetCategoryTreeAsync(CategoryTreeReqDto requestDto);
     }
 }

@@ -100,5 +100,17 @@ namespace Digitalmarket.Controller.Business.Controllers
             var deleted = await _productService.DeleteProductAsync(productId);
             return Ok(new ApiResponse<bool> { Data = deleted });
         }
+
+        /// <summary>
+        /// Xóa (soft-delete) sản phẩm theo ItemId (query) — seller hiện tại
+        /// </summary>
+        [HttpDelete("delete")]
+        [AllowAnonymous]
+        [ProducesResponseType(typeof(ApiResponse<bool>), StatusCodes.Status200OK)]
+        public async Task<IActionResult> DeleteProductByItemId([FromQuery] Guid itemId)
+        {
+            var deleted = await _productService.DeleteProductByItemIdAsync(itemId);
+            return Ok(new ApiResponse<bool> { Data = deleted });
+        }
     }
 }
