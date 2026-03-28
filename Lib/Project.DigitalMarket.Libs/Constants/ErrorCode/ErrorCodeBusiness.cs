@@ -66,8 +66,9 @@ namespace Project.DigitalMarket.Libs.Constants.ErrorCode
         public const int InvalidAmount = 3012;
 
 
-        public const int InvalidProductData = 3010;
-        public const int SlugAlreadyExists = 3011;
-        public const int ProductNotFound = 3012;
+        public const int InvalidProductData = 3014;
+        public const int SlugAlreadyExists = 3015;
+        public const int ProductNotFound = 3016;
+        public const int OutOfStock = 3017;
     }
 }

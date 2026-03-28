@@ -368,44 +368,6 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Data
                      ConcurrencyStamp = "c30c8f1d-9f1c-6b3c-d3e0-7c4d5e6f7a8b"
                  }
              );
-            builder.Entity<CategoryEntity>().HasData(
-                new CategoryEntity
-                {
-                    Id = Guid.Parse("11111111-1111-1111-1111-111111111111"),
-                    Name = "Thoi trang nam",
-                    Slug = "thoi-trang-nam",
-                    Level = 1,
-                    SortOrder = 1,
-                    IsActive = true
-                },
-                new CategoryEntity
-                {
-                    Id = Guid.Parse("22222222-2222-2222-2222-222222222222"),
-                    Name = "Ao thun",
-                    Slug = "ao-thun",
-                    ParentId = Guid.Parse("11111111-1111-1111-1111-111111111111"),
-                    Level = 2,
-                    SortOrder = 1,
-                    IsActive = true
-                }
-            );
-
-            builder.Entity<BrandEntity>().HasData(
-                new BrandEntity
-                {
-                    Id = Guid.Parse("33333333-3333-3333-3333-333333333333"),
-                    Name = "No Brand",
-                    Slug = "no-brand",
-                    IsActive = true
-                },
-                new BrandEntity
-                {
-                    Id = Guid.Parse("44444444-4444-4444-4444-444444444444"),
-                    Name = "Nike",
-                    Slug = "nike",
-                    IsActive = true
-                }
-            );
 
         }
     }
