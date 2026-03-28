@@ -223,7 +223,7 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Migrations
                         new
                         {
                             Id = new Guid("33333333-3333-3333-3333-333333333333"),
-                            CreatedAt = new DateTime(2026, 3, 28, 2, 40, 44, 419, DateTimeKind.Local).AddTicks(7823),
+                            CreatedAt = new DateTime(2026, 3, 28, 13, 33, 5, 334, DateTimeKind.Local).AddTicks(3234),
                             IsActive = true,
                             IsDeleted = false,
                             Name = "No Brand",
@@ -232,7 +232,7 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Migrations
                         new
                         {
                             Id = new Guid("44444444-4444-4444-4444-444444444444"),
-                            CreatedAt = new DateTime(2026, 3, 28, 2, 40, 44, 419, DateTimeKind.Local).AddTicks(7825),
+                            CreatedAt = new DateTime(2026, 3, 28, 13, 33, 5, 334, DateTimeKind.Local).AddTicks(3238),
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Nike",
@@ -346,7 +346,7 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Migrations
                         new
                         {
                             Id = new Guid("11111111-1111-1111-1111-111111111111"),
-                            CreatedAt = new DateTime(2026, 3, 28, 2, 40, 44, 419, DateTimeKind.Local).AddTicks(7778),
+                            CreatedAt = new DateTime(2026, 3, 28, 13, 33, 5, 334, DateTimeKind.Local).AddTicks(3177),
                             IsActive = true,
                             IsDeleted = false,
                             Level = 1,
@@ -357,7 +357,7 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Migrations
                         new
                         {
                             Id = new Guid("22222222-2222-2222-2222-222222222222"),
-                            CreatedAt = new DateTime(2026, 3, 28, 2, 40, 44, 419, DateTimeKind.Local).AddTicks(7799),
+                            CreatedAt = new DateTime(2026, 3, 28, 13, 33, 5, 334, DateTimeKind.Local).AddTicks(3196),
                             IsActive = true,
                             IsDeleted = false,
                             Level = 2,
@@ -1124,9 +1124,6 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Migrations
 
                     b.Property<string>("FrontImageUrl")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid>("Id")
-                        .HasColumnType("uniqueidentifier");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");

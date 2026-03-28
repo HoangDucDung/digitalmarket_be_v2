@@ -53,7 +53,9 @@ namespace Project.DigitalMarket.Domain.Managers.Auths
                 Token = new JwtSecurityTokenHandler().WriteToken(token),
                 Expiration = expiration,
                 FullName = user.FullName,
-                Email = user.Email ?? string.Empty
+                Email = user.Email ?? string.Empty,
+                Roles = roles.ToList(),
+                IsSeller = roles.Contains(RoleConstants.Seller)
             };
         }
 

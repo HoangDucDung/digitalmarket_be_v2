@@ -140,6 +140,7 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Data
             {
                 entity.ToTable("UserKycProfiles");
                 entity.HasKey(k => k.UserId);
+                entity.Ignore(k => k.Id); // Bỏ qua Id từ BaseEntity vì UserId đã là PK cho quan hệ 1-1
                 
                 entity.Property(k => k.DocumentType).HasMaxLength(50).IsRequired();
                 entity.Property(k => k.DocumentNumber).HasMaxLength(100).IsRequired();

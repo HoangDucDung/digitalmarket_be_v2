@@ -104,4 +104,3 @@ E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalma
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Base\obj\Debug\net8.0\Digitalmarket.Controller.Base.genruntimeconfig.cache
 E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Base\obj\Debug\net8.0\ref\Digitalmarket.Controller.Base.dll
 e:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Base\obj\Debug\net8.0\Digitalmarket.Controller.Base.MvcApplicationPartsAssemblyInfo.cs
-E:\tap_hoa_so\digitalmarket_be_v2\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Base\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

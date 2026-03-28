@@ -25,5 +25,7 @@ namespace Project.DigitalMarket.Application.Contract.DTOs.Auths
         /// </summary>
         public string Email { get; set; } = string.Empty;
         public bool RequiresTwoFactor { get; set; }
+        public IList<string> Roles { get; set; } = new List<string>();
+        public bool IsSeller { get; set; }
     }
 }

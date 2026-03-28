@@ -39,6 +39,31 @@
             Lấy danh sách bình luận của sản phẩm.
             </summary>
         </member>
+        <member name="M:Digitalmarket.Controller.Business.Controllers.ProductController.GetDailyDiscover(System.Int32,System.Int32,System.Boolean,System.String,System.String)">
+            <summary>
+            Lấy danh sách sản phẩm (có filter + phân trang)
+            </summary>
+        </member>
+        <member name="M:Digitalmarket.Controller.Business.Controllers.ProductController.GetProductDetail(Project.DigitalMarket.Application.Contract.DTOs.Business.Product.ProductDetailReqDto)">
+            <summary>
+            Lấy chi tiết sản phẩm
+            </summary>
+        </member>
+        <member name="M:Digitalmarket.Controller.Business.Controllers.ProductController.CreateProduct(Project.DigitalMarket.Application.Contract.DTOs.Business.Product.ProductCreateReqDto)">
+            <summary>
+            Thêm sản phẩm (tạo mới) - seller hiện tại
+            </summary>
+        </member>
+        <member name="M:Digitalmarket.Controller.Business.Controllers.ProductController.UpdateProduct(Project.DigitalMarket.Application.Contract.DTOs.Business.Product.ProductUpdateReqDto)">
+            <summary>
+            Sửa sản phẩm (patch) - seller hiện tại
+            </summary>
+        </member>
+        <member name="M:Digitalmarket.Controller.Business.Controllers.ProductController.DeleteProduct(System.Guid)">
+            <summary>
+            Xóa (soft-delete) sản phẩm - seller hiện tại
+            </summary>
+        </member>
         <member name="T:Digitalmarket.Controller.Business.Controllers.SellerController">
             <summary>
             Controller xử lý các nghiệp vụ liên quan đến Seller
@@ -124,16 +149,6 @@
         <member name="M:Digitalmarket.Controller.Order.Controllers.OrderController.CancelOrder(System.Guid)">
             <summary>
             Hủy đơn hàng
-            </summary>
-        </member>
-        <member name="M:Digitalmarket.Controller.Product.Controllers.ProductController.GetDailyDiscover(System.String,System.Int32,System.Int32,System.Int32,System.Boolean,System.String,System.String)">
-            <summary>
-            Lấy danh sách sản phẩm (có filter + phân trang)
-            </summary>
-        </member>
-        <member name="M:Digitalmarket.Controller.Product.Controllers.ProductController.GetProductDetail(Project.DigitalMarket.Application.Contract.DTOs.Business.Product.ProductDetailReqDto)">
-            <summary>
-            Lấy chi tiết sản phẩm
             </summary>
         </member>
     </members>

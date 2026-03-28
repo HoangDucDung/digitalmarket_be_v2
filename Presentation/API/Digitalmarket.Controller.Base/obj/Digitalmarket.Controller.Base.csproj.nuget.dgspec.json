@@ -32,8 +32,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain.Share\\Project.DigitalMarket.Domain.Share.csproj": {
-                "projectPath": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain.Share\\Project.DigitalMarket.Domain.Share.csproj"
+              "e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain.Share\\Project.DigitalMarket.Domain.Share.csproj": {
+                "projectPath": "e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain.Share\\Project.DigitalMarket.Domain.Share.csproj"
               }
             }
           }
@@ -155,14 +155,14 @@
         }
       }
     },
-    "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain.Share\\Project.DigitalMarket.Domain.Share.csproj": {
+    "e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain.Share\\Project.DigitalMarket.Domain.Share.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain.Share\\Project.DigitalMarket.Domain.Share.csproj",
+        "projectUniqueName": "e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain.Share\\Project.DigitalMarket.Domain.Share.csproj",
         "projectName": "Project.DigitalMarket.Domain.Share",
-        "projectPath": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain.Share\\Project.DigitalMarket.Domain.Share.csproj",
+        "projectPath": "e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain.Share\\Project.DigitalMarket.Domain.Share.csproj",
         "packagesPath": "C:\\Users\\FPTSHOP\\.nuget\\packages\\",
-        "outputPath": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain.Share\\obj\\",
+        "outputPath": "e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain.Share\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -252,8 +252,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain.Share\\Project.DigitalMarket.Domain.Share.csproj": {
-                "projectPath": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain.Share\\Project.DigitalMarket.Domain.Share.csproj"
+              "e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain.Share\\Project.DigitalMarket.Domain.Share.csproj": {
+                "projectPath": "e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain.Share\\Project.DigitalMarket.Domain.Share.csproj"
               }
             }
           }
@@ -368,14 +368,14 @@
         }
       }
     },
-    "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure.Mail\\Project.DigitalMarket.Infrastructure.Mail.csproj": {
+    "e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure.Mail\\Project.DigitalMarket.Infrastructure.Mail.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure.Mail\\Project.DigitalMarket.Infrastructure.Mail.csproj",
+        "projectUniqueName": "e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure.Mail\\Project.DigitalMarket.Infrastructure.Mail.csproj",
         "projectName": "Project.DigitalMarket.Infrastructure.Mail",
-        "projectPath": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure.Mail\\Project.DigitalMarket.Infrastructure.Mail.csproj",
+        "projectPath": "e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure.Mail\\Project.DigitalMarket.Infrastructure.Mail.csproj",
         "packagesPath": "C:\\Users\\FPTSHOP\\.nuget\\packages\\",
-        "outputPath": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure.Mail\\obj\\",
+        "outputPath": "e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure.Mail\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -446,14 +446,14 @@
         }
       }
     },
-    "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure.MsSql\\Project.DigitalMarket.Infrastructure.MsSql.csproj": {
+    "e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure.MsSql\\Project.DigitalMarket.Infrastructure.MsSql.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure.MsSql\\Project.DigitalMarket.Infrastructure.MsSql.csproj",
+        "projectUniqueName": "e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure.MsSql\\Project.DigitalMarket.Infrastructure.MsSql.csproj",
         "projectName": "Project.DigitalMarket.Infrastructure.MsSql",
-        "projectPath": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure.MsSql\\Project.DigitalMarket.Infrastructure.MsSql.csproj",
+        "projectPath": "e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure.MsSql\\Project.DigitalMarket.Infrastructure.MsSql.csproj",
         "packagesPath": "C:\\Users\\FPTSHOP\\.nuget\\packages\\",
-        "outputPath": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure.MsSql\\obj\\",
+        "outputPath": "e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure.MsSql\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -558,8 +558,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain.Share\\Project.DigitalMarket.Domain.Share.csproj": {
-                "projectPath": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain.Share\\Project.DigitalMarket.Domain.Share.csproj"
+              "e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain.Share\\Project.DigitalMarket.Domain.Share.csproj": {
+                "projectPath": "e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain.Share\\Project.DigitalMarket.Domain.Share.csproj"
               },
               "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\Project.DigitalMarket.Libs.csproj": {
                 "projectPath": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\Project.DigitalMarket.Libs.csproj"
@@ -729,11 +729,11 @@
               "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application\\Project.DigitalMarket.Application.csproj": {
                 "projectPath": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application\\Project.DigitalMarket.Application.csproj"
               },
-              "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure.Mail\\Project.DigitalMarket.Infrastructure.Mail.csproj": {
-                "projectPath": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure.Mail\\Project.DigitalMarket.Infrastructure.Mail.csproj"
+              "e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure.Mail\\Project.DigitalMarket.Infrastructure.Mail.csproj": {
+                "projectPath": "e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure.Mail\\Project.DigitalMarket.Infrastructure.Mail.csproj"
               },
-              "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure.MsSql\\Project.DigitalMarket.Infrastructure.MsSql.csproj": {
-                "projectPath": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure.MsSql\\Project.DigitalMarket.Infrastructure.MsSql.csproj"
+              "e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure.MsSql\\Project.DigitalMarket.Infrastructure.MsSql.csproj": {
+                "projectPath": "e:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure.MsSql\\Project.DigitalMarket.Infrastructure.MsSql.csproj"
               },
               "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj": {
                 "projectPath": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj"

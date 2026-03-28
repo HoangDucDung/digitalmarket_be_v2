@@ -12,8 +12,8 @@ using Project.DigitalMarket.Infrastructure.MsSql.Data;
 namespace Project.DigitalMarket.Infrastructure.MsSql.Migrations
 {
     [DbContext(typeof(DigitalMarketDbContext))]
-    [Migration("20260326154823_AddCommentTable")]
-    partial class AddCommentTable
+    [Migration("20260328063305_Initial_Fresh_Start")]
+    partial class Initial_Fresh_Start
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -179,6 +179,70 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("Project.DigitalMarket.Domain.Entities.Business.BrandEntity", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsActive")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(true);
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("Slug")
+                        .IsRequired()
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Slug")
+                        .IsUnique();
+
+                    b.ToTable("Brands", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("33333333-3333-3333-3333-333333333333"),
+                            CreatedAt = new DateTime(2026, 3, 28, 13, 33, 5, 334, DateTimeKind.Local).AddTicks(3234),
+                            IsActive = true,
+                            IsDeleted = false,
+                            Name = "No Brand",
+                            Slug = "no-brand"
+                        },
+                        new
+                        {
+                            Id = new Guid("44444444-4444-4444-4444-444444444444"),
+                            CreatedAt = new DateTime(2026, 3, 28, 13, 33, 5, 334, DateTimeKind.Local).AddTicks(3238),
+                            IsActive = true,
+                            IsDeleted = false,
+                            Name = "Nike",
+                            Slug = "nike"
+                        });
+                });
+
             modelBuilder.Entity("Project.DigitalMarket.Domain.Entities.Business.CartItemEntity", b =>
                 {
                     b.Property<Guid>("Id")
@@ -223,6 +287,88 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("CartItems", (string)null);
+                });
+
+            modelBuilder.Entity("Project.DigitalMarket.Domain.Entities.Business.CategoryEntity", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsActive")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(true);
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Level")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(1);
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<Guid?>("ParentId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Slug")
+                        .IsRequired()
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<int?>("SortOrder")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Slug")
+                        .IsUnique();
+
+                    b.HasIndex("ParentId", "SortOrder");
+
+                    b.ToTable("Categories", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("11111111-1111-1111-1111-111111111111"),
+                            CreatedAt = new DateTime(2026, 3, 28, 13, 33, 5, 334, DateTimeKind.Local).AddTicks(3177),
+                            IsActive = true,
+                            IsDeleted = false,
+                            Level = 1,
+                            Name = "Thoi trang nam",
+                            Slug = "thoi-trang-nam",
+                            SortOrder = 1
+                        },
+                        new
+                        {
+                            Id = new Guid("22222222-2222-2222-2222-222222222222"),
+                            CreatedAt = new DateTime(2026, 3, 28, 13, 33, 5, 334, DateTimeKind.Local).AddTicks(3196),
+                            IsActive = true,
+                            IsDeleted = false,
+                            Level = 2,
+                            Name = "Ao thun",
+                            ParentId = new Guid("11111111-1111-1111-1111-111111111111"),
+                            Slug = "ao-thun",
+                            SortOrder = 1
+                        });
                 });
 
             modelBuilder.Entity("Project.DigitalMarket.Domain.Entities.Business.CommentEntity", b =>
@@ -271,6 +417,54 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Comments", (string)null);
+                });
+
+            modelBuilder.Entity("Project.DigitalMarket.Domain.Entities.Business.FileEntity", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Base64Data")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ContentType")
+                        .IsRequired()
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FileName")
+                        .IsRequired()
+                        .HasMaxLength(512)
+                        .HasColumnType("nvarchar(512)");
+
+                    b.Property<long>("FileSize")
+                        .HasColumnType("bigint");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("UploadedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UploadedAt");
+
+                    b.ToTable("Files", (string)null);
                 });
 
             modelBuilder.Entity("Project.DigitalMarket.Domain.Entities.Business.OrderEntity", b =>
@@ -412,11 +606,6 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Migrations
                     b.Property<Guid?>("BrandId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("CategoryBundle")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
                     b.Property<Guid?>("CategoryId")
                         .HasColumnType("uniqueidentifier");
 
@@ -428,71 +617,54 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Migrations
 
                     b.Property<string>("Currency")
                         .IsRequired()
+                        .ValueGeneratedOnAdd()
                         .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasColumnType("nvarchar(10)")
+                        .HasDefaultValue("VND");
 
-                    b.Property<int>("DiscountPercent")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ImageUrl")
-                        .IsRequired()
-                        .HasMaxLength(1000)
-                        .HasColumnType("nvarchar(1000)");
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsActive")
-                        .HasColumnType("bit");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(true);
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("IsFeatured")
-                        .HasColumnType("bit");
+                    b.Property<string>("Material")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(512)
                         .HasColumnType("nvarchar(512)");
 
-                    b.Property<decimal>("OriginalPrice")
-                        .HasPrecision(18, 2)
-                        .HasColumnType("decimal(18,2)");
-
                     b.Property<DateTime?>("PublishedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<decimal>("RatingAverage")
-                        .HasPrecision(3, 2)
-                        .HasColumnType("decimal(3,2)");
-
-                    b.Property<decimal?>("SalePrice")
-                        .HasPrecision(18, 2)
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<byte[]>("RowVersion")
+                        .IsConcurrencyToken()
+                        .IsRequired()
+                        .ValueGeneratedOnAddOrUpdate()
+                        .HasColumnType("rowversion");
 
                     b.Property<Guid>("SellerId")
                         .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("ShopLocation")
-                        .IsRequired()
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.Property<string>("ShopName")
-                        .IsRequired()
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
 
                     b.Property<string>("Slug")
                         .IsRequired()
                         .HasMaxLength(512)
                         .HasColumnType("nvarchar(512)");
 
-                    b.Property<int>("SoldCount")
-                        .HasColumnType("int");
-
                     b.Property<string>("Status")
                         .IsRequired()
+                        .ValueGeneratedOnAdd()
                         .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
+                        .HasColumnType("nvarchar(20)")
+                        .HasDefaultValue("Draft");
 
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("datetime2");
@@ -502,14 +674,254 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("BrandId");
+
                     b.HasIndex("Slug")
                         .IsUnique();
 
-                    b.HasIndex("SellerId", "Status", "IsDeleted");
+                    b.HasIndex("CategoryId", "IsActive");
 
-                    b.HasIndex("IsDeleted", "IsActive", "Status", "CategoryBundle");
+                    b.HasIndex("SellerId", "Status", "PublishedAt");
 
-                    b.ToTable("Products", (string)null);
+                    b.ToTable("Products", null, t =>
+                        {
+                            t.HasCheckConstraint("CK_Products_Status", "[Status] IN ('Draft','Published','Archived')");
+                        });
+                });
+
+            modelBuilder.Entity("Project.DigitalMarket.Domain.Entities.Business.ProductImageEntity", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("FileId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsPrimary")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
+
+                    b.Property<Guid>("ProductId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("SortOrder")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(0);
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("FileId");
+
+                    b.HasIndex("ProductId");
+
+                    b.HasIndex("ProductId", "IsPrimary")
+                        .IsUnique()
+                        .HasFilter("[IsPrimary] = 1");
+
+                    b.ToTable("ProductImages", (string)null);
+                });
+
+            modelBuilder.Entity("Project.DigitalMarket.Domain.Entities.Business.ProductInventoryMovementEntity", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("ChangeType")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Note")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<int>("QuantityDelta")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("VariantId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("VariantId", "CreatedAt");
+
+                    b.ToTable("ProductInventoryMovements", (string)null);
+                });
+
+            modelBuilder.Entity("Project.DigitalMarket.Domain.Entities.Business.ProductRatingEntity", b =>
+                {
+                    b.Property<Guid>("ProductId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<decimal>("AvgRating")
+                        .HasPrecision(3, 2)
+                        .HasColumnType("decimal(3,2)");
+
+                    b.Property<int>("RatingCount")
+                        .HasColumnType("int");
+
+                    b.HasKey("ProductId");
+
+                    b.ToTable("ProductRatings", null, t =>
+                        {
+                            t.HasCheckConstraint("CK_ProductRatings_Avg", "[AvgRating] >= 0 AND [AvgRating] <= 5");
+
+                            t.HasCheckConstraint("CK_ProductRatings_Count", "[RatingCount] >= 0");
+                        });
+                });
+
+            modelBuilder.Entity("Project.DigitalMarket.Domain.Entities.Business.ProductVariantAttributeEntity", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("AttributeName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<byte>("AttributeOrder")
+                        .HasColumnType("tinyint");
+
+                    b.Property<string>("AttributeValue")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("VariantId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AttributeName", "AttributeValue");
+
+                    b.HasIndex("VariantId", "AttributeOrder")
+                        .IsUnique();
+
+                    b.ToTable("ProductVariantAttributes", null, t =>
+                        {
+                            t.HasCheckConstraint("CK_ProductVariantAttributes_Order", "[AttributeOrder] IN (1,2)");
+                        });
+                });
+
+            modelBuilder.Entity("Project.DigitalMarket.Domain.Entities.Business.ProductVariantEntity", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsActive")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(true);
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<decimal?>("OriginalPrice")
+                        .HasPrecision(18, 2)
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("Price")
+                        .HasPrecision(18, 2)
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<Guid>("ProductId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Sku")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<int>("StockQuantity")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(0);
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("VariantName")
+                        .IsRequired()
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.HasIndex("Sku")
+                        .IsUnique()
+                        .HasFilter("[Sku] IS NOT NULL");
+
+                    b.HasIndex("ProductId", "VariantName")
+                        .IsUnique();
+
+                    b.ToTable("ProductVariants", null, t =>
+                        {
+                            t.HasCheckConstraint("CK_ProductVariants_Price", "[Price] >= 0");
+
+                            t.HasCheckConstraint("CK_ProductVariants_Stock", "[StockQuantity] >= 0");
+                        });
                 });
 
             modelBuilder.Entity("Project.DigitalMarket.Domain.Entities.UserAuditLogEntity", b =>
@@ -637,11 +1049,9 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Migrations
 
             modelBuilder.Entity("Project.DigitalMarket.Domain.Entities.UserFinancialTieEntity", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("AccountName")
                         .IsRequired()
@@ -656,7 +1066,13 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("IsDefault")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
                     b.Property<string>("Provider")
@@ -668,6 +1084,12 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Migrations
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<Guid>("UserId")
                         .HasColumnType("uniqueidentifier");
@@ -690,6 +1112,9 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("DocumentNumber")
                         .IsRequired()
                         .HasMaxLength(100)
@@ -703,6 +1128,9 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Migrations
                     b.Property<string>("FrontImageUrl")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Note")
                         .HasColumnType("nvarchar(max)");
 
@@ -710,15 +1138,18 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("VerificationStatus")
                         .IsRequired()
                         .ValueGeneratedOnAdd()
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)")
                         .HasDefaultValue("Pending");
-
-                    b.Property<DateTime?>("VerifiedAt")
-                        .HasColumnType("datetime2");
 
                     b.HasKey("UserId");
 
@@ -853,6 +1284,16 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Migrations
                     b.Navigation("Product");
                 });
 
+            modelBuilder.Entity("Project.DigitalMarket.Domain.Entities.Business.CategoryEntity", b =>
+                {
+                    b.HasOne("Project.DigitalMarket.Domain.Entities.Business.CategoryEntity", "Parent")
+                        .WithMany("Children")
+                        .HasForeignKey("ParentId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.Navigation("Parent");
+                });
+
             modelBuilder.Entity("Project.DigitalMarket.Domain.Entities.Business.CommentEntity", b =>
                 {
                     b.HasOne("Project.DigitalMarket.Domain.Entities.Business.ProductEntity", "Product")
@@ -887,6 +1328,94 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Migrations
                         .IsRequired();
 
                     b.Navigation("Order");
+
+                    b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("Project.DigitalMarket.Domain.Entities.Business.ProductEntity", b =>
+                {
+                    b.HasOne("Project.DigitalMarket.Domain.Entities.Business.BrandEntity", "Brand")
+                        .WithMany()
+                        .HasForeignKey("BrandId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("Project.DigitalMarket.Domain.Entities.Business.CategoryEntity", "Category")
+                        .WithMany()
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("Project.DigitalMarket.Domain.Entities.UserEntity", "Seller")
+                        .WithMany()
+                        .HasForeignKey("SellerId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Brand");
+
+                    b.Navigation("Category");
+
+                    b.Navigation("Seller");
+                });
+
+            modelBuilder.Entity("Project.DigitalMarket.Domain.Entities.Business.ProductImageEntity", b =>
+                {
+                    b.HasOne("Project.DigitalMarket.Domain.Entities.Business.FileEntity", "File")
+                        .WithMany()
+                        .HasForeignKey("FileId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("Project.DigitalMarket.Domain.Entities.Business.ProductEntity", "Product")
+                        .WithMany("Images")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("File");
+
+                    b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("Project.DigitalMarket.Domain.Entities.Business.ProductInventoryMovementEntity", b =>
+                {
+                    b.HasOne("Project.DigitalMarket.Domain.Entities.Business.ProductVariantEntity", "Variant")
+                        .WithMany("InventoryMovements")
+                        .HasForeignKey("VariantId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Variant");
+                });
+
+            modelBuilder.Entity("Project.DigitalMarket.Domain.Entities.Business.ProductRatingEntity", b =>
+                {
+                    b.HasOne("Project.DigitalMarket.Domain.Entities.Business.ProductEntity", "Product")
+                        .WithOne("Rating")
+                        .HasForeignKey("Project.DigitalMarket.Domain.Entities.Business.ProductRatingEntity", "ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("Project.DigitalMarket.Domain.Entities.Business.ProductVariantAttributeEntity", b =>
+                {
+                    b.HasOne("Project.DigitalMarket.Domain.Entities.Business.ProductVariantEntity", "Variant")
+                        .WithMany("Attributes")
+                        .HasForeignKey("VariantId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Variant");
+                });
+
+            modelBuilder.Entity("Project.DigitalMarket.Domain.Entities.Business.ProductVariantEntity", b =>
+                {
+                    b.HasOne("Project.DigitalMarket.Domain.Entities.Business.ProductEntity", "Product")
+                        .WithMany("Variants")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Product");
                 });
@@ -946,9 +1475,30 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Migrations
                     b.Navigation("Wallet");
                 });
 
+            modelBuilder.Entity("Project.DigitalMarket.Domain.Entities.Business.CategoryEntity", b =>
+                {
+                    b.Navigation("Children");
+                });
+
             modelBuilder.Entity("Project.DigitalMarket.Domain.Entities.Business.OrderEntity", b =>
                 {
                     b.Navigation("Items");
+                });
+
+            modelBuilder.Entity("Project.DigitalMarket.Domain.Entities.Business.ProductEntity", b =>
+                {
+                    b.Navigation("Images");
+
+                    b.Navigation("Rating");
+
+                    b.Navigation("Variants");
+                });
+
+            modelBuilder.Entity("Project.DigitalMarket.Domain.Entities.Business.ProductVariantEntity", b =>
+                {
+                    b.Navigation("Attributes");
+
+                    b.Navigation("InventoryMovements");
                 });
 
             modelBuilder.Entity("Project.DigitalMarket.Domain.Entities.UserEntity", b =>
