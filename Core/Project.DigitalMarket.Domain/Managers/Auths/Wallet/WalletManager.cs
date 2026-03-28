@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Project.DigitalMarket.Domain.Entities;
 using Project.DigitalMarket.Domain.Repositories.Auths.Wallet;
@@ -16,6 +17,7 @@ namespace Project.DigitalMarket.Domain.Managers.Auths.Wallet
     {
         private IWalletRepository _walletRepository => _lazyloadProvider.LazyGetRequiredService<IWalletRepository>();
         private IWalletTransactionRepository _transactionRepository => _lazyloadProvider.LazyGetRequiredService<IWalletTransactionRepository>();
+        private UserManager<UserEntity> _userManager => _lazyloadProvider.LazyGetRequiredService<UserManager<UserEntity>>();
 
         /// <summary>
         /// Lấy hoặc tạo mới ví cho người dùng
@@ -25,6 +27,13 @@ namespace Project.DigitalMarket.Domain.Managers.Auths.Wallet
             var wallet = await _walletRepository.GetByCondition(x => x.UserId == userId).FirstOrDefaultAsync();
             if (wallet == null)
             {
+                // Verify user exists before creating a wallet (prevent FK conflict with old tokens)
+                var user = await _userManager.FindByIdAsync(userId.ToString());
+                if (user == null)
+                {
+                    throw new BusinessException(ErrorCode.AccountNotFound, "Tài khoản không tồn tại. Vui lòng đăng ký mới hoặc đăng nhập lại.");
+                }
+
                 wallet = new WalletEntity
                 {
                     UserId = userId,

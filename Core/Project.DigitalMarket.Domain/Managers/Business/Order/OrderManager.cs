@@ -50,6 +50,9 @@ namespace Project.DigitalMarket.Domain.Managers.Business.Order
 
             foreach (var item in cartItems)
             {
+                // Cập nhật tồn kho
+                await UpdateProductStockAsync(item.Product, item.Quantity);
+
                 order.Items.Add(new OrderItemEntity
                 {
                     ProductId = item.ProductId,
@@ -117,6 +120,9 @@ namespace Project.DigitalMarket.Domain.Managers.Business.Order
                 }
             };
 
+            // Cập nhật tồn kho
+            await UpdateProductStockAsync(product, quantity);
+
             await _orderRepository.AddAsync(order);
 
             // Xử lý thanh toán nếu dùng ví
@@ -142,6 +148,32 @@ namespace Project.DigitalMarket.Domain.Managers.Business.Order
         private static decimal GetOriginalPrice(ProductEntity product)
         {
             return product.Variants.Where(v => v.IsActive).OrderBy(v => v.Price).Select(v => v.OriginalPrice ?? v.Price).FirstOrDefault();
+        }
+
+        private async Task UpdateProductStockAsync(ProductEntity product, int quantity)
+        {
+            var variant = product.Variants
+                .Where(v => v.IsActive)
+                .OrderBy(v => v.Price)
+                .FirstOrDefault();
+
+            if (variant == null)
+                throw new BusinessException(ErrorCode.ProductNotAvailable, $"Sản phẩm '{product.Name}' không có biến thể khả dụng.");
+
+            if (variant.StockQuantity < quantity)
+                throw new BusinessException(ErrorCode.OutOfStock, $"Sản phẩm '{product.Name}' - {variant.VariantName} không đủ tồn kho (Còn lại: {variant.StockQuantity}).");
+
+            variant.StockQuantity -= quantity;
+            variant.InventoryMovements.Add(new ProductInventoryMovementEntity
+            {
+                ChangeType = "Order",
+                QuantityDelta = -quantity,
+                Note = "Trừ tồn kho cho đơn hàng mới",
+                CreatedAt = GenerateExtentions.Now,
+                CreatedBy = "System"
+            });
+
+            _productRepository.Update(product);
         }
 
         public async Task<List<OrderEntity>> GetUserOrdersAsync(Guid userId)

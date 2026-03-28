@@ -13,6 +13,7 @@ namespace Digitalmarket.Controller.Business.Controllers
     {
         private IProductService _productService => _lazyloadProvider.LazyGetRequiredService<IProductService>();
 
+        [AllowAnonymous]
         [HttpGet("tree")]
         [ProducesResponseType(typeof(CategoryTreeResDto), StatusCodes.Status200OK)]
         public async Task<ActionResult<CategoryTreeResDto>> GetCategoryTree([FromQuery] CategoryTreeReqDto req)
