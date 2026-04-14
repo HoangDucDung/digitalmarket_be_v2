@@ -56,7 +56,7 @@ namespace Project.DigitalMarket.Application.Services.Auths
             await _userManager.AddToRoleAsync(user, RoleConstants.Customer);
 
             // Gửi email xác thực (Tạm thời ẩn và ghi log console)
-            var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+            var token = await _userManager.GenerateTwoFactorTokenAsync(user, "Email");
             // await _emailService.SendEmailAsync(user.Email!, "Xác thực email", $"Mã xác thực của bạn là: {token}");
             Console.WriteLine($"\n[TEST LOG] Email: {user.Email} | Type: Xác thực email | Token: {token}\n");
 
