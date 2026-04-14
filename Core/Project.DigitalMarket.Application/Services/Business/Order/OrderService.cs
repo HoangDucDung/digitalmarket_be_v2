@@ -6,7 +6,7 @@ using Project.DigitalMarket.Libs.DependencyInjection;
 
 namespace Project.DigitalMarket.Application.Services.Business.Order
 {
-    public class OrderService(ILazyloadProvider lazyloadProvider) : DigitalMarketServiceBase(lazyloadProvider), IOrderService
+    public class OrderService(ILazyloadProvider lazyloadProvider) : DigitalMarketServiceBase<OrderService>(lazyloadProvider), IOrderService
     {
         private IOrderManager _orderManager => _lazyloadProvider.LazyGetRequiredService<IOrderManager>();
 

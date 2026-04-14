@@ -11,7 +11,7 @@ namespace Project.DigitalMarket.Application.Services.Business.Wallet
     /// <summary>
     /// Triển khai Service quản lý nghiệp vụ business cho Ví
     /// </summary>
-    public class WalletService(ILazyloadProvider lazyloadProvider) : DigitalMarketServiceBase(lazyloadProvider), IWalletService
+    public class WalletService(ILazyloadProvider lazyloadProvider) : DigitalMarketServiceBase<WalletService>(lazyloadProvider), IWalletService
     {
         private IWalletManager _walletManager => _lazyloadProvider.LazyGetRequiredService<IWalletManager>();
 

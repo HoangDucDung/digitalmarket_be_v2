@@ -14,7 +14,7 @@ namespace Digitalmarket.Controller.Business.Controllers
     /// </summary>
     [ApiController]
     [Route("api/[controller]")]
-    public class SellerController(ILazyloadProvider lazyloadProvider) : DigitalBaseController(lazyloadProvider)
+    public class SellerController(ILazyloadProvider lazyloadProvider) : DigitalBaseController<SellerController>(lazyloadProvider)
     {
         private ISellerService _sellerService => _lazyloadProvider.LazyGetRequiredService<ISellerService>();
 

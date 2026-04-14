@@ -9,7 +9,7 @@ namespace Digitalmarket.Controller.Order.Controllers
 {
     [ApiController]
     [Route("api/[controller]s")]
-    public class OrderController(ILazyloadProvider lazyloadProvider) : DigitalBaseController(lazyloadProvider)
+    public class OrderController(ILazyloadProvider lazyloadProvider) : DigitalBaseController<OrderController>(lazyloadProvider)
     {
         private IOrderService _orderService => _lazyloadProvider.LazyGetRequiredService<IOrderService>();
 

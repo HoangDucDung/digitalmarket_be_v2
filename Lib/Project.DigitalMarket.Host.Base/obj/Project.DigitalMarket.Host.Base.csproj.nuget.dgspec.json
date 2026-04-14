@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj": {}
+    "C:\\Users\\MIC\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj": {}
   },
   "projects": {
-    "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain.Share\\Project.DigitalMarket.Domain.Share.csproj": {
+    "C:\\Users\\MIC\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain.Share\\Project.DigitalMarket.Domain.Share.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain.Share\\Project.DigitalMarket.Domain.Share.csproj",
+        "projectUniqueName": "C:\\Users\\MIC\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain.Share\\Project.DigitalMarket.Domain.Share.csproj",
         "projectName": "Project.DigitalMarket.Domain.Share",
-        "projectPath": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain.Share\\Project.DigitalMarket.Domain.Share.csproj",
-        "packagesPath": "C:\\Users\\FPTSHOP\\.nuget\\packages\\",
-        "outputPath": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain.Share\\obj\\",
+        "projectPath": "C:\\Users\\MIC\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain.Share\\Project.DigitalMarket.Domain.Share.csproj",
+        "packagesPath": "C:\\Users\\MIC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\MIC\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain.Share\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\FPTSHOP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MIC\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,14 +26,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\Project.DigitalMarket.Libs.csproj": {
-                "projectPath": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\Project.DigitalMarket.Libs.csproj"
+              "C:\\Users\\MIC\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\Project.DigitalMarket.Libs.csproj": {
+                "projectPath": "C:\\Users\\MIC\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\Project.DigitalMarket.Libs.csproj"
               }
             }
           }
@@ -48,7 +49,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -69,24 +70,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Extension\\Project.DigitalMarket.Extension\\Project.DigitalMarket.Extension.csproj": {
+    "C:\\Users\\MIC\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Extension\\Project.DigitalMarket.Extension\\Project.DigitalMarket.Extension.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Extension\\Project.DigitalMarket.Extension\\Project.DigitalMarket.Extension.csproj",
+        "projectUniqueName": "C:\\Users\\MIC\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Extension\\Project.DigitalMarket.Extension\\Project.DigitalMarket.Extension.csproj",
         "projectName": "Project.DigitalMarket.Extension",
-        "projectPath": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Extension\\Project.DigitalMarket.Extension\\Project.DigitalMarket.Extension.csproj",
-        "packagesPath": "C:\\Users\\FPTSHOP\\.nuget\\packages\\",
-        "outputPath": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Extension\\Project.DigitalMarket.Extension\\obj\\",
+        "projectPath": "C:\\Users\\MIC\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Extension\\Project.DigitalMarket.Extension\\Project.DigitalMarket.Extension.csproj",
+        "packagesPath": "C:\\Users\\MIC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\MIC\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Extension\\Project.DigitalMarket.Extension\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\FPTSHOP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MIC\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -95,6 +96,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -113,7 +115,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -134,24 +136,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj": {
+    "C:\\Users\\MIC\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj",
+        "projectUniqueName": "C:\\Users\\MIC\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj",
         "projectName": "Project.DigitalMarket.Host.Base",
-        "projectPath": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj",
-        "packagesPath": "C:\\Users\\FPTSHOP\\.nuget\\packages\\",
-        "outputPath": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\obj\\",
+        "projectPath": "C:\\Users\\MIC\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj",
+        "packagesPath": "C:\\Users\\MIC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\MIC\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\FPTSHOP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MIC\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -160,17 +162,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain.Share\\Project.DigitalMarket.Domain.Share.csproj": {
-                "projectPath": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain.Share\\Project.DigitalMarket.Domain.Share.csproj"
+              "C:\\Users\\MIC\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain.Share\\Project.DigitalMarket.Domain.Share.csproj": {
+                "projectPath": "C:\\Users\\MIC\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain.Share\\Project.DigitalMarket.Domain.Share.csproj"
               },
-              "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\Project.DigitalMarket.Libs.csproj": {
-                "projectPath": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\Project.DigitalMarket.Libs.csproj"
+              "C:\\Users\\MIC\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\Project.DigitalMarket.Libs.csproj": {
+                "projectPath": "C:\\Users\\MIC\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\Project.DigitalMarket.Libs.csproj"
               }
             }
           }
@@ -185,7 +188,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -224,24 +227,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\Project.DigitalMarket.Libs.csproj": {
+    "C:\\Users\\MIC\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\Project.DigitalMarket.Libs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\Project.DigitalMarket.Libs.csproj",
+        "projectUniqueName": "C:\\Users\\MIC\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\Project.DigitalMarket.Libs.csproj",
         "projectName": "Project.DigitalMarket.Libs",
-        "projectPath": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\Project.DigitalMarket.Libs.csproj",
-        "packagesPath": "C:\\Users\\FPTSHOP\\.nuget\\packages\\",
-        "outputPath": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\obj\\",
+        "projectPath": "C:\\Users\\MIC\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\Project.DigitalMarket.Libs.csproj",
+        "packagesPath": "C:\\Users\\MIC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\MIC\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\FPTSHOP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MIC\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -250,14 +253,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Extension\\Project.DigitalMarket.Extension\\Project.DigitalMarket.Extension.csproj": {
-                "projectPath": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Extension\\Project.DigitalMarket.Extension\\Project.DigitalMarket.Extension.csproj"
+              "C:\\Users\\MIC\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Extension\\Project.DigitalMarket.Extension\\Project.DigitalMarket.Extension.csproj": {
+                "projectPath": "C:\\Users\\MIC\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Extension\\Project.DigitalMarket.Extension\\Project.DigitalMarket.Extension.csproj"
               }
             }
           }
@@ -272,7 +276,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -299,7 +303,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

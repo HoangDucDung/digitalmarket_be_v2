@@ -14,7 +14,7 @@ namespace Digitalmarket.Controller.Business.Controllers
 {
     [ApiController]
     [Route("api/[controller]s")]
-    public class FileController(ILazyloadProvider lazyloadProvider) : DigitalBaseController(lazyloadProvider)
+    public class FileController(ILazyloadProvider lazyloadProvider) : DigitalBaseController<FileController>(lazyloadProvider)
     {
         protected DigitalMarketDbContext _context => _lazyloadProvider.LazyGetRequiredService<DigitalMarketDbContext>();
 

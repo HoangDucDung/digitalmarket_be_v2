@@ -16,7 +16,8 @@ namespace Digitalmarket.Controller.Auth
             [
                 "auth.json",
                 "Email.json",
-                "connection.json"
+                "connection.json",
+                "elastic.json"
             ]);
 
 
@@ -48,6 +49,7 @@ namespace Digitalmarket.Controller.Auth
             builder.Services.GetAuthConfig(builder.Configuration);
             builder.Services.GetEmailConfig(builder.Configuration);
             builder.Services.GetConnectionConfig(builder.Configuration);
+            builder.Services.GetElasticConfig(builder.Configuration);
 
             var app = builder.Build();
 

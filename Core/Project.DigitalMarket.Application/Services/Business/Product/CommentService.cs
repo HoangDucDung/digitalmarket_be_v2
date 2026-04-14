@@ -9,7 +9,7 @@ using Project.DigitalMarket.Libs.Exceptions;
 
 namespace Project.DigitalMarket.Application.Services.Business.Product
 {
-    public class CommentService(ILazyloadProvider lazyloadProvider) : DigitalMarketServiceBase(lazyloadProvider), ICommentService
+    public class CommentService(ILazyloadProvider lazyloadProvider) : DigitalMarketServiceBase<CommentService>(lazyloadProvider), ICommentService
     {
         private ICommentManager _commentManager => _lazyloadProvider.LazyGetRequiredService<ICommentManager>();
 

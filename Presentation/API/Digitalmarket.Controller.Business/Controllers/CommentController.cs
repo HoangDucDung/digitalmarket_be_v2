@@ -10,7 +10,7 @@ namespace Digitalmarket.Controller.Business.Controllers
 {
     [ApiController]
     [Route("api/[controller]s")]
-    public class CommentController(ILazyloadProvider lazyloadProvider) : DigitalBaseController(lazyloadProvider)
+    public class CommentController(ILazyloadProvider lazyloadProvider) : DigitalBaseController<CommentController>(lazyloadProvider)
     {
         private ICommentService _commentService => _lazyloadProvider.LazyGetRequiredService<ICommentService>();
 

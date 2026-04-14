@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Extension\\Project.DigitalMarket.Extension\\Project.DigitalMarket.Extension.csproj": {}
+    "C:\\Users\\MIC\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Extension\\Project.DigitalMarket.Extension\\Project.DigitalMarket.Extension.csproj": {}
   },
   "projects": {
-    "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Extension\\Project.DigitalMarket.Extension\\Project.DigitalMarket.Extension.csproj": {
+    "C:\\Users\\MIC\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Extension\\Project.DigitalMarket.Extension\\Project.DigitalMarket.Extension.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Extension\\Project.DigitalMarket.Extension\\Project.DigitalMarket.Extension.csproj",
+        "projectUniqueName": "C:\\Users\\MIC\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Extension\\Project.DigitalMarket.Extension\\Project.DigitalMarket.Extension.csproj",
         "projectName": "Project.DigitalMarket.Extension",
-        "projectPath": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Extension\\Project.DigitalMarket.Extension\\Project.DigitalMarket.Extension.csproj",
-        "packagesPath": "C:\\Users\\FPTSHOP\\.nuget\\packages\\",
-        "outputPath": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Extension\\Project.DigitalMarket.Extension\\obj\\",
+        "projectPath": "C:\\Users\\MIC\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Extension\\Project.DigitalMarket.Extension\\Project.DigitalMarket.Extension.csproj",
+        "packagesPath": "C:\\Users\\MIC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\MIC\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Extension\\Project.DigitalMarket.Extension\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\FPTSHOP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MIC\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -44,7 +45,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -65,7 +66,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

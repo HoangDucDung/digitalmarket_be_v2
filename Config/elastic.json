@@ -1,0 +1,7 @@
+{
+  "ElasticConfig": {
+    "Url": "http://localhost:9200",
+    "UserName": "elastic",
+    "Password": "123456"
+  }
+}

@@ -9,7 +9,7 @@ namespace Digitalmarket.Controller.Cart.Controllers
 {
     [ApiController]
     [Route("api/[controller]s")]
-    public class CartController(ILazyloadProvider lazyloadProvider) : DigitalBaseController(lazyloadProvider)
+    public class CartController(ILazyloadProvider lazyloadProvider) : DigitalBaseController<CartController>(lazyloadProvider)
     {
         private ICartService _cartService => _lazyloadProvider.LazyGetRequiredService<ICartService>();
 

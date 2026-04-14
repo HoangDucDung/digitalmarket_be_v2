@@ -36,6 +36,13 @@ namespace Project.DigitalMarket.Host.Base.Configs
             GetSectionConfigure<ConnectionString>(services, configuration, "ConnectionString");
         }
 
+        public static void GetElasticConfig(this IServiceCollection services, IConfiguration configuration)
+        {
+            GetSectionConfigure<ElasticConfig>(services, configuration, "ElasticConfig");
+        }
+
+
+        #region kafka
         public static void GetKafkaConfig(this IServiceCollection services, IConfiguration configuration)
         {
             GetSectionConfigure<KafkaConfig>(services, configuration, "TestNumberOneKafka");
@@ -50,5 +57,6 @@ namespace Project.DigitalMarket.Host.Base.Configs
         {
             GetSectionConfigure<ConsumerConfig>(services, configuration, "TestKafka");
         }
+        #endregion
     }
 }

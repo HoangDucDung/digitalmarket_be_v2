@@ -9,7 +9,7 @@ namespace Digitalmarket.Controller.Business.Controllers
 {
     [ApiController]
     [Route("api/categories")]
-    public class CategoryController(ILazyloadProvider lazyloadProvider) : DigitalBaseController(lazyloadProvider)
+    public class CategoryController(ILazyloadProvider lazyloadProvider) : DigitalBaseController<CategoryController>(lazyloadProvider)
     {
         private IProductService _productService => _lazyloadProvider.LazyGetRequiredService<IProductService>();
 

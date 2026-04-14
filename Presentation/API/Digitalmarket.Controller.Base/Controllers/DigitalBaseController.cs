@@ -3,21 +3,18 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Project.DigitalMarket.Libs.DependencyInjection;
 using Project.DigitalMarket.Domain.Models;
+using Microsoft.Extensions.Logging;
 
 namespace Digitalmarket.Controller.Base.Controllers
 {
     [ApiController]
     [Authorize]
     [Route("api/[controller]")]
-    public class DigitalBaseController : ControllerBase
+    public class DigitalBaseController<T>(ILazyloadProvider lazyloadProvider) : ControllerBase
     {
-        protected ILazyloadProvider _lazyloadProvider;
+        protected ILazyloadProvider _lazyloadProvider = lazyloadProvider;
+        protected ILogger _logger => _lazyloadProvider.LazyGetRequiredService<ILoggerFactory>().CreateLogger(typeof(T));
         private UserContext? _userContext;
-
-        public DigitalBaseController(ILazyloadProvider lazyloadProvider)
-        {
-            _lazyloadProvider = lazyloadProvider;
-        }
 
         /// <summary>
         /// Thông tin người dùng hiện tại trích xuất từ JWT token

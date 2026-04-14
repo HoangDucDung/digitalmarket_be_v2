@@ -88,6 +88,136 @@
           }
         }
       },
+      "Elastic.Channels/0.14.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Threading.Channels": "8.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/Elastic.Channels.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/Elastic.Channels.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Elastic.CommonSchema/9.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Elastic.CommonSchema.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Elastic.CommonSchema.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Elastic.CommonSchema.NLog/9.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Elastic.CommonSchema": "9.0.0",
+          "NLog": "6.0.2"
+        },
+        "compile": {
+          "lib/net8.0/Elastic.CommonSchema.NLog.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Elastic.CommonSchema.NLog.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Elastic.Ingest.Elasticsearch/0.14.0": {
+        "type": "package",
+        "dependencies": {
+          "Elastic.Ingest.Transport": "0.14.0"
+        },
+        "compile": {
+          "lib/net8.0/Elastic.Ingest.Elasticsearch.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Elastic.Ingest.Elasticsearch.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Elastic.Ingest.Elasticsearch.CommonSchema/9.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Elastic.CommonSchema": "9.0.0",
+          "Elastic.Ingest.Elasticsearch": "0.14.0"
+        },
+        "compile": {
+          "lib/net8.0/Elastic.Ingest.Elasticsearch.CommonSchema.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Elastic.Ingest.Elasticsearch.CommonSchema.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Elastic.Ingest.Transport/0.14.0": {
+        "type": "package",
+        "dependencies": {
+          "Elastic.Channels": "0.14.0",
+          "Elastic.Transport": "0.10.0",
+          "System.Threading.Channels": "8.0.0"
+        },
+        "compile": {
+          "lib/net8.0/Elastic.Ingest.Transport.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Elastic.Ingest.Transport.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Elastic.NLog.Targets/9.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Elastic.CommonSchema.NLog": "9.0.0",
+          "Elastic.Ingest.Elasticsearch.CommonSchema": "9.0.0"
+        },
+        "compile": {
+          "lib/net8.0/Elastic.NLog.Targets.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Elastic.NLog.Targets.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Elastic.Transport/0.10.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.7.0"
+        },
+        "compile": {
+          "lib/net8.0/Elastic.Transport.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Elastic.Transport.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "MailKit/4.15.1": {
         "type": "package",
         "dependencies": {
@@ -741,6 +871,56 @@
           }
         }
       },
+      "NLog/6.1.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/NLog.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/NLog.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NLog.Extensions.Logging/6.1.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "8.0.0",
+          "Microsoft.Extensions.Logging": "8.0.0",
+          "NLog": "6.1.1"
+        },
+        "compile": {
+          "lib/net8.0/NLog.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/NLog.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NLog.Web.AspNetCore/6.1.2": {
+        "type": "package",
+        "dependencies": {
+          "NLog.Extensions.Logging": "6.1.2"
+        },
+        "compile": {
+          "lib/net8.0/NLog.Web.AspNetCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/NLog.Web.AspNetCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Swashbuckle.AspNetCore/6.6.2": {
         "type": "package",
         "dependencies": {
@@ -1214,6 +1394,22 @@
           }
         }
       },
+      "System.Threading.Channels/8.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/System.Threading.Channels.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/System.Threading.Channels.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
       "System.Threading.Tasks.Extensions/4.5.4": {
         "type": "package",
         "compile": {
@@ -1466,6 +1662,198 @@
         "lib/netstandard2.0/BouncyCastle.Cryptography.dll",
         "lib/netstandard2.0/BouncyCastle.Cryptography.xml",
         "packageIcon.png"
+      ]
+    },
+    "Elastic.Channels/0.14.0": {
+      "sha512": "8vRZXKUntTgsN6TbbOVnKkFbq7hy4vwEPm2GYqM1oXGpOprTOdIp/l0ie6LAb8hm+is9CPIywqNZdfOp7KU+YQ==",
+      "type": "package",
+      "path": "elastic.channels/0.14.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "elastic.channels.0.14.0.nupkg.sha512",
+        "elastic.channels.nuspec",
+        "lib/netstandard2.0/Elastic.Channels.dll",
+        "lib/netstandard2.0/Elastic.Channels.pdb",
+        "lib/netstandard2.0/Elastic.Channels.xml",
+        "lib/netstandard2.1/Elastic.Channels.dll",
+        "lib/netstandard2.1/Elastic.Channels.pdb",
+        "lib/netstandard2.1/Elastic.Channels.xml",
+        "license.txt",
+        "nuget-icon.png"
+      ]
+    },
+    "Elastic.CommonSchema/9.0.0": {
+      "sha512": "5I7rbqLobJZY2cf9EratD2peUva31eyfSwuf8Qm8gM5ButP5F/NNzcUuvsuAleBQXmAJb55CLnMxA9oMGYHdsg==",
+      "type": "package",
+      "path": "elastic.commonschema/9.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "elastic.commonschema.9.0.0.nupkg.sha512",
+        "elastic.commonschema.nuspec",
+        "lib/net462/Elastic.CommonSchema.dll",
+        "lib/net462/Elastic.CommonSchema.pdb",
+        "lib/net462/Elastic.CommonSchema.xml",
+        "lib/net8.0/Elastic.CommonSchema.dll",
+        "lib/net8.0/Elastic.CommonSchema.pdb",
+        "lib/net8.0/Elastic.CommonSchema.xml",
+        "lib/net9.0/Elastic.CommonSchema.dll",
+        "lib/net9.0/Elastic.CommonSchema.pdb",
+        "lib/net9.0/Elastic.CommonSchema.xml",
+        "lib/netstandard2.0/Elastic.CommonSchema.dll",
+        "lib/netstandard2.0/Elastic.CommonSchema.pdb",
+        "lib/netstandard2.0/Elastic.CommonSchema.xml",
+        "lib/netstandard2.1/Elastic.CommonSchema.dll",
+        "lib/netstandard2.1/Elastic.CommonSchema.pdb",
+        "lib/netstandard2.1/Elastic.CommonSchema.xml",
+        "license.txt",
+        "nuget-icon.png"
+      ]
+    },
+    "Elastic.CommonSchema.NLog/9.0.0": {
+      "sha512": "p7Y11CAQqfVeDAU3RxjYflYPPDeTWYcTCnFby5+0dMsq2UnNN0q2trVz1FF9sItMfZPje5RY7sWoxDrms24Cfw==",
+      "type": "package",
+      "path": "elastic.commonschema.nlog/9.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "elastic.commonschema.nlog.9.0.0.nupkg.sha512",
+        "elastic.commonschema.nlog.nuspec",
+        "lib/net462/Elastic.CommonSchema.NLog.dll",
+        "lib/net462/Elastic.CommonSchema.NLog.pdb",
+        "lib/net462/Elastic.CommonSchema.NLog.xml",
+        "lib/net8.0/Elastic.CommonSchema.NLog.dll",
+        "lib/net8.0/Elastic.CommonSchema.NLog.pdb",
+        "lib/net8.0/Elastic.CommonSchema.NLog.xml",
+        "lib/netstandard2.0/Elastic.CommonSchema.NLog.dll",
+        "lib/netstandard2.0/Elastic.CommonSchema.NLog.pdb",
+        "lib/netstandard2.0/Elastic.CommonSchema.NLog.xml",
+        "lib/netstandard2.1/Elastic.CommonSchema.NLog.dll",
+        "lib/netstandard2.1/Elastic.CommonSchema.NLog.pdb",
+        "lib/netstandard2.1/Elastic.CommonSchema.NLog.xml",
+        "license.txt",
+        "nuget-icon.png"
+      ]
+    },
+    "Elastic.Ingest.Elasticsearch/0.14.0": {
+      "sha512": "+a1wTp7Z9ACzBlh1pt4r59HK3tpqimJGcbi5w4a/dMZ5/QlXJ6xj/yaSIQ6NgecQIUQVsibH0eFWGuwt2/rlTA==",
+      "type": "package",
+      "path": "elastic.ingest.elasticsearch/0.14.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "elastic.ingest.elasticsearch.0.14.0.nupkg.sha512",
+        "elastic.ingest.elasticsearch.nuspec",
+        "lib/net8.0/Elastic.Ingest.Elasticsearch.dll",
+        "lib/net8.0/Elastic.Ingest.Elasticsearch.pdb",
+        "lib/net8.0/Elastic.Ingest.Elasticsearch.xml",
+        "lib/netstandard2.0/Elastic.Ingest.Elasticsearch.dll",
+        "lib/netstandard2.0/Elastic.Ingest.Elasticsearch.pdb",
+        "lib/netstandard2.0/Elastic.Ingest.Elasticsearch.xml",
+        "lib/netstandard2.1/Elastic.Ingest.Elasticsearch.dll",
+        "lib/netstandard2.1/Elastic.Ingest.Elasticsearch.pdb",
+        "lib/netstandard2.1/Elastic.Ingest.Elasticsearch.xml",
+        "license.txt",
+        "nuget-icon.png"
+      ]
+    },
+    "Elastic.Ingest.Elasticsearch.CommonSchema/9.0.0": {
+      "sha512": "TCmz6N/Vpspt9NxiFy2oWYqu4wc5UOAEqR7TZ3NNu/mLRfKx/0TUV3SXW+jIsacIsh/i5nb8JXRERwd/LbGpHg==",
+      "type": "package",
+      "path": "elastic.ingest.elasticsearch.commonschema/9.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "elastic.ingest.elasticsearch.commonschema.9.0.0.nupkg.sha512",
+        "elastic.ingest.elasticsearch.commonschema.nuspec",
+        "lib/net8.0/Elastic.Ingest.Elasticsearch.CommonSchema.dll",
+        "lib/net8.0/Elastic.Ingest.Elasticsearch.CommonSchema.pdb",
+        "lib/net8.0/Elastic.Ingest.Elasticsearch.CommonSchema.xml",
+        "lib/netstandard2.0/Elastic.Ingest.Elasticsearch.CommonSchema.dll",
+        "lib/netstandard2.0/Elastic.Ingest.Elasticsearch.CommonSchema.pdb",
+        "lib/netstandard2.0/Elastic.Ingest.Elasticsearch.CommonSchema.xml",
+        "lib/netstandard2.1/Elastic.Ingest.Elasticsearch.CommonSchema.dll",
+        "lib/netstandard2.1/Elastic.Ingest.Elasticsearch.CommonSchema.pdb",
+        "lib/netstandard2.1/Elastic.Ingest.Elasticsearch.CommonSchema.xml",
+        "license.txt",
+        "nuget-icon.png"
+      ]
+    },
+    "Elastic.Ingest.Transport/0.14.0": {
+      "sha512": "XoBT9ub4imzF+KN14MWEVyS3O40teXQ4uPLkTL6XV6vZMbSjRvohg1/4B4YK0EBkDUu71xHLd6rupdwJXwYl8Q==",
+      "type": "package",
+      "path": "elastic.ingest.transport/0.14.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "elastic.ingest.transport.0.14.0.nupkg.sha512",
+        "elastic.ingest.transport.nuspec",
+        "lib/net8.0/Elastic.Ingest.Transport.dll",
+        "lib/net8.0/Elastic.Ingest.Transport.pdb",
+        "lib/net8.0/Elastic.Ingest.Transport.xml",
+        "lib/netstandard2.0/Elastic.Ingest.Transport.dll",
+        "lib/netstandard2.0/Elastic.Ingest.Transport.pdb",
+        "lib/netstandard2.0/Elastic.Ingest.Transport.xml",
+        "lib/netstandard2.1/Elastic.Ingest.Transport.dll",
+        "lib/netstandard2.1/Elastic.Ingest.Transport.pdb",
+        "lib/netstandard2.1/Elastic.Ingest.Transport.xml",
+        "license.txt",
+        "nuget-icon.png"
+      ]
+    },
+    "Elastic.NLog.Targets/9.0.0": {
+      "sha512": "97z5RM5/IUfquH32VisdBQ2uPOH17J5xl58ke3qT0XDUPeI6jYWkrvku5APo6QTpCwhcdGlq9Ffz24sZmakFug==",
+      "type": "package",
+      "path": "elastic.nlog.targets/9.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "elastic.nlog.targets.9.0.0.nupkg.sha512",
+        "elastic.nlog.targets.nuspec",
+        "lib/net8.0/Elastic.NLog.Targets.dll",
+        "lib/net8.0/Elastic.NLog.Targets.pdb",
+        "lib/net8.0/Elastic.NLog.Targets.xml",
+        "lib/netstandard2.0/Elastic.NLog.Targets.dll",
+        "lib/netstandard2.0/Elastic.NLog.Targets.pdb",
+        "lib/netstandard2.0/Elastic.NLog.Targets.xml",
+        "lib/netstandard2.1/Elastic.NLog.Targets.dll",
+        "lib/netstandard2.1/Elastic.NLog.Targets.pdb",
+        "lib/netstandard2.1/Elastic.NLog.Targets.xml",
+        "license.txt",
+        "nuget-icon.png"
+      ]
+    },
+    "Elastic.Transport/0.10.0": {
+      "sha512": "xtEahhp8ZWj5T/uWbiHcodQrz3P/n1il/CFLzbpfk6ygKQTHn6RxDF16G4LiDqr3GrAleU6urOIdbWJ6+YDjpA==",
+      "type": "package",
+      "path": "elastic.transport/0.10.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "elastic.transport.0.10.0.nupkg.sha512",
+        "elastic.transport.nuspec",
+        "lib/net462/Elastic.Transport.dll",
+        "lib/net462/Elastic.Transport.pdb",
+        "lib/net462/Elastic.Transport.xml",
+        "lib/net8.0/Elastic.Transport.dll",
+        "lib/net8.0/Elastic.Transport.pdb",
+        "lib/net8.0/Elastic.Transport.xml",
+        "lib/netstandard2.0/Elastic.Transport.dll",
+        "lib/netstandard2.0/Elastic.Transport.pdb",
+        "lib/netstandard2.0/Elastic.Transport.xml",
+        "lib/netstandard2.1/Elastic.Transport.dll",
+        "lib/netstandard2.1/Elastic.Transport.pdb",
+        "lib/netstandard2.1/Elastic.Transport.xml",
+        "license.txt",
+        "nuget-icon.png"
       ]
     },
     "MailKit/4.15.1": {
@@ -2724,6 +3112,76 @@
         "mimekit.nuspec"
       ]
     },
+    "NLog/6.1.2": {
+      "sha512": "y/3o6RVhHHeAMDaUdETeEtisYyypZApxeKd3k8HIH4IdqFzJNF5sXuJ07hNtAq6hLMup+yh3zuTckpFJqucOrw==",
+      "type": "package",
+      "path": "nlog/6.1.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "N.png",
+        "lib/net35/NLog.dll",
+        "lib/net35/NLog.xml",
+        "lib/net45/NLog.dll",
+        "lib/net45/NLog.xml",
+        "lib/net46/NLog.dll",
+        "lib/net46/NLog.xml",
+        "lib/netstandard2.0/NLog.dll",
+        "lib/netstandard2.0/NLog.xml",
+        "lib/netstandard2.1/NLog.dll",
+        "lib/netstandard2.1/NLog.xml",
+        "nlog.6.1.2.nupkg.sha512",
+        "nlog.nuspec"
+      ]
+    },
+    "NLog.Extensions.Logging/6.1.2": {
+      "sha512": "CDak9fN3yqDrmFth5OX/8WpRdEhHOHDK9O4Lej4oWG0r9MygEKfwZXgl1F5ixSnz0Sk3aW/3a/irjtttJUGDDw==",
+      "type": "package",
+      "path": "nlog.extensions.logging/6.1.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "N.png",
+        "README.md",
+        "lib/net10.0/NLog.Extensions.Logging.dll",
+        "lib/net10.0/NLog.Extensions.Logging.xml",
+        "lib/net462/NLog.Extensions.Logging.dll",
+        "lib/net462/NLog.Extensions.Logging.xml",
+        "lib/net6.0/NLog.Extensions.Logging.dll",
+        "lib/net6.0/NLog.Extensions.Logging.xml",
+        "lib/net8.0/NLog.Extensions.Logging.dll",
+        "lib/net8.0/NLog.Extensions.Logging.xml",
+        "lib/netstandard2.0/NLog.Extensions.Logging.dll",
+        "lib/netstandard2.0/NLog.Extensions.Logging.xml",
+        "lib/netstandard2.1/NLog.Extensions.Logging.dll",
+        "lib/netstandard2.1/NLog.Extensions.Logging.xml",
+        "nlog.extensions.logging.6.1.2.nupkg.sha512",
+        "nlog.extensions.logging.nuspec"
+      ]
+    },
+    "NLog.Web.AspNetCore/6.1.2": {
+      "sha512": "PLXSRq7SYKhneMMd7+Ds4/gOVg++CDNpdN67ke6gp837aW4e70aQWuhMFHVL4YnFpO1UL+5QGEHP4w9wKZfwtg==",
+      "type": "package",
+      "path": "nlog.web.aspnetcore/6.1.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "N.png",
+        "README.md",
+        "lib/net10.0/NLog.Web.AspNetCore.dll",
+        "lib/net10.0/NLog.Web.AspNetCore.xml",
+        "lib/net462/NLog.Web.AspNetCore.dll",
+        "lib/net462/NLog.Web.AspNetCore.xml",
+        "lib/net6.0/NLog.Web.AspNetCore.dll",
+        "lib/net6.0/NLog.Web.AspNetCore.xml",
+        "lib/net8.0/NLog.Web.AspNetCore.dll",
+        "lib/net8.0/NLog.Web.AspNetCore.xml",
+        "lib/netstandard2.0/NLog.Web.AspNetCore.dll",
+        "lib/netstandard2.0/NLog.Web.AspNetCore.xml",
+        "nlog.web.aspnetcore.6.1.2.nupkg.sha512",
+        "nlog.web.aspnetcore.nuspec"
+      ]
+    },
     "Swashbuckle.AspNetCore/6.6.2": {
       "sha512": "+NB4UYVYN6AhDSjW0IJAd1AGD8V33gemFNLPaxKTtPkHB+HaKAKf9MGAEUPivEWvqeQfcKIw8lJaHq6LHljRuw==",
       "type": "package",
@@ -3534,6 +3992,38 @@
         "version.txt"
       ]
     },
+    "System.Threading.Channels/8.0.0": {
+      "sha512": "CMaFr7v+57RW7uZfZkPExsPB6ljwzhjACWW1gfU35Y56rk72B/Wu+sTqxVmGSk4SFUlPc3cjeKND0zktziyjBA==",
+      "type": "package",
+      "path": "system.threading.channels/8.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.Threading.Channels.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Threading.Channels.targets",
+        "lib/net462/System.Threading.Channels.dll",
+        "lib/net462/System.Threading.Channels.xml",
+        "lib/net6.0/System.Threading.Channels.dll",
+        "lib/net6.0/System.Threading.Channels.xml",
+        "lib/net7.0/System.Threading.Channels.dll",
+        "lib/net7.0/System.Threading.Channels.xml",
+        "lib/net8.0/System.Threading.Channels.dll",
+        "lib/net8.0/System.Threading.Channels.xml",
+        "lib/netstandard2.0/System.Threading.Channels.dll",
+        "lib/netstandard2.0/System.Threading.Channels.xml",
+        "lib/netstandard2.1/System.Threading.Channels.dll",
+        "lib/netstandard2.1/System.Threading.Channels.xml",
+        "system.threading.channels.8.0.0.nupkg.sha512",
+        "system.threading.channels.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "System.Threading.Tasks.Extensions/4.5.4": {
       "sha512": "zteT+G8xuGu6mS+mzDzYXbzS7rd3K6Fjb9RiZlYlJPam2/hU7JCBZBVEcywNuR+oZ1ncTvc/cq0faRr3P01OVg==",
       "type": "package",
@@ -3642,6 +4132,10 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "Elastic.CommonSchema.NLog >= 9.0.0",
+      "Elastic.NLog.Targets >= 9.0.0",
+      "NLog >= 6.1.2",
+      "NLog.Web.AspNetCore >= 6.1.2",
       "Project.DigitalMarket.Application >= 1.0.0",
       "Project.DigitalMarket.Application.Contract >= 1.0.0",
       "Project.DigitalMarket.Host.Base >= 1.0.0",
@@ -3651,23 +4145,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\FPTSHOP\\.nuget\\packages\\": {},
+    "C:\\Users\\MIC\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Presentation\\API\\Digitalmarket.Controller.Base\\Digitalmarket.Controller.Base.csproj",
+      "projectUniqueName": "C:\\Users\\MIC\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Presentation\\API\\Digitalmarket.Controller.Base\\Digitalmarket.Controller.Base.csproj",
       "projectName": "Digitalmarket.Controller.Base",
-      "projectPath": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Presentation\\API\\Digitalmarket.Controller.Base\\Digitalmarket.Controller.Base.csproj",
-      "packagesPath": "C:\\Users\\FPTSHOP\\.nuget\\packages\\",
-      "outputPath": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Presentation\\API\\Digitalmarket.Controller.Base\\obj\\",
+      "projectPath": "C:\\Users\\MIC\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Presentation\\API\\Digitalmarket.Controller.Base\\Digitalmarket.Controller.Base.csproj",
+      "packagesPath": "C:\\Users\\MIC\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\MIC\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Presentation\\API\\Digitalmarket.Controller.Base\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\FPTSHOP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\MIC\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3676,26 +4170,27 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application.Contract\\Project.DigitalMarket.Application.Contract.csproj": {
-              "projectPath": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application.Contract\\Project.DigitalMarket.Application.Contract.csproj"
+            "C:\\Users\\MIC\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application.Contract\\Project.DigitalMarket.Application.Contract.csproj": {
+              "projectPath": "C:\\Users\\MIC\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application.Contract\\Project.DigitalMarket.Application.Contract.csproj"
             },
-            "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application\\Project.DigitalMarket.Application.csproj": {
-              "projectPath": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application\\Project.DigitalMarket.Application.csproj"
+            "C:\\Users\\MIC\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application\\Project.DigitalMarket.Application.csproj": {
+              "projectPath": "C:\\Users\\MIC\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Application\\Project.DigitalMarket.Application.csproj"
             },
-            "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure.Mail\\Project.DigitalMarket.Infrastructure.Mail.csproj": {
-              "projectPath": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure.Mail\\Project.DigitalMarket.Infrastructure.Mail.csproj"
+            "C:\\Users\\MIC\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure.Mail\\Project.DigitalMarket.Infrastructure.Mail.csproj": {
+              "projectPath": "C:\\Users\\MIC\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure.Mail\\Project.DigitalMarket.Infrastructure.Mail.csproj"
             },
-            "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure.MsSql\\Project.DigitalMarket.Infrastructure.MsSql.csproj": {
-              "projectPath": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure.MsSql\\Project.DigitalMarket.Infrastructure.MsSql.csproj"
+            "C:\\Users\\MIC\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure.MsSql\\Project.DigitalMarket.Infrastructure.MsSql.csproj": {
+              "projectPath": "C:\\Users\\MIC\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Infrastructure\\Project.DigitalMarket.Infrastructure.MsSql\\Project.DigitalMarket.Infrastructure.MsSql.csproj"
             },
-            "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj": {
-              "projectPath": "E:\\tap_hoa_so\\digitalmarket_be_v2\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj"
+            "C:\\Users\\MIC\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj": {
+              "projectPath": "C:\\Users\\MIC\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj"
             }
           }
         }
@@ -3710,12 +4205,28 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.300"
+      "SdkAnalysisLevel": "10.0.200"
     },
     "frameworks": {
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "Elastic.CommonSchema.NLog": {
+            "target": "Package",
+            "version": "[9.0.0, )"
+          },
+          "Elastic.NLog.Targets": {
+            "target": "Package",
+            "version": "[9.0.0, )"
+          },
+          "NLog": {
+            "target": "Package",
+            "version": "[6.1.2, )"
+          },
+          "NLog.Web.AspNetCore": {
+            "target": "Package",
+            "version": "[6.1.2, )"
+          },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
             "version": "[6.6.2, )"
@@ -3740,7 +4251,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

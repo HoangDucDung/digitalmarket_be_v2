@@ -12,7 +12,7 @@ namespace Digitalmarket.Controller.Auth.Controllers
     /// </summary>
     [ApiController]
     [Route("api/[controller]")]
-    public class AuthController(ILazyloadProvider lazyloadProvider) : DigitalBaseController(lazyloadProvider)
+    public class AuthController(ILazyloadProvider lazyloadProvider) : DigitalBaseController<AuthController>(lazyloadProvider)
     {
         private IAuthService _authService => _lazyloadProvider.LazyGetRequiredService<IAuthService>();
 

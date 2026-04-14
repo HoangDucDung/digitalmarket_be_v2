@@ -4,11 +4,10 @@ using Project.DigitalMarket.Application.Contract.Services.Business.Product;
 using Project.DigitalMarket.Domain.Managers.Business.Product;
 using Project.DigitalMarket.Domain.Models.Business.Product;
 using Project.DigitalMarket.Libs.DependencyInjection;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace Project.DigitalMarket.Application.Services.Business.Product
 {
-    public class ProductService(ILazyloadProvider lazyloadProvider) : DigitalMarketServiceBase(lazyloadProvider), IProductService
+    public class ProductService(ILazyloadProvider lazyloadProvider) : DigitalMarketServiceBase<ProductService>(lazyloadProvider), IProductService
     {
         private IProductManager _productManager => _lazyloadProvider.LazyGetRequiredService<IProductManager>();
 

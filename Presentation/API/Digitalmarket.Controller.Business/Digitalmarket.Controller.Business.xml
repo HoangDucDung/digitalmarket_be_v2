@@ -64,6 +64,11 @@
             Xóa (soft-delete) sản phẩm - seller hiện tại
             </summary>
         </member>
+        <member name="M:Digitalmarket.Controller.Business.Controllers.ProductController.DeleteProductByItemId(System.Guid)">
+            <summary>
+            Xóa (soft-delete) sản phẩm theo ItemId (query) — seller hiện tại
+            </summary>
+        </member>
         <member name="T:Digitalmarket.Controller.Business.Controllers.SellerController">
             <summary>
             Controller xử lý các nghiệp vụ liên quan đến Seller

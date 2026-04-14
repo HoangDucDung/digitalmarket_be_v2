@@ -8,6 +8,7 @@ using Project.DigitalMarket.Libs.Exceptions;
 using Project.DigitalMarket.Libs.Constants.ErrorCode;
 using Project.DigitalMarket.Domain.Share.Constants.Auths;
 using Project.Extensions.Extensions;
+using Microsoft.Extensions.Logging;
 
 namespace Project.DigitalMarket.Application.Services.Auths
 {
@@ -15,7 +16,7 @@ namespace Project.DigitalMarket.Application.Services.Auths
     /// Service xử lý đăng ký, đăng nhập và tạo JWT token.
     /// Chuyển lại Application theo yêu cầu (Business Logic layer).
     /// </summary>
-    public class AuthService(ILazyloadProvider lazyloadProvider) : DigitalMarketServiceBase(lazyloadProvider), IAuthService
+    public class AuthService(ILazyloadProvider lazyloadProvider) : DigitalMarketServiceBase<AuthService>(lazyloadProvider), IAuthService
     {
         private UserManager<UserEntity> _userManager => _lazyloadProvider.LazyGetRequiredService<UserManager<UserEntity>>();
         private SignInManager<UserEntity> _signInManager => _lazyloadProvider.LazyGetRequiredService<SignInManager<UserEntity>>();
@@ -27,6 +28,7 @@ namespace Project.DigitalMarket.Application.Services.Auths
         /// </summary>
         public async Task<AuthResponseDto> RegisterAsync(RegisterDto registerDto)
         {
+            _logger.LogDebug("Bắt đầu đăng ký tài khoản mới với email: {Email}", registerDto.Email);
             // Kiểm tra email đã tồn tại chưa
             var existingUser = await _userManager.FindByEmailAsync(registerDto.Email);
             if (existingUser != null)

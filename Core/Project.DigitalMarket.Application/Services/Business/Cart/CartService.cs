@@ -5,7 +5,7 @@ using Project.DigitalMarket.Libs.DependencyInjection;
 
 namespace Project.DigitalMarket.Application.Services.Business.Cart
 {
-    public class CartService(ILazyloadProvider lazyloadProvider) : DigitalMarketServiceBase(lazyloadProvider), ICartService
+    public class CartService(ILazyloadProvider lazyloadProvider) : DigitalMarketServiceBase<CartService>(lazyloadProvider), ICartService
     {
         private ICartManager _cartManager => _lazyloadProvider.LazyGetRequiredService<ICartManager>();
 
