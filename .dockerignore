@@ -16,3 +16,7 @@
 **/.dockerignore
 **/Dockerfile
 **/.github
+
+# Exclude appsettings from base projects (keep only in main entry point)
+Presentation/API/Digitalmarket.Controller.Base/appsettings.json
+Presentation/API/Digitalmarket.Controller.Base/appsettings.Development.json
