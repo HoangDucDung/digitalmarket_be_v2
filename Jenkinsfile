@@ -43,6 +43,17 @@ pipeline {
         }
 
         // ──────────────────────────────────────────────
+        // 2.5. Chạy Unit Tests (Phần cốt lõi của CI)
+        // ──────────────────────────────────────────────
+        // stage('Run Tests') {
+        //     steps {
+        //         echo '🧪 Đang chạy Unit Tests...'
+        //         // Ví dụ với .NET:
+        //         sh 'dotnet test Digitalmarket.sln --logger "trx;LogFileName=test_results.trx"'
+        //     }
+        // }
+
+        // ──────────────────────────────────────────────
         // 3. Build Docker images song song (Microservices)
         // ──────────────────────────────────────────────
         stage('Docker Build - Microservices') {
