@@ -8,12 +8,12 @@ using Project.DigitalMarket.Libs.Exceptions;
 using Project.DigitalMarket.Libs.Constants.ErrorCode;
 using Project.Extensions.Extensions;
 
-namespace Project.DigitalMarket.Domain.Managers.Auths.Wallet
+namespace Project.DigitalMarket.Domain.Managers.Business.Wallet
 {
     /// <summary>
     /// Triển khai Manager quản lý nghiệp vụ lõi cho Ví (Core Entity Logic)
     /// </summary>
-    public class WalletManager(ILazyloadProvider lazyloadProvider) : ManagerBase(lazyloadProvider), IWalletManager
+    internal sealed class WalletManager(ILazyloadProvider lazyloadProvider) : ManagerBase(lazyloadProvider), IWalletManager
     {
         private IWalletRepository _walletRepository => _lazyloadProvider.LazyGetRequiredService<IWalletRepository>();
         private IWalletTransactionRepository _transactionRepository => _lazyloadProvider.LazyGetRequiredService<IWalletTransactionRepository>();
@@ -80,19 +80,6 @@ namespace Project.DigitalMarket.Domain.Managers.Auths.Wallet
             await _transactionRepository.AddAsync(transaction);
             _walletRepository.Update(wallet);
             await _walletRepository.SaveChangesAsync();
-        }
-
-        /// <summary>
-        /// Truy vấn lịch sử giao dịch của người dùng
-        /// </summary>
-        public async Task<List<WalletTransactionEntity>> GetTransactionsAsync(Guid userId, int page = 1, int pageSize = 10)
-        {
-            var wallet = await GetOrCreateWalletAsync(userId);
-            return await _transactionRepository.GetByCondition(x => x.WalletId == wallet.UserId)
-                .OrderByDescending(x => x.CreatedAt)
-                .Skip((page - 1) * pageSize)
-                .Take(pageSize)
-                .ToListAsync();
         }
     }
 }

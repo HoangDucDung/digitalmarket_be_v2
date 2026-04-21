@@ -9,35 +9,8 @@ namespace Project.DigitalMarket.Domain.Managers.Business.Product
     public interface IProductManager
     {
         /// <summary>
-        /// Lấy danh sách sản phẩm cho feed khám phá hàng ngày
-        /// </summary>
-        Task<ProductDiscoveryResult> GetDailyDiscoverAsync(ProductDiscoveryReq request);
-
-        /// <summary>
-        /// Lấy thông tin chi tiết của một sản phẩm bất kỳ
-        /// </summary>
-        Task<ProductDetailResult?> GetProductDetailAsync(ProductDetailReq request);
-
-        /// <summary>
-        /// Thêm sản phẩm mới
+        /// Thêm sản phẩm mới (Nghiệp vụ đặc thù: sinh slug, xử lý variant, validation phức tạp)
         /// </summary>
         Task<Guid> AddProductAsync(ProductCreateReq request);
-
-        /// <summary>
-        /// Cập nhật sản phẩm (patch) của seller
-        /// </summary>
-        Task<bool> UpdateProductAsync(ProductUpdateReq request);
-
-        /// <summary>
-        /// Xóa (soft-delete) sản phẩm của seller
-        /// </summary>
-        Task<bool> DeleteProductAsync(Guid sellerId, Guid productId);
-
-        /// <summary>
-        /// Xóa (soft-delete) sản phẩm theo ItemId (trùng ProductId trong DB).
-        /// </summary>
-        Task<bool> DeleteProductByItemIdAsync(Guid sellerId, Guid itemId);
-
-        Task<List<CategoryNodeResult>> GetCategoryTreeAsync(CategoryTreeReq request);
     }
 }

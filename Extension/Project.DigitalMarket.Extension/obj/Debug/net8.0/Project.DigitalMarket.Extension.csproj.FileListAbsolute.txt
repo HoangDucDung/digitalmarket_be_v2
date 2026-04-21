@@ -22,3 +22,15 @@ C:\Users\MIC\Documents\Code\hddung\digitalmarket_be_v2\Extension\Project.Digital
 C:\Users\MIC\Documents\Code\hddung\digitalmarket_be_v2\Extension\Project.DigitalMarket.Extension\obj\Debug\net8.0\refint\Project.DigitalMarket.Extension.dll
 C:\Users\MIC\Documents\Code\hddung\digitalmarket_be_v2\Extension\Project.DigitalMarket.Extension\obj\Debug\net8.0\Project.DigitalMarket.Extension.pdb
 C:\Users\MIC\Documents\Code\hddung\digitalmarket_be_v2\Extension\Project.DigitalMarket.Extension\obj\Debug\net8.0\ref\Project.DigitalMarket.Extension.dll
+C:\Users\MIC\OneDrive\Documents\Code\hddung\digitalmarket_be_v2\Extension\Project.DigitalMarket.Extension\bin\Debug\net8.0\Project.DigitalMarket.Extension.deps.json
+C:\Users\MIC\OneDrive\Documents\Code\hddung\digitalmarket_be_v2\Extension\Project.DigitalMarket.Extension\bin\Debug\net8.0\Project.DigitalMarket.Extension.dll
+C:\Users\MIC\OneDrive\Documents\Code\hddung\digitalmarket_be_v2\Extension\Project.DigitalMarket.Extension\bin\Debug\net8.0\Project.DigitalMarket.Extension.pdb
+C:\Users\MIC\OneDrive\Documents\Code\hddung\digitalmarket_be_v2\Extension\Project.DigitalMarket.Extension\obj\Debug\net8.0\Project.DigitalMarket.Extension.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MIC\OneDrive\Documents\Code\hddung\digitalmarket_be_v2\Extension\Project.DigitalMarket.Extension\obj\Debug\net8.0\Project.DigitalMarket.Extension.AssemblyInfoInputs.cache
+C:\Users\MIC\OneDrive\Documents\Code\hddung\digitalmarket_be_v2\Extension\Project.DigitalMarket.Extension\obj\Debug\net8.0\Project.DigitalMarket.Extension.AssemblyInfo.cs
+C:\Users\MIC\OneDrive\Documents\Code\hddung\digitalmarket_be_v2\Extension\Project.DigitalMarket.Extension\obj\Debug\net8.0\Project.DigitalMarket.Extension.csproj.CoreCompileInputs.cache
+C:\Users\MIC\OneDrive\Documents\Code\hddung\digitalmarket_be_v2\Extension\Project.DigitalMarket.Extension\obj\Debug\net8.0\Project.DigitalMarket.Extension.sourcelink.json
+C:\Users\MIC\OneDrive\Documents\Code\hddung\digitalmarket_be_v2\Extension\Project.DigitalMarket.Extension\obj\Debug\net8.0\Project.DigitalMarket.Extension.dll
+C:\Users\MIC\OneDrive\Documents\Code\hddung\digitalmarket_be_v2\Extension\Project.DigitalMarket.Extension\obj\Debug\net8.0\refint\Project.DigitalMarket.Extension.dll
+C:\Users\MIC\OneDrive\Documents\Code\hddung\digitalmarket_be_v2\Extension\Project.DigitalMarket.Extension\obj\Debug\net8.0\Project.DigitalMarket.Extension.pdb
+C:\Users\MIC\OneDrive\Documents\Code\hddung\digitalmarket_be_v2\Extension\Project.DigitalMarket.Extension\obj\Debug\net8.0\ref\Project.DigitalMarket.Extension.dll

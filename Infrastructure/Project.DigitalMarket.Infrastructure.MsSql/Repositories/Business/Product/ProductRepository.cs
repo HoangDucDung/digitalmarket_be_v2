@@ -8,8 +8,48 @@ using Project.Extensions.Extensions;
 
 namespace Project.DigitalMarket.Infrastructure.MsSql.Repositories.Business.Product
 {
-    public class ProductRepository(ILazyloadProvider lazyloadProvider) : RepositoryBase<ProductEntity>(lazyloadProvider), IProductRepository
+    internal sealed class ProductRepository(ILazyloadProvider lazyloadProvider) : RepositoryBase<ProductEntity>(lazyloadProvider), IProductRepository
     {
+        public async Task<(List<ProductEntity> Items, int Total)> GetPagedDiscoveryAsync(int limit, int offset, string? keyword)
+        {
+            var query = GetDiscoverQuery();
+            if (!string.IsNullOrWhiteSpace(keyword))
+            {
+                var k = keyword.Trim();
+                query = query.Where(x => EF.Functions.Like(x.Name, $"%{k}%"));
+            }
+
+            var total = await query.CountAsync();
+            var items = await query
+                .OrderByDescending(x => x.PublishedAt)
+                .ThenByDescending(x => x.CreatedAt)
+                .Skip(offset)
+                .Take(limit)
+                .ToListAsync();
+
+            return (items, total);
+        }
+
+        public Task<ProductEntity?> GetProductDetailByIdAsync(Guid productId)
+        {
+            return GetDiscoverQuery()
+                .FirstOrDefaultAsync(x => x.Id == productId);
+        }
+
+        public Task<List<CategoryEntity>> GetCategoryTreeAsync(bool includeDisabled)
+        {
+            return GetCategoryTreeQuery(includeDisabled)
+                .OrderBy(x => x.Level)
+                .ThenBy(x => x.SortOrder ?? int.MaxValue)
+                .ThenBy(x => x.Name)
+                .ToListAsync();
+        }
+
+        public Task<bool> IsSlugExistsAsync(string slug)
+        {
+            return GetByCondition(x => x.Slug == slug).AnyAsync();
+        }
+
         public IQueryable<ProductEntity> GetDiscoverQuery()
         {
             var now = GenerateExtentions.Now;

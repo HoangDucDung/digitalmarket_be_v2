@@ -10,10 +10,10 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Repositories.Base
     /// Lớp triển khai các hàm CRUD cơ bản bằng Entity Framework Core
     /// </summary>
     /// <typeparam name="TEntity">Thực thể Database (Entity)</typeparam>
-    public abstract class RepositoryBase<TEntity> : IRepositoryBase<TEntity> where TEntity : class
+    internal abstract class RepositoryBase<TEntity> : IRepositoryBase<TEntity> where TEntity : class
     {
         protected readonly ILazyloadProvider _lazyloadProvider;
-        protected DigitalMarketDbContext _context => _lazyloadProvider.LazyGetRequiredService<DigitalMarketDbContext>();
+        internal DigitalMarketDbContext _context => _lazyloadProvider.LazyGetRequiredService<DigitalMarketDbContext>();
         protected DbSet<TEntity> _dbSet => _context.Set<TEntity>();
 
         protected RepositoryBase(ILazyloadProvider lazyloadProvider)

@@ -6,7 +6,7 @@ using Project.DigitalMarket.Libs.DependencyInjection;
 
 namespace Project.DigitalMarket.Infrastructure.MsSql.Repositories.Auths
 {
-    public class AuthRepository(ILazyloadProvider lazyloadProvider) : RepositoryBase<UserEntity>(lazyloadProvider), IAuthRepository
+    internal sealed class AuthRepository(ILazyloadProvider lazyloadProvider) : RepositoryBase<UserEntity>(lazyloadProvider), IAuthRepository
     {
         public async Task<UserEntity?> GetUserByEmailAsync(string email)
         {

@@ -12,7 +12,7 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Data
     /// <summary>
     /// DbContext tích hợp Identity, kế thừa IdentityDbContext để tự động quản lý bảng User, Role, Claims...
     /// </summary>
-    public class DigitalMarketDbContext : IdentityDbContext<UserEntity, IdentityRole<Guid>, Guid>
+    internal class DigitalMarketDbContext : IdentityDbContext<UserEntity, IdentityRole<Guid>, Guid>
     {
         public DigitalMarketDbContext(DbContextOptions<DigitalMarketDbContext> options) : base(options)
         {

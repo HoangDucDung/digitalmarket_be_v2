@@ -8,16 +8,16 @@ using Project.DigitalMarket.Libs.DependencyInjection;
 using Project.DigitalMarket.Libs.Exceptions;
 using Project.DigitalMarket.Libs.Constants.ErrorCode;
 using Project.Extensions.Extensions;
-using aut_wall = Project.DigitalMarket.Domain.Managers.Auths.Wallet;
+using Project.DigitalMarket.Domain.Managers.Business.Wallet;
 
 namespace Project.DigitalMarket.Domain.Managers.Business.Order
 {
-    public class OrderManager(ILazyloadProvider lazyloadProvider) : ManagerBase(lazyloadProvider), IOrderManager
+    internal sealed class OrderManager(ILazyloadProvider lazyloadProvider) : ManagerBase(lazyloadProvider), IOrderManager
     {
         private IOrderRepository _orderRepository => _lazyloadProvider.LazyGetRequiredService<IOrderRepository>();
         private ICartRepository _cartRepository => _lazyloadProvider.LazyGetRequiredService<ICartRepository>();
         private IProductRepository _productRepository => _lazyloadProvider.LazyGetRequiredService<IProductRepository>();
-        private aut_wall.IWalletManager _walletManager => _lazyloadProvider.LazyGetRequiredService<aut_wall.IWalletManager>();
+        private IWalletManager _walletManager => _lazyloadProvider.LazyGetRequiredService<IWalletManager>();
 
         public async Task<OrderEntity> CheckoutCartAsync(Guid userId, string paymentMethod, string? note)
         {
@@ -174,36 +174,6 @@ namespace Project.DigitalMarket.Domain.Managers.Business.Order
             });
 
             _productRepository.Update(product);
-        }
-
-        public async Task<List<OrderEntity>> GetUserOrdersAsync(Guid userId)
-        {
-            return await _orderRepository.GetByCondition(x => x.BuyerId == userId)
-                .Include(x => x.Items)
-                .OrderByDescending(x => x.CreatedAt)
-                .ToListAsync();
-        }
-
-        public async Task<OrderEntity> GetOrderDetailAsync(Guid userId, Guid orderId)
-        {
-            var order = await _orderRepository.GetByCondition(x => x.Id == orderId && x.BuyerId == userId)
-                .Include(x => x.Items)
-                .ThenInclude(i => i.Product)
-                .FirstOrDefaultAsync();
-            if (order == null) throw new BusinessException(ErrorCode.OrderNotFound, "Đơn hàng không tồn tại.");
-            return order;
-        }
-
-        public async Task CancelOrderAsync(Guid userId, Guid orderId)
-        {
-            var order = await _orderRepository.GetByCondition(x => x.Id == orderId && x.BuyerId == userId).FirstOrDefaultAsync();
-            if (order == null) throw new BusinessException(ErrorCode.OrderNotFound, "Đơn hàng không tồn tại.");
-            if (order.Status != OrderConstants.Status.Pending) throw new BusinessException(ErrorCode.OnlyPendingOrderAllowed, "Chỉ có thể hủy đơn hàng đang chờ.");
-
-            order.Status = OrderConstants.Status.Cancelled;
-            order.UpdatedAt = GenerateExtentions.Now;
-            _orderRepository.Update(order);
-            await _orderRepository.SaveChangesAsync();
         }
     }
 }

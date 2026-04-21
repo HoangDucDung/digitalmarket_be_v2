@@ -8,9 +8,9 @@ namespace Project.DigitalMarket.Application.Services.Mails
     /// Service logic xử lý gửi Email ở tầng Application.
     /// Gọi (Call) IEmailManager từ Domain Layer.
     /// </summary>
-    public class EmailService(ILazyloadProvider lazyloadProvider) : DigitalMarketServiceBase<EmailService>(lazyloadProvider), IEmailService
+    internal sealed class EmailService(ILazyloadProvider lazyloadProvider) : DigitalMarketServiceBase<EmailService>(lazyloadProvider), IEmailService
     {
-        private IEmailManager _emailManager => _lazyloadProvider.LazyGetRequiredService<IEmailManager>();
+        private IEmailDigitalMarketManager _emailManager => _lazyloadProvider.LazyGetRequiredService<IEmailDigitalMarketManager>();
 
         /// <summary>
         /// Gửi Email đến 1 địa chỉ

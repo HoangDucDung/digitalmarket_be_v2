@@ -8,28 +8,8 @@ namespace Project.DigitalMarket.Domain.Managers.Business.Cart
     public interface ICartManager
     {
         /// <summary>
-        /// Thêm sản phẩm vào giỏ hàng của người dùng
+        /// Thêm sản phẩm vào giỏ hàng (Nghiệp vụ đặc thù: check chính chủ, lấy giá tham chiếu)
         /// </summary>
         Task AddToCartAsync(Guid userId, Guid productId, int quantity);
-
-        /// <summary>
-        /// Cập nhật số lượng của một mục trong giỏ hàng
-        /// </summary>
-        Task UpdateQuantityAsync(Guid userId, Guid cartItemId, int quantity);
-
-        /// <summary>
-        /// Xóa một mục khỏi giỏ hàng
-        /// </summary>
-        Task RemoveFromCartAsync(Guid userId, Guid cartItemId);
-
-        /// <summary>
-        /// Lấy toàn bộ danh sách sản phẩm trong giỏ hàng của người dùng
-        /// </summary>
-        Task<List<CartItemEntity>> GetUserCartAsync(Guid userId);
-
-        /// <summary>
-        /// Xóa sạch tất cả các mục trong giỏ hàng của người dùng
-        /// </summary>
-        Task ClearCartAsync(Guid userId);
     }
 }

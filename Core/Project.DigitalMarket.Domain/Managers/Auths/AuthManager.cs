@@ -12,7 +12,7 @@ using System.Text;
 
 namespace Project.DigitalMarket.Domain.Managers.Auths
 {
-    public class AuthManager(ILazyloadProvider lazyloadProvider) : ManagerBase(lazyloadProvider), IAuthManager
+    internal sealed class AuthManager(ILazyloadProvider lazyloadProvider) : ManagerBase(lazyloadProvider), IAuthManager
     {
         private IAuthConfig _authConfig => _lazyloadProvider.LazyGetRequiredService<IAuthConfig>();
 

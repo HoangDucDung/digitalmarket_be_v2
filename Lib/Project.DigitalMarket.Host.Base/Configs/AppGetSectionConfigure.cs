@@ -52,11 +52,6 @@ namespace Project.DigitalMarket.Host.Base.Configs
         {
             GetSectionConfigure<ProducerCustomConfig>(services, configuration, "ProducerCommon");
         }
-
-        public static void GetConsumerTestKafkaConfig(this IServiceCollection services, IConfiguration configuration)
-        {
-            GetSectionConfigure<ConsumerConfig>(services, configuration, "TestKafka");
-        }
         #endregion
     }
 }

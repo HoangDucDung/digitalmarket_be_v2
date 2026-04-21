@@ -1,10 +1,14 @@
 
 using Digitalmarket.Controller.Base.AppCoreFactory;
+using Digitalmarket.Controller.Base.Constants;
 using NLog;
 using NLog.Extensions.Logging;
 using NLog.Web;
+using Project.DigitalMarket.Application;
+using Project.DigitalMarket.Domain;
 using Project.DigitalMarket.Host.Base.Bases;
 using Project.DigitalMarket.Host.Base.Configs;
+using Project.DigitalMarket.Infrastructure.MsSql;
 using System.Reflection;
 
 namespace Digitalmarket.Controller.Business
@@ -20,10 +24,9 @@ namespace Digitalmarket.Controller.Business
                 // 1. Tải cấu hình từ các file JSON trước (Cần thiết để NLog đọc được giá trị)
                 builder.Configuration.AddBaseConfiguration(
                 [
-                    "auth.json",
-                    "Email.json",
-                    "connection.json",
-                    "elastic.json"
+                    ConfigJsonName.Email,
+                    ConfigJsonName.Connection,
+                    ConfigJsonName.Elastic
                 ]);
 
                 // 2. Cấu hình NLog: Đăng ký RegisterConfigSettings để đọc được từ builder.Configuration
@@ -34,7 +37,7 @@ namespace Digitalmarket.Controller.Business
                 // 3. Tích hợp NLog vào ASP.NET Core
                 builder.Host.UseNLog();
 
-                var docName = "Business";
+                var docName = RedocName.Business;
 
                 // Add services to the container.
                 builder.Services.AddCors(options =>
@@ -51,15 +54,19 @@ namespace Digitalmarket.Controller.Business
                 builder.Services.AddEndpointsApiExplorer();
                 builder.Services.AddAPIDocument(Assembly.GetExecutingAssembly().GetName().Name ?? "", docName);
 
+                // Đăng ký các service tùy chỉnh
                 builder.Services.AddLazyloadFactory();
-                builder.Services.UseAppAuthenFactory(builder.Configuration);
-                builder.Services.UseAppManagerFactory();
-                builder.Services.UseAppBussinessFactory();
+                builder.Services.AddBusinessServiceFactory();
+                builder.Services.AddBusinessDomainFactory();
+                builder.Services.AddBusinessMsSqlFactory();
 
-                builder.Services.GetAuthConfig(builder.Configuration);
+                // Đăng ký các options
                 builder.Services.GetEmailConfig(builder.Configuration);
                 builder.Services.GetConnectionConfig(builder.Configuration);
                 builder.Services.GetElasticConfig(builder.Configuration);
+
+                // Đăng ký AutoMapper
+                builder.Services.AddAutoMapper(typeof(DigitalMarketAutoMapper));
 
                 var app = builder.Build();
 

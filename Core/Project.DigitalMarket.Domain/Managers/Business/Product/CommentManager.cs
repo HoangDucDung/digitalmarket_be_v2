@@ -8,7 +8,7 @@ namespace Project.DigitalMarket.Domain.Managers.Business.Product
     /// <summary>
     /// Thực thi quản lý logic nghiệp vụ cho Comment.
     /// </summary>
-    public class CommentManager(ILazyloadProvider lazyloadProvider) : ManagerBase(lazyloadProvider), ICommentManager
+    internal sealed class CommentManager(ILazyloadProvider lazyloadProvider) : ManagerBase(lazyloadProvider), ICommentManager
     {
         private ICommentRepository _commentRepository => _lazyloadProvider.LazyGetRequiredService<ICommentRepository>();
 

@@ -16,7 +16,7 @@ namespace Project.DigitalMarket.Application.Services.Auths
     /// Service xử lý đăng ký, đăng nhập và tạo JWT token.
     /// Chuyển lại Application theo yêu cầu (Business Logic layer).
     /// </summary>
-    public class AuthService(ILazyloadProvider lazyloadProvider) : DigitalMarketServiceBase<AuthService>(lazyloadProvider), IAuthService
+    internal sealed class AuthService(ILazyloadProvider lazyloadProvider) : DigitalMarketServiceBase<AuthService>(lazyloadProvider), IAuthService
     {
         private UserManager<UserEntity> _userManager => _lazyloadProvider.LazyGetRequiredService<UserManager<UserEntity>>();
         private SignInManager<UserEntity> _signInManager => _lazyloadProvider.LazyGetRequiredService<SignInManager<UserEntity>>();

@@ -1,7 +1,13 @@
 
 using Digitalmarket.Controller.Base.AppCoreFactory;
+using Digitalmarket.Controller.Base.Constants;
+using Project.DigitalMarket.Application;
+using Project.DigitalMarket.Domain;
 using Project.DigitalMarket.Host.Base.Bases;
 using Project.DigitalMarket.Host.Base.Configs;
+using Project.DigitalMarket.Host.Base.Configurations;
+using Project.DigitalMarket.Infrastructure.MsSql;
+using Project.DigitalMarket.Infrastructure.MsSql.Configurations;
 using System.Reflection;
 
 namespace Digitalmarket.Controller.Auth
@@ -14,14 +20,14 @@ namespace Digitalmarket.Controller.Auth
 
             builder.Configuration.AddBaseConfiguration(
             [
-                "auth.json",
-                "Email.json",
-                "connection.json",
-                "elastic.json"
+                ConfigJsonName.Auth,
+                ConfigJsonName.Email,
+                ConfigJsonName.Connection,
+                ConfigJsonName.Elastic
             ]);
 
 
-            var docName = "Auth";
+            var docName = RedocName.Auth;
 
             // Add services to the container.
             builder.Services.AddCors(options =>
@@ -40,16 +46,26 @@ namespace Digitalmarket.Controller.Auth
             // Thêm dịch vụ tạo tài liệu API
             builder.Services.AddAPIDocument(Assembly.GetExecutingAssembly().GetName().Name ?? "", docName);
 
-            // Đăng ký các dịch vụ tùy chỉnh
+            // Cấu hình JWT Authentication
+            JwtConfiguration.ConfigureJwt(builder.Services, builder.Configuration);
+
+            // Đăng ký các service tùy chỉnh
             builder.Services.AddLazyloadFactory();
-            builder.Services.UseAppAuthenFactory(builder.Configuration);
-            builder.Services.UseAppManagerFactory();
+            builder.Services.AddAuthServiceFactory();
+            builder.Services.AddAuthDomainFactory();
+            builder.Services.AddAuthMsSqlFactory();
 
             // Đăng ký các options
             builder.Services.GetAuthConfig(builder.Configuration);
             builder.Services.GetEmailConfig(builder.Configuration);
             builder.Services.GetConnectionConfig(builder.Configuration);
             builder.Services.GetElasticConfig(builder.Configuration);
+
+            // Đăng ký AutoMapper
+            builder.Services.AddAutoMapper(typeof(DigitalMarketAutoMapper));
+
+            // Đăng ký cấu hình Identity
+            builder.Services.AddMsSqlIdentity(builder.Configuration);
 
             var app = builder.Build();
 

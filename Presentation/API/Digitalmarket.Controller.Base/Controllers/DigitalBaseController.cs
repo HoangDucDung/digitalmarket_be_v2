@@ -2,8 +2,7 @@ using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Project.DigitalMarket.Libs.DependencyInjection;
-using Project.DigitalMarket.Domain.Models;
-using Microsoft.Extensions.Logging;
+using Project.DigitalMarket.Domain.Models.Commons;
 
 namespace Digitalmarket.Controller.Base.Controllers
 {
@@ -14,6 +13,7 @@ namespace Digitalmarket.Controller.Base.Controllers
     {
         protected ILazyloadProvider _lazyloadProvider = lazyloadProvider;
         protected ILogger _logger => _lazyloadProvider.LazyGetRequiredService<ILoggerFactory>().CreateLogger(typeof(T));
+
         private UserContext? _userContext;
 
         /// <summary>

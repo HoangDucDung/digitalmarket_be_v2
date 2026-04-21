@@ -9,7 +9,7 @@ namespace Project.DigitalMarket.Application.Services.Business.Seller
     /// <summary>
     /// Service xử lý các nghiệp vụ liên quan đến Seller
     /// </summary>
-    public class SellerService(ILazyloadProvider lazyloadProvider) : DigitalMarketServiceBase<SellerService>(lazyloadProvider), ISellerService
+    internal sealed class SellerService(ILazyloadProvider lazyloadProvider) : DigitalMarketServiceBase<SellerService>(lazyloadProvider), ISellerService
     {
         private ISellerManager _sellerManager => _lazyloadProvider.LazyGetRequiredService<ISellerManager>();
 

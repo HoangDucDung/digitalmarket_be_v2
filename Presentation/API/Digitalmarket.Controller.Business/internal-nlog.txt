@@ -1,142 +1,40 @@
-2026-04-14 09:26:12.6749 Info Loading assembly name: NLog.Web.AspNetCore
-2026-04-14 09:26:12.6749 Info NLog.Web.AspNetCore, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.2.1383. Product version: 6.1.2+82b909b8b4044417774ed8f67c58655ca7e4e2b8. GlobalAssemblyCache: False
-2026-04-14 09:26:12.6749 Info Loading assembly name: Elastic.NLog.Targets
-2026-04-14 09:26:12.6749 Info Elastic.NLog.Targets, Version=9.0.0.0, Culture=neutral, PublicKeyToken=069ca2728db333c1. File version: 9.0.0.0. Product version: 9.0.0+608d9254e808806db6cd119e9af00ab7ae9402c2. GlobalAssemblyCache: False
-2026-04-14 09:26:12.6749 Info Loading assembly name: Elastic.CommonSchema.NLog
-2026-04-14 09:26:12.6749 Info Elastic.CommonSchema.NLog, Version=9.0.0.0, Culture=neutral, PublicKeyToken=069ca2728db333c1. File version: 9.0.0.0. Product version: 9.0.0+608d9254e808806db6cd119e9af00ab7ae9402c2. GlobalAssemblyCache: False
-2026-04-14 09:26:12.7047 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
-2026-04-14 09:26:12.7097 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'ElasticsearchTarget' cannot assign unknown property 'dataStreamName'='logs-digitalmarket-apps'
-   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString[T](T targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
-2026-04-14 09:26:12.7240 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'assembly-name' - Verify type-alias and check extension is included.
-   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
-   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
-2026-04-14 09:26:12.7240 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnetcore-environment' - Extension NLog.Web.AspNetCore not included?
-   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
-   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
-2026-04-14 09:26:12.7240 Info Registered target NLog.Targets.ElasticsearchTarget(Name=elastic)
-2026-04-14 09:26:12.7240 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.2.5163. Product version: 6.1.2+24518acbad6757883eafdd5ec696eb049305cb7b. GlobalAssemblyCache: False
-2026-04-14 09:26:12.7694 Info Configuration initialized: TargetNames=elastic, console, ConfigItems=73, AutoReload=true, FilePath=C:\Users\MIC\Documents\Code\hddung\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Business\bin\Debug\net8.0\nlog.config
-2026-04-14 09:54:41.2899 Info Loading assembly name: NLog.Web.AspNetCore
-2026-04-14 09:54:41.2899 Info NLog.Web.AspNetCore, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.2.1383. Product version: 6.1.2+82b909b8b4044417774ed8f67c58655ca7e4e2b8. GlobalAssemblyCache: False
-2026-04-14 09:54:41.2899 Info Loading assembly name: Elastic.NLog.Targets
-2026-04-14 09:54:41.2899 Info Elastic.NLog.Targets, Version=9.0.0.0, Culture=neutral, PublicKeyToken=069ca2728db333c1. File version: 9.0.0.0. Product version: 9.0.0+608d9254e808806db6cd119e9af00ab7ae9402c2. GlobalAssemblyCache: False
-2026-04-14 09:54:41.3004 Info Loading assembly name: Elastic.CommonSchema.NLog
-2026-04-14 09:54:41.3004 Info Elastic.CommonSchema.NLog, Version=9.0.0.0, Culture=neutral, PublicKeyToken=069ca2728db333c1. File version: 9.0.0.0. Product version: 9.0.0+608d9254e808806db6cd119e9af00ab7ae9402c2. GlobalAssemblyCache: False
-2026-04-14 09:54:41.3004 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
-2026-04-14 09:54:41.3170 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'ElasticsearchTarget' cannot assign unknown property 'dataStreamName'='logs-digitalmarket-apps'
-   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString[T](T targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
-2026-04-14 09:54:41.3170 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'assembly-name' - Verify type-alias and check extension is included.
-   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
-   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
-2026-04-14 09:54:41.3307 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnetcore-environment' - Extension NLog.Web.AspNetCore not included?
-   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
-   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
-2026-04-14 09:54:41.3307 Info Registered target NLog.Targets.ElasticsearchTarget(Name=elastic)
-2026-04-14 09:54:41.3307 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.2.5163. Product version: 6.1.2+24518acbad6757883eafdd5ec696eb049305cb7b. GlobalAssemblyCache: False
-2026-04-14 09:54:41.3775 Info Configuration initialized: TargetNames=elastic, console, ConfigItems=73, AutoReload=true, FilePath=C:\Users\MIC\Documents\Code\hddung\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Business\bin\Debug\net8.0\nlog.config
-2026-04-14 09:56:35.9083 Info Loading assembly name: NLog.Web.AspNetCore
-2026-04-14 09:56:35.9122 Info NLog.Web.AspNetCore, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.2.1383. Product version: 6.1.2+82b909b8b4044417774ed8f67c58655ca7e4e2b8. GlobalAssemblyCache: False
-2026-04-14 09:56:35.9122 Info Loading assembly name: Elastic.NLog.Targets
-2026-04-14 09:56:35.9122 Info Elastic.NLog.Targets, Version=9.0.0.0, Culture=neutral, PublicKeyToken=069ca2728db333c1. File version: 9.0.0.0. Product version: 9.0.0+608d9254e808806db6cd119e9af00ab7ae9402c2. GlobalAssemblyCache: False
-2026-04-14 09:56:35.9122 Info Loading assembly name: Elastic.CommonSchema.NLog
-2026-04-14 09:56:35.9122 Info Elastic.CommonSchema.NLog, Version=9.0.0.0, Culture=neutral, PublicKeyToken=069ca2728db333c1. File version: 9.0.0.0. Product version: 9.0.0+608d9254e808806db6cd119e9af00ab7ae9402c2. GlobalAssemblyCache: False
-2026-04-14 09:56:35.9313 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
-2026-04-14 09:56:35.9409 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'ElasticsearchTarget' cannot assign unknown property 'dataStreamName'='logs-digitalmarket-apps'
-   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString[T](T targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
-2026-04-14 09:56:35.9409 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'assembly-name' - Verify type-alias and check extension is included.
-   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
-   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
-2026-04-14 09:56:35.9409 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnetcore-environment' - Extension NLog.Web.AspNetCore not included?
-   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
-   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
-2026-04-14 09:56:35.9409 Info Registered target NLog.Targets.ElasticsearchTarget(Name=elastic)
-2026-04-14 09:56:35.9409 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.2.5163. Product version: 6.1.2+24518acbad6757883eafdd5ec696eb049305cb7b. GlobalAssemblyCache: False
-2026-04-14 09:56:35.9951 Info Configuration initialized: TargetNames=elastic, console, ConfigItems=73, AutoReload=true, FilePath=C:\Users\MIC\Documents\Code\hddung\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Business\bin\Debug\net8.0\nlog.config
-2026-04-14 09:57:56.7880 Info AutoReload Config File Monitor reloading configuration...
-2026-04-14 09:57:56.7880 Info Loading NLog config from XML file: C:\Users\MIC\Documents\Code\hddung\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Business\bin\Debug\net8.0\nlog.config
-2026-04-14 09:57:56.7880 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
-2026-04-14 09:57:56.7880 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'ElasticsearchTarget' cannot assign unknown property 'index'='logs-digitalmarket-apps'
-   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString[T](T targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
-2026-04-14 09:57:56.7880 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'ElasticsearchTarget' cannot assign unknown property 'dataStreamName'='logs-digitalmarket-apps'
-   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString[T](T targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
-2026-04-14 09:57:56.7880 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'assembly-name' - Verify type-alias and check extension is included.
-   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
-   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
-2026-04-14 09:57:56.7880 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnetcore-environment' - Extension NLog.Web.AspNetCore not included?
-   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
-   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
-2026-04-14 09:57:56.7880 Info Registered target NLog.Targets.ElasticsearchTarget(Name=elastic)
-2026-04-14 09:57:56.7880 Info Closing old configuration.
-2026-04-14 09:57:56.7990 Info Configuration initialized: TargetNames=elastic, console, ConfigItems=73, AutoReload=true, FilePath=C:\Users\MIC\Documents\Code\hddung\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Business\bin\Debug\net8.0\nlog.config
-2026-04-14 10:01:12.0361 Info Loading assembly name: NLog.Web.AspNetCore
-2026-04-14 10:01:12.0361 Info NLog.Web.AspNetCore, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.2.1383. Product version: 6.1.2+82b909b8b4044417774ed8f67c58655ca7e4e2b8. GlobalAssemblyCache: False
-2026-04-14 10:01:12.0361 Info Loading assembly name: Elastic.NLog.Targets
-2026-04-14 10:01:12.0361 Info Elastic.NLog.Targets, Version=9.0.0.0, Culture=neutral, PublicKeyToken=069ca2728db333c1. File version: 9.0.0.0. Product version: 9.0.0+608d9254e808806db6cd119e9af00ab7ae9402c2. GlobalAssemblyCache: False
-2026-04-14 10:01:12.0896 Info Loading assembly name: Elastic.CommonSchema.NLog
-2026-04-14 10:01:12.0896 Info Elastic.CommonSchema.NLog, Version=9.0.0.0, Culture=neutral, PublicKeyToken=069ca2728db333c1. File version: 9.0.0.0. Product version: 9.0.0+608d9254e808806db6cd119e9af00ab7ae9402c2. GlobalAssemblyCache: False
-2026-04-14 10:01:12.1039 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
-2026-04-14 10:01:12.1195 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'ElasticsearchTarget' cannot assign unknown property 'dataStreamName'='logs-digitalmarket-apps'
-   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString[T](T targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
-2026-04-14 10:01:12.1195 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'assembly-name' - Verify type-alias and check extension is included.
-   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
-   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
-2026-04-14 10:01:12.1195 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnetcore-environment' - Extension NLog.Web.AspNetCore not included?
-   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
-   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
-2026-04-14 10:01:12.1195 Info Registered target NLog.Targets.ElasticsearchTarget(Name=elastic)
-2026-04-14 10:01:12.1296 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.2.5163. Product version: 6.1.2+24518acbad6757883eafdd5ec696eb049305cb7b. GlobalAssemblyCache: False
-2026-04-14 10:01:12.1795 Info Configuration initialized: TargetNames=elastic, console, ConfigItems=73, AutoReload=true, FilePath=C:\Users\MIC\Documents\Code\hddung\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Business\bin\Debug\net8.0\nlog.config
-2026-04-14 10:04:09.1130 Info Loading assembly name: NLog.Web.AspNetCore
-2026-04-14 10:04:09.1130 Info NLog.Web.AspNetCore, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.2.1383. Product version: 6.1.2+82b909b8b4044417774ed8f67c58655ca7e4e2b8. GlobalAssemblyCache: False
-2026-04-14 10:04:09.1130 Info Loading assembly name: Elastic.NLog.Targets
-2026-04-14 10:04:09.1130 Info Elastic.NLog.Targets, Version=9.0.0.0, Culture=neutral, PublicKeyToken=069ca2728db333c1. File version: 9.0.0.0. Product version: 9.0.0+608d9254e808806db6cd119e9af00ab7ae9402c2. GlobalAssemblyCache: False
-2026-04-14 10:04:09.1661 Info Loading assembly name: Elastic.CommonSchema.NLog
-2026-04-14 10:04:09.1661 Info Elastic.CommonSchema.NLog, Version=9.0.0.0, Culture=neutral, PublicKeyToken=069ca2728db333c1. File version: 9.0.0.0. Product version: 9.0.0+608d9254e808806db6cd119e9af00ab7ae9402c2. GlobalAssemblyCache: False
-2026-04-14 10:04:09.1788 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
-2026-04-14 10:04:09.1945 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'ElasticsearchTarget' cannot assign unknown property 'index'='logs-digitalmarket-apps'
-   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString[T](T targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
-2026-04-14 10:04:09.1945 Info Registered target NLog.Targets.ElasticsearchTarget(Name=elastic)
-2026-04-14 10:04:09.1945 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.2.5163. Product version: 6.1.2+24518acbad6757883eafdd5ec696eb049305cb7b. GlobalAssemblyCache: False
-2026-04-14 10:04:09.2532 Info Configuration initialized: TargetNames=elastic, console, ConfigItems=70, AutoReload=true, FilePath=C:\Users\MIC\Documents\Code\hddung\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Business\bin\Debug\net8.0\nlog.config
-2026-04-14 10:06:21.4661 Info Loading assembly name: NLog.Web.AspNetCore
-2026-04-14 10:06:21.4661 Info NLog.Web.AspNetCore, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.2.1383. Product version: 6.1.2+82b909b8b4044417774ed8f67c58655ca7e4e2b8. GlobalAssemblyCache: False
-2026-04-14 10:06:21.4742 Info Loading assembly name: Elastic.NLog.Targets
-2026-04-14 10:06:21.4742 Info Elastic.NLog.Targets, Version=9.0.0.0, Culture=neutral, PublicKeyToken=069ca2728db333c1. File version: 9.0.0.0. Product version: 9.0.0+608d9254e808806db6cd119e9af00ab7ae9402c2. GlobalAssemblyCache: False
-2026-04-14 10:06:21.5235 Info Loading assembly name: Elastic.CommonSchema.NLog
-2026-04-14 10:06:21.5235 Info Elastic.CommonSchema.NLog, Version=9.0.0.0, Culture=neutral, PublicKeyToken=069ca2728db333c1. File version: 9.0.0.0. Product version: 9.0.0+608d9254e808806db6cd119e9af00ab7ae9402c2. GlobalAssemblyCache: False
-2026-04-14 10:06:21.5396 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
-2026-04-14 10:06:21.5570 Info Registered target NLog.Targets.ElasticsearchTarget(Name=elastic)
-2026-04-14 10:06:21.5570 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.2.5163. Product version: 6.1.2+24518acbad6757883eafdd5ec696eb049305cb7b. GlobalAssemblyCache: False
-2026-04-14 10:06:21.6215 Info Configuration initialized: TargetNames=elastic, console, ConfigItems=70, AutoReload=true, FilePath=C:\Users\MIC\Documents\Code\hddung\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Business\bin\Debug\net8.0\nlog.config
-2026-04-14 10:28:13.6316 Info Loading assembly name: NLog.Web.AspNetCore
-2026-04-14 10:28:13.6316 Info NLog.Web.AspNetCore, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.2.1383. Product version: 6.1.2+82b909b8b4044417774ed8f67c58655ca7e4e2b8. GlobalAssemblyCache: False
-2026-04-14 10:28:13.6316 Info Loading assembly name: Elastic.NLog.Targets
-2026-04-14 10:28:13.6316 Info Elastic.NLog.Targets, Version=9.0.0.0, Culture=neutral, PublicKeyToken=069ca2728db333c1. File version: 9.0.0.0. Product version: 9.0.0+608d9254e808806db6cd119e9af00ab7ae9402c2. GlobalAssemblyCache: False
-2026-04-14 10:28:13.6316 Info Loading assembly name: Elastic.CommonSchema.NLog
-2026-04-14 10:28:13.6316 Info Elastic.CommonSchema.NLog, Version=9.0.0.0, Culture=neutral, PublicKeyToken=069ca2728db333c1. File version: 9.0.0.0. Product version: 9.0.0+608d9254e808806db6cd119e9af00ab7ae9402c2. GlobalAssemblyCache: False
-2026-04-14 10:28:13.6538 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
-2026-04-14 10:28:13.6597 Info Registered target NLog.Targets.ElasticsearchTarget(Name=elastic)
-2026-04-14 10:28:13.6597 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.2.5163. Product version: 6.1.2+24518acbad6757883eafdd5ec696eb049305cb7b. GlobalAssemblyCache: False
-2026-04-14 10:28:13.7123 Info Configuration initialized: TargetNames=elastic, console, ConfigItems=70, AutoReload=true, FilePath=C:\Users\MIC\Documents\Code\hddung\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Business\bin\Debug\net8.0\nlog.config
-2026-04-14 10:28:41.9382 Info Loading assembly name: NLog.Web.AspNetCore
-2026-04-14 10:28:41.9418 Info NLog.Web.AspNetCore, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.2.1383. Product version: 6.1.2+82b909b8b4044417774ed8f67c58655ca7e4e2b8. GlobalAssemblyCache: False
-2026-04-14 10:28:41.9418 Info Loading assembly name: Elastic.NLog.Targets
-2026-04-14 10:28:41.9418 Info Elastic.NLog.Targets, Version=9.0.0.0, Culture=neutral, PublicKeyToken=069ca2728db333c1. File version: 9.0.0.0. Product version: 9.0.0+608d9254e808806db6cd119e9af00ab7ae9402c2. GlobalAssemblyCache: False
-2026-04-14 10:28:41.9418 Info Loading assembly name: Elastic.CommonSchema.NLog
-2026-04-14 10:28:41.9418 Info Elastic.CommonSchema.NLog, Version=9.0.0.0, Culture=neutral, PublicKeyToken=069ca2728db333c1. File version: 9.0.0.0. Product version: 9.0.0+608d9254e808806db6cd119e9af00ab7ae9402c2. GlobalAssemblyCache: False
-2026-04-14 10:28:41.9611 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
-2026-04-14 10:28:41.9715 Info Registered target NLog.Targets.ElasticsearchTarget(Name=elastic)
-2026-04-14 10:28:41.9715 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.2.5163. Product version: 6.1.2+24518acbad6757883eafdd5ec696eb049305cb7b. GlobalAssemblyCache: False
-2026-04-14 10:28:41.9715 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: console
-2026-04-14 10:28:42.0211 Info Configuration initialized: TargetNames=elastic, ConfigItems=70, AutoReload=true, FilePath=C:\Users\MIC\Documents\Code\hddung\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Business\bin\Debug\net8.0\nlog.config
-2026-04-14 10:33:35.2386 Info Loading assembly name: NLog.Web.AspNetCore
-2026-04-14 10:33:35.2386 Info NLog.Web.AspNetCore, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.2.1383. Product version: 6.1.2+82b909b8b4044417774ed8f67c58655ca7e4e2b8. GlobalAssemblyCache: False
-2026-04-14 10:33:35.2386 Info Loading assembly name: Elastic.NLog.Targets
-2026-04-14 10:33:35.2386 Info Elastic.NLog.Targets, Version=9.0.0.0, Culture=neutral, PublicKeyToken=069ca2728db333c1. File version: 9.0.0.0. Product version: 9.0.0+608d9254e808806db6cd119e9af00ab7ae9402c2. GlobalAssemblyCache: False
-2026-04-14 10:33:35.2386 Info Loading assembly name: Elastic.CommonSchema.NLog
-2026-04-14 10:33:35.2386 Info Elastic.CommonSchema.NLog, Version=9.0.0.0, Culture=neutral, PublicKeyToken=069ca2728db333c1. File version: 9.0.0.0. Product version: 9.0.0+608d9254e808806db6cd119e9af00ab7ae9402c2. GlobalAssemblyCache: False
-2026-04-14 10:33:35.2612 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
-2026-04-14 10:33:35.2686 Info Registered target NLog.Targets.ElasticsearchTarget(Name=elastic)
-2026-04-14 10:33:35.2686 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.2.5163. Product version: 6.1.2+24518acbad6757883eafdd5ec696eb049305cb7b. GlobalAssemblyCache: False
-2026-04-14 10:33:35.2686 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: console
-2026-04-14 10:33:35.3185 Info Configuration initialized: TargetNames=elastic, ConfigItems=70, AutoReload=true, FilePath=C:\Users\MIC\Documents\Code\hddung\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Business\bin\Debug\net8.0\nlog.config
+2026-04-21 15:39:09.5656 Info Loading assembly name: NLog.Web.AspNetCore
+2026-04-21 15:39:09.5703 Info NLog.Web.AspNetCore, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.2.1383. Product version: 6.1.2+82b909b8b4044417774ed8f67c58655ca7e4e2b8. GlobalAssemblyCache: False
+2026-04-21 15:39:09.5935 Info Loading assembly name: Elastic.NLog.Targets
+2026-04-21 15:39:09.5994 Info Elastic.NLog.Targets, Version=9.0.0.0, Culture=neutral, PublicKeyToken=069ca2728db333c1. File version: 9.0.0.0. Product version: 9.0.0+608d9254e808806db6cd119e9af00ab7ae9402c2. GlobalAssemblyCache: False
+2026-04-21 15:39:09.6420 Info Loading assembly name: Elastic.CommonSchema.NLog
+2026-04-21 15:39:09.6420 Info Elastic.CommonSchema.NLog, Version=9.0.0.0, Culture=neutral, PublicKeyToken=069ca2728db333c1. File version: 9.0.0.0. Product version: 9.0.0+608d9254e808806db6cd119e9af00ab7ae9402c2. GlobalAssemblyCache: False
+2026-04-21 15:39:09.6573 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2026-04-21 15:39:09.6932 Info Registered target NLog.Targets.ElasticsearchTarget(Name=elastic)
+2026-04-21 15:39:09.6932 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.2.5163. Product version: 6.1.2+24518acbad6757883eafdd5ec696eb049305cb7b. GlobalAssemblyCache: False
+2026-04-21 15:39:09.6932 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: console
+2026-04-21 15:39:09.8992 Info Configuration initialized: TargetNames=elastic, ConfigItems=70, AutoReload=true, FilePath=C:\Users\MIC\OneDrive\Documents\Code\hddung\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Business\bin\Debug\net8.0\nlog.config
+2026-04-21 15:40:17.1387 Info AutoReload Config File Monitor reloading configuration...
+2026-04-21 15:40:17.1430 Info Loading NLog config from XML file: C:\Users\MIC\OneDrive\Documents\Code\hddung\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Business\bin\Debug\net8.0\nlog.config
+2026-04-21 15:40:17.1430 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2026-04-21 15:40:17.1430 Info Registered target NLog.Targets.ElasticsearchTarget(Name=elastic)
+2026-04-21 15:40:17.1430 Info Closing old configuration.
+2026-04-21 15:40:17.1430 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: console
+2026-04-21 15:40:17.1430 Info Configuration initialized: TargetNames=elastic, ConfigItems=70, AutoReload=true, FilePath=C:\Users\MIC\OneDrive\Documents\Code\hddung\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Business\bin\Debug\net8.0\nlog.config
+2026-04-21 16:26:51.9096 Info Loading assembly name: NLog.Web.AspNetCore
+2026-04-21 16:26:51.9096 Info NLog.Web.AspNetCore, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.2.1383. Product version: 6.1.2+82b909b8b4044417774ed8f67c58655ca7e4e2b8. GlobalAssemblyCache: False
+2026-04-21 16:26:51.9096 Info Loading assembly name: Elastic.NLog.Targets
+2026-04-21 16:26:51.9096 Info Elastic.NLog.Targets, Version=9.0.0.0, Culture=neutral, PublicKeyToken=069ca2728db333c1. File version: 9.0.0.0. Product version: 9.0.0+608d9254e808806db6cd119e9af00ab7ae9402c2. GlobalAssemblyCache: False
+2026-04-21 16:26:51.9096 Info Loading assembly name: Elastic.CommonSchema.NLog
+2026-04-21 16:26:51.9096 Info Elastic.CommonSchema.NLog, Version=9.0.0.0, Culture=neutral, PublicKeyToken=069ca2728db333c1. File version: 9.0.0.0. Product version: 9.0.0+608d9254e808806db6cd119e9af00ab7ae9402c2. GlobalAssemblyCache: False
+2026-04-21 16:26:51.9366 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2026-04-21 16:26:51.9405 Info Registered target NLog.Targets.ElasticsearchTarget(Name=elastic)
+2026-04-21 16:26:51.9405 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.2.5163. Product version: 6.1.2+24518acbad6757883eafdd5ec696eb049305cb7b. GlobalAssemblyCache: False
+2026-04-21 16:26:51.9600 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: console
+2026-04-21 16:26:52.0061 Info Configuration initialized: TargetNames=elastic, ConfigItems=70, AutoReload=true, FilePath=C:\Users\MIC\OneDrive\Documents\Code\hddung\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Business\bin\Debug\net8.0\nlog.config
+2026-04-21 17:23:33.2858 Info Loading assembly name: NLog.Web.AspNetCore
+2026-04-21 17:23:33.2858 Info NLog.Web.AspNetCore, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.2.1383. Product version: 6.1.2+82b909b8b4044417774ed8f67c58655ca7e4e2b8. GlobalAssemblyCache: False
+2026-04-21 17:23:33.2858 Info Loading assembly name: Elastic.NLog.Targets
+2026-04-21 17:23:33.2858 Info Elastic.NLog.Targets, Version=9.0.0.0, Culture=neutral, PublicKeyToken=069ca2728db333c1. File version: 9.0.0.0. Product version: 9.0.0+608d9254e808806db6cd119e9af00ab7ae9402c2. GlobalAssemblyCache: False
+2026-04-21 17:23:33.2858 Info Loading assembly name: Elastic.CommonSchema.NLog
+2026-04-21 17:23:33.2858 Info Elastic.CommonSchema.NLog, Version=9.0.0.0, Culture=neutral, PublicKeyToken=069ca2728db333c1. File version: 9.0.0.0. Product version: 9.0.0+608d9254e808806db6cd119e9af00ab7ae9402c2. GlobalAssemblyCache: False
+2026-04-21 17:23:33.3116 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2026-04-21 17:23:33.3157 Info Registered target NLog.Targets.ElasticsearchTarget(Name=elastic)
+2026-04-21 17:23:33.3157 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.2.5163. Product version: 6.1.2+24518acbad6757883eafdd5ec696eb049305cb7b. GlobalAssemblyCache: False
+2026-04-21 17:23:33.3332 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: console
+2026-04-21 17:23:33.3629 Info Configuration initialized: TargetNames=elastic, ConfigItems=70, AutoReload=true, FilePath=C:\Users\MIC\OneDrive\Documents\Code\hddung\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Business\bin\Debug\net8.0\nlog.config

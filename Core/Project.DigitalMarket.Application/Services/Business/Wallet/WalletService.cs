@@ -1,19 +1,22 @@
+using Microsoft.EntityFrameworkCore;
 using Project.DigitalMarket.Application.Contract.DTOs.Business.Wallet;
 using Project.DigitalMarket.Application.Contract.Services.Business.Wallet;
-using Project.DigitalMarket.Domain.Managers.Auths.Wallet;
+using Project.DigitalMarket.Domain.Repositories.Auths.Wallet;
 using Project.DigitalMarket.Domain.Share.Constants.Business;
 using Project.DigitalMarket.Libs.DependencyInjection;
 using Project.DigitalMarket.Libs.Exceptions;
 using Project.DigitalMarket.Libs.Constants.ErrorCode;
+using Project.DigitalMarket.Domain.Managers.Business.Wallet;
 
 namespace Project.DigitalMarket.Application.Services.Business.Wallet
 {
     /// <summary>
     /// Triển khai Service quản lý nghiệp vụ business cho Ví
     /// </summary>
-    public class WalletService(ILazyloadProvider lazyloadProvider) : DigitalMarketServiceBase<WalletService>(lazyloadProvider), IWalletService
+    internal sealed class WalletService(ILazyloadProvider lazyloadProvider) : DigitalMarketServiceBase<WalletService>(lazyloadProvider), IWalletService
     {
         private IWalletManager _walletManager => _lazyloadProvider.LazyGetRequiredService<IWalletManager>();
+        private IWalletTransactionRepository _transactionRepository => _lazyloadProvider.LazyGetRequiredService<IWalletTransactionRepository>();
 
         /// <summary>
         /// Lấy số dư hiện tại của người dùng đang đăng nhập
@@ -38,11 +41,11 @@ namespace Project.DigitalMarket.Application.Services.Business.Wallet
         }
 
         /// <summary>
-        /// Lấy lịch sử giao dịch của người dùng hiện tại (Dữ liệu đã được map qua DTO)
+        /// Lấy lịch sử giao dịch của người dùng hiện tại (Thông qua Repository)
         /// </summary>
         public async Task<List<WalletTransactionDTO>> GetTransactionsAsync(int page = 1, int pageSize = 10)
         {
-            var transactions = await _walletManager.GetTransactionsAsync(UserId, page, pageSize);
+            var transactions = await _transactionRepository.GetPagedByUserIdAsync(UserId, page, pageSize);
             return _mapper.Map<List<WalletTransactionDTO>>(transactions);
         }
     }

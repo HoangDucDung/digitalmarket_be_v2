@@ -15,7 +15,7 @@ namespace Project.DigitalMarket.Domain.Managers.Business.Seller
     /// <summary>
     /// Manager xử lý logic nghiệp vụ cho Seller (Domain layer)
     /// </summary>
-    public class SellerManager(ILazyloadProvider lazyloadProvider) : ManagerBase(lazyloadProvider), ISellerManager
+    internal sealed class SellerManager(ILazyloadProvider lazyloadProvider) : ManagerBase(lazyloadProvider), ISellerManager
     {
         private UserManager<UserEntity> _userManager => _lazyloadProvider.LazyGetRequiredService<UserManager<UserEntity>>();
         private RoleManager<IdentityRole<Guid>> _roleManager => _lazyloadProvider.LazyGetRequiredService<RoleManager<IdentityRole<Guid>>>();

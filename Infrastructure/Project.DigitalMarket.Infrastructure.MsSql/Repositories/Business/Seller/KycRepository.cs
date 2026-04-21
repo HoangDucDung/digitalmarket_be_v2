@@ -8,7 +8,7 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Repositories.Business.Selle
     /// <summary>
     /// Triển khai Repository cho KYC Profile
     /// </summary>
-    public class KycRepository(ILazyloadProvider lazyloadProvider) : RepositoryBase<UserKycProfileEntity>(lazyloadProvider), IKycRepository
+    internal sealed class KycRepository(ILazyloadProvider lazyloadProvider) : RepositoryBase<UserKycProfileEntity>(lazyloadProvider), IKycRepository
     {
     }
 }

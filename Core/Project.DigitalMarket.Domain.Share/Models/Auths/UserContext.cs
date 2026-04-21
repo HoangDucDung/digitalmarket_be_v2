@@ -1,6 +1,4 @@
-using System;
-
-namespace Project.DigitalMarket.Domain.Models
+namespace Project.DigitalMarket.Domain.Models.Commons
 {
     public class UserContext
     {

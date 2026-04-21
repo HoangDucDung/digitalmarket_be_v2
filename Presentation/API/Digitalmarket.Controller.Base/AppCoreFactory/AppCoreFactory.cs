@@ -1,46 +1,5 @@
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Tokens;
-using Project.DigitalMarket.Domain.Entities;
-using Project.DigitalMarket.Domain.Managers.Auths;
-using Project.DigitalMarket.Application.Contract.Services.Auths;
-using Project.DigitalMarket.Application.Contract.Services.Mails;
-using Project.DigitalMarket.Application.Services.Auths;
-using Project.DigitalMarket.Domain.ExternalServices.Mails;
-using Project.DigitalMarket.Application.Contract.Services.Business.Seller;
-using Project.DigitalMarket.Application.Contract.Services.Business.Wallet;
-using Project.DigitalMarket.Infrastructure.Mail.Services;
-using Project.DigitalMarket.Infrastructure.MsSql.Data;
+using Project.DigitalMarket.Host.Base.Middleware;
 using Project.DigitalMarket.Libs.DependencyInjection;
-using System.Text;
-using Project.DigitalMarket.Application;
-using Project.DigitalMarket.Application.Contract.Services.Business.Cart;
-using Project.DigitalMarket.Application.Contract.Services.Business.Order;
-using Project.DigitalMarket.Application.Contract.Services.Business.Product;
-using Project.DigitalMarket.Application.Services.Business.Cart;
-using Project.DigitalMarket.Application.Services.Business.Order;
-using Project.DigitalMarket.Application.Services.Business.Product;
-using Project.DigitalMarket.Application.Services.Business.Seller;
-using Project.DigitalMarket.Application.Services.Business.Wallet;
-using Project.DigitalMarket.Domain.Managers.Business.Cart;
-using Project.DigitalMarket.Domain.Managers.Business.Order;
-using Project.DigitalMarket.Domain.Managers.Business.Product;
-using Project.DigitalMarket.Domain.Managers.Business.Seller;
-using Project.DigitalMarket.Domain.Repositories.Auths;
-using Project.DigitalMarket.Infrastructure.MsSql.Repositories.Auths;
-using Project.DigitalMarket.Domain.Repositories.Business.Cart;
-using Project.DigitalMarket.Domain.Repositories.Business.Order;
-using Project.DigitalMarket.Domain.Repositories.Business.Product;
-using Project.DigitalMarket.Domain.Repositories.Business.Seller;
-using Project.DigitalMarket.Infrastructure.MsSql.Repositories.Business.Cart;
-using Project.DigitalMarket.Infrastructure.MsSql.Repositories.Business.Order;
-using Project.DigitalMarket.Infrastructure.MsSql.Repositories.Business.Product;
-using Project.DigitalMarket.Infrastructure.MsSql.Repositories.Business.Seller;
-using Project.DigitalMarket.Domain.Managers.Auths.Wallet;
-using Project.DigitalMarket.Domain.Repositories.Auths.Wallet;
-using Project.DigitalMarket.Infrastructure.MsSql.Repositories.Auths.Wallet;
-using Project.Extensions.Extensions;
 
 namespace Digitalmarket.Controller.Base.AppCoreFactory
 {
@@ -49,6 +8,12 @@ namespace Digitalmarket.Controller.Base.AppCoreFactory
     /// </summary>
     public static class AppCoreFactory
     {
+        /// <summary>
+        /// Đăng ký service cho các lớp trong AppCore, bao gồm các provider hỗ trợ lazy loading và caching, 
+        /// giúp tối ưu hiệu năng và quản lý tài nguyên hiệu quả hơn.
+        /// </summary>
+        /// <param name="service"></param>
+        /// <returns></returns>
         public static IServiceCollection AddLazyloadFactory(this IServiceCollection service)
         {
             service.AddHttpContextAccessor();
@@ -58,133 +23,15 @@ namespace Digitalmarket.Controller.Base.AppCoreFactory
         }
 
         /// <summary>
-        /// DI cho auth: Đăng ký Identity, JWT Authentication, DbContext, AuthService, AutoMapper
+        /// Cấu hình middeware cho ứng dụng.
         /// </summary>
-        /// <param name="services"></param>
-        /// <param name="configuration">Configuration để đọc AuthConfig và ConnectionString</param>
+        /// <param name="builder"></param>
         /// <returns></returns>
-        public static IServiceCollection UseAppAuthenFactory(this IServiceCollection services, IConfiguration configuration)
+        public static IApplicationBuilder MiddlewareRegistration(this IApplicationBuilder builder)
         {
-            // 1. Đăng ký DbContext với SQL Server
-            var connectionString = configuration.GetSection("ConnectionString:SqlServer").Value;
-            services.AddDbContext<DigitalMarketDbContext>(options =>
-                options.UseSqlServer(connectionString));
+            builder.UseMiddleware<ApplicationMiddleware>();
 
-            // 2. Đăng ký Identity
-            services.AddIdentity<UserEntity, IdentityRole<Guid>>(options =>
-            {
-                options.Password.RequireDigit = true;
-                options.Password.RequiredLength = 6;
-                options.Password.RequireNonAlphanumeric = false;
-                options.Password.RequireUppercase = true;
-                options.Password.RequireLowercase = true;
-                options.User.RequireUniqueEmail = true;
-            })
-            .AddEntityFrameworkStores<DigitalMarketDbContext>()
-            .AddDefaultTokenProviders();
-
-            // 3. Cấu hình JWT Authentication
-            var authConfig = configuration.GetSection("AuthConfig");
-            var secretKey = authConfig["SecretKey"];
-
-            services.AddAuthentication(options =>
-            {
-                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            })
-            .AddJwtBearer(options =>
-            {
-                options.TokenValidationParameters = new TokenValidationParameters
-                {
-                    ValidateIssuerSigningKey = true,
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey!)),
-                    ValidateIssuer = true,
-                    ValidIssuer = authConfig["Issuer"],
-                    ValidateAudience = true,
-                    ValidAudience = authConfig["Audience"],
-                    ValidateLifetime = true,
-                    ClockSkew = TimeSpan.Zero
-                };
-                options.Events = new JwtBearerEvents
-                {
-                    OnMessageReceived = context =>
-                    {
-                        var token = context.Request.Headers["Authorization"].FirstOrDefault()
-                                 ?? context.Request.Headers["Authentication"].FirstOrDefault();
-
-                        if (token.HasValue() && token.StartsWith("Bearer ", StringComparison.OrdinalIgnoreCase))
-                        {
-                            context.Token = token.Substring("Bearer ".Length).Trim();
-                        }
-                        return Task.CompletedTask;
-                    }
-                };
-            });
-
-            // 4. Đăng ký AutoMapper
-            services.AddAutoMapper(typeof(DigitalMarketAutoMapper));
-
-            // 5. Đăng ký Services (Application Layer)
-            services.AddScoped<IAuthService, AuthService>();
-            services.AddScoped<IEmailService, Project.DigitalMarket.Application.Services.Mails.EmailService>();
-
-            // 6. Đăng ký External Services (Domain Contract <-> Infras Implementation)
-            services.AddScoped<IEmailManager, EmailService>();
-
-            return services;
-        }
-
-        public static IServiceCollection UseAppBussinessFactory(this IServiceCollection services)
-        {
-            services.AddScoped<ISellerService, SellerService>();
-            services.AddScoped<IProductService, ProductService>();
-            services.AddScoped<ICartService, CartService>();
-            services.AddScoped<IOrderService, OrderService>();
-            services.AddScoped<ICommentService, CommentService>();
-            services.AddScoped<IWalletService, WalletService>();
-            return services;
-        }
-
-        /// <summary>
-        /// DI cho domain logic
-        /// </summary>
-        /// <param name="services"></param>
-        /// <returns></returns>
-        public static IServiceCollection UseAppDomainFactory(this IServiceCollection services)
-        {
-            return services;
-        }
-
-        /// <summary>
-        /// DI cho domain logic (Manager)
-        /// </summary>
-        /// <param name="services"></param>
-        /// <returns></returns>
-        public static IServiceCollection UseAppManagerFactory(this IServiceCollection services)
-        {
-            services.AddScoped<IAuthManager, AuthManager>();
-            services.AddScoped<IAuthRepository, AuthRepository>();
-
-            // Business Managers & Repositories
-            services.AddScoped<ISellerManager, SellerManager>();
-            services.AddScoped<IProductManager, ProductManager>();
-            services.AddScoped<ICommentManager, CommentManager>();
-            services.AddScoped<ICartManager, CartManager>();
-            services.AddScoped<IOrderManager, OrderManager>();
-            
-            services.AddScoped<IKycRepository, KycRepository>();
-            services.AddScoped<IFinancialRepository, FinancialRepository>();
-            services.AddScoped<IProductRepository, ProductRepository>();
-            services.AddScoped<ICommentRepository, CommentRepository>();
-            services.AddScoped<ICartRepository, CartRepository>();
-            services.AddScoped<IOrderRepository, OrderRepository>();
-
-            // Wallet
-            services.AddScoped<IWalletManager, WalletManager>();
-            services.AddScoped<IWalletRepository, WalletRepository>();
-            services.AddScoped<IWalletTransactionRepository, WalletTransactionRepository>();
-
-            return services;
+            return builder;
         }
     }
 }

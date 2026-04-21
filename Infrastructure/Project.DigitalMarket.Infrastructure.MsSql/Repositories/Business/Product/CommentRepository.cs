@@ -8,7 +8,7 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Repositories.Business.Produ
     /// <summary>
     /// Thực thi repository cho Comment sử dụng Entity Framework Core.
     /// </summary>
-    public class CommentRepository(ILazyloadProvider lazyloadProvider) : RepositoryBase<CommentEntity>(lazyloadProvider), ICommentRepository
+    internal sealed class CommentRepository(ILazyloadProvider lazyloadProvider) : RepositoryBase<CommentEntity>(lazyloadProvider), ICommentRepository
     {
         public IQueryable<CommentEntity> GetByProductId(Guid productId)
         {

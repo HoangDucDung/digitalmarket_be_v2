@@ -1,6 +1,6 @@
 using Project.DigitalMarket.Domain.Entities;
 
-namespace Project.DigitalMarket.Domain.Managers.Auths.Wallet
+namespace Project.DigitalMarket.Domain.Managers.Business.Wallet
 {
     /// <summary>
     /// Manager quản lý các nghiệp vụ lõi (Core Entity Logic) xoay quanh Ví điện tử
@@ -23,10 +23,5 @@ namespace Project.DigitalMarket.Domain.Managers.Auths.Wallet
         /// <param name="description">Mô tả giao dịch</param>
         /// <param name="referenceId">Mã tham chiếu (Ví dụ: OrderCode)</param>
         Task ProcessTransactionAsync(Guid userId, decimal amount, string type, string description, string? referenceId = null);
-
-        /// <summary>
-        /// Lấy danh sách lịch sử giao dịch có phân trang
-        /// </summary>
-        Task<List<WalletTransactionEntity>> GetTransactionsAsync(Guid userId, int page = 1, int pageSize = 10);
     }
 }

@@ -8,7 +8,7 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Repositories.Business.Selle
     /// <summary>
     /// Triển khai Repository cho Financial Tie
     /// </summary>
-    public class FinancialRepository(ILazyloadProvider lazyloadProvider) : RepositoryBase<UserFinancialTieEntity>(lazyloadProvider), IFinancialRepository
+    internal sealed class FinancialRepository(ILazyloadProvider lazyloadProvider) : RepositoryBase<UserFinancialTieEntity>(lazyloadProvider), IFinancialRepository
     {
     }
 }

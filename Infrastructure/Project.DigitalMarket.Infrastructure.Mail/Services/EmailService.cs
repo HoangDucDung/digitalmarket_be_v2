@@ -12,7 +12,7 @@ namespace Project.DigitalMarket.Infrastructure.Mail.Services
     /// Thực thi (Implementation) việc gửi email qua SMTP (MailKit).
     /// Kế thừa và thực hiện contract IEmailManager từ Domain Layer.
     /// </summary>
-    public class EmailService : IEmailManager
+    public class EmailService : IEmailDigitalMarketManager
     {
         private readonly ILazyloadProvider _lazyloadProvider;
         private IEmailConfig _emailConfig => _lazyloadProvider.LazyGetRequiredService<IEmailConfig>();
