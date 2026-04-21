@@ -25,6 +25,22 @@ Dưới đây là 5 điểm chưa hợp lý lớn nhất kèm theo giải thích
 
 ---
 
+## 2. Dependency Leakage: Web API (Presentation) gọi trực tiếp Infrastructure (done)
+
+> [!IMPORTANT]
+> Tầng Web API đang tham chiếu mạnh tới Infrastructure làm phá vỡ sự cô lập của kiến trúc.
+
+**Giải thích chi tiết:**
+- Theo lý thuyết, Presentation -> Application -> Domain. Infrastructure là vòng ngoài cùng giao tiếp với file/DB. Tầng Application (và Presentation) chỉ thông qua các Interface chứa trong Domain/Application để nói chuyện với DB mà không hề biết lớp thực thi (về sau).
+- Hiện tại project `Digitalmarket.Controller.Base` (thuộc tầng Presentation) lại có `<ProjectReference>` trực tiếp đến `Project.DigitalMarket.Infrastructure.MsSql` và `Project.DigitalMarket.Infrastructure.Mail`. Sự liên kết này phục vụ cho cục `AppCoreFactory` thực hiện Dependency Injection (DI).
+- Việc Dependency như vậy khiến project `Controller.Base` kéo theo thư viện Infrastructure, làm cho tất cả các class Controller kế thừa base có khả năng truy suất trực tiếp `DbContext` (hay các Entity Db), vượt mặt được Application layer.
+
+**Phương án khắc phục:**
+1. Chuyển phần đăng ký DI của Database, Mail... từ `Controller.Base` sang một Extension Methods (như `AddInfrastructureLayer()`) thuộc dự án `Infrastructure`.
+2. Ở file `Program.cs` của tầng API cao nhất chỉ gọi các ServiceCollection Extension mà tuyệt đối không đưa các project Infrastructure vào project Shared UI / Share Web Base.
+
+---
+
 ## 3. Kiến trúc Microservices lai tạp Monolith (Coupled Microservices)
 
 > [!CAUTION]
@@ -43,7 +59,7 @@ Dưới đây là 5 điểm chưa hợp lý lớn nhất kèm theo giải thích
 
 ---
 
-## 4. Over-layering: Tạo ra quá nhiều lớp trung gian dư thừa
+## 4. Over-layering: Tạo ra quá nhiều lớp trung gian dư thừa (done)
 
 > [!NOTE]
 > Flow luân chuyển thay vì 3 lớp đang bị tách nhỏ thành 4 lớp: Controller -> Service -> Manager -> Repository.
