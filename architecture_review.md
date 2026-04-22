@@ -8,7 +8,7 @@ Dưới đây là 5 điểm chưa hợp lý lớn nhất kèm theo giải thích
 
 ---
 
-## 1. Vi phạm nghiêm trọng: Rò rỉ Infrastructure vào tầng Domain (Domain Dependency Injection Anti-Pattern)
+## 1. Vi phạm nghiêm trọng: Rò rỉ Infrastructure vào tầng Domain (Domain Dependency Injection Anti-Pattern) (done)
 
 > [!WARNING]
 > Tầng **Domain** đang bị phụ thuộc vào Entity Framework Core (Database) - đi ngược lại triết lý cốt lõi của Clean Architecture.
@@ -75,7 +75,7 @@ Dưới đây là 5 điểm chưa hợp lý lớn nhất kèm theo giải thích
 
 ---
 
-## 5. Sai định dạng loại dự án (SDK Type) cho project Library
+## 5. Sai định dạng loại dự án (SDK Type) cho project Library (done)
 
 > [!WARNING]
 > Project sinh ra để làm thư viện dùng chung nhưng lại mang cấu hình SDK Web Server.

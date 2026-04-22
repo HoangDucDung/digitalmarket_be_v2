@@ -997,11 +997,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\MIC\\OneDrive\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj",
+      "projectUniqueName": "C:\\Users\\MIC\\OneDrive\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj",
       "projectName": "Project.DigitalMarket.Host.Base",
-      "projectPath": "c:\\Users\\MIC\\OneDrive\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj",
+      "projectPath": "C:\\Users\\MIC\\OneDrive\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\Project.DigitalMarket.Host.Base.csproj",
       "packagesPath": "C:\\Users\\MIC\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\MIC\\OneDrive\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\obj\\",
+      "outputPath": "C:\\Users\\MIC\\OneDrive\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Host.Base\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1023,11 +1023,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "c:\\Users\\MIC\\OneDrive\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain.Share\\Project.DigitalMarket.Domain.Share.csproj": {
-              "projectPath": "c:\\Users\\MIC\\OneDrive\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain.Share\\Project.DigitalMarket.Domain.Share.csproj"
+            "C:\\Users\\MIC\\OneDrive\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain.Share\\Project.DigitalMarket.Domain.Share.csproj": {
+              "projectPath": "C:\\Users\\MIC\\OneDrive\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Core\\Project.DigitalMarket.Domain.Share\\Project.DigitalMarket.Domain.Share.csproj"
             },
-            "c:\\Users\\MIC\\OneDrive\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\Project.DigitalMarket.Libs.csproj": {
-              "projectPath": "c:\\Users\\MIC\\OneDrive\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\Project.DigitalMarket.Libs.csproj"
+            "C:\\Users\\MIC\\OneDrive\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\Project.DigitalMarket.Libs.csproj": {
+              "projectPath": "C:\\Users\\MIC\\OneDrive\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\Project.DigitalMarket.Libs.csproj"
             }
           }
         }

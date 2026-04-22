@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\MIC\\OneDrive\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\Project.DigitalMarket.Libs.csproj": {}
+    "C:\\Users\\MIC\\OneDrive\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\Project.DigitalMarket.Libs.csproj": {}
   },
   "projects": {
-    "c:\\Users\\MIC\\OneDrive\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Extension\\Project.DigitalMarket.Extension\\Project.DigitalMarket.Extension.csproj": {
+    "C:\\Users\\MIC\\OneDrive\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Extension\\Project.DigitalMarket.Extension\\Project.DigitalMarket.Extension.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\MIC\\OneDrive\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Extension\\Project.DigitalMarket.Extension\\Project.DigitalMarket.Extension.csproj",
+        "projectUniqueName": "C:\\Users\\MIC\\OneDrive\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Extension\\Project.DigitalMarket.Extension\\Project.DigitalMarket.Extension.csproj",
         "projectName": "Project.DigitalMarket.Extension",
-        "projectPath": "c:\\Users\\MIC\\OneDrive\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Extension\\Project.DigitalMarket.Extension\\Project.DigitalMarket.Extension.csproj",
+        "projectPath": "C:\\Users\\MIC\\OneDrive\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Extension\\Project.DigitalMarket.Extension\\Project.DigitalMarket.Extension.csproj",
         "packagesPath": "C:\\Users\\MIC\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\MIC\\OneDrive\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Extension\\Project.DigitalMarket.Extension\\obj\\",
+        "outputPath": "C:\\Users\\MIC\\OneDrive\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Extension\\Project.DigitalMarket.Extension\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -70,14 +70,14 @@
         }
       }
     },
-    "c:\\Users\\MIC\\OneDrive\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\Project.DigitalMarket.Libs.csproj": {
+    "C:\\Users\\MIC\\OneDrive\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\Project.DigitalMarket.Libs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\MIC\\OneDrive\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\Project.DigitalMarket.Libs.csproj",
+        "projectUniqueName": "C:\\Users\\MIC\\OneDrive\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\Project.DigitalMarket.Libs.csproj",
         "projectName": "Project.DigitalMarket.Libs",
-        "projectPath": "c:\\Users\\MIC\\OneDrive\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\Project.DigitalMarket.Libs.csproj",
+        "projectPath": "C:\\Users\\MIC\\OneDrive\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\Project.DigitalMarket.Libs.csproj",
         "packagesPath": "C:\\Users\\MIC\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\MIC\\OneDrive\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\obj\\",
+        "outputPath": "C:\\Users\\MIC\\OneDrive\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Lib\\Project.DigitalMarket.Libs\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -99,8 +99,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "c:\\Users\\MIC\\OneDrive\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Extension\\Project.DigitalMarket.Extension\\Project.DigitalMarket.Extension.csproj": {
-                "projectPath": "c:\\Users\\MIC\\OneDrive\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Extension\\Project.DigitalMarket.Extension\\Project.DigitalMarket.Extension.csproj"
+              "C:\\Users\\MIC\\OneDrive\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Extension\\Project.DigitalMarket.Extension\\Project.DigitalMarket.Extension.csproj": {
+                "projectPath": "C:\\Users\\MIC\\OneDrive\\Documents\\Code\\hddung\\digitalmarket_be_v2\\Extension\\Project.DigitalMarket.Extension\\Project.DigitalMarket.Extension.csproj"
               }
             }
           }

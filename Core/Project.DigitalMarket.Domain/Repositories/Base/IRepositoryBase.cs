@@ -9,17 +9,6 @@ namespace Project.DigitalMarket.Domain.Repositories.Base
     public interface IRepositoryBase<TEntity> where TEntity : class
     {
         /// <summary>
-        /// Lấy toàn bộ danh sách bản ghi (không tracking để tăng hiệu suất đọc)
-        /// </summary>
-        IQueryable<TEntity> GetAll();
-
-        /// <summary>
-        /// Lấy danh sách bản ghi dựa theo điều kiện nhất định
-        /// </summary>
-        /// <param name="expression">Biểu thức lambda điều kiện (vd: x => x.Id == id)</param>
-        IQueryable<TEntity> GetByCondition(Expression<Func<TEntity, bool>> expression);
-
-        /// <summary>
         /// Lấy một bản ghi theo khóa chính (Id)
         /// </summary>
         /// <param name="id">Giá trị của khóa chính</param>

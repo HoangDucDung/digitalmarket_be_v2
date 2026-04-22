@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
 using Project.DigitalMarket.Domain.Entities;
 using Project.DigitalMarket.Domain.Repositories.Auths.Wallet;
 using Project.DigitalMarket.Domain.Share.Constants.Business;
@@ -24,7 +23,7 @@ namespace Project.DigitalMarket.Domain.Managers.Business.Wallet
         /// </summary>
         public async Task<WalletEntity> GetOrCreateWalletAsync(Guid userId)
         {
-            var wallet = await _walletRepository.GetByCondition(x => x.UserId == userId).FirstOrDefaultAsync();
+            var wallet = await _walletRepository.GetByUserIdAsync(userId);
             if (wallet == null)
             {
                 // Verify user exists before creating a wallet (prevent FK conflict with old tokens)

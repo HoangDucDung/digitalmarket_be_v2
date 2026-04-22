@@ -50,7 +50,7 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Repositories.Business.Produ
             return GetByCondition(x => x.Slug == slug).AnyAsync();
         }
 
-        public IQueryable<ProductEntity> GetDiscoverQuery()
+        private IQueryable<ProductEntity> GetDiscoverQuery()
         {
             var now = GenerateExtentions.Now;
             return GetByCondition(x =>
@@ -67,7 +67,7 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Repositories.Business.Produ
                 .Include(x => x.Seller);
         }
 
-        public IQueryable<CategoryEntity> GetCategoryTreeQuery(bool includeDisabled)
+        private IQueryable<CategoryEntity> GetCategoryTreeQuery(bool includeDisabled)
         {
             var query = _context.Set<CategoryEntity>().Where(x => !x.IsDeleted);
             if (!includeDisabled)
@@ -97,6 +97,13 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Repositories.Business.Produ
             return _context.Set<BrandEntity>()
                 .Where(x => x.IsActive && !x.IsDeleted)
                 .FirstOrDefaultAsync(x => x.Slug.ToLower() == key || x.Name.ToLower() == key);
+        }
+
+        public async Task<ProductEntity?> GetActiveWithVariantsByIdAsync(Guid productId)
+        {
+            return await GetByCondition(x => x.Id == productId && x.IsActive && !x.IsDeleted)
+                .Include(x => x.Variants)
+                .FirstOrDefaultAsync();
         }
     }
 }

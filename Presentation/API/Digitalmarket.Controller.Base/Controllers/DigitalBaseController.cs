@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Project.DigitalMarket.Libs.DependencyInjection;
 using Project.DigitalMarket.Domain.Models.Commons;
+using Microsoft.Extensions.Logging;
 
 namespace Digitalmarket.Controller.Base.Controllers
 {

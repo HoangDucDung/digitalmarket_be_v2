@@ -36,5 +36,13 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Repositories.Business.Cart
                 Delete(item);
             await SaveChangesAsync();
         }
+
+        public async Task<List<CartItemEntity>> GetSelectedItemsWithProductByUserIdAsync(Guid userId)
+        {
+            return await GetByCondition(x => x.UserId == userId && x.IsSelected)
+                .Include(x => x.Product)
+                .ThenInclude(p => p.Variants)
+                .ToListAsync();
+        }
     }
 }

@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using Project.DigitalMarket.Domain.Entities;
 using Project.DigitalMarket.Domain.Repositories.Auths.Wallet;
 using Project.DigitalMarket.Infrastructure.MsSql.Repositories.Base;
@@ -7,5 +8,9 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Repositories.Business.Walle
 {
     internal sealed class WalletRepository(ILazyloadProvider lazyloadProvider) : RepositoryBase<WalletEntity>(lazyloadProvider), IWalletRepository
     {
+        public async Task<WalletEntity?> GetByUserIdAsync(Guid userId)
+        {
+            return await GetByCondition(x => x.UserId == userId).FirstOrDefaultAsync();
+        }
     }
 }

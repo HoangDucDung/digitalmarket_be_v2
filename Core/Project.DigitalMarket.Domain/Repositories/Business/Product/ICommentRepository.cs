@@ -11,6 +11,6 @@ namespace Project.DigitalMarket.Domain.Repositories.Business.Product
         /// <summary>
         /// Lấy danh sách bình luận của một sản phẩm.
         /// </summary>
-        IQueryable<CommentEntity> GetByProductId(Guid productId);
+        Task<List<CommentEntity>> GetByProductIdAsync(Guid productId);
     }
 }

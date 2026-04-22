@@ -1,4 +1,3 @@
-using Microsoft.EntityFrameworkCore;
 using Project.DigitalMarket.Domain.Entities.Business;
 using Project.DigitalMarket.Domain.Repositories.Business.Cart;
 using Project.DigitalMarket.Domain.Repositories.Business.Order;
@@ -21,10 +20,7 @@ namespace Project.DigitalMarket.Domain.Managers.Business.Order
 
         public async Task<OrderEntity> CheckoutCartAsync(Guid userId, string paymentMethod, string? note)
         {
-            var cartItems = await _cartRepository.GetByCondition(x => x.UserId == userId && x.IsSelected)
-                .Include(x => x.Product)
-                .ThenInclude(p => p.Variants)
-                .ToListAsync();
+            var cartItems = await _cartRepository.GetSelectedItemsWithProductByUserIdAsync(userId);
 
             if (!cartItems.Any()) throw new BusinessException(ErrorCode.EmptyCart, "Giỏ hàng của bạn đang trống.");
 
@@ -86,9 +82,7 @@ namespace Project.DigitalMarket.Domain.Managers.Business.Order
 
         public async Task<OrderEntity> DirectPurchaseAsync(Guid userId, Guid productId, int quantity, string paymentMethod, string? note)
         {
-            var product = await _productRepository.GetByCondition(x => x.Id == productId && x.IsActive && !x.IsDeleted)
-                .Include(x => x.Variants)
-                .FirstOrDefaultAsync();
+            var product = await _productRepository.GetActiveWithVariantsByIdAsync(productId);
             if (product == null) throw new BusinessException(ErrorCode.ProductNotAvailable, "Sản phẩm không khả dụng.");
 
             if (product.SellerId == userId)

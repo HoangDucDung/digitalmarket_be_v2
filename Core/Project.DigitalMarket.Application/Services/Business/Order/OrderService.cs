@@ -1,7 +1,5 @@
-using Microsoft.EntityFrameworkCore;
 using Project.DigitalMarket.Application.Contract.DTOs.Business.Order;
 using Project.DigitalMarket.Application.Contract.Services.Business.Order;
-using Project.DigitalMarket.Domain.Entities.Business;
 using Project.DigitalMarket.Domain.Managers.Business.Order;
 using Project.DigitalMarket.Domain.Repositories.Business.Order;
 using Project.DigitalMarket.Libs.DependencyInjection;

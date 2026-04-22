@@ -31,13 +31,13 @@ namespace Project.DigitalMarket.Domain.Managers.Auths
 
             var claims = new List<Claim>
             {
-                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                new Claim(ClaimTypes.Email, user.Email ?? string.Empty),
-                new Claim(ClaimTypes.Name, user.FullName),
-                new Claim("IsCustomer", roles.Contains(RoleConstants.Customer).ToString().ToLower()),
-                new Claim("IsSeller", roles.Contains(RoleConstants.Seller).ToString().ToLower()),
-                new Claim("UserRoles", string.Join(",", roles)),
-                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+                new(ClaimTypes.NameIdentifier, user.Id.ToString()),
+                new(ClaimTypes.Email, user.Email ?? string.Empty),
+                new(ClaimTypes.Name, user.FullName),
+                new("IsCustomer", roles.Contains(RoleConstants.Customer).ToString().ToLower()),
+                new("IsSeller", roles.Contains(RoleConstants.Seller).ToString().ToLower()),
+                new("UserRoles", string.Join(",", roles)),
+                new(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
             };
 
             var token = new JwtSecurityToken(

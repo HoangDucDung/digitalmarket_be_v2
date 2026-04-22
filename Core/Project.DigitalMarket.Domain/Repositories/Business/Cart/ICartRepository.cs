@@ -24,5 +24,10 @@ namespace Project.DigitalMarket.Domain.Repositories.Business.Cart
         /// Xóa sạch tất cả các mục trong giỏ hàng của người dùng
         /// </summary>
         Task ClearCartAsync(Guid userId);
+
+        /// <summary>
+        /// Lấy danh sách các mục đang chọn trong giỏ hàng kèm thông tin Product và Variants
+        /// </summary>
+        Task<List<CartItemEntity>> GetSelectedItemsWithProductByUserIdAsync(Guid userId);
     }
 }

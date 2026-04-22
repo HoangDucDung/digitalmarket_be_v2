@@ -5,5 +5,9 @@ namespace Project.DigitalMarket.Domain.Repositories.Auths.Wallet
 {
     public interface IWalletRepository : IRepositoryBase<WalletEntity>
     {
+        /// <summary>
+        /// Lấy thông tin ví của người dùng
+        /// </summary>
+        Task<WalletEntity?> GetByUserIdAsync(Guid userId);
     }
 }

@@ -1,4 +1,3 @@
-using Microsoft.EntityFrameworkCore;
 using Project.DigitalMarket.Domain.Entities.Business;
 using Project.DigitalMarket.Domain.Repositories.Business.Product;
 using Project.DigitalMarket.Libs.DependencyInjection;
@@ -27,10 +26,7 @@ namespace Project.DigitalMarket.Domain.Managers.Business.Product
         /// </summary>
         public async Task<List<CommentEntity>> GetProductCommentsAsync(Guid productId)
         {
-            return await _commentRepository.GetByProductId(productId)
-                .Include(c => c.User)
-                .OrderByDescending(c => c.CreatedAt)
-                .ToListAsync();
+            return await _commentRepository.GetByProductIdAsync(productId);
         }
     }
 }

@@ -1,4 +1,3 @@
-using Microsoft.EntityFrameworkCore;
 using Project.DigitalMarket.Application.Contract.DTOs.Business.Cart;
 using Project.DigitalMarket.Application.Contract.Services.Business.Cart;
 using Project.DigitalMarket.Domain.Managers.Business.Cart;

@@ -30,10 +30,12 @@ namespace Project.DigitalMarket.Domain.Repositories.Business.Product
         /// </summary>
         Task<bool> IsSlugExistsAsync(string slug);
         
-        // Cần thiết cho các logic cũ hoặc nội bộ
-        IQueryable<ProductEntity> GetDiscoverQuery();
-        IQueryable<CategoryEntity> GetCategoryTreeQuery(bool includeDisabled);
         Task<CategoryEntity?> ResolveCategoryAsync(string categoryNameOrSlug);
         Task<BrandEntity?> ResolveBrandAsync(string? brandNameOrSlug);
+
+        /// <summary>
+        /// Lấy thông tin sản phẩm đang hoạt động kèm thông tin biến thể
+        /// </summary>
+        Task<ProductEntity?> GetActiveWithVariantsByIdAsync(Guid productId);
     }
 }

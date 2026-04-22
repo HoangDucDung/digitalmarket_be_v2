@@ -1,31 +1,31 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="NLog" Version="6.1.2" />
-    <PackageReference Include="Elastic.NLog.Targets" Version="9.0.0" />
-    <PackageReference Include="Elastic.CommonSchema.NLog" Version="9.0.0" />
-    <PackageReference Include="NLog.Web.AspNetCore" Version="6.1.2" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="NLog" Version="6.1.2" />
+		<PackageReference Include="Elastic.NLog.Targets" Version="9.0.0" />
+		<PackageReference Include="Elastic.CommonSchema.NLog" Version="9.0.0" />
+		<PackageReference Include="NLog.Web.AspNetCore" Version="6.1.2" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <None Update="Nlog.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
+	<ItemGroup>
+		<None Update="Nlog.config">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\Core\Project.DigitalMarket.Application.Contract\Project.DigitalMarket.Application.Contract.csproj" />
-    <ProjectReference Include="..\..\..\Core\Project.DigitalMarket.Application\Project.DigitalMarket.Application.csproj" />
-    <ProjectReference Include="..\..\..\Infrastructure\Project.DigitalMarket.Infrastructure.Mail\Project.DigitalMarket.Infrastructure.Mail.csproj" />
-    <ProjectReference Include="..\..\..\Infrastructure\Project.DigitalMarket.Infrastructure.MsSql\Project.DigitalMarket.Infrastructure.MsSql.csproj" />
-    <ProjectReference Include="..\..\..\Lib\Project.DigitalMarket.Host.Base\Project.DigitalMarket.Host.Base.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\Core\Project.DigitalMarket.Application.Contract\Project.DigitalMarket.Application.Contract.csproj" />
+		<ProjectReference Include="..\..\..\Core\Project.DigitalMarket.Application\Project.DigitalMarket.Application.csproj" />
+		<ProjectReference Include="..\..\..\Infrastructure\Project.DigitalMarket.Infrastructure.Mail\Project.DigitalMarket.Infrastructure.Mail.csproj" />
+		<ProjectReference Include="..\..\..\Infrastructure\Project.DigitalMarket.Infrastructure.MsSql\Project.DigitalMarket.Infrastructure.MsSql.csproj" />
+		<ProjectReference Include="..\..\..\Lib\Project.DigitalMarket.Host.Base\Project.DigitalMarket.Host.Base.csproj" />
+	</ItemGroup>
 
 </Project>

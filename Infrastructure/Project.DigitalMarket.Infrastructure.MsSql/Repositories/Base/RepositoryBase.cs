@@ -24,7 +24,7 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Repositories.Base
         /// <summary>
         /// Lấy toàn bộ danh sách bản ghi và tắt tracking (AsNoTracking) để tối ưu hiệu năng
         /// </summary>
-        public virtual IQueryable<TEntity> GetAll()
+        protected virtual IQueryable<TEntity> GetAll()
         {
             return _dbSet.AsNoTracking();
         }
@@ -32,7 +32,7 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Repositories.Base
         /// <summary>
         /// Lấy danh sách bản ghi thỏa mãn điều kiện nhất định, tắt tracking
         /// </summary>
-        public virtual IQueryable<TEntity> GetByCondition(Expression<Func<TEntity, bool>> expression)
+        protected virtual IQueryable<TEntity> GetByCondition(Expression<Func<TEntity, bool>> expression)
         {
             return _dbSet.Where(expression).AsNoTracking();
         }

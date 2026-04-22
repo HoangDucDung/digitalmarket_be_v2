@@ -8,5 +8,9 @@ namespace Project.DigitalMarket.Domain.Repositories.Business.Seller
     /// </summary>
     public interface IKycRepository : IRepositoryBase<UserKycProfileEntity>
     {
+        /// <summary>
+        /// Lấy thông tin KYC của người dùng
+        /// </summary>
+        Task<UserKycProfileEntity?> GetByUserIdAsync(Guid userId);
     }
 }

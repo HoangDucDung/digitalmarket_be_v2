@@ -1,4 +1,3 @@
-using Microsoft.EntityFrameworkCore;
 using Project.DigitalMarket.Domain.Entities.Business;
 using Project.DigitalMarket.Domain.Repositories.Business.Cart;
 using Project.DigitalMarket.Domain.Repositories.Business.Product;

@@ -8,5 +8,9 @@ namespace Project.DigitalMarket.Domain.Repositories.Business.Seller
     /// </summary>
     public interface IFinancialRepository : IRepositoryBase<UserFinancialTieEntity>
     {
+        /// <summary>
+        /// Lấy thông tin tài chính mặc định của người dùng
+        /// </summary>
+        Task<UserFinancialTieEntity?> GetDefaultByUserIdAsync(Guid userId);
     }
 }

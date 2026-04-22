@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using Project.DigitalMarket.Domain.Entities.Business;
 using Project.DigitalMarket.Domain.Repositories.Business.Product;
 using Project.DigitalMarket.Infrastructure.MsSql.Repositories.Base;
@@ -10,9 +11,12 @@ namespace Project.DigitalMarket.Infrastructure.MsSql.Repositories.Business.Produ
     /// </summary>
     internal sealed class CommentRepository(ILazyloadProvider lazyloadProvider) : RepositoryBase<CommentEntity>(lazyloadProvider), ICommentRepository
     {
-        public IQueryable<CommentEntity> GetByProductId(Guid productId)
+        public async Task<List<CommentEntity>> GetByProductIdAsync(Guid productId)
         {
-            return _dbSet.Where(x => x.ProductId == productId && !x.IsDeleted);
+            return await GetByCondition(x => x.ProductId == productId && !x.IsDeleted)
+                .Include(x => x.User)
+                .OrderByDescending(x => x.CreatedAt)
+                .ToListAsync();
         }
     }
 }

@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
 using Project.DigitalMarket.Domain.Entities;
 using Project.DigitalMarket.Domain.Models.Business.Seller;
 using Project.DigitalMarket.Domain.Repositories.Business.Seller;
@@ -47,7 +46,7 @@ namespace Project.DigitalMarket.Domain.Managers.Business.Seller
             await _userManager.UpdateAsync(user);
 
             // 2. Tạo hoặc cập nhật hồ sơ KYC qua Repository
-            var kycProfile = await _kycRepository.GetByCondition(x => x.UserId == userId).FirstOrDefaultAsync();
+            var kycProfile = await _kycRepository.GetByUserIdAsync(userId);
             
             bool isNewKyc = false;
             if (kycProfile == null)
@@ -72,7 +71,7 @@ namespace Project.DigitalMarket.Domain.Managers.Business.Seller
             }
 
             // 3. Tạo hoặc cập nhật thông tin tài chính (Payout) qua Repository
-            var financialTie = await _financialRepository.GetByCondition(x => x.UserId == userId && x.IsDefault).FirstOrDefaultAsync();
+            var financialTie = await _financialRepository.GetDefaultByUserIdAsync(userId);
 
             if (financialTie == null)
             {
