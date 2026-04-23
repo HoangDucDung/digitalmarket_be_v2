@@ -31,12 +31,9 @@ namespace Project.DigitalMarket.Domain.Managers.Auths
 
             var claims = new List<Claim>
             {
-                new(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                new(ClaimTypes.Email, user.Email ?? string.Empty),
-                new(ClaimTypes.Name, user.FullName),
-                new("IsCustomer", roles.Contains(RoleConstants.Customer).ToString().ToLower()),
-                new("IsSeller", roles.Contains(RoleConstants.Seller).ToString().ToLower()),
-                new("UserRoles", string.Join(",", roles)),
+                new(AppClaimTypes.UserId, user.Id.ToString()),
+                new(AppClaimTypes.Email, user.Email ?? string.Empty),
+                new(AppClaimTypes.Role, string.Join(",", roles)),
                 new(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
             };
 

@@ -1,7 +1,7 @@
 using Project.DigitalMarket.Domain.Entities;
 using Project.DigitalMarket.Domain.Repositories.Base;
 
-namespace Project.DigitalMarket.Domain.Repositories.Auths.Wallet
+namespace Project.DigitalMarket.Domain.Repositories.Business.Wallet
 {
     public interface IWalletTransactionRepository : IRepositoryBase<WalletTransactionEntity>
     {

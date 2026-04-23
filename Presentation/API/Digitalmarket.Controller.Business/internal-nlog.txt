@@ -82,3 +82,14 @@
 2026-04-22 09:24:03.9266 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.2.5163. Product version: 6.1.2+24518acbad6757883eafdd5ec696eb049305cb7b. GlobalAssemblyCache: False
 2026-04-22 09:24:03.9438 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: console
 2026-04-22 09:24:03.9907 Info Configuration initialized: TargetNames=elastic, ConfigItems=70, AutoReload=true, FilePath=C:\Users\MIC\OneDrive\Documents\Code\hddung\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Business\bin\Debug\net8.0\nlog.config
+2026-04-22 14:27:04.1032 Info Loading assembly name: NLog.Web.AspNetCore
+2026-04-22 14:27:04.1032 Info NLog.Web.AspNetCore, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.2.1383. Product version: 6.1.2+82b909b8b4044417774ed8f67c58655ca7e4e2b8. GlobalAssemblyCache: False
+2026-04-22 14:27:04.1126 Info Loading assembly name: Elastic.NLog.Targets
+2026-04-22 14:27:04.1126 Info Elastic.NLog.Targets, Version=9.0.0.0, Culture=neutral, PublicKeyToken=069ca2728db333c1. File version: 9.0.0.0. Product version: 9.0.0+608d9254e808806db6cd119e9af00ab7ae9402c2. GlobalAssemblyCache: False
+2026-04-22 14:27:04.1126 Info Loading assembly name: Elastic.CommonSchema.NLog
+2026-04-22 14:27:04.1126 Info Elastic.CommonSchema.NLog, Version=9.0.0.0, Culture=neutral, PublicKeyToken=069ca2728db333c1. File version: 9.0.0.0. Product version: 9.0.0+608d9254e808806db6cd119e9af00ab7ae9402c2. GlobalAssemblyCache: False
+2026-04-22 14:27:04.1353 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2026-04-22 14:27:04.1431 Info Registered target NLog.Targets.ElasticsearchTarget(Name=elastic)
+2026-04-22 14:27:04.1431 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.2.5163. Product version: 6.1.2+24518acbad6757883eafdd5ec696eb049305cb7b. GlobalAssemblyCache: False
+2026-04-22 14:27:04.1620 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: console
+2026-04-22 14:27:04.2169 Info Configuration initialized: TargetNames=elastic, ConfigItems=70, AutoReload=true, FilePath=C:\Users\MIC\OneDrive\Documents\Code\hddung\digitalmarket_be_v2\Presentation\API\Digitalmarket.Controller.Business\bin\Debug\net8.0\nlog.config

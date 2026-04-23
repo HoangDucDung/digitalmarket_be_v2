@@ -4,6 +4,6 @@
     {
         public const string UserId = "uid";
         public const string Email = "email";
-        public const string Role = "rol";
+        public const string Role = "role";
     }
 }

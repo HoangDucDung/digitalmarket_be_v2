@@ -1,11 +1,11 @@
 using Project.DigitalMarket.Application.Contract.DTOs.Business.Wallet;
 using Project.DigitalMarket.Application.Contract.Services.Business.Wallet;
-using Project.DigitalMarket.Domain.Repositories.Auths.Wallet;
 using Project.DigitalMarket.Domain.Share.Constants.Business;
 using Project.DigitalMarket.Libs.DependencyInjection;
 using Project.DigitalMarket.Libs.Exceptions;
 using Project.DigitalMarket.Libs.Constants.ErrorCode;
 using Project.DigitalMarket.Domain.Managers.Business.Wallet;
+using Project.DigitalMarket.Domain.Repositories.Business.Wallet;
 
 namespace Project.DigitalMarket.Application.Services.Business.Wallet
 {

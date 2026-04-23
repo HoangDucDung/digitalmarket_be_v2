@@ -24,5 +24,15 @@ namespace Project.DigitalMarket.Libs.Constants.ErrorCode
         /// Tài khoản không tồn tại
         /// </summary>
         public const int AccountNotFound = 1003;
+
+        /// <summary>
+        /// Chưa đăng nhập hoặc Token không hợp lệ
+        /// </summary>
+        public const int Unauthorized = 1004;
+
+        /// <summary>
+        /// Không có quyền truy cập
+        /// </summary>
+        public const int Forbidden = 1005;
     }
 }

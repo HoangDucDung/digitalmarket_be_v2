@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Project.DigitalMarket.Domain.Entities;
-using Project.DigitalMarket.Domain.Repositories.Auths.Wallet;
+using Project.DigitalMarket.Domain.Repositories.Business.Wallet;
 using Project.DigitalMarket.Infrastructure.MsSql.Repositories.Base;
 using Project.DigitalMarket.Libs.DependencyInjection;
 

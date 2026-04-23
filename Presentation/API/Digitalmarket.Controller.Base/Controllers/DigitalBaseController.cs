@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Project.DigitalMarket.Libs.DependencyInjection;
 using Project.DigitalMarket.Domain.Models.Commons;
 using Microsoft.Extensions.Logging;
+using Project.DigitalMarket.Domain.Share.Constants.Auths;
 
 namespace Digitalmarket.Controller.Base.Controllers
 {
@@ -31,7 +32,7 @@ namespace Digitalmarket.Controller.Base.Controllers
                         UserId = Guid.TryParse(User.FindFirstValue(ClaimTypes.NameIdentifier), out var userId) ? userId : Guid.Empty,
                         Email = User.FindFirstValue(ClaimTypes.Email) ?? string.Empty,
                         FullName = User.FindFirstValue(ClaimTypes.Name) ?? string.Empty,
-                        Role = User.FindFirstValue(ClaimTypes.Role) ?? string.Empty
+                        Role = User.FindFirstValue(AppClaimTypes.Role) ?? string.Empty
                     };
                 }
                 return _userContext;

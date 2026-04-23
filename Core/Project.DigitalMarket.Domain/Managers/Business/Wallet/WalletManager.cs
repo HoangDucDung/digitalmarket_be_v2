@@ -1,11 +1,11 @@
 using Microsoft.AspNetCore.Identity;
 using Project.DigitalMarket.Domain.Entities;
-using Project.DigitalMarket.Domain.Repositories.Auths.Wallet;
 using Project.DigitalMarket.Domain.Share.Constants.Business;
 using Project.DigitalMarket.Libs.DependencyInjection;
 using Project.DigitalMarket.Libs.Exceptions;
 using Project.DigitalMarket.Libs.Constants.ErrorCode;
 using Project.Extensions.Extensions;
+using Project.DigitalMarket.Domain.Repositories.Business.Wallet;
 
 namespace Project.DigitalMarket.Domain.Managers.Business.Wallet
 {

@@ -1,10 +1,10 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Project.DigitalMarket.Domain.Repositories.Auths;
-using Project.DigitalMarket.Domain.Repositories.Auths.Wallet;
 using Project.DigitalMarket.Domain.Repositories.Business.Cart;
 using Project.DigitalMarket.Domain.Repositories.Business.Order;
 using Project.DigitalMarket.Domain.Repositories.Business.Product;
 using Project.DigitalMarket.Domain.Repositories.Business.Seller;
+using Project.DigitalMarket.Domain.Repositories.Business.Wallet;
 using Project.DigitalMarket.Infrastructure.MsSql.Repositories.Auths;
 using Project.DigitalMarket.Infrastructure.MsSql.Repositories.Business.Cart;
 using Project.DigitalMarket.Infrastructure.MsSql.Repositories.Business.Order;

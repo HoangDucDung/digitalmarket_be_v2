@@ -88,6 +88,26 @@
             <response code="200">Đăng ký thành công, hồ sơ đang chờ duyệt</response>
             <response code="401">Chưa đăng nhập</response>
         </member>
+        <member name="M:Digitalmarket.Controller.Business.Controllers.TestRoleController.TestAll">
+            <summary>
+            Test API dành cho tất cả người dùng đã đăng nhập (Dùng base [Authorize])
+            </summary>
+        </member>
+        <member name="M:Digitalmarket.Controller.Business.Controllers.TestRoleController.TestAdmin">
+            <summary>
+            Test API chỉ dành cho Admin (Dùng custom [DigitalAuthorize])
+            </summary>
+        </member>
+        <member name="M:Digitalmarket.Controller.Business.Controllers.TestRoleController.TestSeller">
+            <summary>
+            Test API chỉ dành cho Seller (Dùng custom [DigitalAuthorize])
+            </summary>
+        </member>
+        <member name="M:Digitalmarket.Controller.Business.Controllers.TestRoleController.TestCustomer">
+            <summary>
+            Test API chỉ dành cho Customer (Dùng custom [DigitalAuthorize])
+            </summary>
+        </member>
         <member name="T:Digitalmarket.Controller.Business.Controllers.WalletController">
             <summary>
             Controller quản lý các thao tác liên quan đến Ví điện tử và Giao dịch
