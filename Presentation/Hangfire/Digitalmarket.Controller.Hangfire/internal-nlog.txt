@@ -1,0 +1,88 @@
+2026-05-04 14:01:04.5142 Info Loading assembly name: NLog.Web.AspNetCore
+2026-05-04 14:01:04.5187 Info NLog.Web.AspNetCore, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.2.1383. Product version: 6.1.2+82b909b8b4044417774ed8f67c58655ca7e4e2b8. GlobalAssemblyCache: False
+2026-05-04 14:01:04.5187 Info Loading assembly name: Elastic.NLog.Targets
+2026-05-04 14:01:04.5187 Info Elastic.NLog.Targets, Version=9.0.0.0, Culture=neutral, PublicKeyToken=069ca2728db333c1. File version: 9.0.0.0. Product version: 9.0.0+608d9254e808806db6cd119e9af00ab7ae9402c2. GlobalAssemblyCache: False
+2026-05-04 14:01:04.5540 Info Loading assembly name: Elastic.CommonSchema.NLog
+2026-05-04 14:01:04.5540 Info Elastic.CommonSchema.NLog, Version=9.0.0.0, Culture=neutral, PublicKeyToken=069ca2728db333c1. File version: 9.0.0.0. Product version: 9.0.0+608d9254e808806db6cd119e9af00ab7ae9402c2. GlobalAssemblyCache: False
+2026-05-04 14:01:04.5734 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2026-05-04 14:01:04.5979 Info Registered target NLog.Targets.ElasticsearchTarget(Name=elastic)
+2026-05-04 14:01:04.5979 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.2.5163. Product version: 6.1.2+24518acbad6757883eafdd5ec696eb049305cb7b. GlobalAssemblyCache: False
+2026-05-04 14:01:04.5979 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: console
+2026-05-04 14:01:04.7177 Info Configuration initialized: TargetNames=elastic, ConfigItems=70, AutoReload=true, FilePath=C:\Users\MIC\OneDrive\Documents\Code\hddung\digitalmarket_be_v2\Presentation\Hangfire\Digitalmarket.Controller.Hangfire\bin\Debug\net8.0\nlog.config
+2026-05-04 14:01:36.7614 Info Loading assembly name: NLog.Web.AspNetCore
+2026-05-04 14:01:36.7614 Info NLog.Web.AspNetCore, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.2.1383. Product version: 6.1.2+82b909b8b4044417774ed8f67c58655ca7e4e2b8. GlobalAssemblyCache: False
+2026-05-04 14:01:36.7743 Info Loading assembly name: Elastic.NLog.Targets
+2026-05-04 14:01:36.7743 Info Elastic.NLog.Targets, Version=9.0.0.0, Culture=neutral, PublicKeyToken=069ca2728db333c1. File version: 9.0.0.0. Product version: 9.0.0+608d9254e808806db6cd119e9af00ab7ae9402c2. GlobalAssemblyCache: False
+2026-05-04 14:01:36.8040 Info Loading assembly name: Elastic.CommonSchema.NLog
+2026-05-04 14:01:36.8040 Info Elastic.CommonSchema.NLog, Version=9.0.0.0, Culture=neutral, PublicKeyToken=069ca2728db333c1. File version: 9.0.0.0. Product version: 9.0.0+608d9254e808806db6cd119e9af00ab7ae9402c2. GlobalAssemblyCache: False
+2026-05-04 14:01:36.8238 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2026-05-04 14:01:36.8503 Info Registered target NLog.Targets.ElasticsearchTarget(Name=elastic)
+2026-05-04 14:01:36.8503 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.2.5163. Product version: 6.1.2+24518acbad6757883eafdd5ec696eb049305cb7b. GlobalAssemblyCache: False
+2026-05-04 14:01:36.8615 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: console
+2026-05-04 14:01:36.9732 Info Configuration initialized: TargetNames=elastic, ConfigItems=70, AutoReload=true, FilePath=C:\Users\MIC\OneDrive\Documents\Code\hddung\digitalmarket_be_v2\Presentation\Hangfire\Digitalmarket.Controller.Hangfire\bin\Debug\net8.0\nlog.config
+2026-05-04 14:06:27.5436 Info Loading assembly name: NLog.Web.AspNetCore
+2026-05-04 14:06:27.5436 Info NLog.Web.AspNetCore, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.2.1383. Product version: 6.1.2+82b909b8b4044417774ed8f67c58655ca7e4e2b8. GlobalAssemblyCache: False
+2026-05-04 14:06:27.5550 Info Loading assembly name: Elastic.NLog.Targets
+2026-05-04 14:06:27.5550 Info Elastic.NLog.Targets, Version=9.0.0.0, Culture=neutral, PublicKeyToken=069ca2728db333c1. File version: 9.0.0.0. Product version: 9.0.0+608d9254e808806db6cd119e9af00ab7ae9402c2. GlobalAssemblyCache: False
+2026-05-04 14:06:27.5755 Info Loading assembly name: Elastic.CommonSchema.NLog
+2026-05-04 14:06:27.5755 Info Elastic.CommonSchema.NLog, Version=9.0.0.0, Culture=neutral, PublicKeyToken=069ca2728db333c1. File version: 9.0.0.0. Product version: 9.0.0+608d9254e808806db6cd119e9af00ab7ae9402c2. GlobalAssemblyCache: False
+2026-05-04 14:06:27.5933 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2026-05-04 14:06:27.6146 Info Registered target NLog.Targets.ElasticsearchTarget(Name=elastic)
+2026-05-04 14:06:27.6146 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.2.5163. Product version: 6.1.2+24518acbad6757883eafdd5ec696eb049305cb7b. GlobalAssemblyCache: False
+2026-05-04 14:06:27.6146 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: console
+2026-05-04 14:06:27.7187 Info Configuration initialized: TargetNames=elastic, ConfigItems=70, AutoReload=true, FilePath=C:\Users\MIC\OneDrive\Documents\Code\hddung\digitalmarket_be_v2\Presentation\Hangfire\Digitalmarket.Controller.Hangfire\bin\Debug\net8.0\nlog.config
+2026-05-04 14:07:43.7663 Info Loading assembly name: NLog.Web.AspNetCore
+2026-05-04 14:07:43.7707 Info NLog.Web.AspNetCore, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.2.1383. Product version: 6.1.2+82b909b8b4044417774ed8f67c58655ca7e4e2b8. GlobalAssemblyCache: False
+2026-05-04 14:07:43.7707 Info Loading assembly name: Elastic.NLog.Targets
+2026-05-04 14:07:43.7707 Info Elastic.NLog.Targets, Version=9.0.0.0, Culture=neutral, PublicKeyToken=069ca2728db333c1. File version: 9.0.0.0. Product version: 9.0.0+608d9254e808806db6cd119e9af00ab7ae9402c2. GlobalAssemblyCache: False
+2026-05-04 14:07:43.8059 Info Loading assembly name: Elastic.CommonSchema.NLog
+2026-05-04 14:07:43.8059 Info Elastic.CommonSchema.NLog, Version=9.0.0.0, Culture=neutral, PublicKeyToken=069ca2728db333c1. File version: 9.0.0.0. Product version: 9.0.0+608d9254e808806db6cd119e9af00ab7ae9402c2. GlobalAssemblyCache: False
+2026-05-04 14:07:43.8281 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2026-05-04 14:07:43.8504 Info Registered target NLog.Targets.ElasticsearchTarget(Name=elastic)
+2026-05-04 14:07:43.8504 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.2.5163. Product version: 6.1.2+24518acbad6757883eafdd5ec696eb049305cb7b. GlobalAssemblyCache: False
+2026-05-04 14:07:43.8504 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: console
+2026-05-04 14:07:43.9564 Info Configuration initialized: TargetNames=elastic, ConfigItems=70, AutoReload=true, FilePath=C:\Users\MIC\OneDrive\Documents\Code\hddung\digitalmarket_be_v2\Presentation\Hangfire\Digitalmarket.Controller.Hangfire\bin\Debug\net8.0\nlog.config
+2026-05-04 16:48:21.7581 Info Loading assembly name: NLog.Web.AspNetCore
+2026-05-04 16:48:21.7581 Info NLog.Web.AspNetCore, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.2.1383. Product version: 6.1.2+82b909b8b4044417774ed8f67c58655ca7e4e2b8. GlobalAssemblyCache: False
+2026-05-04 16:48:21.7701 Info Loading assembly name: Elastic.NLog.Targets
+2026-05-04 16:48:21.7701 Info Elastic.NLog.Targets, Version=9.0.0.0, Culture=neutral, PublicKeyToken=069ca2728db333c1. File version: 9.0.0.0. Product version: 9.0.0+608d9254e808806db6cd119e9af00ab7ae9402c2. GlobalAssemblyCache: False
+2026-05-04 16:48:21.7985 Info Loading assembly name: Elastic.CommonSchema.NLog
+2026-05-04 16:48:21.7985 Info Elastic.CommonSchema.NLog, Version=9.0.0.0, Culture=neutral, PublicKeyToken=069ca2728db333c1. File version: 9.0.0.0. Product version: 9.0.0+608d9254e808806db6cd119e9af00ab7ae9402c2. GlobalAssemblyCache: False
+2026-05-04 16:48:21.8179 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2026-05-04 16:48:21.8340 Info Registered target NLog.Targets.ElasticsearchTarget(Name=elastic)
+2026-05-04 16:48:21.8485 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.2.5163. Product version: 6.1.2+24518acbad6757883eafdd5ec696eb049305cb7b. GlobalAssemblyCache: False
+2026-05-04 16:48:21.8485 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: console
+2026-05-04 16:48:21.9652 Info Configuration initialized: TargetNames=elastic, ConfigItems=70, AutoReload=true, FilePath=C:\Users\MIC\OneDrive\Documents\Code\hddung\digitalmarket_be_v2\Presentation\Hangfire\Digitalmarket.Controller.Hangfire\bin\Debug\net8.0\nlog.config
+2026-05-04 16:49:17.7253 Info Loading assembly name: NLog.Web.AspNetCore
+2026-05-04 16:49:17.7253 Info NLog.Web.AspNetCore, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.2.1383. Product version: 6.1.2+82b909b8b4044417774ed8f67c58655ca7e4e2b8. GlobalAssemblyCache: False
+2026-05-04 16:49:17.7253 Info Loading assembly name: Elastic.NLog.Targets
+2026-05-04 16:49:17.7253 Info Elastic.NLog.Targets, Version=9.0.0.0, Culture=neutral, PublicKeyToken=069ca2728db333c1. File version: 9.0.0.0. Product version: 9.0.0+608d9254e808806db6cd119e9af00ab7ae9402c2. GlobalAssemblyCache: False
+2026-05-04 16:49:17.7253 Info Loading assembly name: Elastic.CommonSchema.NLog
+2026-05-04 16:49:17.7253 Info Elastic.CommonSchema.NLog, Version=9.0.0.0, Culture=neutral, PublicKeyToken=069ca2728db333c1. File version: 9.0.0.0. Product version: 9.0.0+608d9254e808806db6cd119e9af00ab7ae9402c2. GlobalAssemblyCache: False
+2026-05-04 16:49:17.7478 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2026-05-04 16:49:17.7540 Info Registered target NLog.Targets.ElasticsearchTarget(Name=elastic)
+2026-05-04 16:49:17.7540 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.2.5163. Product version: 6.1.2+24518acbad6757883eafdd5ec696eb049305cb7b. GlobalAssemblyCache: False
+2026-05-04 16:49:17.7690 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: console
+2026-05-04 16:49:17.8109 Info Configuration initialized: TargetNames=elastic, ConfigItems=70, AutoReload=true, FilePath=C:\Users\MIC\OneDrive\Documents\Code\hddung\digitalmarket_be_v2\Presentation\Hangfire\Digitalmarket.Controller.Hangfire\bin\Debug\net8.0\nlog.config
+2026-05-04 16:49:50.1821 Info Loading assembly name: NLog.Web.AspNetCore
+2026-05-04 16:49:50.1821 Info NLog.Web.AspNetCore, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.2.1383. Product version: 6.1.2+82b909b8b4044417774ed8f67c58655ca7e4e2b8. GlobalAssemblyCache: False
+2026-05-04 16:49:50.1821 Info Loading assembly name: Elastic.NLog.Targets
+2026-05-04 16:49:50.1821 Info Elastic.NLog.Targets, Version=9.0.0.0, Culture=neutral, PublicKeyToken=069ca2728db333c1. File version: 9.0.0.0. Product version: 9.0.0+608d9254e808806db6cd119e9af00ab7ae9402c2. GlobalAssemblyCache: False
+2026-05-04 16:49:50.1919 Info Loading assembly name: Elastic.CommonSchema.NLog
+2026-05-04 16:49:50.1919 Info Elastic.CommonSchema.NLog, Version=9.0.0.0, Culture=neutral, PublicKeyToken=069ca2728db333c1. File version: 9.0.0.0. Product version: 9.0.0+608d9254e808806db6cd119e9af00ab7ae9402c2. GlobalAssemblyCache: False
+2026-05-04 16:49:50.2054 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2026-05-04 16:49:50.2054 Info Registered target NLog.Targets.ElasticsearchTarget(Name=elastic)
+2026-05-04 16:49:50.2054 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.2.5163. Product version: 6.1.2+24518acbad6757883eafdd5ec696eb049305cb7b. GlobalAssemblyCache: False
+2026-05-04 16:49:50.2289 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: console
+2026-05-04 16:49:50.2698 Info Configuration initialized: TargetNames=elastic, ConfigItems=70, AutoReload=true, FilePath=C:\Users\MIC\OneDrive\Documents\Code\hddung\digitalmarket_be_v2\Presentation\Hangfire\Digitalmarket.Controller.Hangfire\bin\Debug\net8.0\nlog.config
+2026-05-04 16:52:02.3888 Info Loading assembly name: NLog.Web.AspNetCore
+2026-05-04 16:52:02.3888 Info NLog.Web.AspNetCore, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.2.1383. Product version: 6.1.2+82b909b8b4044417774ed8f67c58655ca7e4e2b8. GlobalAssemblyCache: False
+2026-05-04 16:52:02.3954 Info Loading assembly name: Elastic.NLog.Targets
+2026-05-04 16:52:02.3954 Info Elastic.NLog.Targets, Version=9.0.0.0, Culture=neutral, PublicKeyToken=069ca2728db333c1. File version: 9.0.0.0. Product version: 9.0.0+608d9254e808806db6cd119e9af00ab7ae9402c2. GlobalAssemblyCache: False
+2026-05-04 16:52:02.3954 Info Loading assembly name: Elastic.CommonSchema.NLog
+2026-05-04 16:52:02.3954 Info Elastic.CommonSchema.NLog, Version=9.0.0.0, Culture=neutral, PublicKeyToken=069ca2728db333c1. File version: 9.0.0.0. Product version: 9.0.0+608d9254e808806db6cd119e9af00ab7ae9402c2. GlobalAssemblyCache: False
+2026-05-04 16:52:02.4118 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2026-05-04 16:52:02.4243 Info Registered target NLog.Targets.ElasticsearchTarget(Name=elastic)
+2026-05-04 16:52:02.4243 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.2.5163. Product version: 6.1.2+24518acbad6757883eafdd5ec696eb049305cb7b. GlobalAssemblyCache: False
+2026-05-04 16:52:02.4243 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: console
+2026-05-04 16:52:02.4753 Info Configuration initialized: TargetNames=elastic, ConfigItems=70, AutoReload=true, FilePath=C:\Users\MIC\OneDrive\Documents\Code\hddung\digitalmarket_be_v2\Presentation\Hangfire\Digitalmarket.Controller.Hangfire\bin\Debug\net8.0\nlog.config

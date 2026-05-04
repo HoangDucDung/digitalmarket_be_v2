@@ -6,6 +6,7 @@
         public const string Email = "Email.json";
         public const string Connection = "connection.json";
         public const string Elastic = "elastic.json";
+        public const string Hangfire = "hangfire.json";
 
     }
 }

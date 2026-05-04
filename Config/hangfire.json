@@ -1,0 +1,9 @@
+{
+  "Hangfire": {
+    "ConnectionString": "Server=localhost;Database=DigitalMarketHangfire;User Id=sa;Password=Hdd@2001;TrustServerCertificate=True;",
+    "Authen": {
+      "UserName": "admin",
+      "Password": "admin123"
+    }
+  }
+}

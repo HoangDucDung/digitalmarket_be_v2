@@ -41,34 +41,29 @@ namespace Project.DigitalMarket.Libs.Constants.ErrorCode
         public const int CartItemNotFound = 3007;
 
         /// <summary>
-        /// Cấu hình (Configuration Section) không tồn tại
-        /// </summary>
-        public const int ConfigSectionNotFound = 3008;
-
-        /// <summary>
         /// Không được phép mua sản phẩm của chính mình
         /// </summary>
-        public const int CannotBuyOwnProduct = 3009;
+        public const int CannotBuyOwnProduct = 3008;
 
         /// <summary>
         /// Số dư không đủ
         /// </summary>
-        public const int InsufficientBalance = 3010;
+        public const int InsufficientBalance = 3009;
 
         /// <summary>
         /// Ví đang bị khóa
         /// </summary>
-        public const int WalletLocked = 3011;
+        public const int WalletLocked = 3010;
 
         /// <summary>
         /// Số tiền không hợp lệ
         /// </summary>
-        public const int InvalidAmount = 3012;
+        public const int InvalidAmount = 3011;
 
 
-        public const int InvalidProductData = 3014;
-        public const int SlugAlreadyExists = 3015;
-        public const int ProductNotFound = 3016;
-        public const int OutOfStock = 3017;
+        public const int InvalidProductData = 3012;
+        public const int SlugAlreadyExists = 3013;
+        public const int ProductNotFound = 3014;
+        public const int OutOfStock = 3015;
     }
 }

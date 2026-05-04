@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Configuration;
-using Microsoft.IdentityModel.Tokens;
 using Microsoft.Extensions.DependencyInjection;
-using System.Text;
+using Microsoft.IdentityModel.Tokens;
+using Project.DigitalMarket.Host.Base.Configs;
+using Project.DigitalMarket.Libs.Exceptions;
 using Project.Extensions.Extensions;
+using System.Text;
 
 namespace Project.DigitalMarket.Host.Base.Configurations
 {
@@ -12,8 +14,11 @@ namespace Project.DigitalMarket.Host.Base.Configurations
         public static void ConfigureJwt(this IServiceCollection services, IConfiguration configuration)
         {
             // Cấu hình JWT Authentication
-            var authConfig = configuration.GetSection("AuthConfig");
-            var secretKey = authConfig["SecretKey"];
+            var authConfig = configuration.GetSection(ConfigKeyConstant.AuthConfig).Get<AuthConfig>();
+
+            if(authConfig == null) throw new AuthException("AuthConfig không tồn tại trong cấu hình.");
+
+            var secretKey = authConfig.SecretKey;
 
             services.AddAuthentication(options =>
             {
@@ -27,9 +32,9 @@ namespace Project.DigitalMarket.Host.Base.Configurations
                     ValidateIssuerSigningKey = true,
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey!)),
                     ValidateIssuer = true,
-                    ValidIssuer = authConfig["Issuer"],
+                    ValidIssuer = authConfig.Issuer,
                     ValidateAudience = true,
-                    ValidAudience = authConfig["Audience"],
+                    ValidAudience = authConfig.Audience,
                     ValidateLifetime = true,
                     ClockSkew = TimeSpan.Zero
                 };
@@ -38,7 +43,8 @@ namespace Project.DigitalMarket.Host.Base.Configurations
                     OnMessageReceived = context =>
                     {
                         var token = context.Request.Headers["Authorization"].FirstOrDefault()
-                                 ?? context.Request.Headers["Authentication"].FirstOrDefault();
+                                 ?? context.Request.Headers["Authentication"].FirstOrDefault()
+                                 ?? string.Empty;
 
                         if (token.HasValue() && token.StartsWith("Bearer ", StringComparison.OrdinalIgnoreCase))
                         {

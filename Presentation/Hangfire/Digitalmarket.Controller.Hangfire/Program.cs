@@ -1,7 +1,8 @@
 
+
 using Digitalmarket.Controller.Base.AppCoreFactory;
 using Digitalmarket.Controller.Base.Constants;
-using Hangfire;
+using Digitalmarket.Controller.Hangfire.Configurations;
 using NLog;
 using NLog.Extensions.Logging;
 using NLog.Web;
@@ -12,10 +13,11 @@ using Project.DigitalMarket.Host.Base.Configs;
 using Project.DigitalMarket.Infrastructure.MsSql;
 using System.Reflection;
 
-namespace Digitalmarket.Controller.Business
+namespace Digitalmarket.Controller.Hangfire
 {
     public class Program
     {
+
         public static void Main(string[] args)
         {
             try
@@ -26,6 +28,7 @@ namespace Digitalmarket.Controller.Business
                 builder.Configuration.AddBaseConfiguration(
                 [
                     ConfigJsonName.Email,
+                    ConfigJsonName.Hangfire,
                     ConfigJsonName.Connection,
                     ConfigJsonName.Elastic
                 ]);
@@ -38,7 +41,7 @@ namespace Digitalmarket.Controller.Business
                 // 3. Tích hợp NLog vào ASP.NET Core
                 builder.Host.UseNLog();
 
-                var docName = RedocName.Business;
+                var docName = RedocName.Hangfire;
 
                 // Add services to the container.
                 builder.Services.AddCors(options =>
@@ -69,26 +72,32 @@ namespace Digitalmarket.Controller.Business
                 // Đăng ký AutoMapper
                 builder.Services.AddAutoMapper(typeof(DigitalMarketAutoMapper));
 
+                // Cấu hình Hangfire
+                builder.Services.ConfigureHangfire(builder.Configuration);
+
                 var app = builder.Build();
 
                 app.UseCors("AllowAll");
                 app.UseAPIDocument(docName);
                 app.MiddlewareRegistration();
                 app.UseHttpsRedirection();
-                app.UseAuthentication();
-                app.UseAuthorization();
+                
+                //app.UseAuthentication();
+                //app.UseAuthorization();
+
+                app.ConfigureHangfireDashboard(builder.Configuration);
 
                 app.MapControllers();
 
                 // Log thông báo service đã sẵn sàng bằng Logger mặc định của .NET
-                app.Logger.LogInformation("Digitalmarket Business Service is ready and running.");
+                app.Logger.LogInformation("Digitalmarket Hangfire Service is ready and running.");
 
                 app.Run();
             }
             catch (Exception ex)
             {
                 var logger = LogManager.GetCurrentClassLogger();
-                logger.Fatal(ex, "Service Digitalmarket Business stopped due to an exception");
+                logger.Fatal(ex, "Service Digitalmarket Hangfire stopped due to an exception");
                 throw;
             }
             finally

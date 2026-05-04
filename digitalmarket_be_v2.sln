@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 18
-VisualStudioVersion = 18.4.11626.88 stable
+VisualStudioVersion = 18.4.11626.88
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Config", "Config", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 	ProjectSection(SolutionItems) = preProject
@@ -8,6 +8,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Config", "Config", "{02EA68
 		Config\connection.json = Config\connection.json
 		Config\consumerConfig.json = Config\consumerConfig.json
 		Config\elastic.json = Config\elastic.json
+		Config\hangfire.json = Config\hangfire.json
 		Config\kafka.json = Config\kafka.json
 	EndProjectSection
 EndProject
@@ -48,6 +49,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project.DigitalMarket.Infrastructure.MsSql", "Infrastructure\Project.DigitalMarket.Infrastructure.MsSql\Project.DigitalMarket.Infrastructure.MsSql.csproj", "{04779790-2A2B-4618-AF0C-CB68EC887358}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project.DigitalMarket.Infrastructure.Mail", "Infrastructure\Project.DigitalMarket.Infrastructure.Mail\Project.DigitalMarket.Infrastructure.Mail.csproj", "{AED9DFED-4B56-4A34-9317-CFCE66506B34}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hangfire", "Hangfire", "{C026B1C8-5E5F-4653-8F19-4D119D3C79D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Digitalmarket.Controller.Hangfire", "Presentation\Hangfire\Digitalmarket.Controller.Hangfire\Digitalmarket.Controller.Hangfire.csproj", "{3AD502A9-AAAE-4C30-B10C-991BBFACEE90}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -203,6 +208,18 @@ Global
 		{AED9DFED-4B56-4A34-9317-CFCE66506B34}.Release|x64.Build.0 = Release|Any CPU
 		{AED9DFED-4B56-4A34-9317-CFCE66506B34}.Release|x86.ActiveCfg = Release|Any CPU
 		{AED9DFED-4B56-4A34-9317-CFCE66506B34}.Release|x86.Build.0 = Release|Any CPU
+		{3AD502A9-AAAE-4C30-B10C-991BBFACEE90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AD502A9-AAAE-4C30-B10C-991BBFACEE90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AD502A9-AAAE-4C30-B10C-991BBFACEE90}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3AD502A9-AAAE-4C30-B10C-991BBFACEE90}.Debug|x64.Build.0 = Debug|Any CPU
+		{3AD502A9-AAAE-4C30-B10C-991BBFACEE90}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3AD502A9-AAAE-4C30-B10C-991BBFACEE90}.Debug|x86.Build.0 = Debug|Any CPU
+		{3AD502A9-AAAE-4C30-B10C-991BBFACEE90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AD502A9-AAAE-4C30-B10C-991BBFACEE90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AD502A9-AAAE-4C30-B10C-991BBFACEE90}.Release|x64.ActiveCfg = Release|Any CPU
+		{3AD502A9-AAAE-4C30-B10C-991BBFACEE90}.Release|x64.Build.0 = Release|Any CPU
+		{3AD502A9-AAAE-4C30-B10C-991BBFACEE90}.Release|x86.ActiveCfg = Release|Any CPU
+		{3AD502A9-AAAE-4C30-B10C-991BBFACEE90}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -222,6 +239,8 @@ Global
 		{E73F3C6E-BB6C-4E29-BEB0-268AB51FB728} = {86CB1195-4960-47E8-B367-1F57BC788337}
 		{04779790-2A2B-4618-AF0C-CB68EC887358} = {DFEE68D8-A7D0-1A41-506C-9B74AA9A7B7B}
 		{AED9DFED-4B56-4A34-9317-CFCE66506B34} = {DFEE68D8-A7D0-1A41-506C-9B74AA9A7B7B}
+		{C026B1C8-5E5F-4653-8F19-4D119D3C79D8} = {5835D766-9847-1D08-5E95-5A99FD0F495D}
+		{3AD502A9-AAAE-4C30-B10C-991BBFACEE90} = {C026B1C8-5E5F-4653-8F19-4D119D3C79D8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1DAB0FCC-FCAB-4B11-A93C-D7FCDE61BE1C}

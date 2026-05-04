@@ -1,5 +1,8 @@
+using Hangfire;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Project.DigitalMarket.Host.Base.Configurations;
 using Project.DigitalMarket.Host.Base.Middleware;
 using Project.DigitalMarket.Libs.DependencyInjection;
 
