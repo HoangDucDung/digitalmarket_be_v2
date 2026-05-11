@@ -23,8 +23,6 @@
 	<ItemGroup>
 		<ProjectReference Include="..\..\..\Core\Project.DigitalMarket.Application.Contract\Project.DigitalMarket.Application.Contract.csproj" />
 		<ProjectReference Include="..\..\..\Core\Project.DigitalMarket.Application\Project.DigitalMarket.Application.csproj" />
-		<ProjectReference Include="..\..\..\Infrastructure\Project.DigitalMarket.Infrastructure.Mail\Project.DigitalMarket.Infrastructure.Mail.csproj" />
-		<ProjectReference Include="..\..\..\Infrastructure\Project.DigitalMarket.Infrastructure.MsSql\Project.DigitalMarket.Infrastructure.MsSql.csproj" />
 		<ProjectReference Include="..\..\..\Lib\Project.DigitalMarket.Host.Base\Project.DigitalMarket.Host.Base.csproj" />
 	</ItemGroup>
 

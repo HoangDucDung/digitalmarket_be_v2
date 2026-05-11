@@ -25,20 +25,24 @@ Dưới đây là 5 điểm chưa hợp lý lớn nhất kèm theo giải thích
 
 ---
 
-## 2. Dependency Leakage: Web API (Presentation) gọi trực tiếp Infrastructure (done)
+## 2. Dependency Leakage: Shared Web API Base gọi trực tiếp Infrastructure (done)
 
 > [!IMPORTANT]
-> Tầng Web API đang tham chiếu mạnh tới Infrastructure làm phá vỡ sự cô lập của kiến trúc.
+> Tầng Thư viện dùng chung (Controller.Base) đang tham chiếu cứng tới Database làm phá vỡ tính tự chủ của Microservices.
 
 **Giải thích chi tiết:**
-- Theo lý thuyết, Presentation -> Application -> Domain. Infrastructure là vòng ngoài cùng giao tiếp với file/DB. Tầng Application (và Presentation) chỉ thông qua các Interface chứa trong Domain/Application để nói chuyện với DB mà không hề biết lớp thực thi (về sau).
-- Hiện tại project `Digitalmarket.Controller.Base` (thuộc tầng Presentation) lại có `<ProjectReference>` trực tiếp đến `Project.DigitalMarket.Infrastructure.MsSql` và `Project.DigitalMarket.Infrastructure.Mail`. Sự liên kết này phục vụ cho cục `AppCoreFactory` thực hiện Dependency Injection (DI).
-- Việc Dependency như vậy khiến project `Controller.Base` kéo theo thư viện Infrastructure, làm cho tất cả các class Controller kế thừa base có khả năng truy suất trực tiếp `DbContext` (hay các Entity Db), vượt mặt được Application layer.
+- Mặc dù `AppCoreFactory` đã được gỡ bỏ khỏi `Base`, nhưng trong file cấu hình `Digitalmarket.Controller.Base.csproj` vẫn còn 2 dòng `<ProjectReference>` trỏ tới `Infrastructure.MsSql` và `Infrastructure.Mail`.
+- **Nguyên tắc tối thượng của Microservices là:** Mỗi dịch vụ được quyền tự do chọn công nghệ Database phù hợp nhất với nó (Polyglot Persistence).
+- Hôm nay cả `Auth` và `Business` đều dùng `MsSql`. Nhưng giả sử tháng sau, hệ thống lớn lên, bạn thấy dịch vụ `Auth` truy vấn quá chậm và muốn chuyển Database của riêng thằng `Auth` sang dùng `Redis` hoặc `PostgreSQL`, trong khi `Business` vẫn dùng `MsSql`.
+- **Lúc này thảm họa xảy ra:** Vì thư viện dùng chung `Base` đang bị trói chặt với `Infrastructure.MsSql`. Cho dù `Auth` không còn dùng SQL Server nữa, nó vẫn bị ép tải về toàn bộ bộ thư viện của `Entity Framework` và `MsSql` chỉ vì nó kế thừa `BaseController`. Bạn không thể dứt bỏ công nghệ cũ ra khỏi dịch vụ mới.
 
 **Phương án khắc phục:**
-1. Chuyển phần đăng ký DI của Database, Mail... từ `Controller.Base` sang một Extension Methods (như `AddInfrastructureLayer()`) thuộc dự án `Infrastructure`.
-2. Ở file `Program.cs` của tầng API cao nhất chỉ gọi các ServiceCollection Extension mà tuyệt đối không đưa các project Infrastructure vào project Shared UI / Share Web Base.
+1. **Tại Controller.Base:** Xóa bỏ hoàn toàn `<ProjectReference>` tới thư viện `MsSql` và `Mail` trong file `Digitalmarket.Controller.Base.csproj`. Thư viện Base tuyệt đối không được dính líu tới DB.
+2. **Tại Auth và Business API (Composition Root):** Các API độc lập (tầng chạy cuối cùng) mới là nơi cần khai báo DI để lắp ghép. Do đó, hãy cắt các thẻ `<ProjectReference Include="...MsSql.csproj" />` và dán vào các file `Digitalmarket.Controller.Business.csproj` và `Digitalmarket.Controller.Auth.csproj` tương ứng.
 
+**Note:**
+1. **Access modifier**: Khi Present depen vào  Application.Contract, Application thì chỉ các Interface được public để Present gọi vào. Các Class service trong Application không được public chỉ Internal để đảm bảo tính 
+đóng gói dữ liệu và tránh để Present chọc thẳng vào logic nghiệp vụ thay vì thông qua Interface.
 ---
 
 ## 3. Kiến trúc Microservices lai tạp Monolith (Coupled Microservices)

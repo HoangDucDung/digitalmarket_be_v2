@@ -17,6 +17,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\..\..\Infrastructure\Project.DigitalMarket.Infrastructure.MsSql\Project.DigitalMarket.Infrastructure.MsSql.csproj" />
 		<ProjectReference Include="..\Digitalmarket.Controller.Base\Digitalmarket.Controller.Base.csproj" />
 	</ItemGroup>
 

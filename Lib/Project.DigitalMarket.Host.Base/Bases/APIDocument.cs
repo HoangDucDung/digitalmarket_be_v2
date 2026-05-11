@@ -41,13 +41,16 @@ namespace Project.DigitalMarket.Host.Base.Bases
         public static IApplicationBuilder UseAPIDocument(this IApplicationBuilder app, string docName)
         {
             app.UseSwagger();
-            app.UseSwaggerUI();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("../swagger/v1/swagger.json", $"{docName} API");
+            });
 
             // Cấu hình ReDoc làm mặc định
             app.UseReDoc(c =>
             {
                 c.RoutePrefix = "docs"; // Đặt làm route mặc định
-                c.SpecUrl = "/swagger/v1/swagger.json";
+                c.SpecUrl = "../swagger/v1/swagger.json";
                 c.DocumentTitle = $"{docName} Documentation";
                 c.HideDownloadButton();
             });
