@@ -30,6 +30,9 @@ pipeline {
         GITHUB_CREDENTIAL_ID = 'token-git-v1'
         GITHUB_ACCOUNT       = 'HoangDucDung'
         GITHUB_REPO          = 'digitalmarket_be_v2'
+
+        // ── kéo thư viện libicu cần trên Jenkins Host ──
+        DOTNET_SYSTEM_GLOBALIZATION_INVARIANT = 'true'
     }
 
     stages {
