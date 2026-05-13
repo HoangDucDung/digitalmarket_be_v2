@@ -25,9 +25,12 @@ pipeline {
     stages {
         stage('CI: Restore & Build') {
             steps {
-                githubNotify(status: 'PENDING', context: "${env.GITHUB_STATUS_CONTEXT ?: 'Jenkins CI/CD'}", description: 'Đang kiểm tra code...')
                 cleanWs() // Xoá sạch workspace cũ
                 checkout scm // Kéo code từ SCM (Github/Gitlab) về
+                
+                // Di chuyển githubNotify xuống SAU KHI checkout scm để Jenkins có đủ thông tin git (commit sha, repo)
+                githubNotify(status: 'PENDING', context: "${env.GITHUB_STATUS_CONTEXT ?: 'Jenkins CI/CD'}", description: 'Đang kiểm tra code...')
+                
                 echo 'Restoring packages & building...'
                 sh 'dotnet restore'
                 sh 'dotnet build --no-restore --configuration Release'
