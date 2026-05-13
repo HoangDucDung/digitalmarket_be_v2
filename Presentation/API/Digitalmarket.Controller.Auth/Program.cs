@@ -11,6 +11,7 @@ using Project.DigitalMarket.Infrastructure.MsSql.Configurations;
 using System.Reflection;
 
 namespace Digitalmarket.Controller.Auth
+{
     public class Program
     {
         public static void Main(string[] args)
