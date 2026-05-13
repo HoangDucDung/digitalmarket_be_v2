@@ -3,7 +3,7 @@ pipeline {
 
     // ── Nạp .NET SDK đã cấu hình tự động từ Jenkins Global Tools ──
     tools {
-        dotNetSdk 'dotnet8'
+        dotnetsdk 'dotnet8'
     }
 
     environment {
