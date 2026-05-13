@@ -21,7 +21,7 @@ pipeline {
         // ── Tag image theo số build của Jenkins ──
         IMAGE_TAG = "${env.BUILD_NUMBER}"
 
-        // ── Thông số cố định cho GitHub Status Notify ──
+        // ── Thông số GitHub Status Notify ──
         GITHUB_CREDENTIAL_ID = 'token-git-v1'
         GITHUB_ACCOUNT       = 'HoangDucDung'
         GITHUB_REPO          = 'digitalmarket_be_v2'
@@ -33,8 +33,16 @@ pipeline {
                 cleanWs() // Xoá sạch workspace cũ
                 checkout scm // Kéo code từ SCM (Github/Gitlab) về
                 
-                // Gọi thông báo an toàn (Tự động nạp repo, account, sha, token-git-v1)
-                safeGithubNotify(status: 'PENDING', context: "${env.GITHUB_STATUS_CONTEXT ?: 'Jenkins CI/CD'}", description: 'Đang kiểm tra code...')
+                // Gọi lệnh githubNotify tiêu chuẩn trực tiếp với đầy đủ tham số
+                githubNotify(
+                    status: 'PENDING', 
+                    context: "${env.GITHUB_STATUS_CONTEXT ?: 'Jenkins CI/CD'}", 
+                    description: 'Đang kiểm tra code...',
+                    credentialsId: env.GITHUB_CREDENTIAL_ID,
+                    account: env.GITHUB_ACCOUNT,
+                    repo: env.GITHUB_REPO,
+                    sha: env.GIT_COMMIT
+                )
                 
                 echo 'Restoring packages & building...'
                 sh 'dotnet restore'
@@ -43,17 +51,33 @@ pipeline {
 
             post {
                 success {
-                    // Chỉ báo SUCCESS sau khi CI xong, không đợi CD
-                    safeGithubNotify(
+                    githubNotify(
                         status: 'SUCCESS', 
                         context: "${env.GITHUB_STATUS_CONTEXT ?: 'Jenkins CI/CD'} - CI", 
-                        description: 'CI passed!')
+                        description: 'CI passed!',
+                        credentialsId: env.GITHUB_CREDENTIAL_ID,
+                        account: env.GITHUB_ACCOUNT,
+                        repo: env.GITHUB_REPO,
+                        sha: env.GIT_COMMIT
+                    )
                 }
                 failure {
-                    safeGithubNotify(
-                        status: 'FAILURE', 
-                        context: "${env.GITHUB_STATUS_CONTEXT ?: 'Jenkins CI/CD'} - CI", 
-                        description: 'CI failed!')
+                    script {
+                        // Chỉ gửi notify nếu có commit SHA để tránh crash quy trình hậu kỳ
+                        if (env.GIT_COMMIT) {
+                            githubNotify(
+                                status: 'FAILURE', 
+                                context: "${env.GITHUB_STATUS_CONTEXT ?: 'Jenkins CI/CD'} - CI", 
+                                description: 'CI failed!',
+                                credentialsId: env.GITHUB_CREDENTIAL_ID,
+                                account: env.GITHUB_ACCOUNT,
+                                repo: env.GITHUB_REPO,
+                                sha: env.GIT_COMMIT
+                            )
+                        } else {
+                            echo '⚠️ Bỏ qua gửi GitHub Status vì chưa lấy được thông tin commit.'
+                        }
+                    }
                 }
             }
         }
@@ -197,10 +221,14 @@ pipeline {
 
     post {
         success {
-            safeGithubNotify(
+            githubNotify(
                 status: 'SUCCESS',
                 context: "${env.GITHUB_STATUS_CONTEXT ?: 'Jenkins CI/CD'} - Deployment",
-                description: 'Build & Deploy thành công!'
+                description: 'Build & Deploy thành công!',
+                credentialsId: env.GITHUB_CREDENTIAL_ID,
+                account: env.GITHUB_ACCOUNT,
+                repo: env.GITHUB_REPO,
+                sha: env.GIT_COMMIT
             )
             echo """
             🎉 ═══════════════════════════════════════════════
@@ -211,40 +239,25 @@ pipeline {
             """
         }
         failure {
-            safeGithubNotify(
-                status: 'FAILURE',
-                context: "${env.GITHUB_STATUS_CONTEXT ?: 'Jenkins CI/CD'} - Deployment",
-                description: 'Build hoặc Deploy thất bại!'
-            )
+            script {
+                if (env.GIT_COMMIT) {
+                    githubNotify(
+                        status: 'FAILURE',
+                        context: "${env.GITHUB_STATUS_CONTEXT ?: 'Jenkins CI/CD'} - Deployment",
+                        description: 'Build hoặc Deploy thất bại!',
+                        credentialsId: env.GITHUB_CREDENTIAL_ID,
+                        account: env.GITHUB_ACCOUNT,
+                        repo: env.GITHUB_REPO,
+                        sha: env.GIT_COMMIT
+                    )
+                } else {
+                    echo '⚠️ Bỏ qua gửi GitHub Status vì thiếu thông tin Commit SHA.'
+                }
+            }
             echo '❌ Pipeline thất bại! Vui lòng kiểm tra Console Output ở trên để tìm lỗi.'
         }
         always {
             cleanWs(notFailBuild: true)
         }
-    }
-}
-
-// ── Hàm trợ giúp gửi trạng thái lên GitHub an toàn, tránh crash và lặp code ──
-def safeGithubNotify(Map params) {
-    try {
-        // Tự động điền 4 tham số bắt buộc để dập tắt hoàn toàn lỗi IllegalArgumentException
-        if (!params.sha && env.GIT_COMMIT) {
-            params.sha = env.GIT_COMMIT
-        }
-
-        // Nếu build sập TRƯỚC KHI checkout (không có commit SHA) -> Bỏ qua để không vấp lỗi
-        if (!params.sha) {
-            echo "⚠️ Bỏ qua gửi GitHub Status vì chưa có thông tin Commit SHA."
-            return
-        }
-
-        // Đọc thông tin cấu hình từ môi trường Jenkinsfile
-        if (!params.account)       { params.account       = env.GITHUB_ACCOUNT }
-        if (!params.repo)          { params.repo          = env.GITHUB_REPO }
-        if (!params.credentialsId) { params.credentialsId = env.GITHUB_CREDENTIAL_ID }
-
-        githubNotify(params)
-    } catch (Exception e) {
-        echo "⚠️ [Cảnh báo GitHub Notify]: Gửi tín hiệu thất bại. Chi tiết: ${e.getMessage()}"
     }
 }
