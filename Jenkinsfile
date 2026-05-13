@@ -1,6 +1,11 @@
 pipeline {
     agent any
 
+    // ── Nạp .NET SDK đã cấu hình tự động từ Jenkins Global Tools ──
+    tools {
+        dotNetSdk 'dotnet8'
+    }
+
     environment {
         // ── Tên Docker image ──
         IMAGE_AUTH     = 'digitalmarket-auth'
