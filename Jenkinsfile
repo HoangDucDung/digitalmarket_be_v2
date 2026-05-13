@@ -31,7 +31,7 @@ pipeline {
         GITHUB_ACCOUNT       = 'HoangDucDung'
         GITHUB_REPO          = 'digitalmarket_be_v2'
 
-        // ── kéo thư viện libicu cần trên Jenkins Host ──
+        // ── Kéo thư viện libicu cần trên Jenkins Host ──
         DOTNET_SYSTEM_GLOBALIZATION_INVARIANT = 'true'
     }
 
@@ -41,11 +41,11 @@ pipeline {
                 cleanWs() // Xoá sạch workspace cũ
                 checkout scm // Kéo code từ SCM (Github/Gitlab) về
                 
-                // Gọi lệnh githubNotify tiêu chuẩn trực tiếp với đầy đủ tham số
+                // ✅ Sửa context để khớp hoàn toàn với block post (CI passed/failed)
                 githubNotify(
                     status: 'PENDING', 
-                    context: "${env.GITHUB_STATUS_CONTEXT ?: 'Jenkins CI/CD'}", 
-                    description: 'Đang kiểm tra code...',
+                    context: "${env.GITHUB_STATUS_CONTEXT ?: 'Jenkins CI/CD'} - CI", 
+                    description: 'Đang kiểm tra compile code...',
                     credentialsId: env.GITHUB_CREDENTIAL_ID,
                     account: env.GITHUB_ACCOUNT,
                     repo: env.GITHUB_REPO,
@@ -96,14 +96,21 @@ pipeline {
             }
             stages {
                 // ──────────────────────────────────────────────
-                // 1. Chạy Unit Tests (Bỏ comment nếu cần kích hoạt)
+                // 1. Khai báo trạng thái Bắt đầu Deploy (Pending)
                 // ──────────────────────────────────────────────
-                // stage('Run Tests') {
-                //     steps {
-                //         echo '🧪 Đang chạy Unit Tests...'
-                //         sh 'dotnet test Digitalmarket.sln --logger "trx;LogFileName=test_results.trx"'
-                //     }
-                // }
+                stage('CD Status: PENDING') {
+                    steps {
+                        githubNotify(
+                            status: 'PENDING',
+                            context: "${env.GITHUB_STATUS_CONTEXT ?: 'Jenkins CI/CD'} - Deployment",
+                            description: 'Đang chuẩn bị Build Docker & Deploy...',
+                            credentialsId: env.GITHUB_CREDENTIAL_ID,
+                            account: env.GITHUB_ACCOUNT,
+                            repo: env.GITHUB_REPO,
+                            sha: env.GIT_COMMIT
+                        )
+                    }
+                }
 
                 // ──────────────────────────────────────────────
                 // 2. Build Docker images song song (Microservices)
