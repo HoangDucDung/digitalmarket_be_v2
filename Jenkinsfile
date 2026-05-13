@@ -141,21 +141,21 @@ node {
             def isMainBranch = (env.BRANCH_NAME == 'main') || (env.GIT_BRANCH != null && env.GIT_BRANCH.contains('main'))
             
             if (env.GIT_COMMIT) {
+                githubNotify(
+                    status: 'FAILURE',
+                    context: "Jenkins CI/CD - CI",
+                    description: 'CI Failed! Lỗi biên dịch code.',
+                    credentialsId: GITHUB_CREDENTIAL_ID,
+                    account: GITHUB_ACCOUNT,
+                    repo: GITHUB_REPO,
+                    sha: env.GIT_COMMIT
+                )
+
                 if (isMainBranch) {
                     githubNotify(
                         status: 'FAILURE',
                         context: "Jenkins CI/CD - Deployment",
                         description: 'Deploy thất bại! Kiểm tra logs.',
-                        credentialsId: GITHUB_CREDENTIAL_ID,
-                        account: GITHUB_ACCOUNT,
-                        repo: GITHUB_REPO,
-                        sha: env.GIT_COMMIT
-                    )
-                } else {
-                    githubNotify(
-                        status: 'FAILURE',
-                        context: "Jenkins CI/CD - CI",
-                        description: 'CI Failed! Lỗi biên dịch code.',
                         credentialsId: GITHUB_CREDENTIAL_ID,
                         account: GITHUB_ACCOUNT,
                         repo: GITHUB_REPO,
