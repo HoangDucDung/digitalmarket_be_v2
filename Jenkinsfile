@@ -40,7 +40,15 @@ pipeline {
             steps {
                 cleanWs() // Xoá sạch workspace cũ
                 checkout scm // Kéo code từ SCM (Github/Gitlab) về
-                
+
+                echo """
+                🔍 [DEBUG] THÔNG TIN GỬI GITHUB:
+                   - Commit SHA:   ${env.GIT_COMMIT}
+                   - GitHub Account: ${env.GITHUB_ACCOUNT}
+                   - GitHub Repo:    ${env.GITHUB_REPO}
+                   - Credential ID:  ${env.GITHUB_CREDENTIAL_ID}
+                """
+
                 // ✅ Sửa context để khớp hoàn toàn với block post (CI passed/failed)
                 githubNotify(
                     status: 'PENDING', 
