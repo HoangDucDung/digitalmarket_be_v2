@@ -20,6 +20,11 @@ pipeline {
 
         // ── Tag image theo số build của Jenkins ──
         IMAGE_TAG = "${env.BUILD_NUMBER}"
+
+        // ── Thông số cố định cho GitHub Status Notify ──
+        GITHUB_CREDENTIAL_ID = 'token-git-v1'
+        GITHUB_ACCOUNT       = 'HoangDucDung'
+        GITHUB_REPO          = 'digitalmarket_be_v2'
     }
 
     stages {
@@ -28,8 +33,8 @@ pipeline {
                 cleanWs() // Xoá sạch workspace cũ
                 checkout scm // Kéo code từ SCM (Github/Gitlab) về
                 
-                // Di chuyển githubNotify xuống SAU KHI checkout scm để Jenkins có đủ thông tin git (commit sha, repo)
-                githubNotify(status: 'PENDING', context: "${env.GITHUB_STATUS_CONTEXT ?: 'Jenkins CI/CD'}", description: 'Đang kiểm tra code...')
+                // Gọi thông báo an toàn (Tự động nạp repo, account, sha, token-git-v1)
+                safeGithubNotify(status: 'PENDING', context: "${env.GITHUB_STATUS_CONTEXT ?: 'Jenkins CI/CD'}", description: 'Đang kiểm tra code...')
                 
                 echo 'Restoring packages & building...'
                 sh 'dotnet restore'
@@ -39,13 +44,13 @@ pipeline {
             post {
                 success {
                     // Chỉ báo SUCCESS sau khi CI xong, không đợi CD
-                    githubNotify(
+                    safeGithubNotify(
                         status: 'SUCCESS', 
                         context: "${env.GITHUB_STATUS_CONTEXT ?: 'Jenkins CI/CD'} - CI", 
                         description: 'CI passed!')
                 }
                 failure {
-                    githubNotify(
+                    safeGithubNotify(
                         status: 'FAILURE', 
                         context: "${env.GITHUB_STATUS_CONTEXT ?: 'Jenkins CI/CD'} - CI", 
                         description: 'CI failed!')
@@ -192,7 +197,7 @@ pipeline {
 
     post {
         success {
-            githubNotify(
+            safeGithubNotify(
                 status: 'SUCCESS',
                 context: "${env.GITHUB_STATUS_CONTEXT ?: 'Jenkins CI/CD'} - Deployment",
                 description: 'Build & Deploy thành công!'
@@ -206,7 +211,7 @@ pipeline {
             """
         }
         failure {
-            githubNotify(
+            safeGithubNotify(
                 status: 'FAILURE',
                 context: "${env.GITHUB_STATUS_CONTEXT ?: 'Jenkins CI/CD'} - Deployment",
                 description: 'Build hoặc Deploy thất bại!'
@@ -216,5 +221,30 @@ pipeline {
         always {
             cleanWs(notFailBuild: true)
         }
+    }
+}
+
+// ── Hàm trợ giúp gửi trạng thái lên GitHub an toàn, tránh crash và lặp code ──
+def safeGithubNotify(Map params) {
+    try {
+        // Tự động điền 4 tham số bắt buộc để dập tắt hoàn toàn lỗi IllegalArgumentException
+        if (!params.sha && env.GIT_COMMIT) {
+            params.sha = env.GIT_COMMIT
+        }
+
+        // Nếu build sập TRƯỚC KHI checkout (không có commit SHA) -> Bỏ qua để không vấp lỗi
+        if (!params.sha) {
+            echo "⚠️ Bỏ qua gửi GitHub Status vì chưa có thông tin Commit SHA."
+            return
+        }
+
+        // Đọc thông tin cấu hình từ môi trường Jenkinsfile
+        if (!params.account)       { params.account       = env.GITHUB_ACCOUNT }
+        if (!params.repo)          { params.repo          = env.GITHUB_REPO }
+        if (!params.credentialsId) { params.credentialsId = env.GITHUB_CREDENTIAL_ID }
+
+        githubNotify(params)
+    } catch (Exception e) {
+        echo "⚠️ [Cảnh báo GitHub Notify]: Gửi tín hiệu thất bại. Chi tiết: ${e.getMessage()}"
     }
 }
